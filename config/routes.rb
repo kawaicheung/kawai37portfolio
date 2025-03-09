@@ -10,7 +10,11 @@ Rails.application.routes.draw do
   get "manifest" => "rails/pwa#manifest", as: :pwa_manifest
 
   root "home#index"
+  get "the-10000ft-view" => "home#the_10000ft_view"
+  get "donedone" => "home#donedone"
   get "what" => "home#what"
+  get "embracing-constraints" => "home#embracing_constraints"
+  get "stretching" => "home#stretching"
 
   # Defines the root path route ("/")
   # root "posts#index"

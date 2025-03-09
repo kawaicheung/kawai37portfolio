@@ -44,8 +44,9 @@
   --border-radius--rounded: 2rem;
   --border-radius--rectanglish: 0.25rem;
 
-  --box-shadow--card: 0 2px 4px rgba(0, 0, 0, .05);
+  --box-shadow--card: 0 2px 8px rgba(0, 0, 0, .15);
   --box-shadow--sticker: 0 2px 4px rgba(0, 0, 0, .25);
+  --box-shadow--figure: 0 2px 8px rgba(0, 0, 0, .15);
 
   --width--crowd: 300px;
 

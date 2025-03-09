@@ -1,0 +1,23 @@
+.nav-btns {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 5rem;
+  height: 5rem;
+  border: 2px solid var(--color--black);
+  border-radius: 50%;
+  text-decoration: none;
+  line-height: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 2.5rem;
+  color: var(--color--black);
+}

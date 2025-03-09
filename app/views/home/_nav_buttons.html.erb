@@ -1,0 +1,11 @@
+
+<% next_path ||= nil %>
+<% prev_path ||= nil %>
+<div class="nav-btns">
+  <% if prev_path %>
+    <%= render "prev_button", path: prev_path %>
+  <% end %>
+  <% if next_path %>
+    <%= render "next_button", path: next_path %>
+  <% end %>
+</div>

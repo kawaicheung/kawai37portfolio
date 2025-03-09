@@ -1,0 +1,19 @@
+.figure-container {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+figure {
+  padding: 1.4rem;
+  border-radius: var(--border-radius--rectanglish);
+  border: var(--border--gray--light);
+  box-shadow: var(--box-shadow--figure);
+}
+
+figcaption {
+  text-align: center;
+  padding-top: 1.4rem;
+  font-size: 1rem;
+  color: var(--color--black);
+}
