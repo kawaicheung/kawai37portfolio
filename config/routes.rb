@@ -11,17 +11,17 @@ Rails.application.routes.draw do
 
   root "home#index"
   get "the-10000ft-view" => "home#the_10000ft_view"
-  get "works" => "home#works"
-  get "donedone" => "home#donedone"
-  get "dnsdigest" => "home#dnsdigest"
-  get "embracing-constraints" => "home#embracing_constraints"
-  get "naming-things" => "home#naming_things"
-  get "what" => "home#what"
-  get "influences" => "home#influences"
-  get "tastes" => "home#tastes"
-  get "stretching" => "home#stretching"
-  get "the-weird-history-of-css" => "home#the_weird_history_of_css"
-  get "bits-of-delight" => "home#bits_of_delight"
+
+  get "works" => "works#index"
+  get "works/donedone" => "works#donedone"
+  get "works/dnsdigest" => "works#dnsdigest"
+  get "works/baseball-scoreboards" => "works#baseball_scoreboards"
+  get "works/naming-things" => "works#naming_things"
+
+  get "tastes" => "tastes#index"
+  get "tastes/bits-of-delight" => "tastes#bits_of_delight"
+  get "tastes/the-weird-history-of-css" => "tastes#the_weird_history_of_css"
+  get "tastes/influences" => "tastes#influences"
 
   # Defines the root path route ("/")
   # root "posts#index"

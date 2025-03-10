@@ -1,20 +1,12 @@
 class HomeController < ApplicationController
+  layout "parent_slide"
   def index
-    @main_class = "index"
+    render layout: "parent_home"
   end
 
   def the_10000ft_view
   end
 
-  def works
-    @main_class = "interlude"
-  end
-
-  def donedone
-  end
-
-  def dnsdigest
-  end
 
   def embracing_constraints
   end

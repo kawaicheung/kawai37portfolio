@@ -1,0 +1,10 @@
+<div class="nav-btns">
+  <% if deduced_prev_path %>
+    <%= render "shared/prev_button", path: deduced_prev_path %>
+  <% end %>
+  <% if deduced_next_path %>
+    <%= render "shared/next_button", path: deduced_next_path %>
+  <% else %>
+    <%= render "shared/next_button", path: nil %>
+  <% end %>
+</div>

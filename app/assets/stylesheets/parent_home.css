@@ -1,0 +1,113 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree ./components
+ *= require_tree ./home
+ *= require_self
+ */
+
+ body {
+  background-color: var(--color--white);
+  color: var(--color--black);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+article {
+  max-width: 1400px;
+  width: 90%;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .hello-sticker {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0 2rem 0;
+    rotate: -1deg;
+    background-color: var(--color--sticker);
+    border-radius: var(--border-radius--rounded);
+    box-shadow: var(--box-shadow--sticker);
+    margin-bottom: 3rem;
+
+    .hello {
+      text-transform: uppercase;
+      color: var(--color--white);
+      font-size: 3rem;
+      font-weight: 800;
+      line-height: 1;
+    }
+
+    .my-name {
+      text-transform: uppercase;
+      color: var(--color--white);
+      font-size: 1rem;
+      font-weight: 600;
+      line-height: 1;
+      letter-spacing: 0.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    h1 {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem;
+      font-size: 3rem;
+      line-height: 1;
+      background-color: var(--color--white);
+      font-family: var(--font-family--handwriting);
+
+      .pronunciation {
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  h3 {
+    font-size: 1.6rem;
+    line-height: 1.4;
+    font-family: var(--font-family--serif);
+    margin-bottom: 2rem;
+    font-weight: 300;
+  }
+
+  h2 {
+    font-family: var(--font-family--display);
+    text-align: center;
+    max-width: 1000px;
+    font-size: 4.5rem;
+    line-height: 1;
+    font-weight: 300;
+    letter-spacing: -0.1rem;
+    margin-bottom: 2rem;
+  }
+
+  p {
+    width: 700px;
+    font-size: 1.6rem;
+    line-height: 1.4;
+    font-family: var(--font-family--serif);
+    margin-bottom: 2rem;
+  }
+}
+
+
