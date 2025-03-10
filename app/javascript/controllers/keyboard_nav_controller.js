@@ -1,18 +1,18 @@
 import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {
+  static targets = ["instructions"]
   static values = {
-    path: String,
-    key: String
+    key: String,
+    path: String
   }
 
   connect() {
-    this.handleKeyPress = this.handleKeyPress.bind(this)
-    document.addEventListener("keydown", this.handleKeyPress)
+    document.addEventListener("keydown", this.handleKeyPress.bind(this))
   }
 
   disconnect() {
-    document.removeEventListener("keydown", this.handleKeyPress)
+    document.removeEventListener("keydown", this.handleKeyPress.bind(this))
   }
 
   handleKeyPress(event) {

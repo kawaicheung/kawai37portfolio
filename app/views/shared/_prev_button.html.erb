@@ -1,12 +1,15 @@
 <%
   # required
   # path: the path to the next page
+  # optional
+  # reversed: whether the button colors should be reversed
 %>
-<div class="nav-btn-container">
-  <%= link_to path, class: "nav-btn", data: { controller: "keyboard-nav", keyboard_nav_key_value: "ArrowLeft", keyboard_nav_path_value: path } do %>
+<% reversed ||= false %>
+<div class="nav-btn-container" data-controller="keyboard-nav" data-keyboard-nav-key-value="ArrowLeft" data-keyboard-nav-path-value="<%= path %>">
+  <%= link_to path, class: "nav-btn #{reversed ? "reversed" : ""}" do %>
     <i class="fa fa-arrow-left"></i>
   <% end %>
-  <div class="keyboard-instructions">
+  <div class="keyboard-instructions <%= reversed ? "reversed" : "" %>" data-keyboard-nav-target="instructions">
     Or hit <span class="key">&larr;</span>
   </div>
 </div>

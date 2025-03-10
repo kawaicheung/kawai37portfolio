@@ -1,9 +1,14 @@
+<%
+  # optional
+  # reversed: passed to buttons
+%>
+<% reversed ||= false %>
 <div class="remote-control">
   <% if deduced_prev_path %>
-    <%= render "shared/prev_button", path: deduced_prev_path %>
+    <%= render "shared/prev_button", path: deduced_prev_path, reversed: reversed %>
   <% end %>
   <% if deduced_next_path %>
-    <%= render "shared/next_button", path: deduced_next_path %>
+    <%= render "shared/next_button", path: deduced_next_path, reversed: reversed %>
   <% else %>
     <%= render "shared/next_button", path: nil %>
   <% end %>
