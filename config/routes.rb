@@ -18,6 +18,9 @@ Rails.application.routes.draw do
   get "works/baseball-scoreboards" => "works#baseball_scoreboards"
   get "works/naming-things" => "works#naming_things"
 
+  get "writing" => "writing#index"
+  get "writing/the-developers-code" => "writing#the_developers_code"
+
   get "tastes" => "tastes#index"
   get "tastes/bits-of-delight" => "tastes#bits_of_delight"
   get "tastes/the-weird-history-of-css" => "tastes#the_weird_history_of_css"

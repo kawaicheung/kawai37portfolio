@@ -8,6 +8,8 @@ module Constants
     :works_dnsdigest_path,
     :works_baseball_scoreboards_path,
     :works_naming_things_path,
+    :writing_path,
+    :writing_the_developers_code_path,
     :tastes_path,
     :tastes_influences_path,
     :tastes_the_weird_history_of_css_path,
