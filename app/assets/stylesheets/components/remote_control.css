@@ -1,0 +1,50 @@
+.remote-control {
+  position: fixed;
+  bottom: 2.5rem;
+  right: 2.5rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-btn-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+
+  .nav-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 5rem;
+    height: 5rem;
+    border: var(--border--black);
+    border-width: 2px;
+    border-radius: 50%;
+    text-decoration: none;
+    line-height: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 2.5rem;
+    color: var(--color--black);
+    background-color: rgba(255, 255, 255, 0.7);
+
+    &.disabled {
+      opacity: 0.5;
+      pointer-events: none;
+    }
+  }
+
+  .keyboard-instructions {
+    font-family: var(--font-family--sans-serif);
+    font-size: 0.8rem;
+    color: var(--color--gray);
+
+    .key {
+      border: var(--border--gray);
+      border-radius: var(--border-radius--rectanglish);
+      padding: 0.2rem;
+      box-shadow: var(--box-shadow--key);
+    }
+  }
+}

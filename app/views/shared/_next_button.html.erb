@@ -2,12 +2,17 @@
   # required
   # path: the path to the next page
 %>
-<% if path %>
-  <%= link_to path, class: "nav-btn", data: { controller: "keyboard-nav", keyboard_nav_key_value: "ArrowRight", keyboard_nav_path_value: path } do %>
-    <i class="fa fa-arrow-right"></i>
+<div class="nav-btn-container">
+  <% if path %>
+    <%= link_to path, class: "nav-btn", data: { controller: "keyboard-nav", keyboard_nav_key_value: "ArrowRight", keyboard_nav_path_value: path } do %>
+      <i class="fa fa-arrow-right"></i>
+    <% end %>
+    <div class="keyboard-instructions">
+      Or hit <span class="key">&rarr;</span>
+    </div>
+  <% else %>
+    <div class="nav-btn disabled">
+      <i class="fa fa-arrow-right"></i>
+    </div>
   <% end %>
-<% else %>
-  <div class="nav-btn disabled">
-    <i class="fa fa-arrow-right"></i>
-  </div>
-<% end %>
+</div>

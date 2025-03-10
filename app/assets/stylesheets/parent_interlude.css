@@ -37,13 +37,15 @@ article {
   align-items: center;
 
   h2 {
-    font-size: 12rem;
+    font-size: 10rem;
     font-weight: 600;
-    letter-spacing: 0.5rem;
+    letter-spacing: 0.2rem;
     font-family: var(--font-family--display);
+    line-height: 1;
   }
 
   p {
+    text-align: center;
     width: 700px;
     font-size: 1.6rem;
     line-height: 1.4;
