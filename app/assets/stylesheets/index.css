@@ -1,4 +1,11 @@
 main.home {
+  justify-content: center;
+  height: 100vh;
+
+  article {
+    margin: 0;
+  }
+
   .hello-sticker {
     display: flex;
     flex-direction: column;

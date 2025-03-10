@@ -1,11 +1,10 @@
-
-<% next_path ||= nil %>
-<% prev_path ||= nil %>
 <div class="nav-btns">
-  <% if prev_path %>
-    <%= render "prev_button", path: prev_path %>
+  <% if deduced_prev_path %>
+    <%= render "prev_button", path: deduced_prev_path %>
   <% end %>
-  <% if next_path %>
-    <%= render "next_button", path: next_path %>
+  <% if deduced_next_path %>
+    <%= render "next_button", path: deduced_next_path %>
+  <% else %>
+    <%= render "next_button", path: nil %>
   <% end %>
 </div>

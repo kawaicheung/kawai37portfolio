@@ -2,6 +2,12 @@
   # required
   # path: the path to the next page
 %>
-<%= link_to path, class: "nav-btn", data: { controller: "keyboard-nav", keyboard_nav_key_value: "ArrowRight", keyboard_nav_path_value: path } do %>
-  <i class="fa fa-arrow-right"></i>
+<% if path %>
+  <%= link_to path, class: "nav-btn", data: { controller: "keyboard-nav", keyboard_nav_key_value: "ArrowRight", keyboard_nav_path_value: path } do %>
+    <i class="fa fa-arrow-right"></i>
+  <% end %>
+<% else %>
+  <div class="nav-btn disabled">
+    <i class="fa fa-arrow-right"></i>
+  </div>
 <% end %>
