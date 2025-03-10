@@ -1,0 +1,30 @@
+.header-pin {
+  position: fixed;
+  top: 2rem;
+  left: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: var(--color--sticker);
+  color: var(--color--white);
+  width: 5rem;
+  height: 5rem;
+  border: var(--border--purple);
+  border-radius: var(--border-radius--circular);
+  font-family: var(--font-family--handwriting);
+  font-size: 1rem;
+  line-height: 1.2;
+  font-weight: 200;
+  box-shadow: var(--box-shadow--sticker);
+  rotate: -8deg;
+  border: var(--border--sticker);
+  border-width: 2px;
+  text-decoration: none;
+  transition: all 0.12s ease-in;
+
+  &:hover {
+    rotate: 0deg;
+    transform: scale(1.05);
+  }
+}

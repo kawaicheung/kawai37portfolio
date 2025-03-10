@@ -3,14 +3,16 @@
   # path: the path to the next page
   # optional
   # reversed: whether the button colors should be reversed
+  # large: whether the button should be large
 %>
 <% reversed ||= false %>
+<% large ||= false %>
 <div class="nav-btn-container" data-controller="keyboard-nav" data-keyboard-nav-key-value="ArrowRight" data-keyboard-nav-path-value="<%= path %>">
   <% if path %>
-    <%= link_to path, class: "nav-btn #{reversed ? "reversed" : ""}" do %>
+    <%= link_to path, class: "nav-btn #{reversed ? "reversed" : ""} #{large ? "large" : ""}" do %>
       <i class="fa fa-arrow-right"></i>
     <% end %>
-    <div class="keyboard-instructions <%= reversed ? "reversed" : "" %>" data-keyboard-nav-target="instructions">
+    <div class="keyboard-instructions delay-more <%= reversed ? "reversed" : "" %> <%= large ? "large" : "" %>" data-keyboard-nav-target="instructions">
       Or hit <span class="key">&rarr;</span>
     </div>
   <% else %>

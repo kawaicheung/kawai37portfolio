@@ -15,8 +15,10 @@ Rails.application.routes.draw do
   get "works" => "works#index"
   get "works/donedone" => "works#donedone"
   get "works/dnsdigest" => "works#dnsdigest"
-  get "works/baseball-scoreboards" => "works#baseball_scoreboards"
   get "works/naming-things" => "works#naming_things"
+  get "works/baseball-scoreboards" => "works#baseball_scoreboards"
+  get "works/shiftlist" => "works#shiftlist"
+  get "works/secret-project" => "works#secret_project"
 
   get "writing" => "writing#index"
   get "writing/the-developers-code" => "writing#the_developers_code"

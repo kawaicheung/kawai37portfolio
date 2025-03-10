@@ -1,6 +1,6 @@
 class TastesController < ApplicationController
   layout "parent_slide"
-  before_action :set_title, except: [ :index ]
+  before_action :set_section_title, except: [ :index ]
 
   def index
     render layout: "parent_interlude"
@@ -16,7 +16,7 @@ class TastesController < ApplicationController
   end
 
   private
-    def set_title
-      @title = "Tastes"
+    def set_section_title
+      @section_title = "Tastes"
     end
 end

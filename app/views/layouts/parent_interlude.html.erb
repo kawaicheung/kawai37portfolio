@@ -16,11 +16,14 @@
     <%= javascript_importmap_tags %>
   </head>
   <body>
+    <header>
+      <%= render "shared/header_pin" %>
+      <%= render "shared/remote_control", reversed: true %>
+    </header>
     <main>
       <article>
         <%= yield %>
       </article>
-      <%= render "shared/remote_control", reversed: true %>
     </main>
   </body>
 </html>
