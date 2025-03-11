@@ -8,8 +8,8 @@
   text-align: center;
   background-color: var(--color--sticker);
   color: var(--color--white);
-  width: 5rem;
-  height: 5rem;
+  width: 6rem;
+  height: 6rem;
   border: var(--border--purple);
   border-radius: var(--border-radius--circular);
   font-family: var(--font-family--handwriting);
