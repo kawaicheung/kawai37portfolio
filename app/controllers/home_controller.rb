@@ -4,29 +4,9 @@ class HomeController < ApplicationController
     render layout: "parent_home"
   end
 
-  def the_10000ft_view
+  def what_ill_bring
   end
 
-
-  def embracing_constraints
-  end
-
-  def naming_things
-  end
-
-  def what
-  end
-
-  def influences
-  end
-
-  def bits_of_delight
-  end
-
-  def tastes
-    @main_class = "interlude"
-  end
-
-  def stretching
+  def why_id_love_this_role
   end
 end

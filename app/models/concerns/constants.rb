@@ -2,7 +2,8 @@
 module Constants
   NAVIGATION_PATHS = [
     :root_path,
-    :the_10000ft_view_path,
+    :what_ill_bring_path,
+    :why_id_love_this_role_path,
     :works_path,
     :works_donedone_path,
     :works_dnsdigest_path,
