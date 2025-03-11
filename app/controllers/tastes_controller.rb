@@ -6,6 +6,9 @@ class TastesController < ApplicationController
     render layout: "parent_interlude"
   end
 
+  def allusion
+  end
+
   def bits_of_delight
   end
 

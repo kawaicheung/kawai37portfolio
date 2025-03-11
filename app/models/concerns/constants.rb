@@ -13,6 +13,7 @@ module Constants
     :writing_path,
     :writing_the_developers_code_path,
     :tastes_path,
+    :tastes_allusion_path,
     :tastes_influences_path,
     :tastes_the_weird_history_of_css_path,
     :tastes_bits_of_delight_path

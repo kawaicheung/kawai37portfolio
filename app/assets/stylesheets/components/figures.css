@@ -2,6 +2,10 @@
   display: flex;
   gap: 1rem;
   margin-bottom: 2rem;
+
+  &.smaller {
+    width: 75%;
+  }
 }
 
 figure {
@@ -9,8 +13,9 @@ figure {
   border-radius: var(--border-radius--rounded);
   border: none;
   background: linear-gradient(var(--color--white), var(--color--white)) padding-box,
-              linear-gradient(to bottom, var(--color--gray), var(--color--white) 80%, transparent 100%) border-box;
-  border: 2px solid transparent;
+              linear-gradient(to bottom, var(--color--gray), var(--color--gray)) border-box;
+  border: 1px solid transparent;
+  box-shadow: var(--box-shadow--figure);
 
   img {
     border-radius: var(--border-radius--rectanglish);
