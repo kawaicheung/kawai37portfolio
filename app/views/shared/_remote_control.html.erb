@@ -1,15 +1,22 @@
 <%
   # optional
-  # reversed: passed to buttons
+  # reversed: passed to buttons and keyboard instructions
 %>
 <% reversed ||= false %>
 <div class="remote-control">
-  <% if deduced_prev_path %>
-    <%= render "shared/prev_button", path: deduced_prev_path, reversed: reversed %>
-  <% end %>
+  <div class="nav-btn-container">
+    <% if deduced_prev_path %>
+      <%= render "shared/prev_button", path: deduced_prev_path, reversed: reversed %>
+    <% end %>
   <% if deduced_next_path %>
     <%= render "shared/next_button", path: deduced_next_path, reversed: reversed %>
   <% else %>
-    <%= render "shared/next_button", path: nil %>
-  <% end %>
+      <%= render "shared/next_button", path: nil %>
+    <% end %>
+  </div>
+  <div class="keyboard-instructions <%= reversed ? "reversed" : "" %>">
+    Or use
+      <span class="key">&larr;</span>
+      <span class="key">&rarr;</span> keys
+  </div>
 </div>

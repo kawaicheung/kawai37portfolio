@@ -21,10 +21,9 @@
   border: var(--border--sticker);
   border-width: 2px;
   text-decoration: none;
-  transition: all 0.12s ease-in;
+  transition: all 0.12s ease-in-out;
 
   &:hover {
-    rotate: 0deg;
-    transform: scale(1.05);
+    transform: scale(1.2);
   }
 }
