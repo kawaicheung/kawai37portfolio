@@ -3,6 +3,17 @@
   overflow-wrap: normal;
 }
 
+.dns-label {
+  font-family: var(--font-family--monospace);
+  font-size: 1rem;
+  line-height: 1;
+  font-weight: 200;
+  border: var(--border--gray);
+  color: var(--color--black);
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--border-radius--rectanglish);
+}
+
 
 .zany-text {
   display: inline-block;

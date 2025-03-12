@@ -11,7 +11,7 @@
 figure {
   padding: 1.8rem;
   border: var(--border--gray--light);
-  border-radius: var(--border-radius--rectanglish);
+  border-radius: var(--border-radius--rounded);
   box-shadow: var(--box-shadow--figure);
 
   img {

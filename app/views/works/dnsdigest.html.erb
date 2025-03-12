@@ -1,7 +1,62 @@
 <h2><strong>DnsDigest</strong> turns cryptic DNS records into a beautiful report.</h2>
 
 <p>
-  Spent time on words.
+  Last summer, as we were in the midst of selling DoneDone, I began a side project to both learn Ruby on Rails 
+  and produce something real.
 </p>
+<p>
+  As you read earlier, I love making cryptic, ugly stuff better. One thing that’s always bothered me is how hard it is to understand DNS. 
+</p>
+<p>
+  I don’t mean that whole picture of servers and clouds and dotted lines. I mean understanding what a 
+  <span class="dns-label">DMARC</span> record does and how it works with 
+  <span class="dns-label">DKIM</span> and <span class="dns-label">SPF</span>. 
+  I mean seeing all of your <span class="dns-label">A</span>, <span class="dns-label">AAAA</span>, 
+  and <span class="dns-label">CNAME</span> mapping records grouped in one cohesive screen. 
+  I mean adding a note so you remember what that random <span class="dns-label">TXT</span> 
+  record Google asked you to add was even intended for. 
+</p>
+<p>
+  The end result is DnsDigest. You can import your DNS records from common providers like Cloudflare and AWS and instantly see an organized, well-written report.
+   I released it this past January.
+</p>
+<p>
+  It's a simple tool that allows you to see your DNS records in a beautiful, easy-to-understand format.
+</p>
+<div class="figure-container smaller">
+  <figure>
+    <%= image_tag "dnsdigest-hero.png", alt: "Stretching" %>
+    <figcaption>I got a kick out of writing this copy, speaking to a younger me, embarassed about how hard it is to understand DNS.</figcaption>
+  </figure>
+</div>
+<div class="figure-container smaller">
+  <figure>
+    <%= image_tag "dnsdigest-bubbles.png", alt: "Stretching" %>
+    <figcaption>An animated bubble quote area demonstrating the before-and-after mindset of using DnsDigest.</figcaption>
+  </figure>
+</div>
+<div class="figure-container smaller">
+  <figure>
+    <%= image_tag "dnsdigest-screen-mappings.png", alt: "Stretching" %>
+    <figcaption>Or, everything you do ends up kind of feeling like you? It's that feeling of a band past its prime churning out what sounds like them. The innovation is gone.</figcaption>
+  </figure>
+
+  <figure>
+    <%= image_tag "dnsdigest-screen-mx.png", alt: "Stretching" %>
+    <figcaption>Or, everything you do ends up kind of feeling like you? It's that feeling of a band past its prime churning out what sounds like them. The innovation is gone.</figcaption>
+  </figure>
+</div>
+<div class="figure-container smaller">
+  <figure>
+    <%= image_tag "dnsdigest-screen-spf.png", alt: "Stretching" %>
+    <figcaption>Or, everything you do ends up kind of feeling like you? It's that feeling of a band past its prime churning out what sounds like them. The innovation is gone.</figcaption>
+  </figure>
+
+  <figure>
+    <%= image_tag "dnsdigest-screen-dmarc.png", alt: "Stretching" %>
+    <figcaption>Or, everything you do ends up kind of feeling like you? It's that feeling of a band past its prime churning out what sounds like them. The innovation is gone.</figcaption>
+  </figure>
+</div>
+<%= link_to "Here's what a sample digest looks like", "https://dnsdigest.com/sample", target: "_blank" %>
 
 </div>
