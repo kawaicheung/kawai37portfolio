@@ -1,0 +1,24 @@
+<%
+%>
+<nav class="nav-map">
+  <ul>
+    <li>
+      <%= render "shared/header_pin"%>
+    </li>  
+    <li>
+      <%= link_to works_path do %>
+        <span>Work</span>
+      <% end %>
+    </li>
+    <li>
+      <%= link_to writing_path do %>
+        <span>Writing down the bones</span>
+      <% end %>
+    </li>
+    <li>
+      <%= link_to tastes_path do %>
+        <span>Tastes</span>
+      <% end %>
+    </li>
+  </ul>
+</nav>
