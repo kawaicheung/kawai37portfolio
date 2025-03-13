@@ -1,15 +1,13 @@
 <%
+  # Optional: reversed: true
 %>
+<% reversed ||= false %>
 <nav class="nav-map">
   <ul> 
-    <li>
-      <%= link_to "Works", works_path %>
-    </li>
-    <li>
-      <%= link_to "Writing", writing_path %>
-    </li>
-    <li>
-      <%= link_to "Tastes", tastes_path %>
-    </li>
+    <% Constants::NAVIGATION_SECTIONS.each do |section| %>
+      <li>
+        <%= link_to section[:name], "/#{section[:path]}", class: "#{reversed ? "reversed" : ""} #{request.path.include?(section[:path]) ? "selected" : ""}" %>
+      </li>
+    <% end %>
   </ul>
 </nav>

@@ -21,8 +21,8 @@
       <%= render "shared/remote_control" %>
     </header>
     <main>
+      <%= render "shared/nav_map" %>
       <article>
-        <%= render "shared/nav_map" %>
         <%= yield %>
         <%= render "shared/next_button", path: deduced_next_path, large: true %>
       </article>

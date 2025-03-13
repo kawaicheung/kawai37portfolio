@@ -10,8 +10,10 @@ Rails.application.routes.draw do
   get "manifest" => "rails/pwa#manifest", as: :pwa_manifest
 
   root "home#index"
-  get "what-ill-bring" => "home#what_ill_bring"
-  get "why-id-love-this-role" => "home#why_id_love_this_role"
+
+  get "pitch" => "pitch#what_ill_bring"
+  get "pitch/what-ill-bring" => "pitch#what_ill_bring"
+  get "pitch/why-id-love-this-role" => "pitch#why_id_love_this_role"
 
   get "works" => "works#index"
   get "works/donedone" => "works#donedone"

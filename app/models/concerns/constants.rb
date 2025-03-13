@@ -2,8 +2,8 @@
 module Constants
   NAVIGATION_PATHS = [
     :root_path,
-    :what_ill_bring_path,
-    :why_id_love_this_role_path,
+    :pitch_path,
+    :pitch_why_id_love_this_role_path,
     :works_path,
     :works_donedone_path,
     :works_dnsdigest_path,
@@ -19,5 +19,12 @@ module Constants
     :tastes_allusion_path,
     :tastes_influences_path,
     :tastes_the_weird_history_of_css_path
+  ].freeze
+
+  NAVIGATION_SECTIONS = [
+    { name: "The Pitch", path: "pitch" },
+    { name: "Works", path: "works" },
+    { name: "Writing", path: "writing" },
+    { name: "Tastes", path: "tastes" }
   ].freeze
 end

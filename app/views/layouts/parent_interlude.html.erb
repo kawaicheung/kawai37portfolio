@@ -21,8 +21,10 @@
       <%= render "shared/remote_control", reversed: true %>
     </header>
     <main>
+      <%= render "shared/nav_map", reversed: true %>
       <article>
         <%= yield %>
+        <%= render "shared/next_button", path: deduced_next_path, large: true, reversed: true %>
       </article>
     </main>
   </body>

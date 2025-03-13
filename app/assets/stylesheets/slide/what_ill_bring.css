@@ -1,11 +1,12 @@
 .funny-button {
+  position: relative;
   background-color: var(--color--green);
   color: var(--color--white);
   border-radius: var(--border-radius--rectanglish);
   padding: 0.5rem;
   font-size: 1rem;
   width: 160px;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
   border-bottom: var(--border--gray);
   border-right: var(--border--gray);
   font-weight: 600;
@@ -13,5 +14,14 @@
 
   &:hover {
     transform: translateY(-2px);
+  }
+
+  .subline {
+    position: absolute;
+    bottom: -1.3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.8rem;
+    color: var(--color--gray);
   }
 }
