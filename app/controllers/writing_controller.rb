@@ -9,6 +9,9 @@ class WritingController < ApplicationController
   def the_developers_code
   end
 
+  def top_picks
+  end
+
   private
     def set_section_title
       @section_title = "Writing"

@@ -1,24 +1,15 @@
 <%
 %>
 <nav class="nav-map">
-  <ul>
+  <ul> 
     <li>
-      <%= render "shared/header_pin"%>
-    </li>  
-    <li>
-      <%= link_to works_path do %>
-        <span>Work</span>
-      <% end %>
+      <%= link_to "Works", works_path %>
     </li>
     <li>
-      <%= link_to writing_path do %>
-        <span>Writing down the bones</span>
-      <% end %>
+      <%= link_to "Writing", writing_path %>
     </li>
     <li>
-      <%= link_to tastes_path do %>
-        <span>Tastes</span>
-      <% end %>
+      <%= link_to "Tastes", tastes_path %>
     </li>
   </ul>
 </nav>

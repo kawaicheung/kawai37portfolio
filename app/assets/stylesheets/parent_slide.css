@@ -23,6 +23,7 @@ body {
 header {
   position: fixed;
   display: flex;
+  align-items: center;
   justify-content: space-between;
   width: 100%;
   padding: 2rem;
@@ -37,7 +38,7 @@ main {
 article {
   max-width: 1400px;
   width: 90%;
-  margin-top: 8rem;
+  margin-top: 0rem;
   margin-bottom: 10rem;
   padding: 4rem;
   display: flex;
@@ -52,6 +53,7 @@ article {
     line-height: 1;
     font-weight: 300;
     letter-spacing: -0.1rem;
+    margin-top: 6rem;
     margin-bottom: 3rem;
 
     strong {

@@ -23,6 +23,7 @@ Rails.application.routes.draw do
 
   get "writing" => "writing#index"
   get "writing/the-developers-code" => "writing#the_developers_code"
+  get "writing/top-picks" => "writing#top_picks"
 
   get "tastes" => "tastes#index"
   get "tastes/allusion" => "tastes#allusion"

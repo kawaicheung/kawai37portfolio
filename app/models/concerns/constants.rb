@@ -13,6 +13,7 @@ module Constants
     :works_secret_project_path,
     :writing_path,
     :writing_the_developers_code_path,
+    :writing_top_picks_path,
     :tastes_path,
     :tastes_bits_of_delight_path,
     :tastes_allusion_path,

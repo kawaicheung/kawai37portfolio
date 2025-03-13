@@ -17,11 +17,12 @@
   </head>
   <body>
     <header>
-      <%= render "shared/nav_map" %>
+      <%= render "shared/header_pin" %>
       <%= render "shared/remote_control" %>
     </header>
     <main>
       <article>
+        <%= render "shared/nav_map" %>
         <%= yield %>
         <%= render "shared/next_button", path: deduced_next_path, large: true %>
       </article>
