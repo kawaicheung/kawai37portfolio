@@ -51,8 +51,4 @@
   --box-shadow--figure: 0 2px 8px rgba(0, 0, 0, .1);
   --box-shadow--key: 0 1px 1px rgba(0, 0, 0, .3);
 
-  --width--crowd: 300px;
-
-  --z-index--crowd: 100;
-  --z-index--modal: 200;
 }
