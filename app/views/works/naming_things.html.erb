@@ -11,10 +11,11 @@
       <%= video_tag "nt.mov", autoplay: true, loop: true, muted: true, controls: true %>
       <figcaption><span><strong>Simple little touches:</strong> Even when describing small snippets of code, it's hard to quickly pinpoint
       exactly which part the author is referring to. Here, you can rollover the text to see the 
-      exact portion highlighted.</span></figcaption>
+      exact portion highlighted.</span>
+      </figcaption>
     </figure>
 </div>
-
+ <%= render "shared/external_link_button", path: "https://kawaicheung.io/scoreboards/comiskey-1978.html", text: "See the real thing!" %>  
 <div class="figure-container">
   <figure>
     <%= image_tag "nt-0.png", alt: "Stretching" %>

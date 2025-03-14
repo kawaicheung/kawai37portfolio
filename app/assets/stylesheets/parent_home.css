@@ -106,8 +106,7 @@ article {
       border: var(--border--theme);
       border-width: 2px;
       opacity: 0;
-      transform: rotate(5deg) scale(0.8);
-      animation: appearAndBounce 0.25s ease-out 2.5s forwards;
+      animation: appearAndBounce 0.25s ease-out 1.2s forwards;
     }
   }
   
@@ -142,7 +141,7 @@ article {
 @keyframes appearAndBounce {
   0% {
     opacity: 0;
-    transform: rotate(-5deg) scale(0.8);
+    transform: rotate(-15deg) scale(0.8);
   }
   50% {
     opacity: 1;

@@ -54,7 +54,7 @@
   font-size: 0.7rem;
   color: var(--color--black);
   opacity: 0;
-  animation: fadeIn 0.5s ease-in-out forwards;
+  animation: keyboardFadeIn 0.5s ease-in-out forwards;
   animation-delay: 1s;
   background-color: var(--color--white);
   padding: 0.5rem;
@@ -80,7 +80,7 @@
   }
 }
 
-@keyframes fadeIn {
+@keyframes keyboardFadeIn {
   0% {
     opacity: 0;
     transform: translateY(20px);
