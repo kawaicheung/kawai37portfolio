@@ -1,34 +1,69 @@
-<h2>A fun one: HTML and CSS only <strong>baseball scoreboards</strong>.</h2>
-<h3>Sometimes you get into design ruts. This was a way for me to stretch my thinking.</h3>
+<h2>Avoiding the design rut with <span class="no-break"><strong>HTML and CSS</strong> art.</span></h2>
 <p>
-  I wanted to see if I could create near photo-realistic images of old baseball scoreboards using only CSS. My goal wasn't
-  to write pure, beautiful, semantic HTML and CSS (though I tried). Really, it was to stretch my own thinking with how you can use
-  the tools at-hand. Here are the results:
+  Design gets derivative. The cookie-cutter designs we saw a decade ago with 
+  <%= link_to "boilerplate responsive templates", "https://medium.com/@kawai-cheung/how-the-evolution-of-baseball-stadiums-might-inform-the-future-of-web-design-1b506e584227", target: "_blank" %>
+  are back now with those default styles that CSS libraries like Tailwind provide. AI is only making this worse.
+</p>
+<p>
+  One way I keep myself from getting into a derivate design rut is to stretch my thinking&mdash;
+  venture somewhere else with the tools I already use.
+</p>
+<p>
+  So, a couple years ago, I decided to marry my childhood love for baseball and art with my grown-up love for code. 
+  Given all the new toys that CSS provides today, could I make realistic looking baseball-themed pieces with nothing but raw HTML and CSS?
+</p>
+<p>
+  I started small&mdash;replicating the original two tickets I've still kept from my first Cubs game (my 5th grade teacher gave them away to 
+  any student who had perfect attendance that year. He knew the right buttons to push).
+</p>
+<div class="figure-container smallest">
+    <figure>
+      <%= image_tag "bb-tickets.png", alt: "Stretching" %>
+      <figcaption>
+        <span><strong>Perfect game</strong>: A 75 degree Friday afternoon. A $2 hot dog. The Cubs won 15-2. </span>
+        <%= render "shared/external_link_button", path: "https://kawaicheung.io/scoreboards/two-for-friday.html", text: "See the real thing!" %>
+      </figcaption>
+    </figure>
+</div>
+<p>
+    The most satisfying part of recreating these tickets was replicating the imperfections of print. 
+    The Cubs logo is ever so slightly offset a pixel up-and-to-the-right from its white background. The perforations of the 
+    edges are nothing more than a <span class="code">dotted 1px white</span> border, which pops against the <span class="code">box-shadow</span> 
+    of the ticket. The tiniest touch of <span class="code">blur</span> on the monospace font makes it look like printed type.
+</p>
+<p class="note"><strong>Note:</strong> For this project, I allowed myself to write imperfect, un-DRY CSS. 
+This was about expanding my comfort with the medium.
+Ya know, in case you're viewing source 🙂.
+</p>
+<p>
+  After that, I decided to take it up a few levels. Referencing some old photographs, I replicated these classic baseball scoreboards
+  with the same rule: No images. No Javascript. Just pure HTML and CSS.
 </p>
 <div class="figure-container">
     <figure>
       <%= image_tag "bb-wrigley-1941.png", alt: "Stretching" %>
       <figcaption>
-        <span><strong>Wrigley Field, 1941</strong>: Toyed with CSS perspective, hand-cut letters via polygon() clip-paths, 
-        and making it a windy, rainy day with animation.</span>
-        <%= render "shared/text_button", path: "https://kawaicheung.io/scoreboards/wrigley-1941.html", text: "See the real thing!" %>
+        <span><strong>Wrigley Field, 1941</strong>: Toyed with CSS perspective, hand-cut letters via clip-paths, 
+        and made it a windy, rainy day with animation (Wait for it!).</span>
+        <%= render "shared/external_link_button", path: "https://kawaicheung.io/scoreboards/wrigley-1941.html", text: "See the real thing!" %>
       </figcaption>
     </figure>
      <figure>
       <%= image_tag "bb-comiskey-1978.png", alt: "Stretching" %>
       <figcaption>
         <span><strong>Comiskey Park, 1978</strong>: A complete bastardization of flexbox and CSS grid made for a really fun (and tedious) project.</span>
-        <%= render "shared/text_button", path: "https://kawaicheung.io/scoreboards/comiskey-1978.html", text: "See the real thing!" %>  
+        <%= render "shared/external_link_button", path: "https://kawaicheung.io/scoreboards/comiskey-1978.html", text: "See the real thing!" %>  
         </figcaption>
     </figure>
 </div>
-
+<p>With the Wrigley Field scoreboard, I geeked out on all sorts of animation techniques: The rain drops, darkening skies, 
+  rotating clock hands, waving flags, and the angle of the shadows against the open areas of the scoreboard.
 <p>
-  It's like writer's block for design (designer's block?). That feeling where nothing feels new anymore.
-  When you've done this work for this long, the hardest part is to stretch your own thinking. Or, everything
-  you do ends up kind of feeling like you? It's that feeling of a band past its prime churning out what sounds like them.
-  The innovation is gone.
+  With the Comiskey Park scoreboard, I went a bit nuts on CSS grid. <strong>Every light bulb</strong> is accounted for. They 
+  are turned on with the class <span class="code">lit</span>. It was fun to turn on each bulb individually, and leave an 
+  occasional one burnt out (An ode to the energy crisis of the 1970s maybe?).
 </p>
-<p>After 25 years, styling code can just feel derivative. Flexbox or grid layout? How much padding and spacing? How dark is the black?</p>
-
+<p>
+  The Comiskey one was quite taxing. I took a break on this after that. 
+</p>
 </div>

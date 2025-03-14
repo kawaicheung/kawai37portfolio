@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  background-color: var(--color--sticker);
+  background-color: var(--color--theme);
   color: var(--color--white);
   width: 6rem;
   height: 6rem;

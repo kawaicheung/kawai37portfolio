@@ -1,4 +1,4 @@
-.text-btn {
+.external-link-btn {
   width: fit-content;
   display: flex;
   align-items: center;
@@ -17,6 +17,7 @@
   background-color: var(--color--white);
   transition: all 0.12s ease-in;
   margin-bottom: 2rem;
+  font-weight: 700;
 
   &:hover {
     transform: scale(1.05);

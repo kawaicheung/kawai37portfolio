@@ -96,10 +96,26 @@ article {
     line-height: 1.4;
     font-family: var(--font-family--serif);
     margin-bottom: 2rem;
+
+    &.note {
+      font-size: 1rem;
+      font-family: var(--font-family--sans-serif);
+      padding: 1.5rem;
+      border-radius: 1rem;
+      background-color: var(--color--theme--light);
+    }
   }
 
   p + h3 {
     margin-top: 1.6rem;
+  }
+
+  hr {
+    width: 350px;
+    border: 0;
+    height: 2px;
+    background-color: var(--color--gray);
+    margin: 2rem 0;
   }
 }
 
