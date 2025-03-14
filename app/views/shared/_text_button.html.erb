@@ -1,0 +1,11 @@
+<%
+  # required
+  # path: the url to navigate to
+  # text: the text to display on the button
+  # optional
+  # reversed: whether the button colors should be reversed
+%>
+<% reversed ||= false %>
+<%= link_to path, class: "text-btn #{reversed ? "reversed" : ""}", target: "_blank" do %>
+  <span><%= text %></span><i class="fa fa-arrow-right"></i>
+<% end %>

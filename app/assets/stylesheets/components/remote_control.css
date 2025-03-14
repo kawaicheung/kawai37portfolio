@@ -17,7 +17,7 @@
   height: 3.6rem;
   border: var(--border--black);
   border-width: 2px;
-  border-radius: 50%;
+  border-radius: var(--border-radius--circular);
   text-decoration: none;
   line-height: 0;
   padding: 0;

@@ -6,10 +6,10 @@
 <div class="remote-control">
   <div class="nav-btn-container">
     <% if deduced_prev_path %>
-      <%= render "shared/prev_button", path: deduced_prev_path, reversed: reversed %>
+      <%= render "shared/prev_button", reversed: reversed %>
     <% end %>
   <% if deduced_next_path %>
-    <%= render "shared/next_button", path: deduced_next_path, reversed: reversed %>
+    <%= render "shared/next_button", reversed: reversed %>
   <% else %>
       <%= render "shared/next_button", path: nil %>
     <% end %>
