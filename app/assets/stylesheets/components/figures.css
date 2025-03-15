@@ -22,6 +22,7 @@
 }
 
 figure {
+  width: 100%;
   padding: 1.8rem;
   border: var(--border--gray--light);
   border-radius: var(--border-radius--rounded);
