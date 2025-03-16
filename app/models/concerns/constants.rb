@@ -13,18 +13,11 @@ module Constants
     :works_naming_things_path,
     :writing_path,
     :writing_the_developers_code_path,
-    :writing_top_picks_path,
-    :tastes_path,
-    :tastes_bits_of_delight_path,
-    :tastes_allusion_path,
-    :tastes_influences_path,
-    :tastes_the_weird_history_of_css_path
+    :writing_top_picks_path
   ].freeze
 
   NAVIGATION_SECTIONS = [
     { name: "The Pitch", path: "pitch" },
-    { name: "Works", path: "works" },
-    { name: "Writing", path: "writing" },
-    { name: "Tastes", path: "tastes" }
+    { name: "The Work", path: "works" }
   ].freeze
 end

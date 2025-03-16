@@ -4,6 +4,9 @@ class HomeController < ApplicationController
     render layout: "parent_home"
   end
 
+  def me
+  end
+
   def what_ill_bring
   end
 
