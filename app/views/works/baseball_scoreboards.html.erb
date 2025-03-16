@@ -5,35 +5,12 @@
   we saw a decade ago have now been replaced by those default styles that CSS libraries like Tailwind provide. AI is only making this worse.
 </p>
 <p>
-  One way I keep myself from getting into a derivate design rut is to stretch my thinking&mdash;
-  venture somewhere else with the tools I already use.
+  I try to avoid designer's block by stretching my thinking&mdash;
+  how can I use the tools I have in a different way?
 </p>
 <p>
   So, a couple years ago, I decided to marry my childhood love for baseball and art with my grown-up love for code. 
   Given all the new toys that CSS provides today, could I make realistic looking baseball-themed pieces with nothing but raw HTML and CSS?
-</p>
-<p>
-  I started small&mdash;replicating the original two tickets I've still kept from my first Cubs game (my 5th grade teacher gave them away to 
-  any student who had perfect attendance that year. He knew the right buttons to push).
-</p>
-<div class="figure-container smallest reversed">
-    <figure>
-      <%= image_tag "bb-tickets.png", alt: "Stretching" %>
-      <figcaption>
-        <span><strong>Perfect game</strong>: A 75 degree Friday afternoon. A $2 hot dog. The Cubs won 15-2. </span>
-        <%= render "shared/external_link_button", path: "https://kawaicheung.io/scoreboards/two-for-friday.html", text: "See the real thing!" %>
-      </figcaption>
-    </figure>
-</div>
-<p>
-    The most satisfying part of recreating these tickets was replicating the imperfections of print. 
-    The Cubs logo is ever so slightly offset a pixel up-and-to-the-right from its white background. The perforations of the 
-    edges are nothing more than a <span class="code">dotted 1px white</span> border, which pops against the <span class="code">box-shadow</span> 
-    of the ticket. The tiniest touch of <span class="code">blur</span> on the monospace font makes it look like printed type.
-</p>
-<p class="note"><strong>Note:</strong> For these projects, I allowed myself to write imperfect, un-DRY CSS. 
-This was about expanding my comfort with the medium.
-Ya know, in case you're viewing source 🙂.
 </p>
 <p>
   After that, I decided to take it up a few levels. Referencing some old photographs, I replicated these classic baseball scoreboards
@@ -63,6 +40,30 @@ Ya know, in case you're viewing source 🙂.
   are turned on with the class <span class="code">lit</span>. It was fun to turn on each bulb individually, and leave an 
   occasional one burnt out (An ode to the energy crisis of the 1970s maybe?).
 </p>
+<p>
+  I started small&mdash;replicating the original two tickets I've still kept from my first Cubs game (my 5th grade teacher gave them away to 
+  any student who had perfect attendance that year. He knew the right buttons to push).
+</p>
+<div class="figure-container smallest reversed">
+    <figure>
+      <%= image_tag "bb-tickets.png", alt: "Stretching" %>
+      <figcaption>
+        <span><strong>Perfect game</strong>: A 75 degree Friday afternoon. A $2 hot dog. The Cubs won 15-2. </span>
+        <%= render "shared/external_link_button", path: "https://kawaicheung.io/scoreboards/two-for-friday.html", text: "See the real thing!" %>
+      </figcaption>
+    </figure>
+</div>
+<p>
+    The most satisfying part of recreating these tickets was replicating the imperfections of print. 
+    The Cubs logo is ever so slightly offset a pixel up-and-to-the-right from its white background. The perforations of the 
+    edges are nothing more than a <span class="code">dotted 1px white</span> border, which pops against the <span class="code">box-shadow</span> 
+    of the ticket. The tiniest touch of <span class="code">blur</span> on the monospace font makes it look like printed type.
+</p>
+<p class="note"><strong>Note:</strong> For these projects, I allowed myself to write imperfect, un-DRY CSS. 
+This was about expanding my comfort with the medium.
+Ya know, in case you're viewing source 🙂.
+</p>
+
 <p>
   Thinking about CSS in a different context gives me a broader perspective on what we can do with design. 
   We don't always need to rely on imagery or scripting for the fancy stuff.

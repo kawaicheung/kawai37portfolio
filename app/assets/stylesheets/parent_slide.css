@@ -11,6 +11,7 @@
  * It is generally better to create a new file per style scope.
  *
  *= require_tree ./components
+ *= require_tree ./pitch
  *= require_tree ./slide
  *= require_self
  */
@@ -36,6 +37,7 @@ main {
 }
 
 article {
+  position: relative;
   max-width: 1400px;
   width: 90%;
   margin-top: 2rem;
