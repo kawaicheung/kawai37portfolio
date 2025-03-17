@@ -1,7 +1,7 @@
 class PitchController < ApplicationController
   layout "parent_slide"
 
-  def what_ill_bring
+  def me
   end
 
   def why_id_love_this_role

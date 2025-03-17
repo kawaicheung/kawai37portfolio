@@ -4,19 +4,16 @@
   margin-bottom: 2rem;
 
   &.smaller {
-    width: 75%;
+    width: var(--width--content);
   }
 
   &.smallest {
-    width: 50%;
+    width: calc(var(--width--content) * .8);
   }
 
-  &.reversed {
+  &.off-white {
     figure {
-      background-color: var(--color--gray--dark);
-    }
-    figcaption {
-      color: var(--color--white);
+      background-color: var(--color--gray--light);
     }
   }
 }

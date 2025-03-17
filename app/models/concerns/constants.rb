@@ -8,9 +8,9 @@ module Constants
     :works_donedone_path,
     :works_dnsdigest_path,
     :works_baseball_scoreboards_path,
+    :works_naming_things_path,
     :works_shiftlist_path,
     :works_secret_project_path,
-    :works_naming_things_path,
     :writing_path,
     :writing_the_developers_code_path,
     :writing_top_picks_path

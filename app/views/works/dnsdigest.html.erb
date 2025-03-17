@@ -1,20 +1,30 @@
-<h2><strong>DnsDigest</strong> turns cryptic DNS records into a beautiful report.</h2>
-<p>After 20+ years of working in C#/.NET, I finally dove into Rails last year. The ramp-up's been quick! Here's my first shipped product.</p>
-<div class="figure-container smaller reversed">
+<h2>Making <strong>DNS management</strong> at least mildly enjoyable.</h2>
+<p>
+  After 20+ years of working in C# and .NET MVC, I finally dove into Rails last year.
+  I spent a few months building a side project so I could produce something real.
+</p>
+<div class="figure-container off-white">
   <figure>
     <%= image_tag "dnsdigest-hero.png", alt: "Stretching" %>
-    <figcaption><span><strong>Copy kick:</strong> The tagline is exactly the thing I wanted someone to tell me a few years ago.</span></figcaption>
+    <figcaption><span><strong>Speaking bluntly:</strong> The tagline is exactly the thing I wanted a DNS expert to tell me a few years ago.</span></figcaption>
+  </figure>
+
+  <figure>
+    <%= video_tag "dnsdigest-bubbles.mov", autoplay: true, loop: true, muted: true %>
+    <figcaption><span><strong>Before and after:</strong> An animated bubble quote area demonstrating the benefits of using DnsDigest.</span></figcaption>
   </figure>
 </div>
 <p>
-  Last summer, as we were in the midst of selling DoneDone, I began a side project to both learn Ruby on Rails 
-  and produce something real.
+  I love making confusing ideas approachable. One thing that I've always struggled with is understanding DNS. 
+</p>
+<p class="note">
+  <strong>The Rails ramp-up:</strong> MVC has always been second nature to me and Active Record is an ORM
+  that has all the sensibilities I would want coming from using other ORMs for so many years. I'm learning
+  the conventions as I need them and would be hungry to learn more from both the designers and 
+  programmers at 37signals.
 </p>
 <p>
-  As you read earlier, I love making cryptic, ugly stuff better. One thing that’s always bothered me is how hard it is to understand DNS. 
-</p>
-<p>
-  I don’t mean that whole picture of servers and clouds and dotted lines. I mean understanding what a 
+  I don’t mean the picture of servers and clouds and dotted lines. I mean understanding what a 
   <span class="dns-label">DMARC</span> record does and how it works with 
   <span class="dns-label">DKIM</span> and <span class="dns-label">SPF</span>. 
   I mean seeing all of your <span class="dns-label">A</span>, <span class="dns-label">AAAA</span>, 
@@ -24,12 +34,9 @@
 </p>
 <p>
   The end result is DnsDigest. You can import your DNS records from common providers like Cloudflare and AWS and instantly see an organized, well-written report.
-   I released it this past January.
+  I released it this past January. It's a simple tool that allows you to see your DNS records in a beautiful, easy-to-understand format.
 </p>
-<p>
-  It's a simple tool that allows you to see your DNS records in a beautiful, easy-to-understand format.
-</p>
-<div class="figure-container smaller">
+<div class="figure-container">
   <figure>
     <%= video_tag "dnsdigest-bubbles.mov", autoplay: true, loop: true, muted: true %>
     <figcaption><span><strong>Before and after:</strong> An animated bubble quote area demonstrating the benefits of using DnsDigest.</span></figcaption>
