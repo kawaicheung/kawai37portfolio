@@ -21,7 +21,7 @@
   font-weight: 200;
   background-color: var(--color--gray--light);
   color: var(--color--black);
-  padding: 0.25rem 0.5rem;
+  padding: 0.15rem 0.5rem;
   border-radius: var(--border-radius--rectanglish);
 }
 

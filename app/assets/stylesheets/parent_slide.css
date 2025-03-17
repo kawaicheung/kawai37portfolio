@@ -38,7 +38,7 @@ main {
 
 article {
   position: relative;
-  max-width: 1400px;
+  max-width: 1080px;
   width: 90%;
   margin-top: 2rem;
   margin-bottom: 10rem;
@@ -108,8 +108,22 @@ article {
     }
   }
 
-  p + h3 {
+  h4 + ul {
     margin-top: 1.6rem;
+  }
+
+  ul {
+    font-family: var(--font-family--serif);
+    font-size: 1.5rem;
+    width: 700px;
+    list-style-type: disc;
+    margin-bottom: 2rem;
+    margin-left: 0;
+    padding-left: 1rem;
+
+    li {
+      margin-bottom: 1rem;
+    }
   }
 
   hr {
