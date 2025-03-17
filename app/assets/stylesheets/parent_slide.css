@@ -101,7 +101,7 @@ article {
     &.note {
       font-size: 1rem;
       font-family: var(--font-family--sans-serif);
-      padding: 1.5rem;
+      padding: var(--padding--module);
       border-radius: 1rem;
       background-color: var(--color--theme--light);
     }

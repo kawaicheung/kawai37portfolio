@@ -24,7 +24,7 @@
 
 figure {
   width: 100%;
-  padding: 1.8rem;
+  padding: var(--padding--module);
   border: var(--border--gray--light);
   border-radius: var(--border-radius--rounded);
   box-shadow: var(--box-shadow--figure);
