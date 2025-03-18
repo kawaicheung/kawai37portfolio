@@ -5,7 +5,7 @@
   justify-content: center;
   gap: 0.5rem;
   height: 3.6rem;
-  border: var(--border--black);
+  border: var(--border--theme);
   border-width: 2px;
   border-radius: var(--border-radius--circular);
   text-decoration: none;
@@ -13,11 +13,12 @@
   padding: 0 2rem;
   box-sizing: border-box;
   font-size: 1.5rem;
-  color: var(--color--black);
-  background-color: var(--color--white);
+  color: var(--color--white);
+  background-color: var(--color--theme);
   transition: all 0.12s ease-in;
   margin-bottom: 2rem;
   font-weight: 700;
+  box-shadow: var(--box-shadow--button);
 
   &:hover {
     transform: scale(1.05);
