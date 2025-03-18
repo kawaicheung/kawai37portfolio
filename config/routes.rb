@@ -19,7 +19,7 @@ Rails.application.routes.draw do
   get "works/dnsdigest" => "works#dnsdigest"
   get "works/naming-things" => "works#naming_things"
   get "works/baseball-scoreboards" => "works#baseball_scoreboards"
-
+  get "works/communications" => "works#communications"
   get "contact" => "contact#index"
 
   get "writing" => "writing#index"

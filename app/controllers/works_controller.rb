@@ -13,4 +13,10 @@ class WorksController < ApplicationController
 
   def baseball_scoreboards
   end
+
+  def naming_things
+  end
+
+  def communications
+  end
 end

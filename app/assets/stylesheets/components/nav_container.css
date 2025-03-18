@@ -35,6 +35,10 @@
             border-bottom: 3px solid var(--color--theme);
           }
 
+          &:hover {
+            border-bottom: 3px solid var(--color--theme--light);
+          }
+
           &.reversed {
             color: var(--color--white);
           }

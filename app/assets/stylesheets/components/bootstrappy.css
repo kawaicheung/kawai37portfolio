@@ -3,6 +3,10 @@
   overflow-wrap: normal;
 }
 
+.circular {
+  border-radius: var(--border-radius--circular);
+}
+
 .dns-label {
   font-family: var(--font-family--monospace);
   font-size: 1rem;
@@ -22,31 +26,4 @@
   border-radius: var(--border-radius--rectanglish);
 }
 
-
-.zany-text {
-  display: inline-block;
-  font-family: var(--font-family--handwriting);
-  font-size: 1.2rem;
-  line-height: 1;
-  font-weight: 200;
-  background-color: var(--color--black);
-  color: var(--color--white);
-  padding: 0.25rem 1rem;
-  border-radius: var(--border-radius--circular);
-  box-shadow: var(--box-shadow--card);
-
-  animation: zany-text 1s ease-in-out infinite;
-}
-
-@keyframes zany-text {
-  0% {
-    transform: rotate(-4deg);
-  }
-  50% {
-    transform: rotate(4deg);
-  }
-  100% {
-    transform: rotate(-4deg);
-  }
-}
 

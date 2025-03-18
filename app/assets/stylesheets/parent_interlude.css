@@ -56,21 +56,9 @@ article {
 
   p {
     text-align: center;
-    width: 700px;
     font-size: 1.6rem;
     line-height: 1.4;
     font-family: var(--font-family--serif);
     margin-bottom: 2rem;
   }
-
-  .me {
-    width: 100px;
-    height: 100px;
-    border-radius: var(--border-radius--circular);
-    box-shadow: var(--box-shadow--sticker);
-    border: var(--border--theme);
-    border-width: 2px;
-  }
 }
-
-

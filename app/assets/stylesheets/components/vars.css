@@ -10,7 +10,7 @@
   --font-size--base: 18px;
 
   --color--theme: rgb(226, 42, 82);
-  --color--theme--light: rgb(226, 42, 82, 0.2);
+  --color--theme--light: rgb(252, 215, 221);
   --color--white: #FFFFFF;
   --color--purple: #6F00FF;
   --color--black: #222;
@@ -41,6 +41,7 @@
   --border--purple: solid 1px var(--color--purple);
   --border--purple--light: solid 1px var(--color--purple--light);
   --border--theme: solid 1px var(--color--theme);
+  --border--theme--light: solid 1px var(--color--theme--light);
   --border--gray--dashed: dashed 1px var(--color--gray);
 
   --border-radius--circular: 10rem;
