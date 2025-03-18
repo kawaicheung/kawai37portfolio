@@ -128,8 +128,9 @@ article {
   hr {
     width: 350px;
     border: 0;
-    height: 2px;
+    height: 4px;
     background-color: var(--color--gray);
+    border-radius: var(--border-radius--rounded);
     margin: 2rem 0;
   }
 }

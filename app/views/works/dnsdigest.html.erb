@@ -1,4 +1,4 @@
-<h2>Giving hope to struggling <strong>DNS record maintainers</strong>.</h2>
+<h2>Giving hope to struggling <strong>DNS record</strong> managers.</h2>
 <p>
   One joy of designing is to make confusing concepts more approachable. And what's more confusing than an 
   unorganized laundry list of DNS records&mdash;the same ones that control everything about how your domain 
@@ -6,31 +6,46 @@
 </p>
 <p>
   The answer to that question became the inspiration behind <%= link_to "DnsDigest", "https://dnsdigest.com", target: "_blank" %>, 
-  a Rails app I released this past January. It converts your DNS records to an organized, well-written report. 
-  Here's a couple shots from the one-page marketing site:
+  a Rails app I released this past January. It converts your DNS records to an organized, well-written report
+  and detects any potential issues with your records. 
 </p>
-<div class="figure-container off-white">
+<div class="figure-container off-white smaller">
   <figure>
     <%= image_tag "dnsdigest-hero.png", alt: "Stretching" %>
     <figcaption><span><strong>Speaking bluntly:</strong> I got a kick out of writing this tagline. I wanted to get to the heart of the pain I used to feel with DNS.</span></figcaption>
   </figure>
 </div>
-<div class="figure-container">
+<p>
+  On the one-page marketing site, I wanted to highlight the features of DnsDigest by creating a
+  &ldquo;before and after&rdquo; of someone starting hopelessly confused:
+</p>
+<div class="figure-container off-white smaller">
   <figure>
     <%= video_tag "dnsdigest-bubbles.mov", autoplay: true, loop: true, muted: true %>
-    <figcaption><span><strong>Before and after:</strong> An animated bubble quote area demonstrating the benefits of using DnsDigest.</span></figcaption>
+    <figcaption><span><strong>Before and after:</strong> A CSS-animated callout showing the benefits of using DnsDigest.</span></figcaption>
   </figure>
 </div>
+<h3>The Dashboard</h3>
+<p>
+  Inside the app, I wanted the first look of your DNS zone file to feel entirely different from 
+  the laundry list you'd expect. Instead, I consolidated records together into more meaningful 
+  groupings, which became the front doors to each of the more detailed sub-sections.
+</p>
 
+<div class="figure-container off-white">
+  <figure>
+    <%= video_tag "dnsdigest-dashboard.mov", autoplay: true, loop: true, muted: true %>
+  </figure>
+</div>
 <h3>Playing with metaphors</h3>
 <p>
-  DnsDigest felt like a perfect place to play with metaphor in design. Rather than seeing a 
+  I often play with metaphors in design. DnsDigest felt like the perfect place to do it. Rather than seeing a 
   typical list of <span class="dns-label">MX</span> records, I show how they group together
   by priority and what services these emails point to. The
   metaphor of an airline ticket made too much sense to pass up.
 </p>
 <p>
-  Similarly, with <span class="dns-label">A</span>, <span class="dns-label">AAAA</span> , 
+  In a more subtle nudge, with <span class="dns-label">A</span>, <span class="dns-label">AAAA</span> , 
   and <span class="dns-label">CNAME</span> records,
   I display how they map to IP addresses in a format similar to a destination board you would 
   see at a train station.
@@ -53,17 +68,20 @@
     </figcaption>
   </figure>
 </div>
-<h3>Explaining the SPF, DKIM, and DMARC triumverate</h3>
+<h3>Explaining email deliverability</h3>
 <p>
-sdasdf
+  As DNS records are everything when it comes to email deliverability,
+  DnsDigest interprets <span class="dns-label">SPF</span>, 
+  <span class="dns-label">DKIM</span>, and <span class="dns-label">DMARC</span>,
+  even detecting SPF lookup issues and potential alignment issues.
 </p>
-
-<%= render "shared/external_link_button", path: "https://dnsdigest.com/sample", text: "See a sample DNS digest" %>
-
-<p>
-  This was my first full Rails project after 20+ years of working in C# and .NET MVC.
-  I spent a few months building a side project so I could produce something real.
-</p>
+<div class="fanset-three">
+  <%= image_tag "dnsdigest-ed-fan-1.png", alt: "Stretching" %>
+  <%= image_tag "dnsdigest-ed-fan-2.png", alt: "Stretching" %>
+  <%= image_tag "dnsdigest-ed-fan-3.png", alt: "Stretching" %>
+</div>
+<%= render "shared/external_link_button", path: "https://dnsdigest.com/sample", text: "Play with a sample DNS digest" %>
+<hr>
 <p class="note">
   <strong>Running on Rails:</strong>  
   This was my first full Rails project after 20+ years of working in C# and .NET MVC.
