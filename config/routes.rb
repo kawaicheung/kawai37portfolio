@@ -12,7 +12,6 @@ Rails.application.routes.draw do
   root "home#index"
 
   get "pitch" => "pitch#me"
-  get "pitch/what-ill-bring" => "pitch#what_ill_bring"
   get "pitch/why-id-love-this-role" => "pitch#why_id_love_this_role"
 
   get "works" => "works#index"
@@ -20,8 +19,8 @@ Rails.application.routes.draw do
   get "works/dnsdigest" => "works#dnsdigest"
   get "works/naming-things" => "works#naming_things"
   get "works/baseball-scoreboards" => "works#baseball_scoreboards"
-  get "works/shiftlist" => "works#shiftlist"
-  get "works/secret-project" => "works#secret_project"
+
+  get "contact" => "contact#index"
 
   get "writing" => "writing#index"
   get "writing/the-developers-code" => "writing#the_developers_code"

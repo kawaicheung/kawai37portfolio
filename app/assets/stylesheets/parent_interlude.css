@@ -62,6 +62,15 @@ article {
     font-family: var(--font-family--serif);
     margin-bottom: 2rem;
   }
+
+  .me {
+    width: 100px;
+    height: 100px;
+    border-radius: var(--border-radius--circular);
+    box-shadow: var(--box-shadow--sticker);
+    border: var(--border--theme);
+    border-width: 2px;
+  }
 }
 
 

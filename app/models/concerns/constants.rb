@@ -9,15 +9,12 @@ module Constants
     :works_dnsdigest_path,
     :works_baseball_scoreboards_path,
     :works_naming_things_path,
-    :works_shiftlist_path,
-    :works_secret_project_path,
-    :writing_path,
-    :writing_the_developers_code_path,
-    :writing_top_picks_path
+    :contact_path
   ].freeze
 
   NAVIGATION_SECTIONS = [
     { name: "The Pitch", path: "pitch" },
-    { name: "The Work", path: "works" }
+    { name: "The Work", path: "works" },
+    { name: "Contact Me", path: "contact" }
   ].freeze
 end
