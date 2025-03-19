@@ -15,7 +15,7 @@
  *= require_self
  */
 
- body {
+body {
   background-color: var(--color--white);
   color: var(--color--black);
 }
@@ -29,7 +29,7 @@ main {
 
   @media (max-width: 768px) {
     height: auto;
-    padding: 4rem 0;
+    padding: 4rem 0 8rem 0;
   }
 }
 
