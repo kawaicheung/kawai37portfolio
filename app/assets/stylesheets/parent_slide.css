@@ -127,12 +127,12 @@ article {
   }
 
   hr {
-    width: 350px;
+    width: 100%;
     border: 0;
     height: 4px;
     background-color: var(--color--theme);
     border-radius: var(--border-radius--rounded);
-    margin: 2rem 0;
+    margin: 2rem 0 4rem 0;
   }
 }
 

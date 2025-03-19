@@ -6,53 +6,97 @@
 </p>
 <p>
   The answer to that question became the inspiration behind <%= link_to "DnsDigest", "https://dnsdigest.com", target: "_blank" %>, 
-  a Rails app I released this past January. It converts your DNS records to an organized, well-written report
-  and detects any potential issues with your records. 
+  a Rails app I created and released this past January. It converts your DNS records to an organized 
+  report and detects any potential issues with your records. 
 </p>
-<div class="figure-container off-white smaller">
+<div class="figure-container off-white">
   <figure>
     <%= image_tag "dnsdigest-hero.png", alt: "Stretching" %>
-    <figcaption><span><strong>Speaking bluntly:</strong> I got a kick out of writing this tagline. I wanted to get to the heart of the pain I used to feel with DNS.</span></figcaption>
+    <figcaption><span><strong>Speaking bluntly:</strong> I got a kick out of writing this marketing page tagline. Getting to the heart of the pain I feel with DNS.</span></figcaption>
   </figure>
-</div>
-<p>
-  On the one-page marketing site, I wanted to highlight the features of DnsDigest by creating a
-  &ldquo;before and after&rdquo; of someone starting hopelessly confused:
-</p>
-<div class="figure-container off-white smaller">
   <figure>
     <%= video_tag "dnsdigest-bubbles.mov", autoplay: true, loop: true, muted: true %>
     <figcaption><span><strong>Before and after:</strong> A CSS-animated callout showing the benefits of using DnsDigest.</span></figcaption>
   </figure>
 </div>
+<%= render "shared/external_link_button", path: "https://dnsdigest.com", text: "Visit the DNS digest site" %>
+
+<hr>
 <h3>The Dashboard</h3>
 <p>
   Inside the app, I wanted the first look of your DNS zone file to feel entirely different from 
   the laundry list you'd expect. Instead, I consolidated records together into more meaningful 
   groupings, which became the front doors to each of the more detailed sub-sections.
 </p>
-
 <div class="figure-container off-white">
   <figure>
-    <%= video_tag "dnsdigest-dashboard.mov", autoplay: true, loop: true, muted: true %>
+    <%= video_tag "dnsdigest-dashboard.mov", playsinline: true, autoplay: true, loop: true, muted: true %>
   </figure>
 </div>
+<hr>
 <h3>Playing with metaphors</h3>
 <p>
-  I often play with metaphors in design. DnsDigest felt like the perfect place to do it. Rather than seeing a 
-  typical list of <span class="dns-label">MX</span> records, I show how they group together
-  by priority and what services these emails point to. The
-  metaphor of an airline ticket made too much sense to pass up.
+  So much of DNS is about routing and destinations. This project seemed like a good place to play with metaphors.
 </p>
+<div class="figure-container smaller">
+  <figure>
+    <%= video_tag "dnsdigest-mx.mov", playsinline: true, autoplay: true, loop: true, muted: true %>
+    <figcaption>
+      <span>Rather than seeing a 
+      typical list of <span class="dns-label">MX</span> records, I show how they group together
+      by priority and what services these emails point to. The
+      metaphor of an airline ticket made too much sense to pass up.
+      </span>
+    </figcaption>
+  </figure>
+</div>
+<div class="figure-container smaller">
+  <figure>
+    <%= video_tag "dnsdigest-mappings.mov", playsinline: true, autoplay: true, loop: true, muted: true %>
+    <figcaption>
+      <span>
+        In a more subtle nudge, with <span class="dns-label">A</span>, <span class="dns-label">AAAA</span> , 
+        and <span class="dns-label">CNAME</span> records,
+        I display how they map to IP addresses in a format similar to a destination board you would 
+        see at a train station.
+      </span>
+    </figcaption>
+  </figure>
+</div>
+<hr>
+<h3>Explaining email deliverability</h3>
 <p>
-  In a more subtle nudge, with <span class="dns-label">A</span>, <span class="dns-label">AAAA</span> , 
-  and <span class="dns-label">CNAME</span> records,
-  I display how they map to IP addresses in a format similar to a destination board you would 
-  see at a train station.
+  For <span class="dns-label">SPF</span> and <span class="dns-label">DMARC</span> records, I show 
+  how to interpret their <span class="dns-label">TXT</span> values. I also built an SPF lookup crawler
+  that counts unique lookups to determine if they are over the recommended 10 maximum lookup limit.
+</p>
+<div class="figure-container smaller">
+  <figure>
+    <%= video_tag "dnsdigest-spf.mov", playsinline: true, autoplay: true, loop: true, muted: true %>
+  </figure>
+</div>
+<hr>
+<h3>Diagnostics view</h3>
+<p>
+  I created a Diagnostics view that evaluates
+  your records based on a series of checks. Using Stimulus, clicking a row triggers a 
+  modal via a Turbo frame replacement to show more details about the diagnostic check.
 </p>
 <div class="figure-container">
   <figure>
-    <%= video_tag "dnsdigest-mx.mov", autoplay: true, loop: true, muted: true %>
+    <%= video_tag "dnsdigest-diagnostics.mov", playsinline: true, autoplay: true, loop: true, muted: true %>
+  </figure>
+</div>
+<hr>
+<h3>Back-office love</h3>
+<p>
+  I always die a little inside when I see a beautiful app that has a clunky, ugly admin interface. I enjoy 
+  attending to the back-office just as much as the customer-facing side. 
+</p>
+
+<div class="figure-container">
+  <figure>
+    <%= image_tag "dnsdigest-admin-1.png", alt: "Stretching" %>
     <figcaption>
       <span>
         <strong>MX records:</strong> Modeled as airline tickets.
@@ -60,7 +104,7 @@
     </figcaption>
   </figure>
   <figure>
-    <%= video_tag "dnsdigest-mappings.mov", autoplay: true, loop: true, muted: true %>
+    <%= image_tag "dnsdigest-admin-2.png", alt: "Stretching" %>
     <figcaption>
       <span>
         <strong>Mapping records:</strong> Modeled as a train schedule board.
@@ -68,24 +112,7 @@
     </figcaption>
   </figure>
 </div>
-<h3>Explaining email deliverability</h3>
-<p>
-  As DNS records are everything when it comes to email deliverability,
-  DnsDigest interprets <span class="dns-label">SPF</span>, 
-  <span class="dns-label">DKIM</span>, and <span class="dns-label">DMARC</span>,
-  even detecting SPF lookup issues and potential alignment issues.
-</p>
-<div class="fanset-three">
-  <%= image_tag "dnsdigest-ed-fan-1.png", alt: "Stretching" %>
-  <%= image_tag "dnsdigest-ed-fan-2.png", alt: "Stretching" %>
-  <%= image_tag "dnsdigest-ed-fan-3.png", alt: "Stretching" %>
-</div>
-<%= render "shared/external_link_button", path: "https://dnsdigest.com/sample", text: "Play with a sample DNS digest" %>
 <hr>
-<p class="note">
-  <strong>Running on Rails:</strong>  
-  This was my first full Rails project after 20+ years of working in C# and .NET MVC.
-  MVC is second nature to me and Active Record has all the sensibilities I would want coming 
-  from using other ORMs, so the ramp-up has been quick. I'm hungry to learn more from both the designers and 
-  programmers at 37signals.
-</p>
+<p>By the way, everything I've showed above (besides the admin) can be viewed in a sample DNS digest 
+  that's linked from the site, and below.</p>
+<%= render "shared/external_link_button", path: "https://dnsdigest.com/sample", text: "Play with a sample DNS digest" %>
