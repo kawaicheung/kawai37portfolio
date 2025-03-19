@@ -1,38 +1,62 @@
 <h2>Making the <strong>code reading</strong> experience a little more delightful.</h2>
 <p>
-  They say there are two hard things about programming: Cache invalidation and naming things. 
-  Let me offer a third: Trying to read about someone else's code.
+  Over the years of building DoneDone, I kept a list of a bunch of examples of how I like to name things in code.
+  In 2020, decided to create a small web-based book, entitled <strong>Naming Things</strong>, to share them.
 </p>
-<p>
-  I find it is hard to reference code and talk abot it at the same time, so I developed a simple way to highlight code.
-  Just using the most basic of js.
-</p>
-<div class="figure-container ">
-    <figure>
-      <%= video_tag "nt.mov", autoplay: true, loop: true, muted: true, controls: true %>
-      <figcaption><span><strong>Simple little touches:</strong> Even when describing small snippets of code, it's hard to quickly pinpoint
-      exactly which part the author is referring to. Here, you can rollover the text to see the 
-      exact portion highlighted.</span>
-      </figcaption>
-    </figure>
+<div class="figure-container two-by-one black">
+  <figure>
+    <%= video_tag "naming-things-desktop.mov", autoplay: true, loop: true, muted: true, controls: true %>
+  </figure>
+  <figure>
+    <%= video_tag "naming-things-responsive.mov", autoplay: true, loop: true, muted: true, controls: true %>
+  </figure>
 </div>
  <%= render "shared/external_link_button", path: "https://kawaicheung.io/naming-things", text: "See the webbook here!" %>  
+<hr>
+<h3>There are <strong>three</strong> hard things about programming</h3>
+<p>
+  They say there are two hard things about programming: Cache invalidation and naming things. While working 
+  on this project, I discovered a third: <strong>Explaining code you've written to someone who hasn't seen it before.</strong>
+</p>
+<p>
+  I've had this problem with physical books and even documentation. Code authors suffer from the &ldquo;curse of knowledge&rdquo;
+  just as much as other professionals do. They typically don't explain the entire context of code they've become so familiar with. 
+</p>
+<p>
+  I wanted to make the experience of reading my book a little better. When rolling your mouse over a highlighted bit of text, 
+  the relevant code automatically highlights. You can take as long as you need to read the context and the code without getting lost.
 <div class="figure-container">
   <figure>
-    <%= image_tag "nt-0.png", alt: "Stretching" %>
-    <figcaption>Or, everything you do ends up kind of feeling like you? It's that feeling of a band past its prime churning out what sounds like them. The innovation is gone.</figcaption>
-  </figure>
-
-  <figure>
-    <%= image_tag "nt-1.png", alt: "Stretching" %>
-    <figcaption>Or, everything you do ends up kind of feeling like you? It's that feeling of a band past its prime churning out what sounds like them. The innovation is gone.</figcaption>
+    <%= video_tag "naming-things-code-highlight.mov",  autoplay: true, loop: true, muted: true, controls: true %>
+    <figcaption>
+      <span><strong>Simple little touches:</strong> Using plain old jQuery and HTML data attributes, I tied
+      my explanations of certain code with the code itself. Each highlighted text has a <span class="code">data-code-ref</span>
+      attribute whose value maps to code wrapped in<span class="code">&lt;span&gt;</span> tags with the same class name.</span>
+    </figcaption>
   </figure>
 </div>
 <hr>
+<h3>Warm and fuzzy code</h3>
 <p>
-  Writing well is an important part of my work diet. This is not a chore to me&mdash;it's part of what makes doing
-  all this stuff fun and rewarding. 
+  I am obsessive about the details of how words render on a page: Font styles, weights, letter spacing, line heights, padding
+  between different sections and paragraphs. 
 </p>
+<div class="figure-container smaller">
+  <figure>
+    <%= image_tag "naming-things-style.png", alt: "Stretching" %>
+  </figure>
+</div>
 <p>
-  Next up, a tasting flight of my writing and how I like to communicate.
+  For this book, I wanted the content to have a warmth and approachability not typical of most technical books. 
+  I loved the playfulness of <%= link_to "Fredericka the Great", "https://fonts.google.com/specimen/Fredericka+the+Great" %>
+  for the chapter titles and the inviting nature of <%= link_to "Lora", "https://fonts.google.com/specimen/Lora" %> for the body text.
+</p>
+<p class="note">
+  I ended up repackaging this webbook as <%= link_to "an ebook through Leanpub", "https://leanpub.com/landing-on-a-great-name", target: "_blank" %> 
+  under the new title &ldquo;Landing on a Great Name&rdquo;.
+</p>
+<hr>
+<p>
+  Next up, I've curated a few of the things I've written, drawn, and spoken about so you have a 
+  sense of how I try to communicate ideas.
 </p>

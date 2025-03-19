@@ -15,8 +15,10 @@
     <% end %>
   </div>
   <div class="keyboard-instructions <%= reversed ? "reversed" : "" %>">
-    Or use
-      <span class="key">&larr;</span>
-      <span class="key">&rarr;</span> keys
+    <% if deduced_next_path %>
+      Or use <span class="key">&larr;</span> <span class="key">&rarr;</span> keys
+    <% else %>
+      Or use <span class="key">&larr;</span> key
+    <% end %>
   </div>
 </div>

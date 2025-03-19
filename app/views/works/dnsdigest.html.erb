@@ -36,16 +36,16 @@
 <hr>
 <h3>Playing with metaphors</h3>
 <p>
-  So much of DNS is about routing and destinations. This project seemed like a good place to play with metaphors.
+  So much of DNS is about routing and destinations. This project seemed like a great place to play with metaphors
+  so DNS newbies could grasp concepts more quickly.
 </p>
 <div class="figure-container smaller">
   <figure>
     <%= video_tag "dnsdigest-mx.mov", playsinline: true, autoplay: true, loop: true, muted: true %>
     <figcaption>
-      <span>Rather than seeing a 
+      <span><strong>SMTP &rarr; IMAP:</strong> Rather than seeing a 
       typical list of <span class="dns-label">MX</span> records, I show how they group together
-      by priority and what services these emails point to. The
-      metaphor of an airline ticket made too much sense to pass up.
+      by priority and what services these emails point to in the design of airline tickets.
       </span>
     </figcaption>
   </figure>
@@ -55,6 +55,7 @@
     <%= video_tag "dnsdigest-mappings.mov", playsinline: true, autoplay: true, loop: true, muted: true %>
     <figcaption>
       <span>
+        <strong>DNS express:</strong> 
         In a more subtle nudge, with <span class="dns-label">A</span>, <span class="dns-label">AAAA</span> , 
         and <span class="dns-label">CNAME</span> records,
         I display how they map to IP addresses in a format similar to a destination board you would 
@@ -97,22 +98,14 @@
 <div class="figure-container">
   <figure>
     <%= image_tag "dnsdigest-admin-1.png", alt: "Stretching" %>
-    <figcaption>
-      <span>
-        <strong>MX records:</strong> Modeled as airline tickets.
-      </span>
-    </figcaption>
   </figure>
   <figure>
     <%= image_tag "dnsdigest-admin-2.png", alt: "Stretching" %>
-    <figcaption>
-      <span>
-        <strong>Mapping records:</strong> Modeled as a train schedule board.
-      </span>
-    </figcaption>
   </figure>
 </div>
 <hr>
-<p>By the way, everything I've showed above (besides the admin) can be viewed in a sample DNS digest 
-  that's linked from the site, and below.</p>
+<p>
+  By the way, everything I've showed above (besides the admin) can be viewed in a sample DNS digest 
+  that's linked below. I hope you'll take a look.
+</p>
 <%= render "shared/external_link_button", path: "https://dnsdigest.com/sample", text: "Play with a sample DNS digest" %>

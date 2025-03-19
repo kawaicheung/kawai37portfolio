@@ -18,8 +18,23 @@
     }
   }
 
+  &.black {
+    figure {
+      background-color: var(--color--black);
+
+      figcaption {
+        color: var(--color--white);
+      }
+    }
+  }
+
   & + h3 {
     margin-top: 1.6rem;
+  }
+
+  &.two-by-one {
+    display: grid;
+    grid-template-columns: 2.57fr 1fr;
   }
 }
 
@@ -31,7 +46,7 @@ figure {
   box-shadow: var(--box-shadow--figure);
 
   img, video {
-    border-radius: var(--border-radius--rectanglish);
+    border-radius: var(--border-radius--rounded-inseam);
     border: var(--border--gray--light);
   }
   

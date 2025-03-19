@@ -46,6 +46,7 @@
 
   --border-radius--circular: 10rem;
   --border-radius--rounded: 2rem;
+  --border-radius--rounded-inseam: 1rem;
   --border-radius--rectanglish: 0.25rem;
 
   --box-shadow--card: 0 2px 8px rgba(0, 0, 0, .15);
