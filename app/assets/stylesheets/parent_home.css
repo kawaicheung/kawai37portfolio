@@ -26,6 +26,11 @@ main {
   justify-content: center;
   align-items: center;
   height: 100vh;
+
+  @media (max-width: 768px) {
+    height: auto;
+    padding: 4rem 0;
+  }
 }
 
 article {
@@ -35,6 +40,11 @@ article {
   display: flex;
   flex-direction: column;
   align-items: center;
+  
+  @media (max-width: 768px) {
+    max-width: 100%;
+    padding: 0;
+  }
 
   .hello-sticker {
     position: relative;
@@ -50,6 +60,10 @@ article {
     margin-bottom: 3rem;
     width: 450px;
     height: 280px;
+
+    @media (max-width: 768px) {
+      width: 100%;
+    }
 
     .hello {
       display: flex;
@@ -93,6 +107,10 @@ article {
       .pronunciation {
         font-size: 1.2rem;
       }
+
+      @media (max-width: 768px) {
+        font-size: 2.4rem;
+      }
     }
 
     .me {
@@ -107,6 +125,11 @@ article {
       border-width: 2px;
       opacity: 0;
       animation: appearAndBounce 0.25s ease-out 1.2s forwards;
+
+      @media (max-width: 768px) { 
+        right: 0;
+        transform: translateX(50%);
+      }
     }
   }
   
@@ -119,15 +142,20 @@ article {
     font-weight: 300;
     letter-spacing: -0.1rem;
     margin-bottom: 2rem;
+
+    @media (max-width: 768px) {
+      font-size: 3rem;
+    }
   }
 
   h3 {
     font-size: 1.4rem;
-    line-height: 1.6;
+    line-height: 1.2;
     font-family: var(--font-family--display);
     letter-spacing: -0.01rem;
     margin-bottom: 2rem;
     font-weight: 400;
+    text-align: center;
   }
 
   p {

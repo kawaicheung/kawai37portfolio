@@ -1,6 +1,10 @@
 .no-break {
   white-space: nowrap;
   overflow-wrap: normal;
+
+  @media (max-width: 768px) {
+    white-space: normal;
+  }
 }
 
 .circular {
