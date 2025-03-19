@@ -40,7 +40,6 @@ main {
 article {
   position: relative;
   max-width: var(--width--article);
-  width: 90%;
   margin-top: 2rem;
   margin-bottom: 10rem;
   padding: 4rem;
@@ -48,6 +47,10 @@ article {
   flex-direction: column;
   align-items: center;
 
+  @media (max-width: 768px) {
+    padding: 0 2rem;
+  }
+  
   h2 {
     font-family: var(--font-family--display);
     text-align: center;
@@ -90,6 +93,10 @@ article {
     margin-bottom: 0.5rem;
     letter-spacing: -0.02rem;
     line-height: 1;
+
+    @media (max-width: 768px) {
+      width: auto;
+    }
   }
 
   p {
@@ -105,6 +112,10 @@ article {
       padding: var(--padding--module);
       border-radius: 1rem;
       background-color: var(--color--theme--light);
+    }
+
+    @media (max-width: 768px) {
+      width: auto;
     }
   }
 
@@ -123,6 +134,10 @@ article {
 
     li {
       margin-bottom: 1rem;
+    }
+
+    @media (max-width: 768px) {
+      width: auto;
     }
   }
 

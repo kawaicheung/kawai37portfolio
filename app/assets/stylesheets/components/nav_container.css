@@ -4,6 +4,11 @@
   flex-direction: column;
   gap: 1rem;
   align-items: center;
+
+  @media (max-width: 768px) {
+    visibility: hidden;
+    pointer-events: none;
+  }
   
   .nav-map {
     margin-top: 4rem;
