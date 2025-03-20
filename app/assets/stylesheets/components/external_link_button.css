@@ -9,8 +9,8 @@
   border-width: 2px;
   border-radius: var(--border-radius--circular);
   text-decoration: none;
-  line-height: 0;
-  padding: 0 2rem;
+  line-height: 1;
+  padding: 2rem;
   box-sizing: border-box;
   font-size: 1.5rem;
   color: var(--color--white);
@@ -19,6 +19,10 @@
   margin-bottom: 2rem;
   font-weight: 700;
   box-shadow: var(--box-shadow--button);
+
+  @media (max-width: 768px) {
+    font-size: 1.2rem;
+  }
 
   &:hover {
     transform: scale(1.05);

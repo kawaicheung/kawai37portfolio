@@ -27,6 +27,11 @@ header {
   width: 100%;
   padding: 2rem;
   z-index: var(--z-index--header);
+
+  @media (max-width: 768px) {
+    padding: 1rem 2rem 4rem 2rem;
+    background: linear-gradient(to bottom, var(--color--black) 50%, transparent 100%);
+  }
 }
 
 main {
@@ -51,13 +56,21 @@ article {
     font-weight: 500;
     font-family: var(--font-family--display);
     line-height: 1;
+
+    @media (max-width: 768px) {
+      font-size: 5rem;
+    }
   }
 
   p {
     text-align: center;
-    font-size: 1.6rem;
+    font-size: var(--font-size--content);
     line-height: 1.4;
     font-family: var(--font-family--serif);
     margin-bottom: 2rem;
+
+    @media (max-width: 768px) {
+      font-size: var(--font-size--content--mobile);
+    }
   }
 }

@@ -59,7 +59,11 @@
   --width--content: 700px;
 
   --padding--module: 1.4rem;
+  --padding--module--mobile: 1rem;
   
   --z-index--header: 100;
   --z-index--nav-container: 200;
+
+  --font-size--content: 1.5rem; 
+  --font-size--content--mobile: 1.4rem;
 }

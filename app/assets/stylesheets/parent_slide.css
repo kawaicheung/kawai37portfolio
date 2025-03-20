@@ -31,7 +31,8 @@ header {
   z-index: var(--z-index--header);
 
   @media (max-width: 768px) {
-    padding: 1rem 2rem;
+    padding: 1rem 2rem 4rem 2rem;
+    background: linear-gradient(to bottom, var(--color--white) 50%, transparent 100%);
   }
 }
 
@@ -54,6 +55,9 @@ article {
   @media (max-width: 768px) {
     padding: 0 2rem;
     margin-top: 6rem;
+    margin-bottom: 4rem;
+    width: 100%;
+    max-width: 100%;
   }
   
   h2 {
@@ -82,7 +86,6 @@ article {
   h3 {
     width: var(--width--content);
     font-family: var(--font-family--display);
-    max-width: 1000px;
     font-size: 2.2rem;
     line-height: 1.2;
     font-weight: 300;
@@ -91,6 +94,10 @@ article {
 
     strong {
       font-weight: 600;
+    }
+
+    @media (max-width: 768px) {
+      width: 100%;
     }
   }
 
@@ -104,13 +111,13 @@ article {
     line-height: 1;
 
     @media (max-width: 768px) {
-      width: auto;
+      width: 100%;
     }
   }
 
   p {
     width: var(--width--content);
-    font-size: 1.5rem;
+    font-size: var(--font-size--content);
     line-height: 1.4;
     font-family: var(--font-family--serif);
     margin-bottom: 2rem;
@@ -124,8 +131,8 @@ article {
     }
 
     @media (max-width: 768px) {
-      width: auto;
-      font-size: 1.3rem;
+      width: 100%;
+      font-size: var(--font-size--content--mobile);
     }
   }
 
@@ -135,7 +142,7 @@ article {
 
   ul, ol {
     font-family: var(--font-family--serif);
-    font-size: 1.5rem;
+    font-size: var(--font-size--content);
     width: var(--width--content);
     margin-bottom: 2rem;
     margin-left: 0;
@@ -146,7 +153,8 @@ article {
     }
 
     @media (max-width: 768px) {
-      width: auto;
+      width: 100%;
+      font-size: var(--font-size--content--mobile);
     }
   }
 

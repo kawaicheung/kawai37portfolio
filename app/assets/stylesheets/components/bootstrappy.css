@@ -7,6 +7,20 @@
   }
 }
 
+.mobile-right {
+  @media (max-width: 768px) {
+    align-self: flex-end;
+  }
+}
+
+.mobile-fixed-right {
+  @media (max-width: 768px) {
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+  }
+}
+
 .dns-label {
   font-family: var(--font-family--monospace);
   font-size: 1rem;

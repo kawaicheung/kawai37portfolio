@@ -3,12 +3,24 @@
   gap: 1rem;
   margin-bottom: 2rem;
 
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+
   &.smaller {
     width: var(--width--content);
+
+    @media (max-width: 768px) {
+      width: 100%;
+    }
   }
 
   &.smallest {
     width: calc(var(--width--content) * .8);
+
+    @media (max-width: 768px) {
+      width: 100%;
+    }
   }
 
   &.off-white {
@@ -44,6 +56,10 @@ figure {
   border: var(--border--gray--light);
   border-radius: var(--border-radius--rounded);
   box-shadow: var(--box-shadow--figure);
+
+  @media (max-width: 768px) {
+    padding: var(--padding--module--mobile);
+  }
 
   img, video {
     border-radius: var(--border-radius--rounded-inseam);

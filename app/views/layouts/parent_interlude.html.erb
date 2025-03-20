@@ -3,7 +3,7 @@
   <head>
     <title><%= content_for(:title) || "Ka Wai Cheung Portfolio for 37signals" %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="theme-color" content="#ffffff" />
+    <meta name="theme-color" content="#222222" />
     <meta name="apple-mobile-web-app-capable" content="yes">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -26,7 +26,9 @@
       <article>
         <%= yield %>
         <% if deduced_next_path %>
-          <%= render "shared/next_button", path: deduced_next_path, large: true, reversed: true %>
+          <div class="mobile-fixed-right">
+            <%= render "shared/next_button", path: deduced_next_path, large: true, reversed: true %>
+          </div>
         <% end %>
       </article>
     </main>

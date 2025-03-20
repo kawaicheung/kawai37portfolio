@@ -155,14 +155,6 @@ article {
     font-weight: 400;
     text-align: center;
   }
-
-  p {
-    width: 700px;
-    font-size: 1.6rem;
-    line-height: 1.4;
-    font-family: var(--font-family--serif);
-    margin-bottom: 2rem;
-  }
 }
 
 @keyframes appearAndBounce {
