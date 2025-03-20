@@ -7,10 +7,6 @@
   }
 }
 
-.circular {
-  border-radius: var(--border-radius--circular);
-}
-
 .dns-label {
   font-family: var(--font-family--monospace);
   font-size: 1rem;

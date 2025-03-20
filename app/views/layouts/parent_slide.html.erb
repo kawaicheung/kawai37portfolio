@@ -25,7 +25,9 @@
       <%= render "shared/nav_container" %>
       <article>
         <%= yield %>
-        <%= render "shared/next_button", path: deduced_next_path, large: true %>
+        <% if deduced_next_path %>
+          <%= render "shared/next_button", path: deduced_next_path, large: true %>
+        <% end %>
       </article>
     </main>
   </body>

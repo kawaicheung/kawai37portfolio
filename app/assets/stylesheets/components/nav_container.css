@@ -41,11 +41,15 @@
           }
 
           &:hover {
-            border-bottom: 3px solid var(--color--theme--light);
+            border-bottom: 3px solid var(--color--black);
           }
 
           &.reversed {
             color: var(--color--white);
+
+            &:hover {
+              border-bottom: 3px solid var(--color--white);
+            }
           }
         }
       }

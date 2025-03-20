@@ -6,7 +6,7 @@
   height: 100%;
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);  
-  animation: slideUp 0.5s ease-out 1s forwards;
+  animation: slideUp 0.7s ease-out 1.5s forwards;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;

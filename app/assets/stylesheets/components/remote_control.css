@@ -78,6 +78,10 @@
       color: var(--color--black);
     }
   }
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 }
 
 @keyframes keyboardFadeIn {

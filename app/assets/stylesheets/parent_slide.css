@@ -29,6 +29,10 @@ header {
   width: 100%;
   padding: 2rem;
   z-index: var(--z-index--header);
+
+  @media (max-width: 768px) {
+    padding: 1rem 2rem;
+  }
 }
 
 main {
@@ -49,6 +53,7 @@ article {
 
   @media (max-width: 768px) {
     padding: 0 2rem;
+    margin-top: 6rem;
   }
   
   h2 {
@@ -63,6 +68,10 @@ article {
 
     strong {
       font-weight: 600;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 3rem;
     }
   }
 
@@ -116,6 +125,7 @@ article {
 
     @media (max-width: 768px) {
       width: auto;
+      font-size: 1.3rem;
     }
   }
 

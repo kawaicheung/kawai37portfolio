@@ -47,9 +47,8 @@ article {
   height: 100%;
 
   h2 {
-    font-size: 8rem;
-    font-weight: 700;
-    letter-spacing: 0.2rem;
+    font-size: 6rem;
+    font-weight: 500;
     font-family: var(--font-family--display);
     line-height: 1;
   }
