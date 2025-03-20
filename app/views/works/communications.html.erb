@@ -1,5 +1,90 @@
-<h2>A few things I've written, spoken, and illustrated.</h2>
+<h2>Speak one. Write one. Draw one.</h2>
 <p>
-  They say there are two hard things about programming: Cache invalidation and naming things. 
-  Let me offer a third: Trying to read about someone else's code.
+  I love that good communication is a core strength of every 37signals hire. 
+  Though I wasn't forward-thinking enough to keep an archive of my
+  most epic emails and Basecamp Classic threads, here are a few things I've written, spoken, and illustrated.
 </p>
+<hr>
+<h3><strong>Real Code Series:</strong> Talking about my design and development thought-process</h3>
+<p>
+  While writing is the communication form I've spent the most time practicing, occasionally, I like to 
+  explain things in front of a camera. Here are three videos from a series I produced on DoneDone called 
+  &ldquo;Real Code&rdquo; that go into small details of my UI, UX, and development thought-process.
+</p>
+<div class="figure-container" style="margin-bottom: 4rem;">
+  <figure style="rotate: -5deg;transform: translateY(15px);">
+    <%= link_to "https://www.youtube.com/watch?v=PNnenqznRD4", target: "_blank", class: "video-thumbnail" do %>
+      <%= image_tag "realcode-1.png", alt: "Video thumbnail for 'Less words, more meaning'" %>
+    <% end %>
+    <figcaption>
+      <span>A video on reducing words while increasing comprehension in UI.</span>
+    </figcaption>
+  </figure>
+  <figure>
+    <%= link_to "https://www.youtube.com/watch?v=amUCxkcRhVo", target: "_blank", class: "video-thumbnail" do %>
+      <%= image_tag "realcode-2.png", alt: "Video thumbnail for 'Improving UX by omission'" %>
+    <% end %>
+    <figcaption>
+      <span>How I think through implementation tradeoffs in design.</span>
+    </figcaption>
+  </figure>
+  <figure style="rotate: 5deg;transform: translateY(15px);">
+    <%= link_to "https://www.youtube.com/watch?v=pJ9TiCs0TSQ", target: "_blank", class: "video-thumbnail" do %>
+      <%= image_tag "realcode-3.png", alt: "Video thumbnail for 'Handling responses optimistically'" %>
+    <% end %>
+    <figcaption>
+      <span>A simple approach to snappier, more immediate responses in UX.</span>
+    </figcaption>
+  </figure>
+</div>
+<p>
+  If you're interested in seeing some more, here's the 
+  <%= link_to "full playlist", "https://www.youtube.com/playlist?list=PL055Epbe68fK7yM8Yp63Z8AcC1TM0kIYD", target: "_blank" %>!
+</p>
+<hr>
+<h3><strong>The Developer&rsquo;s Code:</strong> A book on developer life</h3>
+<p>
+  I love the idea of &ldquo;selling your by-products.&rdquo; Thanks Rework!
+</p>
+<div class="book-view">
+  <figure>
+    <%= image_tag "tdc-1.png", alt: "The Developer's Code book website" %>
+    <figcaption>
+      <span><strong>Mark(eting) my words</strong>: I designed this one-pager to accompany the published book. It's long gone now but still lives in the annals of the Wayback Machine.</span>
+      <%= render "shared/external_link_button", path: "https://web.archive.org/web/20120108043147/http://www.thedeveloperscode.com/", text: "See the archived site!" %>
+    </figcaption>
+  </figure>
+  <div class="meta-info">
+<p>
+  About 15 years ago, I curated a number of blog posts I had written over the prior decade and created a 
+  web-based book about the life of a software developer. (Apparently, I love making web-based books!)
+      I shopped it around for a year until the Pragmatic Bookshelf took a chance on it. It was published in 2012. 
+    </p>
+    <p>A few chapters from the book:</p>
+    <ul>
+      <li>  
+        <%= link_to "https://media.pragprog.com/titles/kcdc/intro.pdf", target: "_blank" do %>
+          <i class="far fa-file-pdf"></i> 
+          <span>Introduction</span>
+          <i class="fas fa-external-link-alt"></i>
+        <% end %>
+      </li>
+      <li>
+        <%= link_to "https://media.pragprog.com/titles/kcdc/ivory.pdf", target: "_blank" do %>
+          <i class="far fa-file-pdf"></i> 
+          <span>The “Ivory Tower” Architect</span>
+          <i class="fas fa-external-link-alt"></i>
+        <% end %>
+      </li>
+      <li>
+        <%= link_to "https://media.pragprog.com/titles/kcdc/simplicity.pdf", target: "_blank" do %>
+          <i class="far fa-file-pdf"></i> 
+          <span>The Simplicity Paradox</span>
+          <i class="fas fa-external-link-alt"></i>
+        <% end %>
+      </li>
+    </ul>
+  </div>
+</div>
+
+

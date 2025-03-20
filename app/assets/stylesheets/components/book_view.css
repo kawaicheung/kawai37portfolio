@@ -1,0 +1,48 @@
+.book-view {
+  display: grid;
+  grid-template-columns: 1.8fr 1fr;
+  margin-bottom: 2rem;
+  width: var(--width--article);
+
+  .meta-info {
+    padding: var(--padding--module);
+
+    p, ul {
+      width: auto;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        margin-bottom: 0.5rem;
+      }
+
+      a {
+        display: flex;
+        width: 100%;
+        gap: 0.5rem;
+        border: var(--border--theme);
+        background: var(--color--theme--light);
+        border-radius: var(--border-radius--rounded);
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+        align-items: center;
+        text-decoration: none;
+        color: var(--color--theme);
+        font-family: var(--font-family--sans-serif);
+        font-weight: 600;
+
+        &:hover {
+          background: var(--color--theme--light);
+        }
+
+        > *:last-child {
+          margin-left: auto;
+        }
+      }
+    }
+  }
+}
