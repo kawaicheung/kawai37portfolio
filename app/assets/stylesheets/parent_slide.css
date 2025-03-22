@@ -27,7 +27,7 @@ header {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  padding: 2rem;
+  padding: 2rem 2rem 0 2rem;
   z-index: var(--z-index--header);
 
   @media (max-width: 768px) {
