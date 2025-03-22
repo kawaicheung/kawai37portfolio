@@ -11,16 +11,29 @@
 </p>
 <div class="figure-container off-white">
   <figure>
-    <%= image_tag "dnsdigest-hero.png", alt: "Stretching" %>
+    <%= image_tag "dnsdigest-hero.png", alt: "A screenshot of the DnsDigest hero area." %>
     <figcaption><span><strong>Speaking bluntly:</strong> I got a kick out of writing this marketing page tagline. Getting to the heart of the pain I feel with DNS.</span></figcaption>
   </figure>
   <figure>
-    <%= video_tag "dnsdigest-bubbles.mov", autoplay: true, loop: true, muted: true %>
+    <%= image_tag "dnsdigest-bubbles.png", alt: "A screenshot of animated bubble quotes from DnsDigest." %>
     <figcaption><span><strong>Before and after:</strong> A CSS-animated callout showing the benefits of using DnsDigest.</span></figcaption>
   </figure>
 </div>
 <%= render "shared/external_link_button", path: "https://dnsdigest.com", text: "Visit the DNS digest site" %>
-
+<hr>
+<h3>An early homepage alternative</h3>
+<p>
+  When I begin a large project, I often start from left field. My original idea for DnsDigest was to scan DNS records for 
+  any domain name you entered. I built this HTML-and-CSS only homepage as a postcard, where you could just type in your domain name. I scratched this approach
+  but thought it was fun to share.
+</p>
+<div class="figure-container">
+  <figure>
+    <%= image_tag "early-better-dns.png", alt: "A screenshot of an early version of the DNS digest homepage." %>
+     <figcaption><span><strong>Postcard version:</strong> An early, quite different approach to the homepage. 
+     This was done in HTML and CSS only, using radial and linear gradients to mimic a stamped ink effect.</span></figcaption>
+  </figure>
+</div>
 <hr>
 <h3>The Dashboard</h3>
 <p>
@@ -28,9 +41,9 @@
   the laundry list you'd expect. Instead, I consolidated records together into more meaningful 
   groupings, which became the front doors to each of the more detailed sub-sections.
 </p>
-<div class="figure-container off-white">
+<div class="figure-container">
   <figure>
-    <%= image_tag "dnsdigest-dashboard.gif", alt: "A screenshot of the DNS digest dashboard" %>
+    <%= render "shared/video_figure", video_asset_path_name: "dnsdigest-dashboard.webm" %>
   </figure>
 </div>
 <hr>
@@ -41,7 +54,7 @@
 </p>
 <div class="figure-container smaller">
   <figure>
-    <%= video_tag "dnsdigest-mx.mov", playsinline: true, autoplay: true, loop: true, muted: true %>
+    <%= render "shared/video_figure", video_asset_path_name: "dnsdigest-mx.webm" %>
     <figcaption>
       <span><strong>SMTP &rarr; IMAP:</strong> Rather than seeing a 
       typical list of <span class="dns-label">MX</span> records, I show how they group together
@@ -52,14 +65,14 @@
 </div>
 <div class="figure-container smaller">
   <figure>
-    <%= video_tag "dnsdigest-mappings.mov", playsinline: true, autoplay: true, loop: true, muted: true %>
+    <%= render "shared/video_figure", video_asset_path_name: "dnsdigest-mappings.webm" %>
     <figcaption>
       <span>
         <strong>DNS express:</strong> 
         In a more subtle nudge, with <span class="dns-label">A</span>, <span class="dns-label">AAAA</span> , 
         and <span class="dns-label">CNAME</span> records,
         I display how they map to IP addresses in a format similar to a destination board you would 
-        see at a train station.
+        see at a train station. Users can also add notes to records to help them remember what they mean.
       </span>
     </figcaption>
   </figure>
@@ -73,7 +86,7 @@
 </p>
 <div class="figure-container smaller">
   <figure>
-    <%= video_tag "dnsdigest-spf.mov", playsinline: true, autoplay: true, loop: true, muted: true %>
+    <%= render "shared/video_figure", video_asset_path_name: "dnsdigest-spf.webm" %>
   </figure>
 </div>
 <hr>
@@ -85,7 +98,7 @@
 </p>
 <div class="figure-container">
   <figure>
-    <%= video_tag "dnsdigest-diagnostics.mov", playsinline: true, autoplay: true, loop: true, muted: true %>
+    <%= render "shared/video_figure", video_asset_path_name: "dnsdigest-diagnostics.webm" %>
   </figure>
 </div>
 <hr>
@@ -94,7 +107,6 @@
   I always die a little inside when I see a beautiful app that has a clunky, ugly admin interface. I enjoy 
   attending to the back-office just as much as the customer-facing side. 
 </p>
-
 <div class="figure-container">
   <figure>
     <%= image_tag "dnsdigest-admin-1.png", alt: "Stretching" %>

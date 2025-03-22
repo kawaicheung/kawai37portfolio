@@ -1,7 +1,7 @@
 <%= image_tag "kc.png", alt: "Ka Wai Cheung", class: "contact-avatar" %>
-<h2>Thanks for your time.</h2>
+<h2>Thank you</h2>
 <p>
-  I&rsquo;d love to work with you and hope you feel the same!
+  Hope to hear from you soon.
 </p>
 
 <div class="fake-paywall-container">
@@ -29,7 +29,10 @@
       </div>
       <div class="links">
         <%= link_to "https://kawaicheung.io", target: "_blank" do %>
-          <span>My personal site in case you haven't had enough. <i class="fa-solid fa-external-link"></i></span>
+          <span>My personal site <i class="fa-solid fa-external-link"></i></span>
+        <% end %>
+        <%= link_to "/files/kawai-cheung-resume-for-37signals.pdf", target: "_blank" do %>
+          <span>My resume <i class="fa-solid fa-file-pdf"></i></span>
         <% end %>
       </div>
     </div>

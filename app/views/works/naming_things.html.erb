@@ -5,10 +5,10 @@
 </p>
 <div class="figure-container two-by-one black">
   <figure>
-    <%= video_tag "naming-things-desktop.mov", autoplay: true, loop: true, muted: true, controls: true %>
+    <%= render "shared/video_figure", video_asset_path_name: "naming-things-desktop.webm" %>
   </figure>
   <figure>
-    <%= video_tag "naming-things-responsive.mov", autoplay: true, loop: true, muted: true, controls: true %>
+    <%= render "shared/video_figure", video_asset_path_name: "naming-things-responsive.webm" %>
   </figure>
 </div>
  <%= render "shared/external_link_button", path: "https://kawaicheung.io/naming-things", text: "See the webbook here!" %>  
@@ -28,7 +28,7 @@
 </p>
 <div class="figure-container">
   <figure>
-    <%= image_tag "test.gif", alt: "A screenshot of code highlighting in action" %>
+    <%= render "shared/video_figure", video_asset_path_name: "naming-things-code-highlight.webm" %>
     <figcaption>
       <span><strong>Simple little touches:</strong> Using plain old jQuery and HTML data attributes, I tied
       my explanations of certain code with the code itself. Each highlighted text has a <span class="code">data-code-ref</span>

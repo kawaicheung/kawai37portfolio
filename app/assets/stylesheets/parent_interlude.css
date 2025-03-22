@@ -51,14 +51,19 @@ article {
   justify-content: center;
   height: 100%;
 
+  @media (max-width: 768px) {
+    padding: 1rem;
+  }
+
   h2 {
     font-size: 6rem;
     font-weight: 500;
     font-family: var(--font-family--display);
     line-height: 1;
+    text-align: center;
 
     @media (max-width: 768px) {
-      font-size: 5rem;
+      font-size: 4rem;
     }
   }
 

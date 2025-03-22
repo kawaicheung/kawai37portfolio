@@ -1,4 +1,4 @@
-<div class="hello-sticker">
+<%= link_to "#{deduced_next_path}", target: "_blank", class: "hello-sticker" do %>
   <div class="hello">
     <span>Hello</span>
     <!-- Pulled from https://37signals.com/assets/images/logo.svg.  -->
@@ -7,7 +7,7 @@
   <div class="my-name">My name is</div>
   <h1>Ka Wai Cheung<span class="pronunciation">Pronounced "Kuh-Way"</span></h1>
   <%= image_tag "kc.png", alt: "Ka Wai Cheung", class: "me" %>  
-</div>
+<% end %>
 <h2>And I&rsquo;d love to be your next <span class="no-break">product designer</span>.</h2>
 <h3>
   I made this little site to show you why. (Yep it's Rails + Hotwire.)

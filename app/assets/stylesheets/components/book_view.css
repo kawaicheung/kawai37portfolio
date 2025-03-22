@@ -3,9 +3,14 @@
   grid-template-columns: 1.8fr 1fr;
   margin-bottom: 2rem;
   width: var(--width--article);
+  gap: 2rem;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
 
   .meta-info {
-    padding: var(--padding--module);
 
     p, ul {
       width: auto;

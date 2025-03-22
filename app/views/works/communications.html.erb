@@ -1,18 +1,18 @@
-<h2>A few things I&rsquo;ve written and spoken about.</h2>
+<h2>Things written and spoken.</h2>
 <p>
   I love that good communication is a core strength of every 37signals hire. 
   Though I wasn't forward-thinking enough to keep an archive of my
   most epic emails and Basecamp Classic threads, here are a few things I've written, spoken, and illustrated.
 </p>
 <hr>
-<h3><strong>Real Code Series:</strong> Talking about my design and development thought-process</h3>
+<h3><strong>Real Code Series:</strong> Talking through my design and development thought-process</h3>
 <p>
   While writing is the communication form I've spent the most time practicing, occasionally, I like to 
   explain things in front of a camera. Here are three videos from a series I produced on DoneDone called 
   &ldquo;Real Code&rdquo; that go into small details of my UI, UX, and development thought-process.
 </p>
-<div class="figure-container" style="margin-bottom: 4rem;">
-  <figure style="rotate: -5deg;transform: translateY(15px);">
+<div class="figure-container three-fan">
+  <figure>
     <%= link_to "https://www.youtube.com/watch?v=PNnenqznRD4", target: "_blank", class: "video-thumbnail" do %>
       <%= image_tag "realcode-1.png", alt: "Video thumbnail for 'Less words, more meaning'" %>
     <% end %>
@@ -28,7 +28,7 @@
       <span>How I think through implementation tradeoffs in design.</span>
     </figcaption>
   </figure>
-  <figure style="rotate: 5deg;transform: translateY(15px);">
+  <figure>
     <%= link_to "https://www.youtube.com/watch?v=pJ9TiCs0TSQ", target: "_blank", class: "video-thumbnail" do %>
       <%= image_tag "realcode-3.png", alt: "Video thumbnail for 'Handling responses optimistically'" %>
     <% end %>
@@ -37,10 +37,7 @@
     </figcaption>
   </figure>
 </div>
-<p>
-  If you're interested in seeing some more, here's the 
-  <%= link_to "full playlist", "https://www.youtube.com/playlist?list=PL055Epbe68fK7yM8Yp63Z8AcC1TM0kIYD", target: "_blank" %>!
-</p>
+<%= render "shared/external_link_button", path: "https://www.youtube.com/playlist?list=PL_0hiGP3NeojDxJILYeLILioIYwIvDWH6", text: "See all 9 Real Code videos" %>
 <hr>
 <h3><strong>The Developer&rsquo;s Code:</strong> A book on developer life</h3>
 <p>
@@ -87,7 +84,7 @@
   </div>
 </div>
 <hr>
-<h3><strong>From the web log:</strong> A couple decades of blog posts</h3>
+<h3><strong>Word flight:</strong> Curating my favorite writing samples</h3>
 <p>
   While I mainly write about design and development, I've also written about other topics&mdash;
   fatherhood, sports, domestic life to name a few. I've pulled out a few of my favorites from my 
@@ -95,41 +92,59 @@
 </p>
 <p><strong>Here are three essays about design and development:</strong></p>
 <ol class="essays-list">
-    <li>
-      <%= link_to "https://medium.com/on-building-software/code-as-the-design-medium-4d83e03d422a", target: "_blank" do %>
-        <span>On my design process using code as the medium</span>
-      <% end %>
-    </li> 
-    <li>
-      <%= link_to "https://medium.com/on-building-software/how-i-build-software-like-a-musician-60e0b81c3af4", target: "_blank" do %>
-        <span>On comparing a software designer to a musician</span>
-      <% end %>
-    </li>
-    <li>
-      <%= link_to "https://medium.com/@kawai-cheung/a-fast-code-culture-5f8f9ce4085c", target: "_blank" do %>
-        <span>On the good and bad side of coding bootcamps (from 2014)</span>
-      <% end %>
-    </li> 
+  <li>
+    <%= link_to "https://medium.com/on-building-software/code-as-the-design-medium-4d83e03d422a", target: "_blank" do %>
+      <span>On my design process using code as the medium</span>
+    <% end %>
+  </li> 
+  <li>
+    <%= link_to "https://medium.com/on-building-software/how-i-build-software-like-a-musician-60e0b81c3af4", target: "_blank" do %>
+      <span>On comparing a software designer to a musician</span>
+    <% end %>
+  </li>
+  <li>
+    <%= link_to "https://medium.com/@kawai-cheung/a-fast-code-culture-5f8f9ce4085c", target: "_blank" do %>
+      <span>On the good and bad side of coding bootcamps (from 2014)</span>
+    <% end %>
+  </li> 
 </ol>
 <p><strong>Here are three essays not about design nor development.</strong> 
   The latter two showcase some of my own drawings, which I occasionally 
   do with an Apple Pencil on my daughter's iPad when she's at school.
 </p>
 <ol class="essays-list">
-    <li>
-      <%= link_to "https://panko.kawaicheung.io/at-the-pivotal-age-of-almost-eight-7fcec2583526", target: "_blank" do %>
-        <span>On the satisfaction of watching your kids get better than you</span>
-      <% end %>
-    </li> 
-    <li>
-      <%= link_to "https://panko.kawaicheung.io/how-to-cut-a-watermelon-so-you-can-store-the-rest-in-the-fridge-3b4cbaaa2da8", target: "_blank" do %>
-        <span>On cutting a watermelon so you can store the rest in the fridge</span>
-      <% end %>
-    </li> 
-    <li>
-      <%= link_to "https://panko.kawaicheung.io/at-the-pivotal-age-of-almost-eight-7fcec2583526", target: "_blank" do %>
-        <span>On making a red sauce</span>
-      <% end %>
-    </li>
+  <li>
+    <%= link_to "https://panko.kawaicheung.io/at-the-pivotal-age-of-almost-eight-7fcec2583526", target: "_blank" do %>
+      <span>On the satisfaction of watching your kids get better than you</span>
+    <% end %>
+  </li> 
+  <li>
+    <%= link_to "https://panko.kawaicheung.io/how-to-cut-a-watermelon-so-you-can-store-the-rest-in-the-fridge-3b4cbaaa2da8", target: "_blank" do %>
+      <span>On cutting a watermelon so you can store the rest in the fridge</span>
+    <% end %>
+  </li> 
+  <li>
+    <%= link_to "https://panko.kawaicheung.io/at-the-pivotal-age-of-almost-eight-7fcec2583526", target: "_blank" do %>
+      <span>On making a red sauce</span>
+    <% end %>
+  </li>
 </ol>
+<hr>
+<h3>One last piece on my web design career</h3>
+<p>
+  I'll end this section with this. Last year, I wrote a longer nostalgia piece about digging up all my past web work on the Wayback Machine. 
+  I was writing it to no one but myself. But much to my surprise, it became a "staff pick" on Medium. You may get a nostalgia kick too!
+</p>
+<div class="figure-container smallest">
+  <figure>
+    <%= link_to "https://medium.com/on-building-software/my-25-year-career-in-web-design-through-the-eyes-of-the-wayback-machine-4e37f3ec94d8", target: "_blank", class: "link-thumbnail" do %>
+      <%= image_tag "medium-25-years.png", alt: "Screenshot of my 25-year web design career post on Medium." %>
+    <% end %>
+    <figcaption>
+      <%= render "shared/external_link_button", path: "https://medium.com/on-building-software/my-25-year-career-in-web-design-through-the-eyes-of-the-wayback-machine-4e37f3ec94d8", text: "Read my web design post" %>  
+    </figcaption>
+  </figure>
+</div>
+
+
 

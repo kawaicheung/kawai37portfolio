@@ -58,6 +58,13 @@ article {
     margin-bottom: 3rem;
     width: 450px;
     height: 280px;
+    text-decoration: none;
+
+    transition: all 0.12s ease-in-out;
+
+    &:hover {
+      transform: scale(1.03);
+    }
 
     @media (max-width: 768px) {
       width: 100%;

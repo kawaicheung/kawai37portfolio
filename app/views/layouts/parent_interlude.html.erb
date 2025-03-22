@@ -22,7 +22,7 @@
       <%= render "shared/remote_control", reversed: true %>
     </header>
     <main>
-      <%= render "shared/nav_container", reversed: true %>
+      <%= render "shared/nav_container", reversed: true, fixed: true %>
       <article>
         <%= yield %>
         <% if deduced_next_path %>
