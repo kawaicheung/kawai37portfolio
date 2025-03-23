@@ -14,25 +14,25 @@
   with this rule: <strong>No images. No Javascript. Just pure HTML and CSS.</strong>
 </p>
 <div class="figure-container">
+  <figure>
+    <%= link_to image_tag("scoreboards-1.png", alt: "A screenshot of Wrigley Field, 1941"), "https://kawaicheung.io/scoreboards/wrigley-1941.html", target: "_blank", class: "link-thumbnail" %>
+    <figcaption>
+      <span><strong>Wrigley Field, 1941</strong>: I played with <span class="code">perspective</span> and 
+      geeked out on CSS animations 
+      to mimic time: The rain drops, darkening skies, 
+      clock hands, waving flags, and casted shadows.</span>
+      <%= render "shared/external_link_button", path: "https://kawaicheung.io/scoreboards/wrigley-1941.html", text: "View the scoreboard" %>
+    </figcaption>
+  </figure>
     <figure>
-      <%= link_to image_tag("scoreboards-1.png", alt: "A screenshot of Wrigley Field, 1941"), "https://kawaicheung.io/scoreboards/wrigley-1941.html", target: "_blank", class: "link-thumbnail" %>
-      <figcaption>
-        <span><strong>Wrigley Field, 1941</strong>: I played with <span class="code">perspective</span> and 
-        geeked out on CSS animations 
-        to mimic time: The rain drops, darkening skies, 
-        clock hands, waving flags, and casted shadows.</span>
-        <%= render "shared/external_link_button", path: "https://kawaicheung.io/scoreboards/wrigley-1941.html", text: "View the scoreboard" %>
-      </figcaption>
-    </figure>
-     <figure>
-      <%= link_to image_tag("scoreboards-2.png", alt: "A screenshot of Comiskey Park, 1978"), "https://kawaicheung.io/scoreboards/comiskey-1978.html", target: "_blank", class: "link-thumbnail" %>
-      <figcaption>
-        <span><strong>Comiskey Park, 1978</strong>:  I went overboard on CSS grid. Every light bulb is a <span class="code">div</span>, turned on with the class <span class="code">lit</span>. 
-        It was fun to turn on each bulb individually, and leave an 
-        occasional one burnt out.</span>
-        <%= render "shared/external_link_button", path: "https://kawaicheung.io/scoreboards/comiskey-1978.html", text: "View the scoreboard" %>  
-      </figcaption>
-    </figure>
+    <%= link_to image_tag("scoreboards-2.png", alt: "A screenshot of Comiskey Park, 1978"), "https://kawaicheung.io/scoreboards/comiskey-1978.html", target: "_blank", class: "link-thumbnail" %>
+    <figcaption>
+      <span><strong>Comiskey Park, 1978</strong>:  I went overboard on CSS grid. Every light bulb is a <span class="code">div</span>, turned on with the class <span class="code">lit</span>. 
+      It was fun to turn on each bulb individually, and leave an 
+      occasional one burnt out.</span>
+      <%= render "shared/external_link_button", path: "https://kawaicheung.io/scoreboards/comiskey-1978.html", text: "View the scoreboard" %>  
+    </figcaption>
+  </figure>
 </div>
 <p>
   Here's a final sentimental piece: The original two tickets from my first Cubs game (I still have them!). 

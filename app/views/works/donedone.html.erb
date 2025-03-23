@@ -1,139 +1,48 @@
 <% content_for :title, "Once an avid Flash developer." %>
-<h2>I built and maintained a product called <strong>DoneDone</strong> for 15 years.</h2>
+<h2>Making <strong>&ldquo;getting things done&rdquo;</strong> easier to do.</h2>
 <p>
-  A couple of years into WAM, we needed an issue tracker to manage our consulting projects. 
-  The landscape for such tools in 2008 was pretty barren and what was there was complex and clunky. 
-  So began my 15-year journey into building an issue tracker called DoneDone.
+  The landscape for issue trackers in 2008 was pretty barren. What was there was complex and clunky. 
+  So began my 15-year journey into creating, building, and maintaining <strong>DoneDone</strong>. 
+  It's been my career pride and joy.
 </p>
-<p>DoneDone is my career pride and joy.</p>
 <p>
-  It would be impossible to distill tens-of-thousands of hours of work, learning, and highs & lows 
-  into one page (and even harder to read all that), so I'll pull out five things that support
-  the stuff I mentioned earlier.
+  It would be impossible to distill all of that work into one page 
+  (and you don't want to read all that!), so I've left 99% of it on the cutting room floor. 
+  Here's just a sampling to show you my design and coding approach.
 </p>
-<h4>(1)Jobs was a huge feature</h4>
+<hr>
+<h3>Marketing Site 1.0 and...5.0</h3>
 <p>
-  Involved a re-thinking of all layers...
+  DoneDone's marketing site has gone through about five major redesigns over the years.
+  I created the original site and copy as well as the last one before we sold the company.
 </p>
-<h4>
-  (2) Added a Kanban board into the existing product. (Show learning with a video)
-</h4>
-<p>
-  Kanban was a natural fit for DoneDone as an isssue tracker...
-</p>
-<h4>
-  (3) I built a wizard to help folks auto-forward their Gmail address into their DoneDone account. (DELIGHT, surprise)
-</h4>
-<p>
-  Blah
-</p>
-<h4>
-  (3) Between the two of us, Developed our own way spiraling way of creating new features. (Show how much we produced with me doing all design/dev)
-</h4>
-<p>
-  </p>
-<div class="figure-container smaller">
-  <figure>
-    <iframe 
-      width="100%"  
-      height="400px"
-      src="https://www.youtube.com/embed/S7yrFHigvxI" 
-      frameborder="0" 
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-      allowfullscreen>
-    </iframe>
-    <figcaption><span><strong>Before and after:</strong> An animated bubble quote area demonstrating the benefits of using DnsDigest.</span></figcaption>
-  </figure>
-</div>
-<h4>Wesbite  updates and copy (2008 and 2024) Ferrari</h4>
-<p>asdasdf</p>
-<h4>
-  (5) In 2017 I wrote a whole series about the product... 
-</h4>
-<p>
-  https://medium.com/the-stories-of-donedone/6-00am-february-4th-2d90379bd88
-</p>
-
-<div class="figure-container smaller">
-    <figure>
-      <%= image_tag "dd-1.png", alt: "Stretching" %>
-      <figcaption>Or, everything you do ends up kind of feeling like you? It's that feeling of a band past its prime churning out what sounds like them. The innovation is gone.</figcaption>
-    </figure>
-</div>
-
-<h3>Marketing site 2008 to 2024</h3>
-<div class="figure-container smaller">
-    <figure>
-      <%= image_tag "dd-og-site.png", alt: "Stretching" %>
-      <figcaption>Or, everything you do ends up kind of feeling like you? It's that feeling of a band past its prime churning out what sounds like them. The innovation is gone.</figcaption>
-    </figure>
-</div>
-
-
 <div class="figure-container">
   <figure>
-    <%= image_tag "dd-1.png", alt: "Stretching" %>
-    <figcaption>Or, everything you do ends up kind of feeling like you? It's that feeling of a band past its prime churning out what sounds like them. The innovation is gone.</figcaption>
+    <%= link_to image_tag("dd-og-site.png", alt: "A screenshot of the original DoneDone marketing site"), "https://web.archive.org/web/20100927203150/http://www.getdonedone.com/index.aspx", target: "_blank", class: "link-thumbnail" %>
+    <figcaption>
+      <span><strong>DoneDone, 2009:</strong> The writing focused on what other issue trackers didn't seem to answer...what happens next?</span>
+      <%= render "shared/external_link_button", path: "https://kawaicheung.io/scoreboards/wrigley-1941.html", text: "Wayback Machine site" %>
+    </figcaption>
   </figure>
-
-  <figure>
-    <%= image_tag "dd-1.png", alt: "Stretching" %>
-    <figcaption>Or, everything you do ends up kind of feeling like you? It's that feeling of a band past its prime churning out what sounds like them. The innovation is gone.</figcaption>
+    <figure>
+    <%= link_to image_tag("dd-2024-site.png", alt: "A screenshot of the 2024 DoneDone marketing site"), "https://web.archive.org/web/20250207070508/https://www.donedone.com/", target: "_blank", class: "link-thumbnail" %>
+    <figcaption>
+      <span><strong>DoneDone, 2024:</strong> The writing focused on how task tracking and a shared inbox can be an all-in-one work solution.</span>
+      <%= render "shared/external_link_button", path: "https://kawaicheung.io/scoreboards/comiskey-1978.html", text: "Wayback Machine site" %>  
+    </figcaption>
   </figure>
 </div>
-<p>
-  The app is built using Vue and the backend and parts of the frontend architecture are built in .NET (using C# and SQLServer). I know these aren't the tools used at 37signals but 
-  having worked with these tools for so long, my eventual move to Ruby on Rails stack was pretty quick and seamless!  
+<p class="note">
+  <strong>Important note:</strong> If you go to <%= link_to "DoneDone.com", "https://www.donedone.com/", target: "_blank" %> now, you'll see a 
+  version of the marketing site created by the new owners of the product. That is not my work.
 </p>
+<hr>
+<h3>Making Gmail auto-forwarding a little bit smoother</h3>
 <p>
-  Is that a good thing or a bad thing? Since I'd really like this position, I'm going to explain why it's a good thing.
+  This includes Hey! as well. (Maybe one day I could pitch this idea for a six-week Shape Up cycle 🤔)
 </p>
-<p>
-  You see, most people are going to come at you with a list of 30 projects they worked on. Parts of this. A little touch of that. 
-  The end product may have morphed into something else. What would it have become if they had more autonomy? Better? Worse? Who knows.
-</p>
-<p>
-  I've had the tremendous luxury of conceptualizing an idea with no more than 1 or 2 other people, and then seeing it to fruition.
-  That doesn't scare me. I thrive on that.
-  </p>
-<p>
-  I conceptualize. I design. I work on all layers of the stack from the front-end to the database.
-  I've managed production infrastructure too (though I don't much like that part).
-</p>
-<p>
-  In fact, for the past 15 years, I worked solely on one pretty large web-based product called DoneDone. 
-  It's a task management and shared inbox tool I created in 2008 and.
-  The build team was never more than 3 people, and for the past six years, it was, well, just me and my business partner. More on all of this later.
-</p>
-<p>
-  We sold DoneDone in September of 2024.
-</p>
-<p>
-  I think I can be a great teammate.
-</p>
-<p>
-  Let me show you an example. For DoneDone, I spent about a month developing an easy way to
-  help folks auto-forward their Gmail address into their DoneDone account. 
-</p>
-<p>
-  Let me show you an example. For DoneDone, I spent about a month developing an easy way to
-  help folks auto-forward their Gmail address into their DoneDone account. 
-</p>
-<p>
-  Let me show you an example. For DoneDone, I spent about a month developing an easy way to
-  help folks auto-forward their Gmail address into their DoneDone account. 
-</p>
-<p>
-  Let me show you an example. For DoneDone, I spent about a month developing an easy way to
-  help folks auto-forward their Gmail address into their DoneDone account. 
-</p>
-<p>
-  Let me show you an example. For DoneDone, I spent about a month developing an easy way to
-  help folks auto-forward their Gmail address into their DoneDone account. 
-</p>
-<p>
-  Let me show you an example. For DoneDone, I spent about a month developing an easy way to
-  help folks auto-forward their Gmail address into their DoneDone account. 
-</p>
-
-</div>
+<hr>
+<h3>A Kanban board in 6 weeks</h3>
+<hr>
+<h3>Re-envisioning the concept of workflows</h3>
+<hr>
