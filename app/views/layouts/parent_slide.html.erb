@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= content_for(:title) || "Ka Wai Cheung Portfolio for 37signals" %></title>
+    <title><%= content_for(:title) || "37signals + Ka Wai Cheung?" %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="theme-color" content="#ffffff" />
     <meta name="apple-mobile-web-app-capable" content="yes">
+    <%= favicon_link_tag %>  
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= yield :head %>

@@ -7,6 +7,11 @@
   }
 }
 
+.just-an-image {  
+  margin-bottom: 2rem;
+  width: var(--width--content);
+}
+
 .mobile-right {
   @media (max-width: 768px) {
     align-self: flex-end;
