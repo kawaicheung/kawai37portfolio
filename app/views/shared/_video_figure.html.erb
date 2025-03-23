@@ -1,1 +1,3 @@
-<%= video_tag "#{video_asset_path_name}", playsinline: true, autoplay: true, loop: true, muted: true %>
+<% show_controls ||= false %>
+<% user_initiated ||= false %>
+<%= video_tag "#{video_asset_path_name}", playsinline: true, controls: show_controls, autoplay: !user_initiated, loop: true, muted: true %>

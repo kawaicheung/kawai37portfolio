@@ -16,6 +16,7 @@ Rails.application.routes.draw do
 
   get "works" => "works#index"
   get "works/donedone" => "works#donedone"
+  get "works/donedone/gmail" => "works#donedone_gmail"
   get "works/dnsdigest" => "works#dnsdigest"
   get "works/naming-things" => "works#naming_things"
   get "works/baseball-scoreboards" => "works#baseball_scoreboards"

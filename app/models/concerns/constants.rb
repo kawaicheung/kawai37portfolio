@@ -6,6 +6,7 @@ module Constants
     :pitch_why_id_love_this_role_path,
     :works_path,
     :works_donedone_path,
+    :works_donedone_gmail_path,
     :works_dnsdigest_path,
     :works_baseball_scoreboards_path,
     :works_naming_things_path,
