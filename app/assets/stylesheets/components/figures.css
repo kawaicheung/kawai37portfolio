@@ -23,19 +23,18 @@
     }
   }
 
-  &.off-white {
-    figure {
-      background-color: var(--color--gray--light);
-      border-color: var(--color--gray--semi);
-    }
-  }
-
-  &.black {
+  &:has(.video-container) {
     figure {
       background-color: var(--color--black);
+      border-color: var(--color--gray--semi);
+      border-radius: var(--border-radius--rounded);
 
       figcaption {
         color: var(--color--white);
+
+        a {
+          color: var(--color--white);
+        }
       }
     }
   }
@@ -91,7 +90,7 @@ figure {
   width: 100%;
   padding: var(--padding--module);
   border: var(--border--gray--light);
-  border-radius: var(--border-radius--rounded);
+  border-radius: var(--border-radius--rectanglish);
   box-shadow: var(--box-shadow--figure);
   background-color: var(--color--white);
 
@@ -99,7 +98,11 @@ figure {
     padding: var(--padding--module--mobile);
   }
 
-  img, video {
+  img {
+    border: var(--border--gray--light);
+  }
+
+  video {
     border-radius: var(--border-radius--rounded-inseam);
     border: var(--border--gray--light);
   }

@@ -30,7 +30,7 @@
   The first part of the setup flow leads you through entering your Gmail address into DoneDone, copying
   the generated forwarding address, and applying it to your Gmail account. Click the video to see the experience in real time:
 </p>
-<div class="figure-container smaller black">
+<div class="figure-container smaller">
   <figure>
     <%= render "shared/video_figure", video_asset_path_name: "donedone-gmail-01.webm", user_initiated: true %>
   </figure>
@@ -63,7 +63,7 @@
   Once you complete the step and the next screen slides in, the app polls against an API method I wrote that 
   detects the confirmation email and parses out the Google generated confirmation link. 
 </p>
-<div class="figure-container black smallest">
+<div class="figure-container smallest">
   <figure>
     <%= image_tag "donedone-gmail-03a.png", alt: "Screenshot of DoneDone Gmail auto-forwarding instructions" %>
   </figure>
@@ -73,7 +73,7 @@
    but in the expected happy case, I surface the link directly on the screen. 
    You just need to click it and then hit the “Confirm” button on Google’s side.
 </p>
-<div class="figure-container black smallest">
+<div class="figure-container smallest">
   <figure>
     <%= image_tag "donedone-gmail-03b.png", alt: "Screenshot of DoneDone Gmail auto-forwarding instructions" %>
   </figure>
@@ -106,7 +106,7 @@
   Gmail address and waiting for it to return using a similar polling scheme as I discussed earlier.
   Click the video to see the final leg of the experience in real time:
 </p>
-<div class="figure-container smaller black">
+<div class="figure-container smaller">
   <figure>
     <%= render "shared/video_figure", video_asset_path_name: "donedone-gmail-05.webm", user_initiated: true %>
     <figcaption>
