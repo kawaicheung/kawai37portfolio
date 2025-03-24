@@ -32,6 +32,7 @@
 
   --margin--slide-container: 2rem;
   --margin-top--slide-content: 2rem;
+  --margin-bottom--content: 2rem;
   
   --border--white: solid 1px var(--color--white);
   --border--purple: solid 1px var(--color--purple);

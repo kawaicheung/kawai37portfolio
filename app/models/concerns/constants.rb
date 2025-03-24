@@ -3,7 +3,6 @@ module Constants
   NAVIGATION_PATHS = [
     :root_path,
     :pitch_path,
-    :pitch_why_id_love_this_role_path,
     :works_path,
     :works_dnsdigest_path,
     :works_donedone_path,

@@ -15,7 +15,7 @@
   color: var(--color--white);
   background-color: var(--color--theme);
   transition: all 0.12s ease-in;
-  margin-bottom: 2rem;
+  margin-bottom: var(--margin-bottom--content);
   font-weight: 700;
   box-shadow: var(--box-shadow--button);
 

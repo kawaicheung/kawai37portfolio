@@ -12,7 +12,6 @@ Rails.application.routes.draw do
   root "home#index"
 
   get "pitch" => "pitch#me"
-  get "pitch/why-id-love-this-role" => "pitch#why_id_love_this_role"
 
   get "works" => "works#index"
   get "works/donedone" => "works#donedone"

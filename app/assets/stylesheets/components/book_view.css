@@ -1,7 +1,7 @@
 .book-view {
   display: grid;
   grid-template-columns: 1.8fr 1fr;
-  margin-bottom: 2rem;
+  margin-bottom: var(--margin-bottom--content);
   width: var(--width--article);
   gap: 2rem;
 

@@ -12,7 +12,7 @@
 }
 
 .just-an-image {  
-  margin-bottom: 2rem;
+  margin-bottom: var(--margin-bottom--content);
   width: var(--width--content);
 }
 

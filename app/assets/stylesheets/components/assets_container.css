@@ -1,0 +1,29 @@
+.assets-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: var(--margin-bottom--content);
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+
+  a {
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--color--theme);
+    border: var(--border--theme);
+    padding: 0.5rem 2rem;
+    border-radius: var(--border-radius--rounded);
+
+    &:hover {
+      background-color: var(--color--theme);
+      color: var(--color--white);
+    }
+
+    @media (max-width: 768px) {
+      text-align: center;
+    }
+  }
+}
