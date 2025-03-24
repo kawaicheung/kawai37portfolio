@@ -3,10 +3,11 @@
 <p>
   The landscape for issue trackers in 2008 was pretty barren. What was there was complex and clunky. 
   So began my 15-year journey into creating, building, and maintaining <strong>DoneDone</strong>. 
-  It's my career pride and joy. I've learned so much about all of development from it.
+  It's my career pride and joy. I've learned so much about design and development from it.
 </p>
 <p>
-  On this page, I'll show you a high-level assortment of the work I did. 
+  I struggled with what exactly to show you (there's too much!) so I'll stick to this script:
+  On this page, I'll show you a high-level assortment of the work I did, focused on product design. 
   On the next one, a deep dive into one particular feature.
 </p>
 <hr>
@@ -35,36 +36,68 @@
   <strong>Important note:</strong> If you go to <%= link_to "DoneDone.com", "https://www.donedone.com/", target: "_blank" %> now, you'll see a 
   version of the marketing site created by the new owners of the product. That is not my work.
 </p>
+
 <hr>
-<h3>A Kanban board in 6 weeks</h3>
+<h3>In the details</h3>
 <p>
-  One of the wonderful benefits of working on the same product for so long is familiarity. 
-  With the product. The code. Your teammates.
-  It means you can go very fast. With my business partner's help in direction and QA, I 
-  shipped the full Kanban board in about 6 weeks.
+  Let's zoom in on some particular details of DoneDone: A random assortment of UI/UX goodies.
 </p>
-<div class="figure-container smaller">
-  <figure>
-    <%= render "shared/video_figure", video_asset_path_name: "donedone-kanban-0.webm" %>
-    <figcaption>
-      <span><strong>A single mind on a single thing for a long time is a powerful force:</strong> 
-      I didn't use Shape Up, but the full Kanban board was started and completed in about 6 weeks. 
-      I can work at a very fast clip when the goal is clear.
-      </span>
-    </figcaption>
-  </figure>
-</div>
-<div class="figure-container smaller">
+
+<div class="figure-container smallest">
   <figure>
     <%= render "shared/video_figure", video_asset_path_name: "donedone-kanban-1.webm" %>
     <figcaption>
-      <span><strong>UX is in the tiny details:</strong> 
-      When the "New task" panel is visible, you can click outside of it to close it. However, once
-      you've entered content, the panel will stay open, preventing annoying accidental closures.
+      <span><strong>Preventing accidental closures:</strong> 
+      On the Kanban board, when the "New task" panel is visible, you can click outside of it to close it. However, once
+      you've entered content, the panel will stay open.
       </span>
     </figcaption>
   </figure>
 </div>
-<hr>
-<h3>Re-envisioning the concept of workflows</h3>
-<hr>
+<div class="figure-container smallest">
+  <figure>
+    <%= render "shared/video_figure", video_asset_path_name: "donedone-filters.webm" %>
+    <figcaption>
+      <span><strong>Filter finesse:</strong> 
+      One of the more intricate features was the filter bar. 
+      Debouncing API calls between filter changes, 
+      creating smart short cut filters, and
+      displaying selected items in a compact, meaningful way
+      was a fun challenge.
+      </span>
+    </figcaption>
+  </figure>
+</div>
+<div class="figure-container smallest">
+  <figure>
+    <%= render "shared/video_figure", video_asset_path_name: "donedone-pusher.webm" %>
+    <figcaption>
+      <span><strong>Who's viewing now?</strong> 
+      On tasks, I integrated with <%= link_to "Pusher", "https://www.pusher.com", target: "_blank" %> web sockets to allow 
+      users to see who else is viewing the task in real-time.
+      </span>
+    </figcaption>
+  </figure>
+</div>
+<div class="figure-container smallest">
+  <figure>
+    <%= render "shared/video_figure", video_asset_path_name: "donedone-traffic-cop.webm" %>
+    <figcaption>
+      <span><strong>Traffic Cop:</strong> 
+      When responding to a customer support ticket, the app notifies you if someone just replied to the same ticket since
+      you last reviewed its history, to prevent multiple replies.
+      </span>
+    </figcaption>
+  </figure>
+</div>
+<div class="figure-container smallest">
+  <figure>
+    <%= render "shared/video_figure", video_asset_path_name: "donedone-pinboard.webm" %>
+    <figcaption>
+      <span><strong>Pinboard:</strong> 
+      At the top of DoneDone is a board that lets you pin any task you want. I gave each task note a slight rotation to 
+      make it feel more natural and imperfect, without getting in the way of readability.
+      </span>
+    </figcaption>
+  </figure>
+</div>
