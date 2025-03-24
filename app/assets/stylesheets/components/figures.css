@@ -119,7 +119,6 @@ figure {
       background: var(--color--black);
       opacity: 0;
       transition: opacity 0.2s ease;
-      border-radius: var(--border-radius--rounded-inseam);
     }
 
     &::after {

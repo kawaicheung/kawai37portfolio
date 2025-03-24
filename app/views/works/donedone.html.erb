@@ -1,3 +1,4 @@
+<% is_mobile = request.user_agent =~ /Mobile|webOS|Android/ %>
 <% content_for :title, "DoneDone" %>
 <h2>Making <strong>&ldquo;getting things done&rdquo;</strong> easier to do for 15 years.</h2>
 <p>
@@ -13,6 +14,66 @@
 
 <hr>
 <h3>A tasting flight of UI and UX goodies</h3>
+<% if is_mobile %>
+  <div class="figure-container smaller" data-slider-target="slide">
+    <figure>
+      <%= render "shared/video_figure", video_asset_path_name: "donedone-kanban-1.webm" %>
+      <figcaption>
+        <span><strong>Preventing accidental closures:</strong> 
+        On the Kanban board, when the "New task" panel is visible, you can click outside of it to close it. However, once
+        you've entered content, the panel will stay open.
+        </span>
+      </figcaption>
+    </figure>
+  </div>
+  <div class="figure-container smaller" data-slider-target="slide">
+    <figure>
+      <%= render "shared/video_figure", video_asset_path_name: "donedone-filters.webm" %>
+      <figcaption>
+        <span><strong>Filter finesse:</strong> 
+        One of the more intricate features was the filter bar. 
+        Debouncing API calls between filter changes, 
+        creating smart short cut filters, and
+        displaying selected items in a compact, meaningful way
+        was a fun challenge.
+        </span>
+      </figcaption>
+    </figure>
+  </div>
+  <div class="figure-container smaller" data-slider-target="slide">
+    <figure>
+      <%= render "shared/video_figure", video_asset_path_name: "donedone-pinboard.webm" %>
+      <figcaption>
+        <span><strong>Pinboard:</strong> 
+        At the top of DoneDone is a board that lets you pin any task you want. I gave each task note a rotation of less than a degree to 
+        make it feel more natural and imperfect, without getting in the way of readability.
+        </span>
+      </figcaption>
+    </figure>
+  </div>
+  <div class="figure-container smaller" data-slider-target="slide">
+    <figure>
+      <%= render "shared/video_figure", video_asset_path_name: "donedone-pusher.webm" %>
+      <figcaption>
+        <span><strong>Who's viewing now?</strong> 
+        On tasks, I integrated with <%= link_to "Pusher", "https://www.pusher.com", target: "_blank" %> web sockets to allow 
+        users to see who else is viewing the task in real-time.
+        </span>
+      </figcaption>
+    </figure>
+  </div>
+  <div class="figure-container smaller" data-slider-target="slide">
+    <figure>
+      <%= render "shared/video_figure", video_asset_path_name: "donedone-traffic-cop.webm" %>
+      <figcaption>
+        <span><strong>Traffic Cop:</strong> 
+        When responding to a customer support ticket, the app notifies you if someone just replied to the same ticket since
+        you last reviewed its history, to prevent multiple replies.
+        </span>
+      </figcaption>
+    </figure>
+  </div>
+<% else %>
 <div class="slider-container" data-controller="slider" data-slider-dot-class-value="slider-dot">
   <button class="slider-nav prev" data-action="click->slider#previous"><i class="fa-solid fa-chevron-left"></i></button>
   <div class="slides">
@@ -79,7 +140,7 @@
   <div class="slider-dots" data-slider-target="dots">
   </div>
 </div>
-
+<% end %>
 <hr>
 <h3>Marketing Site 1.0 and 5.0</h3>
 <p>
@@ -92,14 +153,14 @@
 </p>
 <div class="figure-container">
   <figure>
-    <%= link_to image_tag("dd-og-site.png", alt: "A screenshot of the original DoneDone marketing site"), "https://web.archive.org/web/20100927203150/http://www.getdonedone.com/index.aspx", target: "_blank", class: "link-thumbnail" %>
+    <%= link_to image_tag("dd-og-site.webp", alt: "A screenshot of the original DoneDone marketing site"), "https://web.archive.org/web/20100927203150/http://www.getdonedone.com/index.aspx", target: "_blank", class: "link-thumbnail" %>
     <figcaption>
       <span><strong>DoneDone, 2009:</strong> The writing focused on what other issue trackers didn't seem to answer...what happens next?</span>
       <%= render "shared/external_link_button", path: "https://web.archive.org/web/20100927203150/http://www.getdonedone.com/index.aspx", text: "View archived site" %>
     </figcaption>
   </figure>
     <figure>
-    <%= link_to image_tag("dd-2024-site.png", alt: "A screenshot of the 2024 DoneDone marketing site"), "https://web.archive.org/web/20250207070508/https://www.donedone.com/", target: "_blank", class: "link-thumbnail" %>
+    <%= link_to image_tag("dd-2024-site.webp", alt: "A screenshot of the 2024 DoneDone marketing site"), "https://web.archive.org/web/20250207070508/https://www.donedone.com/", target: "_blank", class: "link-thumbnail" %>
     <figcaption>
       <span><strong>DoneDone, 2024:</strong> The writing focused on how task tracking and a shared inbox can be an all-in-one work solution.</span>
       <%= render "shared/external_link_button", path: "https://web.archive.org/web/20250207070508/https://www.donedone.com/", text: "View archived site" %>  
