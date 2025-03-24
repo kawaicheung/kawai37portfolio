@@ -7,6 +7,10 @@
   }
 }
 
+.hidden {
+  display: none !important;
+}
+
 .just-an-image {  
   margin-bottom: 2rem;
   width: var(--width--content);

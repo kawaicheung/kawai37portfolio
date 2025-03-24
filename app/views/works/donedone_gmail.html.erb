@@ -1,91 +1,145 @@
 <% content_for :title, "DoneDone (Part 2)" %>
-<h2>Hand-holding you through an <strong>annoying setup task</strong>.</h2>
+<h2>Feature analysis: <strong>Gmail auto-forwarding</strong> in DoneDone.</h2>
 <p>
-  In 2018, we rebuilt DoneDone and introduced shared mailboxes to the product. This allows 
-  a team to forward company emails to DoneDone and manage them just like tasks. Think HelpScout.
+  Here's a deep dive into one other feature of DoneDone I'm really proud of.
 </p>
 <p>
-  A couple years later, our mailbox feature was growing steadily. Nearly 
-  40% of our active mailboxes were forwarding from Google.
-  But auto-forwarding is a little annoying to set up. We wanted to smooth out that process.
+  In 2018, we introduced shared mailboxes. This lets you forward emails into DoneDone and manage them just like tasks. Think HelpScout.
 </p>
 <p>
-  Now, most products with Gmail auto-forwarding accompany the feature with a help doc. 
+  A couple years later, mailboxes were growing steadily&mdash;roughly 
+  40% of our active mailboxes were forwarding from a Gmail address.
+  But Gmail auto-forwarding is a bit annoying to set up. I wanted to smooth out that process.
+</p>
+<p>
+  Now, most products with Gmail auto-forwarding accompany the feature with a help doc explaining the multi-step process. 
   <%= link_to "Helpscout does", "https://docs.helpscout.com/article/54-auto-forward-from-google-workspace-to-help-scout", target: "_blank" %>.
   <%= link_to "Intercom does", "https://www.intercom.com/help/en/articles/6522819-automatically-forward-emails-to-the-inbox#h_8cccb8e686", target: "_blank" %>.
   <%= link_to "Zendesk does", "https://support.zendesk.com/hc/en-us/articles/4408886828698-Forwarding-incoming-email-from-your-existing-email-address-to-Zendesk-Support", target: "_blank" %>.
   <%= link_to "HEY does too", "https://www.hey.com/moving-from-gmail/#:~:text=First%2C%20click%20your%20avatar%20to,email%20to%20your%20HEY%20address.", target: "_blank" %>!
 </p>
 <p>
-  I wanted to go a different route. For such an integral part of the setup, I felt the process could be more guided.
-  Here's the approach I conceived, designed, and deployed:
+  I wanted to go a different route with DoneDone. 
+  Hitting a stumbling block on completing the auto-forwarding setup means a customer may never try out the feature.
+  For such an integral part of setup, I felt the process could be more guided.
+  Here's what I designed and developed.
 </p>
 <hr>
-<h3>Grabbing your auto-forwarding address</h3>
+<h3>(1) Applying your auto-forwarding address</h3>
 <p>
-  The first step is to grab your auto-forwarding address. This is done by clicking the button that says "Copy your auto-forwarding address".
+  The first part of the setup flow leads you through entering your Gmail address into DoneDone, copying
+  the generated forwarding address, and applying it to your Gmail account. Click the video to see the experience in real time:
 </p>
 <div class="figure-container smaller black">
   <figure>
-    <%= render "shared/video_figure", video_asset_path_name: "donedone-gmail-01.webm", show_controls: true, user_initiated: true %>
+    <%= render "shared/video_figure", video_asset_path_name: "donedone-gmail-01.webm", user_initiated: true %>
+  </figure>
+</div>
+<p>
+  At this point, you have no choice but to go through Gmail's UI. My focus on this screen was to make the 
+  next series of steps as clear as possible. 
+</p>
+<div class="figure-container smaller">
+  <figure>
+    <%= image_tag "donedone-gmail-02.png", alt: "Screenshot of DoneDone Gmail auto-forwarding instructions" %>
+  </figure>
+</div>
+<p>
+  <strong>Clarity can just be doing the simple stuff right.</strong>
+  The "Click here" link pops another tab directly to Gmail's auto-forwarding setup page for your authenticated account. 
+  The <strong>bolded text</strong> above matches the words you'd find on the Gmail side.
+  The Gmail screenshot provides additional context.
+</p>
+<p>
+  Once this step is complete, Google sends a confirmation email to your forwarding address.
+</p>
+<hr>
+<h3>(2) Finding the confirmation email link</h3>
+<p>
+  In other apps, the user would have to open another tab, find the email Google sent, and click the confirmation link. 
+  I wanted to save that step and keep you on the setup wizard. 
+</p>
+<p> 
+  Once you complete the step and the next screen slides in, the app polls against an API method I wrote that 
+  detects the confirmation email and parses out the Google generated confirmation link. 
+</p>
+<div class="figure-container black smallest">
+  <figure>
+    <%= image_tag "donedone-gmail-03a.png", alt: "Screenshot of DoneDone Gmail auto-forwarding instructions" %>
+  </figure>
+</div>
+<p>
+   If it never finds a match, the screen will flip to an error state, 
+   but in the expected happy case, I surface the link directly on the screen. 
+   You just need to click it and then hit the “Confirm” button on Google’s side.
+</p>
+<div class="figure-container black smallest">
+  <figure>
+    <%= image_tag "donedone-gmail-03b.png", alt: "Screenshot of DoneDone Gmail auto-forwarding instructions" %>
+  </figure>
+</div>
+<p class="note">
+  <strong>Note:</strong> It would've been nice to be able to call the link directly in code, saving you a step. However,
+  for good reason, Google requires the user to click an additional "Confirm" button on their side. So that put a damper on the idea.
+</p>
+<hr>
+<h3>(3) Completing the auto-forwarding setup</h3>
+<p>
+  At this point, Gmail once again forces you to go back to your mail settings and manually grant the freshly added address 
+  as the forwarding address. This part's rather annoying and often forgotten, but another opportunity to explain the steps 
+  at the moment you need them.
+</p>
+<div class="figure-container smaller">
+  <figure>
+    <%= image_tag "donedone-gmail-04.png", alt: "Screenshot of DoneDone Gmail auto-forwarding instructions" %>
+    <figcaption>
+      <span> Similar to the earlier step,
+        The screen guides you through it with a direct link that pops up a new tab, bolded key words, and screenshot.
+      </span>
+    </figcaption>
   </figure>
 </div>
 <hr>
-<h3>Documenting the feature</h3>
+<h3>(4) Testing the full loop</h3>
 <p>
-  For large features like auto-forwarding setup, I like to document the entire technical flow
-  visually (I've been using <%= link_to "drawio.com", "https://drawio.com", target: "_blank" %> lately). Here's a small portion of the one I created for auto-forwarding, including back-end calls,
-  error cases, and rate limit checks. I find it much more useful than straight write-ups.
+  Once you've completed the auto-forwarding setup, the guide tests the full loop by sending an email directly to the 
+  Gmail address and waiting for it to return using a similar polling scheme as I discussed earlier.
+  Click the video to see the final leg of the experience in real time:
+</p>
+<div class="figure-container smaller black">
+  <figure>
+    <%= render "shared/video_figure", video_asset_path_name: "donedone-gmail-05.webm", user_initiated: true %>
+    <figcaption>
+      <span><strong>Wait for it, wait for it...</strong> You deserve a little reward at the end. 
+      When you've set up auto-forwarding the app randomly selects a gif to celebrate the completion of the setup.</span>
+    </figcaption>
+  </figure>
+</div>
+<p>
+  Now, you know you've completed your full Gmail auto-forwarding setup. No need to manually test things. The mailbox 
+  is live and ready to receive emails.
+</p>
+<hr>
+<h3>How I document large features like this</h3>
+<p>
+  For big features like auto-forwarding setup, I like to document the entire technical flow
+  visually (I've been using <%= link_to "drawio.com", "https://drawio.com", target: "_blank" %> lately).
+  Here's a small portion of the one I created for auto-forwarding, including screen flows, back-end calls,
+  error cases, and rate limit checks. 
 </p>
 <div class="figure-container">
   <figure>
     <%= image_tag "donedone-gmail-documentation.png", alt: "Screenshot of DoneDone Gmail auto-forwarding documentation" %>
     <figcaption>
-      <span>A small portion of the documentation I created for the auto-forwarding feature.</span>
+      <span>
+        A small portion of the documentation I created for the auto-forwarding feature. 
+        I find it much more useful than straight write-ups. (I've actually gone back to these often).
+      </span>
     </figcaption>
   </figure>
 </div>
+<hr>
 <p>
-  It starts on this screen with a link that opens up Gmail in a new tab:
-
-
-Once you’ve come back to this tab and clicked “I’ve signed in to Gmail”, the wizard slides to the next task — copying DoneDone’s generated auto-forwarding address using Javascript’s Clipboard class. Once you’ve clicked the email address, the email address is automatically copied, and the “Continue to the next step!” button slides into view:
-
-
-
-The next screen walks you through the process of adding the generated email address as an auto-forwarding address into Gmail, which then sends a confirmation link to that address ensuring you actually have access to the address you added.
-
-This gets to an archaic part of Google’s UI as it involves three distinct clicks (on “Next”, “Proceed”, and “OK”) to get the address added.
-
-
-Sidenote: The one drawback to this screen is that it would have to get updated whenever Google changes the way you add an auto-forwarding address — even if the change were as minor as naming the button “Proceed” to “Continue”. But, the underbellies of software rarely get a facelift, especially if its part of a monstrous enterprise like Google. And I’m using that to my benefit here.
-
-At this point, Google will send an email to the auto-forwarding address. In a typical scenario, the user would have to open yet another tab, log into the inbox of that address, find the email Google sent, and then click the confirmation link. But that opens up another opportunity where the guid could help that along.
-
-Once the next screen slides in, the app runs a setInterval() method which make a call to our own API. The API call looks up the most recent emails received in that particular mailbox and parses out the contents of the emails to regex match against the Google generated confirmation link (e.g. starting with “https://mail-settings.google.com”).
-
-
-This continues every few seconds for a couple of minutes. If it never finds a match, the screen will flip to an error state, but in the expected happy case, we surface the link directly on the screen. The user just needs to click it and then hit the “Confirm” button on Google’s side.
-
-
-Most people will rightfully assume that the auto-forwarding work is done after this step. But Google has one more onerous bit here many miss.
-
-Google requires you to go back to your mail settings and manually grant the freshly added address as the forwarding address.
-
-Once again, this is a process that hasn’t been touched in their end for years — exemplified by the fact that you need to scroll to the bottom of the lengthy settings page to “Save changes.”
-
-All of this is detailed on the next screen after you click “I’ve clicked the link and the Confirm button.”
-
-
-Now, we’ve finished Google’s auto-forwarding setup. As a final step, we test the complete loop on our side once a user clicks “Test that auto-forwarding is working!”
-
-
-When a user clicks the button, an API call is made to send a test email to the Google-owned email address. Then, we start another setInterval() on an API method that waits for that email to land back on our side.
-
-
-Once the email hits, we surface the success page. I thought I’d have fun with this and found a few congratulatory GIFs that the UI will randomly select from.
-
-
-Most products that have a feature that requires auto-forwarding will include a help document on how to forward your Google mail their way, like this one from Help Scout. It’s a tedious read because — well — the process is tedious.
-
-But these are the opportunities I relish. The possibility of making something you’d expect to be drab just a little better. Handholding wherever it’s possible.
+  So that's just a small sampling of my work with DoneDone.
+   Next, I want to show you a couple very different, immensely fun, side projects.
+</p>

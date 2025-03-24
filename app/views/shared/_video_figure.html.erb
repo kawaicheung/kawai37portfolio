@@ -1,3 +1,15 @@
-<% show_controls ||= false %>
 <% user_initiated ||= false %>
-<%= video_tag "#{video_asset_path_name}", playsinline: true, controls: show_controls, autoplay: !user_initiated, loop: true, muted: true %>
+<div data-controller="video-player" class="video-container"  data-action="click->video-player#play">
+  <div data-video-player-target="overlay" class="video-overlay">
+    <button class="play-button">
+      ▶
+    </button>
+  </div>
+  <%= video_tag "#{video_asset_path_name}", 
+                playsinline: true, 
+                controls: user_initiated, 
+                autoplay: !user_initiated, 
+                loop: !user_initiated, 
+                muted: true,
+                data: { video_player_target: "video" } %>
+</div>

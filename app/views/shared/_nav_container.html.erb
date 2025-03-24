@@ -5,11 +5,28 @@
 <div class="nav-container">
   <nav class="nav-map">
     <ul> 
-      <% Constants::NAVIGATION_SECTIONS.each do |section| %>
-        <li>
-          <%= link_to section[:name], "/#{section[:path]}", class: "#{reversed ? "reversed" : ""} #{request.path.include?(section[:path]) ? "selected" : ""}" %>
-        </li>
-      <% end %>
+      <li>
+        <%= link_to "Hello!", pitch_path, class: "#{reversed ? "reversed" : ""} #{request.path.include?("/pitch") ? "selected" : ""}" %>
+      </li>
+      <li>
+        <%= link_to "DnsDigest", works_dnsdigest_path, class: "#{reversed ? "reversed" : ""} #{request.path.include?("/dnsdigest") ? "selected" : ""}" %>
+      </li>
+      <li>
+        <%= link_to "DoneDone", works_donedone_path, class: "#{reversed ? "reversed" : ""} #{request.path.include?("/donedone") ? "selected" : ""}" %>
+      </li>
+      <li>
+        <%= link_to "Funsies", works_baseball_scoreboards_path, class: "#{reversed ? "reversed" : ""} #{request.path.include?("/baseball-scoreboards") ? "selected" : ""}" %>
+      </li>
+      <li>
+        <%= link_to "Book", works_naming_things_path, class: "#{reversed ? "reversed" : ""} #{request.path.include?("/naming-things") ? "selected" : ""}" %>
+      </li>
+      <li>
+        <%= link_to "Write/Speak", works_communications_path, class: "#{reversed ? "reversed" : ""} #{request.path.include?("/communications") ? "selected" : ""}" %>
+      </li>
+      <li>
+        <%= link_to "Next?", contact_path, class: "#{reversed ? "reversed" : ""} #{request.path.include?("/contact") ? "selected" : ""}" %>
+      </li>
+      
     </ul>
   </nav>
   <!--
