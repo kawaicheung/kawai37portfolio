@@ -7,73 +7,77 @@
 </p>
 <p>
   I struggled with what exactly to show you (there's too much!) so I'll stick to this script:
-  On this page,  a high-level assortment of the work I did focused on design thinking. 
+  On this page, a high-level assortment of the work I did focused on design thinking. 
   On the next one, a deep dive into one particular feature.
 </p>
 
 <hr>
-<h3>In the details</h3>
-<p>
-  Let's zoom in on some particular details of DoneDone: A random assortment of UI/UX goodies.
-</p>
-
-<div class="figure-container smallest">
-  <figure>
-    <%= render "shared/video_figure", video_asset_path_name: "donedone-kanban-1.webm" %>
-    <figcaption>
-      <span><strong>Preventing accidental closures:</strong> 
-      On the Kanban board, when the "New task" panel is visible, you can click outside of it to close it. However, once
-      you've entered content, the panel will stay open.
-      </span>
-    </figcaption>
-  </figure>
-</div>
-<div class="figure-container smallest">
-  <figure>
-    <%= render "shared/video_figure", video_asset_path_name: "donedone-filters.webm" %>
-    <figcaption>
-      <span><strong>Filter finesse:</strong> 
-      One of the more intricate features was the filter bar. 
-      Debouncing API calls between filter changes, 
-      creating smart short cut filters, and
-      displaying selected items in a compact, meaningful way
-      was a fun challenge.
-      </span>
-    </figcaption>
-  </figure>
-</div>
-<div class="figure-container smallest">
-  <figure>
-    <%= render "shared/video_figure", video_asset_path_name: "donedone-pusher.webm" %>
-    <figcaption>
-      <span><strong>Who's viewing now?</strong> 
-      On tasks, I integrated with <%= link_to "Pusher", "https://www.pusher.com", target: "_blank" %> web sockets to allow 
-      users to see who else is viewing the task in real-time.
-      </span>
-    </figcaption>
-  </figure>
-</div>
-<div class="figure-container smallest">
-  <figure>
-    <%= render "shared/video_figure", video_asset_path_name: "donedone-traffic-cop.webm" %>
-    <figcaption>
-      <span><strong>Traffic Cop:</strong> 
-      When responding to a customer support ticket, the app notifies you if someone just replied to the same ticket since
-      you last reviewed its history, to prevent multiple replies.
-      </span>
-    </figcaption>
-  </figure>
-</div>
-<div class="figure-container smallest">
-  <figure>
-    <%= render "shared/video_figure", video_asset_path_name: "donedone-pinboard.webm" %>
-    <figcaption>
-      <span><strong>Pinboard:</strong> 
-      At the top of DoneDone is a board that lets you pin any task you want. I gave each task note a slight rotation to 
-      make it feel more natural and imperfect, without getting in the way of readability.
-      </span>
-    </figcaption>
-  </figure>
+<h3>A tasting flight of UI and UX goodies</h3>
+<div class="slider-container" data-controller="slider" data-slider-dot-class-value="slider-dot">
+  <button class="slider-nav prev" data-action="click->slider#previous"><i class="fa-solid fa-chevron-left"></i></button>
+  <div class="slides">
+    <div class="figure-container smaller" data-slider-target="slide">
+      <figure>
+        <%= render "shared/video_figure", video_asset_path_name: "donedone-kanban-1.webm" %>
+        <figcaption>
+          <span><strong>Preventing accidental closures:</strong> 
+          On the Kanban board, when the "New task" panel is visible, you can click outside of it to close it. However, once
+          you've entered content, the panel will stay open.
+          </span>
+        </figcaption>
+      </figure>
+    </div>
+    <div class="figure-container smaller" data-slider-target="slide">
+      <figure>
+        <%= render "shared/video_figure", video_asset_path_name: "donedone-filters.webm" %>
+        <figcaption>
+          <span><strong>Filter finesse:</strong> 
+          One of the more intricate features was the filter bar. 
+          Debouncing API calls between filter changes, 
+          creating smart short cut filters, and
+          displaying selected items in a compact, meaningful way
+          was a fun challenge.
+          </span>
+        </figcaption>
+      </figure>
+    </div>
+    <div class="figure-container smaller" data-slider-target="slide">
+      <figure>
+        <%= render "shared/video_figure", video_asset_path_name: "donedone-pinboard.webm" %>
+        <figcaption>
+          <span><strong>Pinboard:</strong> 
+          At the top of DoneDone is a board that lets you pin any task you want. I gave each task note a rotation of less than a degree to 
+          make it feel more natural and imperfect, without getting in the way of readability.
+          </span>
+        </figcaption>
+      </figure>
+    </div>
+    <div class="figure-container smaller" data-slider-target="slide">
+      <figure>
+        <%= render "shared/video_figure", video_asset_path_name: "donedone-pusher.webm" %>
+        <figcaption>
+          <span><strong>Who's viewing now?</strong> 
+          On tasks, I integrated with <%= link_to "Pusher", "https://www.pusher.com", target: "_blank" %> web sockets to allow 
+          users to see who else is viewing the task in real-time.
+          </span>
+        </figcaption>
+      </figure>
+    </div>
+    <div class="figure-container smaller" data-slider-target="slide">
+      <figure>
+        <%= render "shared/video_figure", video_asset_path_name: "donedone-traffic-cop.webm" %>
+        <figcaption>
+          <span><strong>Traffic Cop:</strong> 
+          When responding to a customer support ticket, the app notifies you if someone just replied to the same ticket since
+          you last reviewed its history, to prevent multiple replies.
+          </span>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+  <button class="slider-nav next" data-action="click->slider#next"><i class="fa-solid fa-chevron-right"></i></button>
+  <div class="slider-dots" data-slider-target="dots">
+  </div>
 </div>
 
 <hr>
@@ -91,14 +95,14 @@
     <%= link_to image_tag("dd-og-site.png", alt: "A screenshot of the original DoneDone marketing site"), "https://web.archive.org/web/20100927203150/http://www.getdonedone.com/index.aspx", target: "_blank", class: "link-thumbnail" %>
     <figcaption>
       <span><strong>DoneDone, 2009:</strong> The writing focused on what other issue trackers didn't seem to answer...what happens next?</span>
-      <%= render "shared/external_link_button", path: "https://kawaicheung.io/scoreboards/wrigley-1941.html", text: "View the Wayback Machine site" %>
+      <%= render "shared/external_link_button", path: "https://web.archive.org/web/20100927203150/http://www.getdonedone.com/index.aspx", text: "View archived site" %>
     </figcaption>
   </figure>
     <figure>
     <%= link_to image_tag("dd-2024-site.png", alt: "A screenshot of the 2024 DoneDone marketing site"), "https://web.archive.org/web/20250207070508/https://www.donedone.com/", target: "_blank", class: "link-thumbnail" %>
     <figcaption>
       <span><strong>DoneDone, 2024:</strong> The writing focused on how task tracking and a shared inbox can be an all-in-one work solution.</span>
-      <%= render "shared/external_link_button", path: "https://kawaicheung.io/scoreboards/comiskey-1978.html", text: "View the Wayback Machine site" %>  
+      <%= render "shared/external_link_button", path: "https://web.archive.org/web/20250207070508/https://www.donedone.com/", text: "View archived site" %>  
     </figcaption>
   </figure>
 </div>

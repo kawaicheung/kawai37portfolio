@@ -63,6 +63,7 @@
   
   --z-index--header: 100;
   --z-index--nav-container: 200;
+  --z-index--slider-nav: 10;
 
   --font-size--content: 1.5rem; 
   --font-size--content--mobile: 1.4rem;
