@@ -12,7 +12,10 @@
         <%= link_to "DnsDigest", works_dnsdigest_path, class: "#{reversed ? "reversed" : ""} #{request.path.include?("/dnsdigest") ? "selected" : ""}" %>
       </li>
       <li>
-        <%= link_to "DoneDone", works_donedone_path, class: "#{reversed ? "reversed" : ""} #{request.path.include?("/donedone") ? "selected" : ""}" %>
+        <%= link_to "DoneDone", works_donedone_path, class: "#{reversed ? "reversed" : ""} #{request.path == "/works/donedone" ? "selected" : ""}" %>
+      </li>
+      <li>
+        <%= link_to "Gmail", works_donedone_gmail_path, class: "#{reversed ? "reversed" : ""} #{request.path.include?("/donedone/gmail") ? "selected" : ""}" %>
       </li>
       <li>
         <%= link_to "Funsies", works_baseball_scoreboards_path, class: "#{reversed ? "reversed" : ""} #{request.path.include?("/baseball-scoreboards") ? "selected" : ""}" %>

@@ -85,6 +85,23 @@
   </div>
 </div>
 <hr>
+<h3>A piece on my full web design career</h3>
+<p>
+  Last year, I wrote a long piece on Medium, digging up all my past web work on the Wayback Machine. 
+  I was writing it to no one but myself. But much to my surprise, it became a &ldquo;staff pick&rdquo; on Medium. 
+  You can see my a lot of my pre-DoneDone work here as well.
+</p>
+<div class="figure-container smallest">
+  <figure>
+    <%= link_to "https://medium.com/on-building-software/my-25-year-career-in-web-design-through-the-eyes-of-the-wayback-machine-4e37f3ec94d8", target: "_blank", class: "link-thumbnail" do %>
+      <%= image_tag "medium-25-years.webp", alt: "Screenshot of my 25-year web design career post on Medium." %>
+    <% end %>
+    <figcaption>
+      <%= render "shared/external_link_button", path: "https://medium.com/on-building-software/my-25-year-career-in-web-design-through-the-eyes-of-the-wayback-machine-4e37f3ec94d8", text: "Read my web design post" %>  
+    </figcaption>
+  </figure>
+</div>
+<hr>
 <h3><strong>Word flight:</strong> Curating my favorite writing samples</h3>
 <p>
   While I mainly write about design and development, I've also written about other topics&mdash;
@@ -130,22 +147,6 @@
     <% end %>
   </li>
 </ol>
-<hr>
-<h3>One last piece on my web design career.</h3>
-<p>
-  I'll end this section with this. Last year, I wrote a longer nostalgia piece about digging up all my past web work on the Wayback Machine. 
-  I was writing it to no one but myself. But much to my surprise, it became a &ldquo;staff pick&rdquo; on Medium. You may get a nostalgia kick too!
-</p>
-<div class="figure-container smallest">
-  <figure>
-    <%= link_to "https://medium.com/on-building-software/my-25-year-career-in-web-design-through-the-eyes-of-the-wayback-machine-4e37f3ec94d8", target: "_blank", class: "link-thumbnail" do %>
-      <%= image_tag "medium-25-years.webp", alt: "Screenshot of my 25-year web design career post on Medium." %>
-    <% end %>
-    <figcaption>
-      <%= render "shared/external_link_button", path: "https://medium.com/on-building-software/my-25-year-career-in-web-design-through-the-eyes-of-the-wayback-machine-4e37f3ec94d8", text: "Read my web design post" %>  
-    </figcaption>
-  </figure>
-</div>
 <hr>
 <p>
   I hope what I've shared on these pages gives you a good sense of my work, joy for the craft,
