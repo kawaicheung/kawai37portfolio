@@ -11,78 +11,84 @@
   On this page, a high-level assortment of the work I did focused on design thinking. 
   On the next one, a deep dive into one particular feature.
 </p>
+<hr>
+<h3>Workflow Jobs</h3>
+<p>
+  One of the largest feature additions was adding jobs to our existing task workflows.
+  This not only allows you to create a series of statuses for tasks, but also automatically reassigns them
+  to the person appointed to a job when the status changes. 
+</p>
 
+<div class="figure-container smaller">
+  <figure>
+    <%= render "shared/video_figure", video_asset_path_name: "donedone-jobs-1.webm" %>
+    <figcaption>
+      <span>
+      <strong>I'd like a job:</strong> In this task, the bug workflow automatically reassigns a ticket
+      to the &ldquo;Tester&rdquo; when a status is marked &ldquo;Ready for retest&rdquo;.
+      </span>
+    </figcaption>
+  </figure>
+</div>
+<p>
+  The management interface allows you to add statuses, order, color code, and mark them active or inactive.
+</p>
+<div class="figure-container smaller">
+  <figure>
+    <%= image_tag "donedone-jobs-b.webp", alt: "Screenshot of the DoneDone workflow management interface." %>
+  </figure>
+</div>
+<p>
+  Within the management interface, you can add jobs, then assign statuses to the job once added. 
+  I tried to make the instructions clear without 
+  being overly verbose.
+</p>
+<div class="figure-container smaller">
+  <figure>
+    <%= image_tag "donedone-jobs-c.webp", alt: "Screenshot of the DoneDone workflow management interface." %>
+  </figure>
+</div>
+<hr>
+<h3>Kanban board</h3>
+<p>
+  I want to give you a sense of my pace with DoneDone. One feature our customers kept asking for was a Kanban board. 
+  In 2021, I added it to DoneDone. This uses Vue's draggable library, but the rest of it I did with plain HTML and CSS.
+</p>
+<div class="figure-container">
+  <figure>
+    <%= image_tag "donedone-kanban-2.webp", alt: "A screenshot of the Kanban board in DoneDone" %>
+    <figcaption>
+      <span><strong>The benefits of familiarity:</strong> The Kanban board was designed, developed, and released in about 6 weeks.</span>
+      <%= render "shared/external_link_button", path: "https://www.donedone.com/features/kanban-boards", text: "View the Kanban features" %>
+    </figcaption>
+  </figure>
+</div>
+<p>
+  As DoneDone was a two-person team at the time (I did design and dev while my business partner Michael handled marketing and sales),
+  we didn't need much process. In fact, most features were started as a single DoneDone task with a plain English write-up 
+  that we would comment on as I iterated 
+  design and developed the back-end code.
+</p>
+<p>
+  We were able to get from concept to a smooth release in six weeks (about one Shape Up cycle). I haven't used Shape Up, but 
+  after reading through your methodology, it seems like something I would easily adapt to. I'd relish a bit more structure too!
+</p>
 <hr>
 <h3>A tasting flight of UI and UX goodies</h3>
-<% if is_mobile %>
-  <div class="figure-container smaller" data-slider-target="slide">
-    <figure>
-      <%= render "shared/video_figure", video_asset_path_name: "donedone-kanban-1.webm" %>
-      <figcaption>
-        <span><strong>Preventing accidental closures:</strong> 
-        On the Kanban board, when the "New task" panel is visible, you can click outside of it to close it. However, once
-        you've entered content, the panel will stay open.
-        </span>
-      </figcaption>
-    </figure>
-  </div>
-  <div class="figure-container smaller" data-slider-target="slide">
-    <figure>
-      <%= render "shared/video_figure", video_asset_path_name: "donedone-filters.webm" %>
-      <figcaption>
-        <span><strong>Filter finesse:</strong> 
-        One of the more intricate features was the filter bar. 
-        Debouncing API calls between filter changes, 
-        creating smart short cut filters, and
-        displaying selected items in a compact, meaningful way
-        was a fun challenge.
-        </span>
-      </figcaption>
-    </figure>
-  </div>
-  <div class="figure-container smaller" data-slider-target="slide">
-    <figure>
-      <%= render "shared/video_figure", video_asset_path_name: "donedone-pinboard.webm" %>
-      <figcaption>
-        <span><strong>Pinboard:</strong> 
-        At the top of DoneDone is a board that lets you pin any task you want. I gave each task note a rotation of less than a degree to 
-        make it feel more natural and imperfect, without getting in the way of readability.
-        </span>
-      </figcaption>
-    </figure>
-  </div>
-  <div class="figure-container smaller" data-slider-target="slide">
-    <figure>
-      <%= render "shared/video_figure", video_asset_path_name: "donedone-pusher.webm" %>
-      <figcaption>
-        <span><strong>Who's viewing now?</strong> 
-        On tasks, I integrated with <%= link_to "Pusher", "https://www.pusher.com", target: "_blank" %> web sockets to allow 
-        users to see who else is viewing the task in real-time.
-        </span>
-      </figcaption>
-    </figure>
-  </div>
-  <div class="figure-container smaller" data-slider-target="slide">
-    <figure>
-      <%= render "shared/video_figure", video_asset_path_name: "donedone-traffic-cop.webm" %>
-      <figcaption>
-        <span><strong>Traffic Cop:</strong> 
-        When responding to a customer support ticket, the app notifies you if someone just replied to the same ticket since
-        you last reviewed its history, to prevent multiple replies.
-        </span>
-      </figcaption>
-    </figure>
-  </div>
-<% else %>
+<p>
+  Here's a small sampling of other features I've done, small and large, over the past few years.
+</p>
+<% unless is_mobile %>
 <div class="slider-container" data-controller="slider" data-slider-dot-class-value="slider-dot">
   <button class="slider-nav prev" data-action="click->slider#previous"><i class="fa-solid fa-chevron-left"></i></button>
   <div class="slides">
+<% end %>
     <div class="figure-container smaller" data-slider-target="slide">
       <figure>
         <%= render "shared/video_figure", video_asset_path_name: "donedone-kanban-1.webm" %>
         <figcaption>
           <span><strong>Preventing accidental closures:</strong> 
-          On the Kanban board, when the "New task" panel is visible, you can click outside of it to close it. However, once
+          Speaking of the Kanban board, when the "New task" panel is visible, you can click outside of it to close it. However, once
           you've entered content, the panel will stay open.
           </span>
         </figcaption>
@@ -136,6 +142,7 @@
       </figure>
     </div>
   </div>
+<% unless is_mobile %>
   <button class="slider-nav next" data-action="click->slider#next"><i class="fa-solid fa-chevron-right"></i></button>
   <div class="slider-dots" data-slider-target="dots">
   </div>
