@@ -30,7 +30,7 @@
   The first part of the setup flow leads you through entering your Gmail address into DoneDone, copying
   the generated forwarding address, and applying it to your Gmail account. Click the video to see the experience in real time:
 </p>
-<div class="figure-container smaller">
+<div class="figure-container">
   <figure>
     <%= render "shared/video_figure", video_asset_path_name: "donedone-gmail-01.webm", user_initiated: true %>
   </figure>
@@ -63,7 +63,7 @@
   Once you complete the step and the next screen slides in, the app polls against an API method I wrote that 
   detects the confirmation email and parses out the Google generated confirmation link. 
 </p>
-<div class="figure-container smallest">
+<div class="figure-container smaller">
   <figure>
     <%= image_tag "donedone-gmail-03a.webp", alt: "Screenshot of DoneDone Gmail auto-forwarding instructions" %>
   </figure>
@@ -73,7 +73,7 @@
    but in the expected happy case, I surface the link directly on the screen. 
    You just need to click it and then hit the “Confirm” button on Google’s side.
 </p>
-<div class="figure-container smallest">
+<div class="figure-container smaller">
   <figure>
     <%= image_tag "donedone-gmail-03b.webp", alt: "Screenshot of DoneDone Gmail auto-forwarding instructions" %>
   </figure>
@@ -106,7 +106,7 @@
   Gmail address and waiting for it to return using a similar polling scheme as I discussed earlier.
   Click the video to see the final leg of the experience in real time:
 </p>
-<div class="figure-container smaller">
+<div class="figure-container">
   <figure>
     <%= render "shared/video_figure", video_asset_path_name: "donedone-gmail-05.webm", user_initiated: true %>
     <figcaption>
@@ -138,6 +138,12 @@
     </figcaption>
   </figure>
 </div>
+<p class="note">
+  <strong>Note:</strong> I made a 10-minute video discussing diagramming as
+  is it's own kind of visual thinking, which has helped me as a designer. It's part of 
+  a video series I did called &ldquo;Real Code&rdquo; (More on that later).
+  If it's of interest to you, <%= link_to "you can watch it here", "https://www.youtube.com/watch?v=Ujj_BKpiQHE&list=PL_0hiGP3NeojDxJILYeLILioIYwIvDWH6&index=3", target: "_blank" %>.
+</p>
 <hr>
 <p>
   So that's just a small sampling of my work with DoneDone.

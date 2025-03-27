@@ -40,14 +40,14 @@
     }
     
     &.prev {
-      left: 1rem;
+      left: -2rem;
       &:hover {
         transform: translateX(-2px) translateY(-50%);
       }
     }
     
     &.next {
-      right: 1rem;
+      right: -2rem;
 
       &:hover {
         transform: translateX(2px) translateY(-50%);

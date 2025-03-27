@@ -3,23 +3,34 @@
 <h2>Making <strong>&ldquo;getting things done&rdquo;</strong> easier to do for 15 years.</h2>
 <p>
   The landscape for issue trackers in 2008 was pretty barren. What was there was complex and clunky. 
-  So began my 15-year journey into creating, building, and maintaining <strong>DoneDone</strong>. 
-  It's my career pride and joy. I've learned so much about design and development from it.
+  So began my journey with <strong>DoneDone</strong>, an issue tracker
+  and shared inbox with thousands of happy customers.
+</p>
+<p> I created and maintained it for 15 years, working from the UI to the database. 
+  Here are <%= link_to "over 80 customer reviews", "https://www.g2.com/products/donedone/reviews", target: "_blank" %> of the product.
 </p>
 <p>
   I struggled with what exactly to show you (there's simply too much!) so I'll stick to this script:
-  On this page, a high-level assortment of work I've completed within the past 4 years. 
+  On this page, a high-level assortment of work I've completed within the past few years. 
   On the next one, a deeper dive into one particular feature. 
 </p>
 <hr>
 <h3>Workflow Jobs</h3>
 <p>
   One of the largest recent feature additions was adding &ldquo;jobs&rdquo; to our existing task workflows.
-  Before this, you could create a series of statuses to apply to a task, but with this new feature, the task automatically 
+  Before this, you could create a series of statuses to apply to a task, but changing the status of a task didn't affect
+  who was assigned to it. You'd have to change the assignee manually.
+</p>
+<div class="figure-container">
+  <figure>
+    <%= render "shared/video_figure", video_asset_path_name: "donedone-no-jobs.webm" %>
+  </figure>
+</div>
+<p>
+  With this new feature, the task automatically 
   gets reassigned to the person appointed to a job when the status changes. 
 </p>
-
-<div class="figure-container smaller">
+<div class="figure-container">
   <figure>
     <%= render "shared/video_figure", video_asset_path_name: "donedone-jobs-1.webm" %>
     <figcaption>
@@ -31,41 +42,60 @@
   </figure>
 </div>
 <p>
-  The management interface allows you to add statuses, order, color code, and mark them active or inactive.
+  I also needed to augment the existing management interface I designed a year earlier.
+  Within the workflow management interface, you can click a button to manage jobs.
+  I tried to make the instructions clear without being overly verbose.
 </p>
-<div class="figure-container smaller">
+<div class="figure-container">
+  <figure>
+    <%= image_tag "donedone-jobs-c.webp", alt: "Screenshot of the DoneDone workflow management interface." %>
+  </figure>
+</div>
+<p>
+  The management interface allows you to add statuses, order, color code, and mark them active or inactive.
+  With this addition, you could now choose which &ldquo;job&rdquo; should be assigned to a task when its status changes as well.
+</p>
+<div class="figure-container">
   <figure>
     <%= image_tag "donedone-jobs-b.webp", alt: "Screenshot of the DoneDone workflow management interface." %>
   </figure>
 </div>
 <p>
-  Within the management interface, you can add jobs, then assign statuses to the job once added. 
-  I tried to make the instructions clear without 
-  being overly verbose.
+  This feature had a ripple effect throughout the app. New database tables to store jobs and the relationships between jobs and statuses,
+  long-standing business logic assumptions that had to be broken and reframed, new API endpoints, and so forth. It was one of those
+  features that seems deceptively simple at the surface.
 </p>
-<div class="figure-container smaller">
-  <figure>
-    <%= image_tag "donedone-jobs-c.webp", alt: "Screenshot of the DoneDone workflow management interface." %>
-  </figure>
-</div>
+<p>
+  While taking on the back-end work along with the front-end design may seem daunting for most, it's a style of creating that 
+  I've become accustomed to. To be able to meander across the entire stack helps keep me in a state of flow.
+  (That said, as I mention in my cover letter, I'm more than ready to focus on a smaller chunk of the stack!)
+</p>
 <hr>
 <h3>Kanban board</h3>
 <p>
-  I want to give you a sense of my pace with DoneDone. One feature our customers kept asking for was a Kanban board. 
-  In 2021, I added it to DoneDone. This uses Vue's draggable library, but the rest of it I did with plain HTML and CSS.
+  I want to give you a sense of my pace with building things in DoneDone. 
+  For years, a feature our customers kept asking for was a Kanban board.
+  Here's what the issue list view I designed looked like.
+</p>
+<div class="figure-container">
+  <figure>
+    <%= image_tag "donedone-list.webp", alt: "A screenshot of the issue list view in DoneDone" %>
+  </figure>
+</div>
+<p>
+  In 2021, we added it to DoneDone. Each column represents the statuses already present in our workflows feature.
+  I used Vue's draggable library to allow you to sort and move cards to other status columns. 
+  The rest of it was done with plain HTML and CSS.
 </p>
 <div class="figure-container">
   <figure>
     <%= image_tag "donedone-kanban-2.webp", alt: "A screenshot of the Kanban board in DoneDone" %>
-    <figcaption>
-      <span><strong>The benefits of familiarity:</strong> The Kanban board was designed, developed, and released in about 6 weeks.</span>
-      <%= render "shared/external_link_button", path: "https://www.donedone.com/features/kanban-boards", text: "View the Kanban features" %>
-    </figcaption>
   </figure>
 </div>
+
 <p>
-  As DoneDone was a two-person team  (I did design and dev while my business partner Michael handled marketing and sales),
-  we didn't need much process. In fact, most features were started as a single DoneDone task with a plain English write-up 
+  As DoneDone was a two-person team (I did design and dev while my business partner Michael handled marketing and sales),
+  we didn't need much process. In fact, most features like Kanban were started from a single DoneDone ticket with a plain English write-up 
   that we would comment on as I iterated design and developed the back-end code.
 </p>
 <p>
@@ -176,4 +206,10 @@
 <p class="note">
   <strong>Important note:</strong> If you go to <%= link_to "DoneDone.com", "https://www.donedone.com/", target: "_blank" %> now, you'll see a 
   version of the marketing site created by the new owners of the product. That is not my work.
+</p>
+<hr>
+<p>
+ <strong>DoneDone is my career pride and joy</strong>.
+  Even as a two-person team, we were able to compete with much bigger products.
+  I learned that I could take on and own so much more than what most companies pigeon-hole you into.
 </p>
