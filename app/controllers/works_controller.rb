@@ -17,6 +17,9 @@ class WorksController < ApplicationController
   def naming_things
   end
 
+  def meetle
+  end
+
   def communications
   end
 end

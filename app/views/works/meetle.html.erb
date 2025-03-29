@@ -1,0 +1,124 @@
+<% content_for :title, "Meetle" %>
+<h2>So why don&rsquo;t you just meet me in the <strong>meetle</strong>?</h2>
+<p>
+  I just showed a product I worked on for 15 years. Here's one I began just a few weeks ago.
+  It's a good example of how I build ideas in their earliest stages.
+</p>
+<p>
+  <strong>The idea:</strong> Riffing off the saying &ldquo;This meeting could've been an email,&rdquo;
+  I'm building an app that transforms emails into public web pages, allowing your &ldquo;attendees&rdquo; to respond asynchronously.
+  This gets rid of meetings while also creating a better way to gather feedback than a lengthy reply chain would.
+</p>
+<p>
+  I'm calling it <strong>Meetle</strong> right now. It's all running locally at the moment, so screenshots and video 
+  captures will have to do!
+</p>
+<hr>
+<h3>Sharpening tone and message</h3>
+<p>
+  Oftentimes, I'll start design with copy. It helps me evolve the idea.
+</p>
+<div class="figure-container">
+  <figure>
+    <%= image_tag "meetle-0.webp", alt: "A screenshot of the Meetle homepage." %>
+    <figcaption>
+      <span>
+        <strong>The elevator pitch:</strong> In 30 seconds, I want someone to understand the idea,
+        why it's useful, and entice them to view the sample.
+      </span>
+    </figcaption>
+  </figure>
+</div>
+<p>
+  I came up with seven headlines that I all liked. So, I created a small Stimulus controller to randomize
+  the headlines on page load:
+</p>
+<ul class="headlines">
+  <li>This meeting could've been <strike>an email</strike> a meetle.</li>
+  <li>Little + meeting = meetle.</li>
+  <li>Why don't you just meet me at the meetle?</li>
+  <li>Meetles get everyone on the same (web) page.</li>
+  <li>A meeting...without the meeting part.</li>
+  <li>5.5 million meetings a day should've been meetles.</li>
+</ul>
+<hr>
+<h3>Marketing through pricing</h3>
+<p>
+  Instead of a monthly subscription, I'm considering selling each meetle at a flat rate. 
+  That not only gives me a better price comparison (the true cost of a meeting vs. a meetle), but also 
+  an alternative pitch: Buy a pack of meetles for <strong>someone else</strong>, like your meeting-loving manager!
+</p>
+<div class="figure-container smaller">
+  <figure>
+    <%= image_tag "meetle-pricing.webp", alt: "A screenshot of the Meetle pricing page." %>
+    <figcaption>
+      <span>
+        <strong>Real ROI:</strong> For $10, I could cancel my next ten needless real-time meetings? Yes please!
+      </span>
+    </figcaption>
+  </figure>
+</div>
+<hr>
+<h3>Getting through the <span class="strike">meeting</span> meetle</h3>
+<p>
+  Here's the start of what Meetle will look like. I'm dabbling with the idea of a front page that shows 
+  the meeting owner, the purpose statement, the attendees, and the timeframe the meetle is active, all derived
+  from the email content. I've started right in Rails&mdash;no design files.
+</p>
+<div class="figure-container">
+  <figure>
+    <%= render "shared/video_figure", video_asset_path_name: "meetle-1.webm" %>
+    <figcaption>
+      <span>
+        For Meetle creators, I want them to think &ldquo;Nice! I created this
+        pretty useful, time-saving site by just sending an email?&rdquo;
+      </span>
+    </figcaption>
+  </figure>
+</div>
+<p class="note">
+  <strong>Thinking ahead:</strong> Though I haven't built it yet, there will be an email parser
+  that will turn emails into public web pages based on some rules.
+  For example, a delimeter like "---" would allow you to separate ideas into different pages, and you can list 
+  all attendee emails at the end of your email.
+</p>
+<hr>
+<h3>Keyboard first</h3>
+<p>
+  I'm experimenting with making the entire app controllable via a keyboard. Hitting <span class="code">ENTER</span> sends you into the Meetle.
+  The <span class="code">&larr;</span> and <span class="code">&rarr;</span> keys let you quickly navigate between pages. 
+  Clicking <span class="code">F</span> spawns an auto-focused pop-up for giving <strong>feedback</strong>.
+</p>
+<div class="figure-container">
+  <figure>
+    <%= render "shared/video_figure", video_asset_path_name: "meetle-2.webm", user_initiated: true %>
+    <figcaption>
+      <span>
+        Early flow of Meetle using keyboard navigation only (see lower-left of video for key captures).
+      </span>
+    </figcaption>
+  </figure>
+</div>
+<hr>
+<h3>Opinionated software</h3>
+<p>
+  <strong>You introduced the world to the idea of opinionated software 20 years ago</strong>, and I've taken that idea to heart in 
+  many of the products I've worked on. Meetle is very opinionated. A few examples: A required purpose statement. 
+  One piece of feedback, per page, per attendee rather than lengthy back-and-forths. 
+  A small period of time for viewing and feedback.
+</p>
+<p class="note">
+  <strong>So you're saying there's a chance?</strong> 
+  In the wild scenario where I'm actually offered this job, I will cease working on this app due to its potential 
+  conflict with 37signals products. It will just be a fun memory.
+</p>
+<hr>
+<p>
+  Moving on from web-based software, my final two work examples are pure passion projects.
+</p>
+
+
+
+
+
+
