@@ -1,5 +1,5 @@
 <% content_for :title, "DnsDigest" %>
-<h2>Giving hope to struggling <strong>DNS record</strong> managers.</h2>
+<h2>Giving hope to struggling <span class="no-break"><strong>DNS record</strong></span> managers.</h2>
 <p>
   One of the things I love about design is how it can make confusing concepts more approachable. And what's more confusing than an 
   unorganized laundry list of DNS records&mdash;the same ones that control everything about how your domain 
@@ -87,7 +87,7 @@
   how to interpret their <span class="dns-label">TXT</span> values. I also built an SPF lookup crawler
   that counts unique lookups to determine if they are over the recommended 10 maximum lookup limit.
 </p>
-<div class="figure-container smaller">
+<div class="figure-container">
   <figure>
     <%= render "shared/video_figure", video_asset_path_name: "dnsdigest-spf.webm" %>
   </figure>
