@@ -3,10 +3,10 @@
 <h2>Making <strong>&ldquo;getting things done&rdquo;</strong> easier to do for 15 years.</h2>
 <p>
   The landscape for issue trackers in 2008 was pretty barren. What was there was complex and clunky. 
-  So began my journey with <strong>DoneDone</strong>, an issue tracker
-  and shared inbox with thousands of happy customers.
+  So began my journey with <strong>DoneDone</strong>, a task tracker
+  and shared inbox I created that thousands of happy customers use.
 </p>
-<p> I created and maintained it for 15 years, working from the UI to the database. 
+<p> I grew and maintained the product for 15 years, working from the UI to the database. 
   Here are <%= link_to "over 80 customer reviews", "https://www.g2.com/products/donedone/reviews", target: "_blank" %> of the product.
 </p>
 <p>
@@ -17,47 +17,51 @@
 <hr>
 <h3>Workflow Jobs</h3>
 <p>
-  One of the largest recent feature additions was adding &ldquo;jobs&rdquo; to our existing task workflows.
+  One of the largest recent feature additions was adding &ldquo;jobs&rdquo; to our existing status workflows.
   Before this, you could create a series of statuses to apply to a task, but changing the status of a task didn't affect
   who was assigned to it. You'd have to change the assignee manually.
 </p>
 <div class="figure-container">
   <figure>
     <%= render "shared/video_figure", video_asset_path_name: "donedone-no-jobs.webm" %>
+    <figcaption>
+      <span>
+        <strong>No jobs available:</strong> The task detail page prior to adding jobs. Status and assignee changes were separate actions.
+      </span>
+    </figcaption>
   </figure>
 </div>
 <p>
-  With this new feature, the task automatically 
-  gets reassigned to the person appointed to a job when the status changes. 
+  With this new feature, you appoint people to jobs when creating a task. The task is then automatically reassigned to the person 
+  appointed to a job when the status changes, creating a more seamless flow of responsibility.
 </p>
 <div class="figure-container">
   <figure>
     <%= render "shared/video_figure", video_asset_path_name: "donedone-jobs-1.webm" %>
     <figcaption>
       <span>
-      <strong>I'd like a job:</strong> In this task, the bug workflow automatically reassigns a ticket
-      to the &ldquo;Tester&rdquo; when a status is marked &ldquo;Ready for retest&rdquo;.
+        <strong>I'd like a job:</strong> The bug workflow automatically reassigns a task
+        to the &ldquo;Tester&rdquo; when a status is marked &ldquo;Ready for retest&rdquo;.
       </span>
     </figcaption>
   </figure>
 </div>
 <p>
-  I also needed to augment the existing management interface I designed a year earlier.
-  Within the workflow management interface, you can click a button to manage jobs.
-  I tried to make the instructions clear without being overly verbose.
-</p>
-<div class="figure-container">
-  <figure>
-    <%= image_tag "donedone-jobs-c.webp", alt: "Screenshot of the DoneDone workflow management interface." %>
-  </figure>
-</div>
-<p>
+  With this change, I also needed to augment the workflow manager I designed a year earlier.
   The management interface allows you to add statuses, order, color code, and mark them active or inactive.
-  With this addition, you could now choose which &ldquo;job&rdquo; should be assigned to a task when its status changes as well.
+  Now you choose which &ldquo;job&rdquo; should be assigned to the task when changed to that status.
 </p>
 <div class="figure-container">
   <figure>
     <%= image_tag "donedone-jobs-b.webp", alt: "Screenshot of the DoneDone workflow management interface." %>
+  </figure>
+</div>
+<p>
+  To edit jobs, I added a &ldquo;Manage jobs&rdquo; button which opens a flyout panel. I tried to make the instructions clear without being overly verbose.
+</p>
+<div class="figure-container">
+  <figure>
+    <%= image_tag "donedone-jobs-c.webp", alt: "Screenshot of the DoneDone workflow management interface." %>
   </figure>
 </div>
 <p>
@@ -75,11 +79,11 @@
 <p>
   I want to give you a sense of my pace with building things in DoneDone. 
   For years, a feature our customers kept asking for was a Kanban board.
-  Here's what the issue list view I designed looked like.
+  Here's what the task list view I designed looked like.
 </p>
 <div class="figure-container">
   <figure>
-    <%= image_tag "donedone-list.webp", alt: "A screenshot of the issue list view in DoneDone" %>
+    <%= image_tag "donedone-list.webp", alt: "A screenshot of the task list view in DoneDone" %>
   </figure>
 </div>
 <p>
@@ -142,19 +146,8 @@
         <%= render "shared/video_figure", video_asset_path_name: "donedone-pinboard.webm" %>
         <figcaption>
           <span><strong>Pinboard:</strong> 
-          At the top of DoneDone is a board that lets you pin any task you want. I gave each task note a rotation of less than a degree to 
+          At the top of DoneDone is a board that lets you pin any task you want. I gave each task card a rotation of less than a degree to 
           make it feel more natural and imperfect, without getting in the way of readability.
-          </span>
-        </figcaption>
-      </figure>
-    </div>
-    <div class="figure-container smaller" data-slider-target="slide">
-      <figure>
-        <%= render "shared/video_figure", video_asset_path_name: "donedone-pusher.webm" %>
-        <figcaption>
-          <span><strong>Who's viewing now?</strong> 
-          On tasks, I integrated with <%= link_to "Pusher", "https://www.pusher.com", target: "_blank" %> web sockets to allow 
-          users to see who else is viewing the task in real-time.
           </span>
         </figcaption>
       </figure>
@@ -166,6 +159,17 @@
           <span><strong>Traffic Cop:</strong> 
           When responding to a customer support ticket, the app notifies you if someone just replied to the same ticket since
           you last reviewed its history, to prevent multiple replies.
+          </span>
+        </figcaption>
+      </figure>
+    </div>
+    <div class="figure-container smaller" data-slider-target="slide">
+      <figure>
+        <%= render "shared/video_figure", video_asset_path_name: "donedone-pusher.webm" %>
+        <figcaption>
+          <span><strong>Who's viewing now?</strong> 
+          On tasks, I integrated with <%= link_to "Pusher", "https://www.pusher.com", target: "_blank" %> web sockets to allow 
+          users to see who else is viewing the task in real-time.
           </span>
         </figcaption>
       </figure>
@@ -195,7 +199,9 @@
       <%= render "shared/external_link_button", path: "https://web.archive.org/web/20100927203150/http://www.getdonedone.com/index.aspx", text: "View archived site" %>
     </figcaption>
   </figure>
-    <figure>
+</div>
+<div class="figure-container">
+  <figure>
     <%= link_to image_tag("dd-2024-site.webp", alt: "A screenshot of the 2024 DoneDone marketing site"), "https://web.archive.org/web/20250207070508/https://www.donedone.com/", target: "_blank", class: "link-thumbnail" %>
     <figcaption>
       <span><strong>DoneDone, 2024:</strong> The writing focused on how task tracking and a shared inbox can be an all-in-one work solution.</span>
@@ -210,6 +216,6 @@
 <hr>
 <p>
  <strong>DoneDone is my career pride and joy</strong>.
-  Even as a two-person team, we were able to compete with much bigger products.
+  Even as a two-person team for much of its history, we were able to compete with much bigger products.
   I learned that I could take on and own so much more than what most companies pigeon-hole you into.
 </p>
