@@ -89,7 +89,7 @@
 figure {
   width: 100%;
   padding: var(--padding--module);
-  border: var(--border--gray--light);
+  border: var(--border--gray--semi);
   border-radius: var(--border-radius--rectanglish);
   box-shadow: var(--box-shadow--figure);
   background-color: var(--color--white);
@@ -99,7 +99,7 @@ figure {
   }
 
   img {
-    border: var(--border--gray--light);
+    border: var(--border--gray--semi);
   }
 
   video {

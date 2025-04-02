@@ -1,13 +1,14 @@
 <% content_for :title, "Meetle" %>
 <h2>So why don&rsquo;t you just meet me in the <strong>meetle</strong>?</h2>
 <p>
-  I just showed you a product I worked on for 15 years. Here's one I began just a few weeks ago using Rails.
-  It's a good example of how I build from naescent ideas.
+  I just showed you a product I worked on for 15 years. Here's one I started just a few weeks ago in Rails.
+  I hope it gives you a taste of my design thinking in mid-flight.
 </p>
 <p>
   <strong>The idea:</strong> Riffing off the saying &ldquo;This meeting could've been an email,&rdquo;
-  I'm building an app that transforms emails into public web pages, allowing your &ldquo;attendees&rdquo; to respond asynchronously.
-  This gets rid of meetings while also creating a better way to gather feedback than a lengthy reply chain would.
+  the app receives emails and transforms them into web pages that your 
+  &ldquo;attendees&rdquo; can respond to asynchronously.
+  This gets rid of live meetings while also creating a better way to gather feedback than a lengthy reply chain would.
 </p>
 <p>
   I'm calling it <strong>Meetle</strong> right now. It's all running locally at the moment, so screenshots and video 
@@ -45,8 +46,8 @@
 <h3>Marketing through pricing</h3>
 <p>
   Instead of a monthly subscription, I'm considering selling each meetle at a flat rate. 
-  That not only gives me a better price comparison (the true cost of a meeting vs. a meetle), but also 
-  an alternative pitch: Buy a pack of meetles for <strong>someone else</strong>, like your meeting-loving manager!
+  That not only provides a more clear price comparison (the true time cost of a meeting vs. a meetle), but also 
+  an alternative selling angle: <strong>Buy a pack of meetles for someone else, like your meeting-loving manager</strong>!
 </p>
 <div class="figure-container">
   <figure>
@@ -63,7 +64,7 @@
 <p>
   Here's the start of what Meetle will look like. I'm dabbling with the idea of a front page that shows 
   the meeting owner, the purpose statement, the attendees, and the timeframe the meetle is active, all derived
-  from the email content. I've started right in Rails&mdash;no design files.
+  from the email content. I've started right in Rails and front-end code&mdash;no design files.
 </p>
 <div class="figure-container">
   <figure>
@@ -77,24 +78,25 @@
   </figure>
 </div>
 <p class="note">
-  <strong>Thinking ahead:</strong> Though I haven't built it yet, there will be an email parser
-  that will turn emails into public web pages based on some rules.
-  For example, a delimeter like "---" would allow you to separate ideas into different pages, and you can list 
-  all attendee emails at the end of your email.
+  <strong>Thinking ahead:</strong> There will eventually be an email parser
+  that will turn emails into public web pages based on some conventions.
+  For example, the subject line and first paragraph will be part of the intro page, 
+  a delimeter like "---" separates text into different pages, and you can list 
+  attendees as a list at the end of your email.
 </p>
 <hr>
 <h3>Keyboard first</h3>
 <p>
   I'm experimenting with making the entire app controllable via a keyboard. Hitting <span class="code">ENTER</span> sends you into the Meetle.
   The <span class="code">&larr;</span> and <span class="code">&rarr;</span> keys let you quickly navigate between pages. 
-  Clicking <span class="code">F</span> spawns an auto-focused pop-up for giving <strong>feedback</strong>.
+  Clicking <span class="code">F</span> spawns an auto-focused pop-up for giving feedback.
 </p>
 <div class="figure-container">
   <figure>
     <%= render "shared/video_figure", video_asset_path_name: "meetle-2.webm", user_initiated: true %>
     <figcaption>
       <span>
-        Early flow of Meetle using keyboard navigation only (see lower-left of video for key captures).
+        <strong>Keying in:</strong> Early flow of Meetle using keyboard navigation only (see lower-left of video for key captures).
       </span>
     </figcaption>
   </figure>
@@ -108,9 +110,9 @@
   A small period of time for viewing and feedback.
 </p>
 <p class="note">
-  <strong>So you're saying there's a chance?</strong> 
-  In the wild scenario where I'm actually offered this job, I will cease working on this app due to its potential 
-  conflict with 37signals products. It will just be a fun memory.
+  <strong>So you're telling me there's a chance?</strong> 
+  If I'm actually offered this job, I will (quite gladly) cease working on this app due to its potential 
+  overlap with 37signals products. 
 </p>
 <hr>
 <p>

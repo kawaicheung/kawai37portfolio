@@ -39,6 +39,8 @@
   --border--black: solid 1px var(--color--black);
   --border--gray: solid 1px var(--color--gray);
   --border--gray--light: solid 1px var(--color--gray--light);
+  --border--gray--dark: solid 1px var(--color--gray--dark);
+  --border--gray--semi: solid 1px var(--color--gray--semi);
   --border--purple: solid 1px var(--color--purple);
   --border--purple--light: solid 1px var(--color--purple--light);
   --border--theme: solid 1px var(--color--theme);
