@@ -4,11 +4,11 @@
   Here's a deep dive into one feature of DoneDone I'm really proud of.
 </p>
 <p>
-  In 2018, we introduced shared mailboxes. This lets you auto-forward emails into DoneDone and manage them just like tasks. Think HelpScout.
+  In 2018, we introduced shared mailboxes, which let you auto-forward emails into DoneDone and manage them just like tasks. Think HelpScout.
 </p>
 <p>
-  Roughly 40% of our active mailboxes are forwarded from a Gmail address.
-  But Gmail auto-forwarding is a bit annoying to set up. I wanted to smooth out that process.
+  About 40% of our mailboxes are forwarded from a Gmail address.
+  But Gmail auto-forwarding has an odd setup process. I wanted to smooth it out.
 </p>
 <p>
   Now, most products with Gmail auto-forwarding accompany the feature with a help doc explaining the multi-step process. 
@@ -18,16 +18,14 @@
   <%= link_to "HEY does too", "https://www.hey.com/moving-from-gmail/#:~:text=First%2C%20click%20your%20avatar%20to,email%20to%20your%20HEY%20address.", target: "_blank" %>!
 </p>
 <p>
-  I wanted to go a different route with DoneDone. 
-  Hitting a stumbling block on completing the auto-forwarding setup means a customer may never try out the feature.
-  For such an integral part of setup, I felt the process could be more guided.
+  I wanted to go a different route with DoneDone as I felt the process could be more guided.
   Here's what I designed and developed.
 </p>
 <hr>
 <h3>(1) Applying your auto-forwarding address</h3>
 <p>
   The first part of the setup flow leads you through entering your Gmail address into DoneDone, copying
-  the generated forwarding address, and applying it to your Gmail account. <strong>Click the video</strong> to see the experience in real time:
+  the generated forwarding address, and applying it to your Gmail account. Play the video to see the experience:
 </p>
 <div class="figure-container">
   <figure>
@@ -103,7 +101,7 @@
 <p>
   Once you've completed the auto-forwarding setup, the guide tests the full loop by sending an email directly to the 
   Gmail address and waiting for it to return using a similar polling scheme as I discussed earlier.
-  <strong>Click the video</strong> to see the final leg of the experience in real time:
+  Play the video to see the final leg of the experience:
 </p>
 <div class="figure-container">
   <figure>

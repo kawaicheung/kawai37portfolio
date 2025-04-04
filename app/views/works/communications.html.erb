@@ -1,50 +1,9 @@
 <% content_for :title, "Writing and speaking" %>
 <h2>Things written and spoken.</h2>
 <p>
-  I love that good communication is a core strength of every 37signals hire. 
   Though I wasn't forward-thinking enough to keep an archive of my
-  most epic emails and Basecamp Classic threads, here are a few things I've written, spoken, and illustrated.
+  most epic Basecamp threads, here are a few things I've written, spoken, and illustrated.
 </p>
-<hr>
-<h3><strong>Real Code Series:</strong> Talking through my design and development thought-process</h3>
-<p>
-  While writing is the communication form I've spent the most time practicing, occasionally, I like to 
-  explain things in front of a camera. Here are three videos from a series I produced on DoneDone called 
-  &ldquo;Real Code&rdquo; that go into small details of my UI, UX, and development thought-process.
-</p>
-<div class="figure-container three-fan">
-  <figure>
-    <%= link_to "https://www.youtube.com/watch?v=PNnenqznRD4", target: "_blank", class: "video-thumbnail" do %>
-      <%= image_tag "realcode-1.webp", alt: "Video thumbnail for 'Less words, more meaning'" %>
-    <% end %>
-    <figcaption>
-      <span>A video on reducing words while increasing comprehension in UI.</span>
-    </figcaption>
-  </figure>
-  <figure>
-    <%= link_to "https://www.youtube.com/watch?v=amUCxkcRhVo", target: "_blank", class: "video-thumbnail" do %>
-      <%= image_tag "realcode-2.webp", alt: "Video thumbnail for 'Improving UX by omission'" %>
-    <% end %>
-    <figcaption>
-      <span>How I think through implementation tradeoffs in design.</span>
-    </figcaption>
-  </figure>
-  <figure>
-    <%= link_to "https://www.youtube.com/watch?v=pJ9TiCs0TSQ", target: "_blank", class: "video-thumbnail" do %>
-      <%= image_tag "realcode-3.webp", alt: "Video thumbnail for 'Handling responses optimistically'" %>
-    <% end %>
-    <figcaption>
-      <span>A simple approach to snappier, more immediate responses in UX.</span>
-    </figcaption>
-  </figure>
-</div>
-<p class="note">
-  <strong>How do you store sort?</strong> Though this has to do more with server-side thinking, 
-  my most popular video is one about how I store Kanban sort order in the database. This was a major
-  technical hurdle I had to get through in the Kanban board I built for DoneDone.
-  <%= link_to "See it here.", "https://www.youtube.com/watch?v=S7yrFHigvxI&list=PL_0hiGP3NeojDxJILYeLILioIYwIvDWH6&index=2", target: "_blank" %>
-</p>
-<%= render "shared/external_link_button", path: "https://www.youtube.com/playlist?list=PL_0hiGP3NeojDxJILYeLILioIYwIvDWH6", text: "See all 9 Real Code videos" %>
 <hr>
 <h3><strong>The Developer&rsquo;s Code:</strong> A book on developer life</h3>
 <p>
@@ -93,7 +52,48 @@
   </div>
 </div>
 <hr>
-<h3><strong>The Stories of DoneDone:</strong> Tales of joy, fear, reservation and pride during the making of our issue tracker</h3>
+<h3><strong>Real Code Series:</strong> Talking through my design and development thought-process</h3>
+<p>
+  While writing is the communication form I've spent the most time practicing, occasionally, I like to 
+  explain things in front of a camera. Here are three videos from a series I produced on DoneDone called 
+  &ldquo;Real Code&rdquo; that go into small details of my UI, UX, and development thought-process.
+</p>
+<div class="figure-container three-fan">
+  <figure>
+    <%= link_to "https://www.youtube.com/watch?v=PNnenqznRD4", target: "_blank", class: "video-thumbnail" do %>
+      <%= image_tag "realcode-1.webp", alt: "Video thumbnail for 'Less words, more meaning'" %>
+    <% end %>
+    <figcaption>
+      <span>A video on reducing words while increasing comprehension in UI.</span>
+    </figcaption>
+  </figure>
+  <figure>
+    <%= link_to "https://www.youtube.com/watch?v=amUCxkcRhVo", target: "_blank", class: "video-thumbnail" do %>
+      <%= image_tag "realcode-2.webp", alt: "Video thumbnail for 'Improving UX by omission'" %>
+    <% end %>
+    <figcaption>
+      <span>How I think through implementation tradeoffs in design.</span>
+    </figcaption>
+  </figure>
+  <figure>
+    <%= link_to "https://www.youtube.com/watch?v=pJ9TiCs0TSQ", target: "_blank", class: "video-thumbnail" do %>
+      <%= image_tag "realcode-3.webp", alt: "Video thumbnail for 'Handling responses optimistically'" %>
+    <% end %>
+    <figcaption>
+      <span>A simple approach to snappier, more immediate responses in UX.</span>
+    </figcaption>
+  </figure>
+</div>
+<p class="note">
+  <strong>How do you store sort?</strong> Though this has to do more with server-side thinking, 
+  my most popular video is one about how I store Kanban sort order in the database. This was a major
+  technical hurdle I had to get through in the Kanban board I built for DoneDone.
+  <%= link_to "See it here.", "https://www.youtube.com/watch?v=S7yrFHigvxI&list=PL_0hiGP3NeojDxJILYeLILioIYwIvDWH6&index=2", target: "_blank" %>
+</p>
+<%= render "shared/external_link_button", path: "https://www.youtube.com/playlist?list=PL_0hiGP3NeojDxJILYeLILioIYwIvDWH6", text: "See all 9 Real Code videos" %>
+
+<hr>
+<h3><strong>Stories of DoneDone:</strong> Tales of joy, fear, reservation and pride during the making of our issue tracker</h3>
 <p>
   In 2017, as I was about to embark on DoneDone as a full-time job, I wrote a series of essays reflecting on 
   the first 8 years. This went beyond design and development and into other parts of building a product.
