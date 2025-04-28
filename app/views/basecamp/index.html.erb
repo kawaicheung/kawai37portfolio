@@ -7,12 +7,19 @@
   <div class="header__date"><strong><%= Time.now.strftime("%A") %></strong>, <%= Time.now.strftime("%b %d") %></div>
 </div>
 
+<div class="thought">
+  <span class="thought__title">
+    Today's thought:  <%= link_to "Look back less", "https://world.hey.com/jason/look-back-less-848e9db0", class: "just-a-link", target: "_blank" %>. 
+  </span>
+  <span class="thought__subtitle">It's a mistake most of the time. And a waste of time almost all of the time.</span>
+</div>
+
 <div class="briefcase">
   <div class="briefcase__items">
     <div class="briefcase__heading">
       <span>What's on tap for you</span>
     </div>
-    <p>Events, cards, to-dos, projects opening/closing</p>
+    <p>Events, cards, to-dos, projects opening/closing, auto-checkins</p>
     <div class="briefcase__post-it">
       Today
     </div>

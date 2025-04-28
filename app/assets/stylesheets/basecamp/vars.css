@@ -5,11 +5,15 @@
   --color--body: hsl(33.3, 60%, 97.1%);
   --color--white: hsl(0, 0%, 100%);
   --color--gray: hsl(0, 0%, 50%);
+  --color--dark-gray: hsl(0, 0%, 30%);
   --color--dark-blue: hsl(204, 16%, 21%);
+  --color--ink: hsl(202, 18%, 21%);
 
   --color--border: hsla(30, 26%, 89%, 1);
   --color--bg-sand: hsl(32.2, 20.2%, 60.2%);
-  
+  --color--jason-fried: hsl(287, 99%, 40%);
+  --color--jason-fried-light: hsl(287, 99%, 90%);
+
   --border-radius--lg: 8px;
   --border-radius--sm: 4px; 
   --border-radius--xs: 2px;

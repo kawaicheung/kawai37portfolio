@@ -16,7 +16,7 @@
 
 body {
   background-color: var(--color--body);
-  color: var(--color--black);
+  color: var(--color--ink);
 }
 
 main {
@@ -38,10 +38,10 @@ main {
 
 .header__logo {
   position: absolute;
-  top: -24px;
+  top: -12px;
   left: 50%;
   transform: translateX(-50%);
-  height: 64px;
+  height: 48px;
   cursor: pointer;
 }
 
@@ -51,8 +51,12 @@ main {
   font-weight: 300;
 
   strong {
-    font-weight: 600;
+    font-weight: 700;
   }
+}
+
+.header_date {
+  color: var(--color--bg-sand);
 }
 
 .briefcase {
@@ -133,21 +137,21 @@ main {
 }
 
 .briefcase__task {
-  padding: 1rem;
-  border-radius: var(--border-radius--lg);
-  border: 1px solid var(--color--border);
+  padding: 0.6rem 1rem;
   display: flex;
   gap: 0.4rem;
-  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
 }
 
 .briefcase__task-icon {
-  color: red;
   background-color: red;
   width: 40px;
 }
 
 .briefcase__task-content {
+
+  span {
+    font-weight: 500;
+  }
 
   p {
     color: #666;
@@ -169,6 +173,25 @@ main {
 .briefcase__item--sm {
   padding: 0.5rem;
   font-size: 0.9rem;
+}
+
+.thought {
+  width: 68em;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.thought__title {
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.thought__subtitle {
+  font-weight: 400;
+  color: var(--color--dark-gray);
 }
 
 .divider {
@@ -196,6 +219,6 @@ h2 {
 
 
 .just-a-link {
-  color: var(--color--gray);
+  color: var(--color--black);
   text-decoration: underline;
 }
