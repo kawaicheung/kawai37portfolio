@@ -23,9 +23,9 @@ Rails.application.routes.draw do
   get "works/communications" => "works#communications"
   get "contact" => "contact#index"
 
-  get "writing" => "writing#index"
-  get "writing/the-developers-code" => "writing#the_developers_code"
-  get "writing/top-picks" => "writing#top_picks"
+  get "basecamp" => "basecamp#index"
+  get "basecamp/first-time" => "basecamp#first_time"
+  get "basecamp/second-time" => "basecamp#second_time"
 
 
   # Defines the root path route ("/")

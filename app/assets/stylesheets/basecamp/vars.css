@@ -1,0 +1,16 @@
+:root {
+  /* Typography */
+  --font-family--sans-serif: -apple-system, system-ui, BlinkMacSystemFont, Aptos, Roboto, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+  --color--body: hsl(33.3, 60%, 97.1%);
+  --color--white: hsl(0, 0%, 100%);
+  --color--gray: hsl(0, 0%, 50%);
+  --color--dark-blue: hsl(204, 16%, 21%);
+
+  --color--border: hsla(30, 26%, 89%, 1);
+  --color--bg-sand: hsl(32.2, 20.2%, 60.2%);
+  
+  --border-radius--lg: 8px;
+  --border-radius--sm: 4px; 
+  --border-radius--xs: 2px;
+}

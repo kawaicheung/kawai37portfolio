@@ -1,0 +1,201 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree ./basecamp
+ *= require_self
+ */
+
+body {
+  background-color: var(--color--body);
+  color: var(--color--black);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4em;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  width: 68em;
+  margin-bottom: 1rem;
+  position: relative;
+  padding: 0 1rem;
+}
+
+.header__logo {
+  position: absolute;
+  top: -24px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 64px;
+  cursor: pointer;
+}
+
+.header__greeting,
+.header__date {
+  font-size: 1.6rem;
+  font-weight: 300;
+
+  strong {
+    font-weight: 600;
+  }
+}
+
+.briefcase {
+  width: 68em; 
+  display: grid;
+  grid-template-columns: 3fr 1.5fr;
+  gap: 2rem;
+  background-color: var(--color--white);
+  border-radius: var(--border-radius--lg);
+  border: 1px solid var(--color--border);
+  padding: 1rem 2rem;
+}
+
+.briefcase__heading {
+  font-size: 1.2rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 1rem 0;
+
+  span {
+    background-color: var(--color--bg-sand);
+    color: var(--color--white);
+    padding: 0.1rem 0.8rem;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    font-weight: 800;
+    border-radius: var(--border-radius--sm);
+
+    &.updated {
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 2px;
+        width: 12px;
+        height: 12px;
+        background-color: red;
+        border-radius: 50%;
+        transform: translate(50%, -50%);
+      }
+    }
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background-color: var(--color--border);
+  }
+}
+
+.briefcase__post-it {
+  font-size: 0.8rem;
+  font-weight: 600;
+  background-color: var(--color--dark-blue);
+  color: var(--color--white);
+  padding: 0.1rem 0.4rem;
+  width: fit-content;
+  rotate: -2deg;
+  border-radius: var(--border-radius--xs);
+  transform: translateX(-8px);
+  margin-top: 2rem;
+}
+
+.briefcase__heading + .briefcase__post-it {
+  margin-top: 0;
+}
+
+.briefcase__items {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.briefcase__task {
+  padding: 1rem;
+  border-radius: var(--border-radius--lg);
+  border: 1px solid var(--color--border);
+  display: flex;
+  gap: 0.4rem;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
+}
+
+.briefcase__task-icon {
+  color: red;
+  background-color: red;
+  width: 40px;
+}
+
+.briefcase__task-content {
+
+  p {
+    color: #666;
+    font-size: 0.8rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+  }
+}
+
+.briefcase__item {
+  padding: 1rem;
+  border-radius: var(--border-radius--sm);
+  border: 1px solid var(--color--border);
+}
+
+.briefcase__item--sm {
+  padding: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.divider {
+  width: 68em;
+  height: 1px;
+  background-color: var(--color--border);
+  margin: 2rem 0;
+}
+
+section {
+  width: 68em;
+  background-color: var(--color--white);
+  border-radius: var(--border-radius--lg);
+  border: 1px solid var(--color--border);
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 1.2rem;
+}
+
+
+.just-a-link {
+  color: var(--color--gray);
+  text-decoration: underline;
+}
