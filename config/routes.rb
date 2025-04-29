@@ -21,6 +21,7 @@ Rails.application.routes.draw do
   get "works/baseball-scoreboards" => "works#baseball_scoreboards"
   get "works/meetle" => "works#meetle"
   get "works/communications" => "works#communications"
+  get "works/basecamp" => "works#basecamp"
   get "contact" => "contact#index"
 
   get "basecamp" => "basecamp#index"

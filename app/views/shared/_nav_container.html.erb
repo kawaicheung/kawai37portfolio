@@ -32,6 +32,9 @@
       <li>
         <%= link_to "Next?", contact_path, class: "#{reversed ? "reversed" : ""} #{request.path.include?("/contact") ? "selected" : ""}" %>
       </li>
+      <li>
+        <%= link_to "Challenge", works_basecamp_path, class: "#{reversed ? "reversed" : ""} #{request.path.include?("/basecamp") ? "selected" : ""}" %>
+      </li>
       
     </ul>
   </nav>

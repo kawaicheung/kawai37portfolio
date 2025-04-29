@@ -1,0 +1,135 @@
+<% content_for :title, "DoneDone" %>
+<h2>Making Basecamp&rsquo;s home screen feel like home.</h2>
+<p>
+  Hey again 37signals!
+  I just figured, since I already made this portfolio site, I might as well add a new page for this 
+  design exercise (See, I can design with scalability in mind!).  The link to the 
+  prototype is below. My reasoning is below that.
+</p>
+<%= render "shared/external_link_button", path: basecamp_path, text: "My rework of Basecamp's home screen", target: "_blank" %>
+<hr>
+<h3>My North Star: A focus on <strong>feeling good</strong>.</h3>
+<p>
+  The Home screen is the very first screen a new customer sees after Jason's welcome message. 
+  It's an immediate opportunity to introduce not just Basecamp the product, but Basecamp the philosophy. 
+</p>
+<p>
+  What is this software about? What is it <strong>not</strong> about?
+</p>
+<p>
+  Basecamp is not about hard metrics. 
+  It's not about &ldquo;why are so many things red&rdquo; or &ldquo;why is that number so high&rdquo; 
+  or &ldquo;why is that line going down&rdquo;. Those things might tell you some contrived bad news.
+</p>
+<p>
+  Basecamp is about momentum. Taking a meaningful step down the path today. Celebrating the progress you just made.
+  Re-evaluating work from the vantage point now. Communication over calculation.
+</p>
+<p>
+  The home screen should exude this.
+  It should make you <em>feel good</em>. 
+</p>
+<p>
+  In control. <br>
+  Calm. <br>
+  In meaningful thought. <br>
+  Focused. <br>
+  Productive. <br>
+  Satisfied.<br>
+</p>
+<p>
+  Everything that the internet seems not to be about today.
+</p>
+<p>
+  This was my focus for the week. Making the Home screen not just a launching pad for everything else, 
+  but feel like home. A place you come back to not because you have to, but because you want to.
+</p>
+<hr>
+<h3>A meaningful thought</h3>
+<p>
+   This one's a bit out of left field. But I think it could be neat.
+</p>
+<p>
+  People talk about the benefits of reading a few pages of fiction instead of doom-scrolling through your phone
+  before you go to bed. But what about the reverse? What about reading a short, thought-provoking piece of non-fiction
+  to rev up your brain in the morning before you hit that first task rather than...doom-scrolling through your phone?
+</p>
+<p>
+  So, I thought it would be fun to surface one philosophical-thought-by-Basecamp each day. No algorithm. No random rotations.
+  One thought for everyone a day.
+</p>
+<p>
+  We'd have to curate carefully. They can't feel promotional. They shouldn't be political. But they ought to 
+  enhance the things that Basecamp stands for. 
+  For example, Jason's (probably) written hundreds of posts that could fit this daily dopamine hit.
+  <%= link_to "Here", "https://world.hey.com/jason/doing-what-you-think-not-what-you-thought-60bb5bef", target: "_blank" %>
+  <%= link_to "are", "https://world.hey.com/jason/go-do-business-00af347c", target: "_blank" %>
+  <%= link_to "five", "https://world.hey.com/jason/subjectivity-in-productivity-e0b4e2ee", target: "_blank" %>
+  <%= link_to "recent", "https://world.hey.com/jason/making-it-happen-vs-letting-it-happen-28d4b4c0", target: "_blank" %>
+  <%= link_to "ones", "https://world.hey.com/jason/the-work-of-art-and-the-work-of-the-art-28d4b4c0", target: "_blank" %>.
+</p>
+<p>
+  Maybe we start with a month's worth&ndash;they just go away after that. 
+  Maybe some people love it and we keep adding onto the stack over time. 
+  And we make it easy to opt out of. If it doesn't work (or is too much work), it's easy to remove.
+</p>
+<hr>
+<h3>Building on your day</h3>
+<p>
+  The usual experience of completing tasks in software isn't very motivating.
+  You complete a task? It grays out.
+  Drag a card to &ldquo;Done&rdquo;? It just goes away.
+  Sign off your Zoom meeting? Crickets.
+  [task,card,event,time-tracked]
+</p>
+<p>
+  Everytime you get something done during the day, the Home screen should celebrate that in a Basecamp-y way. 
+  Not with a small increment in a pie chart. Not confetti raining down from the top of the screen. Just a nudge. A wink.
+  That's what this area is for. 
+</p>
+<p>
+  To keep with the philosophy. these shouldn't be too calculated (besides time tracked). It's not &ldquo;you've completed 30% of your tasks today&rdquo;,
+  it's more like &ldquo;hey, you got things done today!&rdquo;. Roll over the icons and they point you to relevant places in Basecamp
+  for more detail (though later on we could perhaps build in a more tailored experience). That's enough. 
+</p>
+<p>
+  Note: We wouldn't gray out and show here. If you have a to-do done the icon appears. If it doesn't you don't see something grayed out.
+  This means if nothing gets done, there's no feeling of "I got nothing done". It may just not have been that type of day. 
+</p>
+<hr>
+<h3>A single list of what's coming up</h3>
+<p>
+  Working your way down the Home screen, next up is what's coming up. 
+</p>
+<p>
+  The current selling point is that Bascamp is one tool that covers the core features of other tools. But the flipside is it can
+  feel like an umbrella of just a bunch of tools. Seeing how they all fit together takes some time.
+</p>
+<p>
+  One of the learning curves with Basecamp is knowing where all the pieces live. There's to-dos and cards. There's chats, pings, 
+  and messages. There's events. Automatic check-ins. They're all siloed in their own areas of the product. The home screen would
+  also serve as a way to bring all the relevant, timely stuff in one place. Think of this area as your "Today" briefcase or backpack.
+</p>
+<p>
+  I think this helps new folks understand how all the pieces fit together. On trial signup we could stub out a sample to-do, have
+  the card table turned on automatically with a sample card, and a sample event. Make it clear they are samples (no need to try to 
+  "fake them" as something real) but this way a new person doesn't feel overwhelmed.
+</p>
+<hr>
+<h3>What about all the projects?</h3>
+<p>
+  This is one I debated awhile this week about. Seeing all your projects is still important. And right now, the clearest place to see them 
+  is on the Home screen. I also imagine that for some folks, particularly managers, seeing projects is more important than 
+  their own work. 
+</p>
+<p>
+  For a one-week exercise, I thought we shouldn't touch projects at all, but instead have the projects UI come after my new work. 
+  I like the stack option and re-arrangements. 
+</p>
+<hr>
+<h3>A focus on one thing</h3>
+<p>
+  There are so many ways to get to other parts. All sorts of reports. Segregated by projects. Manual feels per project. 
+  But no place that talks about you, regardless of the projects you're on, and curates
+  what you've done, taking all the features into account.
+</p>

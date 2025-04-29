@@ -22,4 +22,7 @@ class WorksController < ApplicationController
 
   def communications
   end
+
+  def basecamp
+  end
 end
