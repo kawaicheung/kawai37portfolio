@@ -51,16 +51,16 @@ main {
 
 .header {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
   width: 68em;
-  margin-bottom: 1.2rem;
+  margin-bottom: 1rem;
   position: relative;
-  padding: 0 1rem;
 }
 
 
 .header__logo {
-  position: absolute;
   top: -12px;
   left: 50%;
   transform: translateX(-50%);
@@ -78,8 +78,21 @@ main {
   }
 }
 
-.header_date {
-  color: var(--color--bg-sand);
+.header__cta-btns {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.header__cta-btn {
+  background-color: var(--color--green-60);
+  color: var(--color--white);
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
 }
 
 .briefcase {
@@ -111,7 +124,7 @@ main {
   height: 46px;
   background-color: var(--color--bg-sand);
   color: var(--color--white);
-  border-radius: 50%;
+  border-radius: var(--border-radius--circular);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -188,6 +201,7 @@ main {
 }
 
 .briefcase__heading {
+  position: relative;
   font-size: 1.2rem;
   font-weight: 600;
   display: flex;
@@ -205,21 +219,6 @@ main {
     font-weight: 800;
     border-radius: var(--border-radius--sm);
 
-    &.updated {
-      position: relative;
-
-      &::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        right: 2px;
-        width: 12px;
-        height: 12px;
-        background-color: red;
-        border-radius: 50%;
-        transform: translate(50%, -50%);
-      }
-    }
   }
 
   &::before,
@@ -237,8 +236,12 @@ main {
   color: var(--color--gray);
 }
 
+.briefcase__description--sm {
+  font-size: 0.9rem;
+}
+
 .briefcase__heading + .briefcase__description {
-  margin-top: -0.8rem;
+  margin-top: -0.5rem;
 }
 
 .briefcase__post-it {
@@ -271,7 +274,7 @@ main {
   border: 1px solid var(--color--border);
   width: 40px;
   height: 40px;
-  border-radius: 50%;
+  border-radius: var(--border-radius--circular);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -309,7 +312,7 @@ main {
 .briefcase__task-actions--calendar {
   color: var(--color--blue);
   background-color: var(--color--blue-30);
-  border-radius: 50%;
+  border-radius: var(--border-radius--circular);
   width: 40px;
   height: 40px;
   display: flex;
@@ -341,19 +344,25 @@ main {
   margin-bottom: 1rem;
 }
 
-.dont-forget-zero-state {
+.zero-state {
   display: flex;
   align-items: center;
   justify-content: center;
+  justify-self: center;
   border: dashed 4px var(--color--yellow-30);
   border-radius: var(--border-radius--lg);
-  padding: 1rem;
-  margin: 1rem;
+  padding: 1.4rem;
+  margin-top: 2rem;
+  text-align: center;
+  color: var(--color--dark-gray);
 }
 
-.dont-forget-zero-state__img {
-  width: 21px;
+.zero-state--dont-forget {
+  height: 200px;
+  width: 200px;
+  border-radius: var(--border-radius--circular);
 }
+
 
 .divider {
   width: 68em;
@@ -387,23 +396,56 @@ h2 {
   background-color: transparent;
   color: var(--color--ink);
   font-weight: 700;
+  cursor: pointer;
+}
+
+.project-btn:hover {
+  border-color: var(--color--black);
 }
 
 .project-listing {
   width: 400px;
-  max-height: 500px;
+  max-height: 200px;
   overflow-y: scroll;
   background-color: var(--color--white);
   border-radius: var(--border-radius--lg);
   border: 4px solid var(--color--ink);
   padding: 1rem;
-
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* IE 10+ */
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      border-bottom: solid 1px var(--color--border);
+
+      a {
+        text-decoration: none;
+        padding: 0.2rem 0.5rem;
+        display: block;
+        color: var(--color--ink);
+        font-weight: 600;
+      }
+    }
+  }
 }
 
 .project-listing::-webkit-scrollbar {
   display: none; /* Chrome, Safari, Opera */
+}
+
+.project-listing__divider {
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 0.2rem 0.5rem;
+}
+
+.project-listing__divider + ul {
+  margin-left: 1rem;
+  border: solid 1px var(--color--border);
 }
 
 

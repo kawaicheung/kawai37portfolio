@@ -19,9 +19,11 @@
   --border-radius--lg: 8px;
   --border-radius--sm: 4px; 
   --border-radius--xs: 2px;
+  --border-radius--circular: 99rem;
 
   --box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
   --box-shadow--sticker: 0 2px 2px 0 rgba(0, 0, 0, 0.3);
+
 
 
   --color--red-50: hsl(13, 97.9%, 62.9%);
@@ -30,4 +32,5 @@
   --color--green-50: hsl(135.6, 39.7%, 52.5%);
   --color--blue-50: hsl(209.2, 100%, 62.9%);
   --color--purple-50: hsl(238.4, 100%, 77.6%);
+  --color--green-60: hsl(148.4, 68.8%, 31.4%);
 }

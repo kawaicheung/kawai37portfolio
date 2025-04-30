@@ -17,7 +17,11 @@
   </div>
 </div>
 <div class="header">
-  <div class="header__greeting">Happy <%= Time.now.strftime("%A") %> afternoon, <strong>Bethany</strong>!</div>
+  <div class="header__cta-btns">
+    <%= link_to "New project", "/", class: "header__cta-btn" %>
+    <%= link_to "Invite people", "/", class: "header__cta-btn" %>
+  </div>
+  <div class="header__greeting">Happy <%= Time.now.strftime("%A") %>, <strong>Bethany!</strong></div>
 </div>
 
 <div class="project-btn">
@@ -25,148 +29,146 @@
   <i class="fa-solid fa-arrow-trend-down"></i>
 </div>
 
-
 <div class="briefcase">
   <div class="briefcase__stickers">
-    <div class="briefcase__sticker briefcase__sticker--tasks">
+    <a href="/" class="briefcase__sticker briefcase__sticker--tasks">
       <div class="briefcase__sticker-badge">
         &checkmark;
       </div>
       <span>
         <i class="fa-solid fa-square-check"></i>
       </span>
-    </div>
-    <div class="briefcase__sticker briefcase__sticker--cards"> 
+    </a>
+    <a href="/" class="briefcase__sticker briefcase__sticker--cards"> 
       <div class="briefcase__sticker-badge">
         3
       </div>
       <span>
         <i class="fa-solid fa-table-columns"></i>
       </span>
-    </div>
-    <div class="briefcase__sticker briefcase__sticker--events">
+    </a>
+    <a href="/" class="briefcase__sticker briefcase__sticker--events">
       <div class="briefcase__sticker-badge">
         3
       </div>
       <span>
         <i class="fa-solid fa-calendar-day"></i>
       </span>
-    </div>
-    <div class="briefcase__sticker briefcase__sticker--check-ins">
+    </a>
+    <a href="/" class="briefcase__sticker briefcase__sticker--check-ins">
       <div class="briefcase__sticker-badge">
         &checkmark;
       </div>
       <span>
         <i class="fa-solid fa-bell"></i>
       </span>
-    </div>
-    <div class="briefcase__sticker briefcase__sticker--time">
+    </a>
+    <a href="/" class="briefcase__sticker briefcase__sticker--time">
       <span>
         <i class="fa-solid fa-clock"></i>
       </span>
       <div class="briefcase__sticker-badge">
         4.5h
       </div>
-    </div>
-    <div class="briefcase__sticker briefcase__sticker--boosts">
+    </a>
+    <a href="/" class="briefcase__sticker briefcase__sticker--boosts">
       <div class="briefcase__sticker-badge">
         12
       </div>
       <span>
         <i class="fa-solid fa-rocket"></i>
       </span>
-    </div>
+    </a>
   </div>
   <!-- Begin: What's on tap -->
-  <div class="briefcase__items">
+  <div>
     <div class="briefcase__heading">
       <span>What's on tap</span>
     </div>
     <p class="briefcase__description">
       Your upcoming <%= link_to "assignments", "/", class: "just-a-link", target: "_blank" %>, <%= link_to "events", "/", class: "just-a-link", target: "_blank" %>, and <%= link_to "check-ins", "/", class: "just-a-link", target: "_blank" %>.
     </p>
-    <div class="briefcase__post-it">
-      Today
+    <div class="briefcase__items hidden">
+
+      <div class="briefcase__post-it">
+        Today
+      </div>
+      <div class="briefcase__task">
+        <div class="briefcase__task-icon">
+          <i class="fa-solid fa-list-check"></i>
+        </div>
+        <div class="briefcase__task-content">
+          <span>Get Farmer's Insurance plumbing doc signed</span>
+          <p><%= link_to "<strong>Things before moving</strong>".html_safe, "/", class:"just-a-link" %> in <%= link_to "The House", "/", class: "just-a-link", target: "_blank" %>
+          </p>
+        </div>
+        <div class="briefcase__task-actions">
+          xxxx
+        </div>
+      </div>
+      <div class="briefcase__task">
+        <div class="briefcase__task-icon">
+          <i class="fa-solid fa-list-check"></i>
+        </div>
+        <div class="briefcase__task-content">
+          <span>Sign up Andrew for basketball camp</span>
+          <p>
+            <strong>Summer schedules</strong> in <%= link_to "Parenting", "/", class: "just-a-link", target: "_blank" %>
+          </p>
+        </div>
+      </div>
+    
+      <div class="briefcase__task">
+        <div class="briefcase__task-icon">
+          <i class="fa-solid fa-bell"></i>
+        </div>
+        <div class="briefcase__task-content">
+          <span>What did you work on today?</span>
+          <p><strong>Starting at 4pm</strong> in <%= link_to "The House", "/", class: "just-a-link", target: "_blank" %>
+          </p>
+        </div>
+      </div>
+      <div class="briefcase__post-it">
+        Tomorrow
+      </div>
+      <div class="briefcase__task">
+        <div class="briefcase__task-icon">
+          <i class="fa-solid fa-calendar-day"></i>
+        </div>
+        <div class="briefcase__task-content">
+          <span>Home the inspector comes</span>
+          <p><strong>All day</strong> in <%= link_to "The House", "/", class: "just-a-link", target: "_blank" %>
+          </p>
+        </div>
+      </div>
+      <div class="briefcase__task">
+        <div class="briefcase__task-icon">
+          <i class="fa-solid fa-calendar-day"></i>
+        </div>
+        <div class="briefcase__task-content">
+          <span>Plumbing meeting with city</span>
+          <p><strong>9:30am-11am</strong> in <%= link_to "The House", "/", class: "just-a-link", target: "_blank" %>
+          </p>
+        </div>
+      </div>
+      <div class="briefcase__links">
+        <%= link_to "See 8 more things on tap", "/", class: "just-a-link just-a-link--em" %>
+        <%= link_to "See 7 overdue assignments", "/", class: "just-a-link just-a-link--em" %>
+      </div>
     </div>
-    <div class="briefcase__task">
-      <div class="briefcase__task-icon">
-        <i class="fa-solid fa-list-check"></i>
-      </div>
-      <div class="briefcase__task-content">
-        <span>Get Farmer's Insurance plumbing doc signed</span>
-        <p><%= link_to "<strong>Things before moving</strong>".html_safe, "/", class:"just-a-link" %> in <%= link_to "The House", "/", class: "just-a-link", target: "_blank" %>
-        </p>
-      </div>
-      <div class="briefcase__task-actions">
-        xxxx
-      </div>
-    </div>
-    <div class="briefcase__task">
-      <div class="briefcase__task-icon">
-        <i class="fa-solid fa-list-check"></i>
-      </div>
-      <div class="briefcase__task-content">
-        <span>Sign up Andrew for basketball camp</span>
-        <p>
-          <strong>Summer schedules</strong> in <%= link_to "Parenting", "/", class: "just-a-link", target: "_blank" %>
-        </p>
-      </div>
-    </div>
-   
-    <div class="briefcase__task">
-      <div class="briefcase__task-icon">
-        <i class="fa-solid fa-bell"></i>
-      </div>
-      <div class="briefcase__task-content">
-        <span>What did you work on today?</span>
-        <p><strong>Starting at 4pm</strong> in <%= link_to "The House", "/", class: "just-a-link", target: "_blank" %>
-        </p>
-      </div>
-    </div>
-    <div class="briefcase__post-it">
-      Tomorrow
-    </div>
-     <div class="briefcase__task">
-      <div class="briefcase__task-icon">
-        <i class="fa-solid fa-calendar-day"></i>
-      </div>
-      <div class="briefcase__task-content">
-        <span>Home the inspector comes</span>
-        <p><strong>All day</strong> in <%= link_to "The House", "/", class: "just-a-link", target: "_blank" %>
-        </p>
-      </div>
-    </div>
-    <div class="briefcase__task">
-      <div class="briefcase__task-icon">
-        <i class="fa-solid fa-calendar-day"></i>
-      </div>
-      <div class="briefcase__task-content">
-        <span>Plumbing meeting with city</span>
-        <p><strong>9:30am-11am</strong> in <%= link_to "The House", "/", class: "just-a-link", target: "_blank" %>
-        </p>
-      </div>
-    </div>
-    <div class="briefcase__links">
-      <%= link_to "See 8 more things on tap", "/", class: "just-a-link just-a-link--em" %>
-      <%= link_to "See 7 overdue assignments", "/", class: "just-a-link just-a-link--em" %>
+     <div class="zero-state">
+      <span>Relax! You have nothing on tap. Once you have a to-do, card, or event assigned to you, it'll show up here.<br>
+      </span>
     </div>
   </div>
   <!-- End: What's on tap -->
-  <div>
-    <div class="accomplishments hidden">
-      <div class="accomplishments__heading">
-        <span>Accomplishments</span>
-      </div>
-    </div>
+  <div class="flex-center">
     <!-- Begin: Don't forget -->
-    <div class="briefcase__items">
-      <div class="briefcase__heading">
-        <%= image_tag "basecamp/icons/dont-forget.svg", style: "width: 20px; height: 20px;" %>
-        <span>Don't forget</span>
-      </div>
-      <p class="briefcase__description">
-        Stuff you wanted to check back in on.
-      </p>
+    <div class="briefcase__heading">
+      <%= image_tag "basecamp/icons/dont-forget.svg", style: "width: 20px; height: 20px; position: absolute; top: -14px; left: 50%; transform: translateX(-50%);" %>
+      <span>Don't forget</span>
+    </div>
+    <div class="briefcase__items hidden">
       <div class="briefcase__task">
         <div class="briefcase__task-icon">
         </div>
@@ -220,8 +222,10 @@
         </div>
       </div>
     </div>
-    <div class="dont-forget-zero-state">
-      <span>You have </span>
+    <div class="zero-state zero-state--dont-forget">
+      <span>You haven't marked anything to remember currently.<br>
+      <%= link_to "What's this?", "/", class: "just-a-link" %>
+      </span>
     </div>
     <!-- End: Don't forget -->
   </div>
@@ -236,18 +240,30 @@
   <span class="thought__subtitle">It's a mistake most of the time. And a waste of time almost all of the time.</span>
 </div>
 
-
 <div class="divider"></div>
-
 
 <div class="project-listing">
   <ul>
     <li>
-      <%= link_to "The House", "/", class: "just-a-link" %>
+      <span class="project-listing__divider">
+        Q3 Marketing
+      </span>
+      <ul>
+        <li>
+          <%= link_to "Q3 Marketing", "/"  %>
+        </li>
+        <li>
+          <%= link_to "Making a Podcast", "/"  %>
+        </li>
+         <li>
+          <%= link_to "The House", "/", class: "just-a-link" %>
+        </li>
+        <li>
+          <%= link_to "The House", "/", class: "just-a-link" %>
+        </li>
+      </ul>
     </li>
-    <li>
-      <%= link_to "The House", "/", class: "just-a-link" %>
-    </li>
+   
     <li>
       <%= link_to "The House", "/", class: "just-a-link" %>
     </li>
