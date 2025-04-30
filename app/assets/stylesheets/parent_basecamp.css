@@ -62,12 +62,55 @@ main {
 .briefcase {
   width: 68em; 
   display: grid;
+  grid-template-columns: 1.8fr 1fr;
   gap: 2rem;
   background-color: var(--color--white);
   border-radius: var(--border-radius--lg);
   border: 1px solid var(--color--border);
   padding: 1rem 2rem 2rem 2rem;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+.thought {
+  width: 68em;
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--color--pink-30);
+  width: fit-content;
+  border-top-left-radius: var(--border-radius--lg);
+  border-top-right-radius: var(--border-radius--lg);
+  position: relative;
+}
+
+.thought__close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  border: none;
+  background: none;
+  color: var(--color--dark-gray);
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0 6px;
+  line-height: 1;
+}
+
+.thought__close:hover {
+  color: var(--color--black);
+}
+
+
+.thought__title {
+  font-weight: 600;
+  font-size: 1.1rem;
+  letter-spacing: -0.02em;
+}
+
+.thought__subtitle {
+  font-weight: 400;
+  color: var(--color--dark-gray);
 }
 
 .briefcase__heading {
@@ -129,6 +172,7 @@ main {
   display: flex;
   flex-direction: column;
   gap: 0.2rem;
+  border: solid 1px red;
 }
 
 .briefcase__task {
@@ -170,24 +214,12 @@ main {
   font-size: 0.9rem;
 }
 
-.thought {
-  width: 68em;
-  padding: 0 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.accomplishments {
+  border: solid 1px blue;
+  height: 180px;
   margin-bottom: 1rem;
 }
 
-.thought__title {
-  font-weight: 600;
-  letter-spacing: -0.02em;
-}
-
-.thought__subtitle {
-  font-weight: 400;
-  color: var(--color--dark-gray);
-}
 
 .divider {
   width: 68em;

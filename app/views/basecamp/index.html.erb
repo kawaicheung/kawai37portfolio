@@ -8,6 +8,7 @@
 </div>
 
 <div class="thought">
+  <button class="thought__close">×</button>
   <span class="thought__title">
     Today's thought:  <%= link_to "Look back less", "https://world.hey.com/jason/look-back-less-848e9db0", class: "just-a-link", target: "_blank" %>. 
   </span>
@@ -62,7 +63,7 @@
       </div>
     </div>
     <div class="briefcase__post-it">
-      <%= Time.now.strftime("%b %d") %>
+      Tomorrow
     </div>
     <div class="briefcase__task">
       <div class="briefcase__task-icon">
@@ -90,83 +91,71 @@
         </p>
       </div>
     </div>
-    <div class="briefcase__post-it">
-      Today
-    </div>
-    <div class="briefcase__task">
-      <div class="briefcase__task-icon">
-      </div>
-      <div class="briefcase__task-content">
-        <span>Get Farmer's Insurance plumbing doc signed</span>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nec turpis et arcu accumsan efficitur at ac est. 
-          Aliquam eu dolor at nibh pharetra commodo. Curabitur magna turpis, sollicitudin vitae varius non,
-           scelerisque et turpis. Pellentesque bibendum diam ut lectus rhoncus vehicula. Nulla nisl eros, 
-           iaculis a magna vel, posuere rhoncus turpis. Praesent lorem nibh, elementum a sapien eu, tincidunt dapibus augue.
-            Quisque faucibus blandit elit, non semper dui viverra sed. Donec congue porttitor nulla.
-        </p>
+  </div>
+  <div>
+    <div class="accomplishments hidden">
+      <div class="accomplishments__heading">
+        <span>Accomplishments</span>
       </div>
     </div>
-    <div class="briefcase__task">
-      <div class="briefcase__task-icon">
+    <div class="briefcase__items">
+      <div class="briefcase__heading">
+        <span>Don't forget</span>
       </div>
-      <div class="briefcase__task-content">
-        <span>Get Farmer's Insurance plumbing doc signed</span>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nec turpis et arcu accumsan efficitur at ac est. 
-          Aliquam eu dolor at nibh pharetra commodo. Curabitur magna turpis, sollicitudin vitae varius non,
-           scelerisque et turpis. Pellentesque bibendum diam ut lectus rhoncus vehicula. Nulla nisl eros, 
-           iaculis a magna vel, posuere rhoncus turpis. Praesent lorem nibh, elementum a sapien eu, tincidunt dapibus augue.
-            Quisque faucibus blandit elit, non semper dui viverra sed. Donec congue porttitor nulla.
-        </p>
+      <div class="briefcase__task">
+        <div class="briefcase__task-icon">
+        </div>
+        <div class="briefcase__task-content">
+          <span>Get Farmer's Insurance plumbing doc signed</span>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nec turpis et arcu accumsan efficitur at ac est. 
+            Aliquam eu dolor at nibh pharetra commodo. Curabitur magna turpis, sollicitudin vitae varius non,
+            scelerisque et turpis. Pellentesque bibendum diam ut lectus rhoncus vehicula. Nulla nisl eros, 
+            iaculis a magna vel, posuere rhoncus turpis. Praesent lorem nibh, elementum a sapien eu, tincidunt dapibus augue.
+              Quisque faucibus blandit elit, non semper dui viverra sed. Donec congue porttitor nulla.
+          </p>
+        </div>
       </div>
-    </div>
-    <div class="briefcase__task">
-      <div class="briefcase__task-icon">
+      <div class="briefcase__task">
+        <div class="briefcase__task-icon">
+        </div>
+        <div class="briefcase__task-content">
+          <span>Get Farmer's Insurance plumbing doc signed</span>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nec turpis et arcu accumsan efficitur at ac est. 
+            Aliquam eu dolor at nibh pharetra commodo. Curabitur magna turpis, sollicitudin vitae varius non,
+            scelerisque et turpis. Pellentesque bibendum diam ut lectus rhoncus vehicula. Nulla nisl eros, 
+            iaculis a magna vel, posuere rhoncus turpis. Praesent lorem nibh, elementum a sapien eu, tincidunt dapibus augue.
+              Quisque faucibus blandit elit, non semper dui viverra sed. Donec congue porttitor nulla.
+          </p>
+        </div>
       </div>
-      <div class="briefcase__task-content">
-        <span>Get Farmer's Insurance plumbing doc signed</span>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nec turpis et arcu accumsan efficitur at ac est. 
-          Aliquam eu dolor at nibh pharetra commodo. Curabitur magna turpis, sollicitudin vitae varius non,
-           scelerisque et turpis. Pellentesque bibendum diam ut lectus rhoncus vehicula. Nulla nisl eros, 
-           iaculis a magna vel, posuere rhoncus turpis. Praesent lorem nibh, elementum a sapien eu, tincidunt dapibus augue.
-            Quisque faucibus blandit elit, non semper dui viverra sed. Donec congue porttitor nulla.
-        </p>
+      <div class="briefcase__task">
+        <div class="briefcase__task-icon">
+        </div>
+        <div class="briefcase__task-content">
+          <span>Get Farmer's Insurance plumbing doc signed</span>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nec turpis et arcu accumsan efficitur at ac est. 
+            Aliquam eu dolor at nibh pharetra commodo. Curabitur magna turpis, sollicitudin vitae varius non,
+            scelerisque et turpis. Pellentesque bibendum diam ut lectus rhoncus vehicula. Nulla nisl eros, 
+            iaculis a magna vel, posuere rhoncus turpis. Praesent lorem nibh, elementum a sapien eu, tincidunt dapibus augue.
+              Quisque faucibus blandit elit, non semper dui viverra sed. Donec congue porttitor nulla.
+          </p>
+        </div>
+      </div>
+      <div class="briefcase__task">
+        <div class="briefcase__task-icon">
+        </div>
+        <div class="briefcase__task-content">
+          <span>Get Farmer's Insurance plumbing doc signed</span>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nec turpis et arcu accumsan efficitur at ac est. 
+            Aliquam eu dolor at nibh pharetra commodo. Curabitur magna turpis, sollicitudin vitae varius non,
+            scelerisque et turpis. Pellentesque bibendum diam ut lectus rhoncus vehicula. Nulla nisl eros, 
+            iaculis a magna vel, posuere rhoncus turpis. Praesent lorem nibh, elementum a sapien eu, tincidunt dapibus augue.
+              Quisque faucibus blandit elit, non semper dui viverra sed. Donec congue porttitor nulla.
+          </p>
+        </div>
       </div>
     </div>
   </div>
 </div>
 
 <div class="divider"></div>
-
-<div class="briefcase">
-  <div class="briefcase__items">
-    <div class="briefcase__heading">
-      <span>New for you</span>
-    </div>
-    <div class="briefcase__item">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nec turpis et arcu accumsan efficitur at ac est. Aliquam eu dolor at nibh pharetra commodo. Curabitur magna turpis, sollicitudin vitae varius non, scelerisque et turpis. Pellentesque bibendum diam ut lectus rhoncus vehicula. Nulla nisl eros, iaculis a magna vel, posuere rhoncus turpis. Praesent lorem nibh, elementum a sapien eu, tincidunt dapibus augue. Quisque faucibus blandit elit, non semper dui viverra sed. Donec congue porttitor nulla.</p>
-    </div>
-    <div class="briefcase__item">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nec turpis et arcu accumsan efficitur at ac est. Aliquam eu dolor at nibh pharetra commodo. Curabitur magna turpis, sollicitudin vitae varius non, scelerisque et turpis. Pellentesque bibendum diam ut lectus rhoncus vehicula. Nulla nisl eros, iaculis a magna vel, posuere rhoncus turpis. Praesent lorem nibh, elementum a sapien eu, tincidunt dapibus augue. Quisque faucibus blandit elit, non semper dui viverra sed. Donec congue porttitor nulla.</p>
-    </div>
-     <div class="briefcase__heading">
-      <span>New for you</span>
-    </div>
-    <div class="briefcase__item">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nec turpis et arcu accumsan efficitur at ac est. Aliquam eu dolor at nibh pharetra commodo. Curabitur magna turpis, sollicitudin vitae varius non, scelerisque et turpis. Pellentesque bibendum diam ut lectus rhoncus vehicula. Nulla nisl eros, iaculis a magna vel, posuere rhoncus turpis. Praesent lorem nibh, elementum a sapien eu, tincidunt dapibus augue. Quisque faucibus blandit elit, non semper dui viverra sed. Donec congue porttitor nulla.</p>
-    </div>
-    <div class="briefcase__item">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nec turpis et arcu accumsan efficitur at ac est. Aliquam eu dolor at nibh pharetra commodo. Curabitur magna turpis, sollicitudin vitae varius non, scelerisque et turpis. Pellentesque bibendum diam ut lectus rhoncus vehicula. Nulla nisl eros, iaculis a magna vel, posuere rhoncus turpis. Praesent lorem nibh, elementum a sapien eu, tincidunt dapibus augue. Quisque faucibus blandit elit, non semper dui viverra sed. Donec congue porttitor nulla.</p>
-    </div>
-  </div>
-  <div class="briefcase__items">  
-    <div class="briefcase__heading">
-      <span>Next 3 days</span>
-    </div>
-    <div class="briefcase__item briefcase__item--sm">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nec turpis et arcu accumsan efficitur at ac est. Aliquam eu dolor at nibh pharetra commodo. Curabitur magna turpis, sollicitudin vitae varius non, scelerisque et turpis. Pellentesque bibendum diam ut lectus rhoncus vehicula. Nulla nisl eros, iaculis a magna vel, posuere rhoncus turpis. Praesent lorem nibh, elementum a sapien eu, tincidunt dapibus augue. Quisque faucibus blandit elit, non semper dui viverra sed. Donec congue porttitor nulla.</p>
-    </div>
-    <div class="briefcase__item briefcase__item--sm">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nec turpis et arcu accumsan efficitur at ac est. Aliquam eu dolor at nibh pharetra commodo. Curabitur magna turpis, sollicitudin vitae varius non, scelerisque et turpis. Pellentesque bibendum diam ut lectus rhoncus vehicula. Nulla nisl eros, iaculis a magna vel, posuere rhoncus turpis. Praesent lorem nibh, elementum a sapien eu, tincidunt dapibus augue. Quisque faucibus blandit elit, non semper dui viverra sed. Donec congue porttitor nulla.</p>
-    </div>
-  </div>
-</div>
