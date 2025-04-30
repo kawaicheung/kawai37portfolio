@@ -16,6 +16,7 @@
 </div>
 
 <div class="briefcase">
+  <!-- Begin: What's on tap -->
   <div class="briefcase__items">
     <div class="briefcase__heading">
       <span>What's on tap</span>
@@ -25,32 +26,31 @@
     </div>
     <div class="briefcase__task">
       <div class="briefcase__task-icon">
+        <i class="fa-solid fa-list-check"></i>
       </div>
       <div class="briefcase__task-content">
         <span>Get Farmer's Insurance plumbing doc signed</span>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nec turpis et arcu accumsan efficitur at ac est. 
-          Aliquam eu dolor at nibh pharetra commodo. Curabitur magna turpis, sollicitudin vitae varius non,
-           scelerisque et turpis. Pellentesque bibendum diam ut lectus rhoncus vehicula. Nulla nisl eros, 
-           iaculis a magna vel, posuere rhoncus turpis. Praesent lorem nibh, elementum a sapien eu, tincidunt dapibus augue.
-            Quisque faucibus blandit elit, non semper dui viverra sed. Donec congue porttitor nulla.
+        <p><%= link_to "<strong>Things before moving</strong>".html_safe, "/", class:"just-a-link" %> in <%= link_to "The House", "/", class: "just-a-link", target: "_blank" %>
+        </p>
+      </div>
+      <div class="briefcase__task-actions">
+        xxxx
+      </div>
+    </div>
+    <div class="briefcase__task">
+      <div class="briefcase__task-icon">
+        <i class="fa-solid fa-list-check"></i>
+      </div>
+      <div class="briefcase__task-content">
+        <span>Sign up Andrew for basketball camp</span>
+        <p>
+          <strong>Summer schedules</strong> in <%= link_to "Parenting", "/", class: "just-a-link", target: "_blank" %>
         </p>
       </div>
     </div>
     <div class="briefcase__task">
       <div class="briefcase__task-icon">
-      </div>
-      <div class="briefcase__task-content">
-        <span>Get Farmer's Insurance plumbing doc signed</span>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nec turpis et arcu accumsan efficitur at ac est. 
-          Aliquam eu dolor at nibh pharetra commodo. Curabitur magna turpis, sollicitudin vitae varius non,
-           scelerisque et turpis. Pellentesque bibendum diam ut lectus rhoncus vehicula. Nulla nisl eros, 
-           iaculis a magna vel, posuere rhoncus turpis. Praesent lorem nibh, elementum a sapien eu, tincidunt dapibus augue.
-            Quisque faucibus blandit elit, non semper dui viverra sed. Donec congue porttitor nulla.
-        </p>
-      </div>
-    </div>
-    <div class="briefcase__task">
-      <div class="briefcase__task-icon">
+        <i class="fa-solid fa-table-columns"></i>
       </div>
       <div class="briefcase__task-content">
         <span>Get Farmer's Insurance plumbing doc signed</span>
@@ -67,6 +67,7 @@
     </div>
     <div class="briefcase__task">
       <div class="briefcase__task-icon">
+        <i class="fa-solid fa-table-columns"></i>
       </div>
       <div class="briefcase__task-content">
         <span>Get Farmer's Insurance plumbing doc signed</span>
@@ -80,6 +81,7 @@
     </div>
     <div class="briefcase__task">
       <div class="briefcase__task-icon">
+        <i class="fa-solid fa-table-columns"></i>
       </div>
       <div class="briefcase__task-content">
         <span>Get Farmer's Insurance plumbing doc signed</span>
@@ -91,13 +93,19 @@
         </p>
       </div>
     </div>
+    <div class="briefcase__links">
+      <%= link_to "View your full schedule", "/", class: "just-a-link just-a-link--em" %>
+      <%= link_to "See all assignments", "/", class: "just-a-link just-a-link--em" %>
+    </div>
   </div>
+  <!-- End: What's on tap -->
   <div>
     <div class="accomplishments hidden">
       <div class="accomplishments__heading">
         <span>Accomplishments</span>
       </div>
     </div>
+    <!-- Begin: Don't forget -->
     <div class="briefcase__items">
       <div class="briefcase__heading">
         <span>Don't forget</span>
@@ -155,6 +163,7 @@
         </div>
       </div>
     </div>
+    <!-- End: Don't forget -->
   </div>
 </div>
 

@@ -8,13 +8,16 @@
   --color--dark-gray: hsl(0, 0%, 30%);
   --color--dark-blue: hsl(204, 16%, 21%);
   --color--ink: hsl(202, 18%, 21%);
-
+  --color--blue: hsl(211.2, 71.4%, 48%);
   --color--border: hsla(30, 26%, 89%, 1);
   --color--bg-sand: hsl(32.2, 20.2%, 60.2%);
   --color--blue-30: hsl(205.9, 100%, 90%);
   --color--pink-30: hsl(319.4, 81%, 91.8%);
+  --color--pink-70: hsl(328.6, 55.8%, 39%);
 
   --border-radius--lg: 8px;
   --border-radius--sm: 4px; 
   --border-radius--xs: 2px;
+
+  --box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
 }

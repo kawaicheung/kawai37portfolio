@@ -68,7 +68,7 @@ main {
   border-radius: var(--border-radius--lg);
   border: 1px solid var(--color--border);
   padding: 1rem 2rem 2rem 2rem;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: var(--box-shadow);
 }
 
 .thought {
@@ -78,6 +78,7 @@ main {
   flex-direction: column;
   align-items: center;
   background-color: var(--color--pink-30);
+  color: var(--color--pink-70);
   width: fit-content;
   border-top-left-radius: var(--border-radius--lg);
   border-top-right-radius: var(--border-radius--lg);
@@ -110,6 +111,7 @@ main {
 
 .thought__subtitle {
   font-weight: 400;
+  font-size: 0.9rem;
   color: var(--color--dark-gray);
 }
 
@@ -172,22 +174,32 @@ main {
   display: flex;
   flex-direction: column;
   gap: 0.2rem;
-  border: solid 1px red;
 }
 
 .briefcase__task {
-  padding: 0.6rem 1rem;
-  display: flex;
-  gap: 0.4rem;
+  padding: 1rem 1rem 1rem 0;
+  display: grid;
+  grid-template-columns: 40px 1fr 50px;
+  gap: 0.6rem;
+  border-bottom: 1px solid var(--color--border);
 }
 
 .briefcase__task-icon {
-  background-color: red;
+  border: 1px solid var(--color--border);
   width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  i {
+    font-size: 1.2rem;
+    color: var(--color--ink);
+  }
 }
 
 .briefcase__task-content {
-
   span {
     font-weight: 500;
   }
@@ -200,6 +212,10 @@ main {
     display: -webkit-box;
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
+
+    strong {
+      font-weight: 600;
+    }
   }
 }
 
@@ -212,6 +228,13 @@ main {
 .briefcase__item--sm {
   padding: 0.5rem;
   font-size: 0.9rem;
+}
+
+.briefcase__links {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
 }
 
 .accomplishments {
@@ -248,4 +271,8 @@ h2 {
 .just-a-link {
   color: var(--color--black);
   text-decoration: underline;
+}
+
+.just-a-link--em {
+  color: var(--color--blue);
 }
