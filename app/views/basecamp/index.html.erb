@@ -21,6 +21,9 @@
     <div class="briefcase__heading">
       <span>What's on tap</span>
     </div>
+    <p class="briefcase__description">
+      Your upcoming assignments, events, and check-ins.
+    </p>
     <div class="briefcase__post-it">
       Today
     </div>
@@ -50,15 +53,31 @@
     </div>
     <div class="briefcase__task">
       <div class="briefcase__task-icon">
-        <i class="fa-solid fa-table-columns"></i>
+        <i class="fa-solid fa-calendar-day"></i>
       </div>
       <div class="briefcase__task-content">
-        <span>Get Farmer's Insurance plumbing doc signed</span>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nec turpis et arcu accumsan efficitur at ac est. 
-          Aliquam eu dolor at nibh pharetra commodo. Curabitur magna turpis, sollicitudin vitae varius non,
-           scelerisque et turpis. Pellentesque bibendum diam ut lectus rhoncus vehicula. Nulla nisl eros, 
-           iaculis a magna vel, posuere rhoncus turpis. Praesent lorem nibh, elementum a sapien eu, tincidunt dapibus augue.
-            Quisque faucibus blandit elit, non semper dui viverra sed. Donec congue porttitor nulla.
+        <span>Home the inspector comes</span>
+        <p><strong>All day</strong> in <%= link_to "The House", "/", class: "just-a-link", target: "_blank" %>
+        </p>
+      </div>
+    </div>
+    <div class="briefcase__task">
+      <div class="briefcase__task-icon">
+        <i class="fa-solid fa-calendar-day"></i>
+      </div>
+      <div class="briefcase__task-content">
+        <span>Plumbing meeting with city</span>
+        <p><strong>9:30am-11am</strong> in <%= link_to "The House", "/", class: "just-a-link", target: "_blank" %>
+        </p>
+      </div>
+    </div>
+    <div class="briefcase__task">
+      <div class="briefcase__task-icon">
+        <i class="fa-solid fa-bell"></i>
+      </div>
+      <div class="briefcase__task-content">
+        <span>What did you work on today?</span>
+        <p><strong>Starting at 4pm</strong> in <%= link_to "The House", "/", class: "just-a-link", target: "_blank" %>
         </p>
       </div>
     </div>
@@ -94,8 +113,7 @@
       </div>
     </div>
     <div class="briefcase__links">
-      <%= link_to "View your full schedule", "/", class: "just-a-link just-a-link--em" %>
-      <%= link_to "See all assignments", "/", class: "just-a-link just-a-link--em" %>
+      <%= link_to "See 8 more things on tap", "/", class: "just-a-link just-a-link--em" %>
     </div>
   </div>
   <!-- End: What's on tap -->
@@ -168,3 +186,7 @@
 </div>
 
 <div class="divider"></div>
+
+<div class="briefcase">
+  sdasdf
+</div>
