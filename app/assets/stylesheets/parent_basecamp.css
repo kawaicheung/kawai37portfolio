@@ -30,7 +30,7 @@ main {
   width: 100%;
   padding: 0 0.5rem;
   height: 40px;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -46,18 +46,18 @@ main {
     list-style: none;
     padding: 0;
     margin: 0;
-    
   }
 }
 
 .header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   width: 68em;
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
   position: relative;
   padding: 0 1rem;
 }
+
 
 .header__logo {
   position: absolute;
@@ -68,10 +68,9 @@ main {
   cursor: pointer;
 }
 
-.header__greeting,
-.header__date {
-  font-size: 1.6rem;
-  font-weight: 300;
+.header__greeting  {
+  font-size: 2rem;
+  font-weight: 400;
   letter-spacing: -0.02rem;
 
   strong {
@@ -83,58 +82,6 @@ main {
   color: var(--color--bg-sand);
 }
 
-.thought {
-  padding: 1rem 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: var(--color--pink-70);
-  width: fit-content;
-  max-width: calc(68em * .6); /* Do clamp */
-  position: relative;
-  border: 4px solid var(--color--border);
-  border-bottom: none;
-  z-index: 1033;
-  background-color: var(--color--body);
-  border-top-left-radius: var(--border-radius--lg);
-  border-top-right-radius: var(--border-radius--lg);
-}
-
-.thought__close {
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  border: none;
-  background: none;
-  color: var(--color--dark-gray);
-  font-size: 1.5rem;
-  cursor: pointer;
-  padding: 0 6px;
-  line-height: 1;
-}
-
-.thought__close:hover {
-  color: var(--color--black);
-}
-
-
-.thought__title {
-  font-weight: 600;
-  letter-spacing: -0.02em;
-}
-
-.thought__subtitle {
-  font-weight: 400;
-  font-size: 0.9rem;
-  color: var(--color--dark-gray);
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-}
-
-
 .briefcase {
   position: relative;
   width: 68em; 
@@ -144,13 +91,13 @@ main {
   background-color: var(--color--white);
   border-radius: var(--border-radius--lg);
   border: 4px solid var(--color--border);
-  padding: 1rem 2rem 2rem 2rem;
+  padding: 1.6rem 2rem 2rem 2rem;
   box-shadow: var(--box-shadow);
 }
 
 .briefcase__stickers {
   position: absolute;
-  top: -50px;
+  top: -28px;
   left: 0;
   background-color: transparent;
   width: 100%;
@@ -160,8 +107,8 @@ main {
 
 .briefcase__sticker {
   position: absolute;
-  width: 50px;
-  height: 50px;
+  width: 46px;
+  height: 46px;
   background-color: var(--color--bg-sand);
   color: var(--color--white);
   border-radius: 50%;
@@ -170,6 +117,16 @@ main {
   justify-content: center;
   font-size: 1.2rem;
   box-shadow: var(--box-shadow--sticker);
+  cursor: pointer;
+}
+
+.briefcase__sticker:hover {
+  animation: bounce 0.1s ease-in-out forwards;
+}
+
+@keyframes bounce {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.1); }
 }
 
 .briefcase__sticker-badge {
@@ -230,12 +187,12 @@ main {
   rotate: -5deg;
 }
 
-
 .briefcase__heading {
   font-size: 1.2rem;
   font-weight: 600;
   display: flex;
   align-items: center;
+  gap: 0.4rem;
   width: 100%;
   margin: 1rem 0;
 
@@ -384,7 +341,6 @@ main {
   margin-bottom: 1rem;
 }
 
-
 .dont-forget-zero-state {
   display: flex;
   align-items: center;
@@ -406,11 +362,9 @@ main {
   margin: 2rem 0;
 }
 
-
 h2 {
   font-size: 1.2rem;
 }
-
 
 .just-a-link {
   color: var(--color--black);
@@ -421,10 +375,22 @@ h2 {
   color: var(--color--blue);
 }
 
+.project-btn {
+  background-color: var(--color--blue);
+  color: var(--color--white);
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius--lg);
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border: 4px solid var(--color--border);
+  border-bottom: none;
+  background-color: transparent;
+  color: var(--color--ink);
+  font-weight: 700;
+}
 
 .project-listing {
   width: 400px;
-  border: solid 1px red;
   max-height: 500px;
   overflow-y: scroll;
   background-color: var(--color--white);
@@ -438,4 +404,54 @@ h2 {
 
 .project-listing::-webkit-scrollbar {
   display: none; /* Chrome, Safari, Opera */
+}
+
+
+.thought {
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--color--pink-70);
+  width: fit-content;
+  max-width: calc(68em * .6); /* Do clamp */
+  position: relative;
+  z-index: 1033;
+  background-color: var(--color--body);
+  rotate: -1deg;
+  background-color: var(--color--yellow-30);
+  transform: translateY(-20px);
+}
+
+.thought__close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  border: none;
+  background: none;
+  color: var(--color--dark-gray);
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0 6px;
+  line-height: 1;
+}
+
+.thought__close:hover {
+  color: var(--color--black);
+}
+
+.thought__title {
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.thought__subtitle {
+  font-weight: 400;
+  font-size: 0.9rem;
+  color: var(--color--dark-gray);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
 }

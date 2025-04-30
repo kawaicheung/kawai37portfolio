@@ -17,18 +17,14 @@
   </div>
 </div>
 <div class="header">
-  <div class="header__greeting"><strong>Good afternoon</strong>, Bethany!</div>
-  <%= image_tag "basecamp/icons/basecamp-logo.svg", class: "header__logo" %>
-  <div class="header__date"><strong><%= Time.now.strftime("%A") %></strong>, <%= Time.now.strftime("%b %d") %></div>
+  <div class="header__greeting">Happy <%= Time.now.strftime("%A") %> afternoon, <strong>Bethany</strong>!</div>
 </div>
 
-<div class="thought">
-  <button class="thought__close">×</button>
-  <span class="thought__title">
-    Today's thought:  <%= link_to "Look back less", "https://world.hey.com/jason/look-back-less-848e9db0", class: "just-a-link", target: "_blank" %>. 
-  </span>
-  <span class="thought__subtitle">It's a mistake most of the time. And a waste of time almost all of the time.</span>
+<div class="project-btn">
+  <span>Dive into a project</span>
+  <i class="fa-solid fa-arrow-trend-down"></i>
 </div>
+
 
 <div class="briefcase">
   <div class="briefcase__stickers">
@@ -87,7 +83,7 @@
       <span>What's on tap</span>
     </div>
     <p class="briefcase__description">
-      Your upcoming assignments, events, and check-ins.
+      Your upcoming <%= link_to "assignments", "/", class: "just-a-link", target: "_blank" %>, <%= link_to "events", "/", class: "just-a-link", target: "_blank" %>, and <%= link_to "check-ins", "/", class: "just-a-link", target: "_blank" %>.
     </p>
     <div class="briefcase__post-it">
       Today
@@ -165,8 +161,12 @@
     <!-- Begin: Don't forget -->
     <div class="briefcase__items">
       <div class="briefcase__heading">
+        <%= image_tag "basecamp/icons/dont-forget.svg", style: "width: 20px; height: 20px;" %>
         <span>Don't forget</span>
       </div>
+      <p class="briefcase__description">
+        Stuff you wanted to check back in on.
+      </p>
       <div class="briefcase__task">
         <div class="briefcase__task-icon">
         </div>
@@ -221,18 +221,23 @@
       </div>
     </div>
     <div class="dont-forget-zero-state">
-      <%= image_tag "basecamp/icons/dont-forget.svg", class: "dont-forget-zero-state__img" %>
-      <span>No items to show</span>
+      <span>You have </span>
     </div>
     <!-- End: Don't forget -->
   </div>
 </div>
 
-<div class="divider"></div>
 
-<div class="briefcase">
-  sdasdf
+<div class="thought">
+  <button class="thought__close">×</button>
+  <span class="thought__title">
+    Today's thought:  <%= link_to "Look back less", "https://world.hey.com/jason/look-back-less-848e9db0", class: "just-a-link", target: "_blank" %>. 
+  </span>
+  <span class="thought__subtitle">It's a mistake most of the time. And a waste of time almost all of the time.</span>
 </div>
+
+
+<div class="divider"></div>
 
 
 <div class="project-listing">
