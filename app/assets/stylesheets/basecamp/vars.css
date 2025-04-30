@@ -14,10 +14,20 @@
   --color--blue-30: hsl(205.9, 100%, 90%);
   --color--pink-30: hsl(319.4, 81%, 91.8%);
   --color--pink-70: hsl(328.6, 55.8%, 39%);
+  --color--yellow-30: hsl(47.2, 93.1%, 77.3%);
 
   --border-radius--lg: 8px;
   --border-radius--sm: 4px; 
   --border-radius--xs: 2px;
 
   --box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  --box-shadow--sticker: 0 2px 2px 0 rgba(0, 0, 0, 0.3);
+
+
+  --color--red-50: hsl(13, 97.9%, 62.9%);
+  --color--orange-50: hsl(35.2, 100%, 47.8%);
+  --color--yellow-50: hsl(46.6, 98.3%, 45.5%);
+  --color--green-50: hsl(135.6, 39.7%, 52.5%);
+  --color--blue-50: hsl(209.2, 100%, 62.9%);
+  --color--purple-50: hsl(238.4, 100%, 77.6%);
 }

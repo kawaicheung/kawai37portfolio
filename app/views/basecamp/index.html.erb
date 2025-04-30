@@ -1,6 +1,21 @@
 
 
-
+<div class="top_nav">
+  <div class="logo">
+    <%= image_tag "basecamp/icons/basecamp-full-logo.svg", class: "logo__img" %>
+  </div>
+  <ul>
+    <li>Home</li>
+    <li>Calendar</li>
+    <li>Chat</li>
+    <li>Files</li>
+    <li>People</li>
+    <li>Ideas</li>
+  </ul>
+  <div class="user">
+    <span class="user__name">Bethany</span>
+  </div>
+</div>
 <div class="header">
   <div class="header__greeting"><strong>Good afternoon</strong>, Bethany!</div>
   <%= image_tag "basecamp/icons/basecamp-logo.svg", class: "header__logo" %>
@@ -16,6 +31,56 @@
 </div>
 
 <div class="briefcase">
+  <div class="briefcase__stickers">
+    <div class="briefcase__sticker briefcase__sticker--tasks">
+      <div class="briefcase__sticker-badge">
+        &checkmark;
+      </div>
+      <span>
+        <i class="fa-solid fa-square-check"></i>
+      </span>
+    </div>
+    <div class="briefcase__sticker briefcase__sticker--cards"> 
+      <div class="briefcase__sticker-badge">
+        3
+      </div>
+      <span>
+        <i class="fa-solid fa-table-columns"></i>
+      </span>
+    </div>
+    <div class="briefcase__sticker briefcase__sticker--events">
+      <div class="briefcase__sticker-badge">
+        3
+      </div>
+      <span>
+        <i class="fa-solid fa-calendar-day"></i>
+      </span>
+    </div>
+    <div class="briefcase__sticker briefcase__sticker--check-ins">
+      <div class="briefcase__sticker-badge">
+        &checkmark;
+      </div>
+      <span>
+        <i class="fa-solid fa-bell"></i>
+      </span>
+    </div>
+    <div class="briefcase__sticker briefcase__sticker--time">
+      <span>
+        <i class="fa-solid fa-clock"></i>
+      </span>
+      <div class="briefcase__sticker-badge">
+        4.5h
+      </div>
+    </div>
+    <div class="briefcase__sticker briefcase__sticker--boosts">
+      <div class="briefcase__sticker-badge">
+        12
+      </div>
+      <span>
+        <i class="fa-solid fa-rocket"></i>
+      </span>
+    </div>
+  </div>
   <!-- Begin: What's on tap -->
   <div class="briefcase__items">
     <div class="briefcase__heading">
@@ -51,7 +116,21 @@
         </p>
       </div>
     </div>
+   
     <div class="briefcase__task">
+      <div class="briefcase__task-icon">
+        <i class="fa-solid fa-bell"></i>
+      </div>
+      <div class="briefcase__task-content">
+        <span>What did you work on today?</span>
+        <p><strong>Starting at 4pm</strong> in <%= link_to "The House", "/", class: "just-a-link", target: "_blank" %>
+        </p>
+      </div>
+    </div>
+    <div class="briefcase__post-it">
+      Tomorrow
+    </div>
+     <div class="briefcase__task">
       <div class="briefcase__task-icon">
         <i class="fa-solid fa-calendar-day"></i>
       </div>
@@ -71,49 +150,9 @@
         </p>
       </div>
     </div>
-    <div class="briefcase__task">
-      <div class="briefcase__task-icon">
-        <i class="fa-solid fa-bell"></i>
-      </div>
-      <div class="briefcase__task-content">
-        <span>What did you work on today?</span>
-        <p><strong>Starting at 4pm</strong> in <%= link_to "The House", "/", class: "just-a-link", target: "_blank" %>
-        </p>
-      </div>
-    </div>
-    <div class="briefcase__post-it">
-      Tomorrow
-    </div>
-    <div class="briefcase__task">
-      <div class="briefcase__task-icon">
-        <i class="fa-solid fa-table-columns"></i>
-      </div>
-      <div class="briefcase__task-content">
-        <span>Get Farmer's Insurance plumbing doc signed</span>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nec turpis et arcu accumsan efficitur at ac est. 
-          Aliquam eu dolor at nibh pharetra commodo. Curabitur magna turpis, sollicitudin vitae varius non,
-           scelerisque et turpis. Pellentesque bibendum diam ut lectus rhoncus vehicula. Nulla nisl eros, 
-           iaculis a magna vel, posuere rhoncus turpis. Praesent lorem nibh, elementum a sapien eu, tincidunt dapibus augue.
-            Quisque faucibus blandit elit, non semper dui viverra sed. Donec congue porttitor nulla.
-        </p>
-      </div>
-    </div>
-    <div class="briefcase__task">
-      <div class="briefcase__task-icon">
-        <i class="fa-solid fa-table-columns"></i>
-      </div>
-      <div class="briefcase__task-content">
-        <span>Get Farmer's Insurance plumbing doc signed</span>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nec turpis et arcu accumsan efficitur at ac est. 
-          Aliquam eu dolor at nibh pharetra commodo. Curabitur magna turpis, sollicitudin vitae varius non,
-           scelerisque et turpis. Pellentesque bibendum diam ut lectus rhoncus vehicula. Nulla nisl eros, 
-           iaculis a magna vel, posuere rhoncus turpis. Praesent lorem nibh, elementum a sapien eu, tincidunt dapibus augue.
-            Quisque faucibus blandit elit, non semper dui viverra sed. Donec congue porttitor nulla.
-        </p>
-      </div>
-    </div>
     <div class="briefcase__links">
       <%= link_to "See 8 more things on tap", "/", class: "just-a-link just-a-link--em" %>
+      <%= link_to "See 7 overdue assignments", "/", class: "just-a-link just-a-link--em" %>
     </div>
   </div>
   <!-- End: What's on tap -->
@@ -180,6 +219,10 @@
           </p>
         </div>
       </div>
+    </div>
+    <div class="dont-forget-zero-state">
+      <%= image_tag "basecamp/icons/dont-forget.svg", class: "dont-forget-zero-state__img" %>
+      <span>No items to show</span>
     </div>
     <!-- End: Don't forget -->
   </div>
