@@ -24,9 +24,69 @@
   <div class="header__greeting">Happy <%= Time.now.strftime("%A") %>, <strong>Bethany!</strong></div>
 </div>
 
-<div class="project-btn">
-  <span>Dive into a project</span>
-  <i class="fa-solid fa-arrow-trend-down"></i>
+<div class="projects">
+  <div class="projects__btn">
+    <span>Dive into a project</span>
+    <i class="fa-solid fa-arrow-trend-down"></i>
+  </div>
+  <ul class="projects__listing">
+    <li class="project-listing__item project-listing__item--pinned">
+      <%= link_to "Q3 Marketing", "/", class: "project-listing__link"  %>
+    </li>
+    <li class="project-listing__item">
+      <%= link_to "Q3 Marketing", "/", class: "project-listing__link"  %>
+    </li>
+    <li>
+      <span class="project-listing__divider">
+        Q3 Marketing
+      </span>
+      <ul>
+        <li>
+          <%= link_to "Q3 Marketing", "/"  %>
+        </li>
+        <li>
+          <%= link_to "Making a Podcast", "/"  %>
+        </li>
+          <li>
+          <%= link_to "The House", "/", class: "just-a-link" %>
+        </li>
+        <li>
+          <%= link_to "The House", "/", class: "just-a-link" %>
+        </li>
+      </ul>
+    </li>
+    
+    <li>
+      <%= link_to "The House", "/", class: "just-a-link" %>
+    </li>
+    <li>
+      <%= link_to "The House", "/", class: "just-a-link" %>
+    </li>
+    <li>
+      <%= link_to "The House", "/", class: "just-a-link" %>
+    </li>
+    <li>
+      <%= link_to "The House", "/", class: "just-a-link" %>
+    </li>
+    <li>
+      <%= link_to "The House", "/", class: "just-a-link" %>
+    </li>
+    <li>
+      <%= link_to "The House", "/", class: "just-a-link" %>
+    </li>
+    <li>
+      <%= link_to "The House", "/", class: "just-a-link" %>
+    </li>
+    <li>
+      <%= link_to "The House", "/", class: "just-a-link" %>
+    </li>
+    <li>
+      <%= link_to "The House", "/", class: "just-a-link" %>
+    </li>
+    <li>
+      <%= link_to "The House", "/", class: "just-a-link" %>
+    </li>
+  </ul>
 </div>
 
 <div class="briefcase">
@@ -165,7 +225,7 @@
   <div class="flex-center">
     <!-- Begin: Don't forget -->
     <div class="briefcase__heading">
-      <%= image_tag "basecamp/icons/dont-forget.svg", style: "width: 20px; height: 20px; position: absolute; top: -14px; left: 50%; transform: translateX(-50%);" %>
+      <%= image_tag "basecamp/icons/dont-forget.svg", class: "briefcase__heading-icon" %>
       <span>Don't forget</span>
     </div>
     <div class="briefcase__items hidden">
@@ -241,58 +301,3 @@
 </div>
 
 <div class="divider"></div>
-
-<div class="project-listing">
-  <ul>
-    <li>
-      <span class="project-listing__divider">
-        Q3 Marketing
-      </span>
-      <ul>
-        <li>
-          <%= link_to "Q3 Marketing", "/"  %>
-        </li>
-        <li>
-          <%= link_to "Making a Podcast", "/"  %>
-        </li>
-         <li>
-          <%= link_to "The House", "/", class: "just-a-link" %>
-        </li>
-        <li>
-          <%= link_to "The House", "/", class: "just-a-link" %>
-        </li>
-      </ul>
-    </li>
-   
-    <li>
-      <%= link_to "The House", "/", class: "just-a-link" %>
-    </li>
-    <li>
-      <%= link_to "The House", "/", class: "just-a-link" %>
-    </li>
-    <li>
-      <%= link_to "The House", "/", class: "just-a-link" %>
-    </li>
-    <li>
-      <%= link_to "The House", "/", class: "just-a-link" %>
-    </li>
-    <li>
-      <%= link_to "The House", "/", class: "just-a-link" %>
-    </li>
-    <li>
-      <%= link_to "The House", "/", class: "just-a-link" %>
-    </li>
-    <li>
-      <%= link_to "The House", "/", class: "just-a-link" %>
-    </li>
-    <li>
-      <%= link_to "The House", "/", class: "just-a-link" %>
-    </li>
-    <li>
-      <%= link_to "The House", "/", class: "just-a-link" %>
-    </li>
-    <li>
-      <%= link_to "The House", "/", class: "just-a-link" %>
-    </li>
-  </ul>
-</div>

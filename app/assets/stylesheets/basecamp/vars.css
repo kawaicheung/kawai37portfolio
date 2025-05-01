@@ -33,4 +33,7 @@
   --color--blue-50: hsl(209.2, 100%, 62.9%);
   --color--purple-50: hsl(238.4, 100%, 77.6%);
   --color--green-60: hsl(148.4, 68.8%, 31.4%);
+
+
+  --height-projects-btn: 40px;
 }
