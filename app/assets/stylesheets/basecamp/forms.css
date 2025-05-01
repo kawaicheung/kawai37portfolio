@@ -1,0 +1,68 @@
+.custom-checkbox {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.custom-checkbox__input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.custom-checkbox__checkmark {
+  position: relative;
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  border: 2px solid #ccc;
+  border-radius: 4px;  /* Adjust for desired roundness */
+  background-color: white;
+}
+
+/* Checkbox hover effect */
+.custom-checkbox:hover .custom-checkbox__checkmark {
+  border-color: #999;
+}
+
+/* Checkmark (hidden by default) */
+.custom-checkbox__checkmark:after {
+  content: '';
+  position: absolute;
+  display: none;
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+/* Show checkmark when checked */
+.custom-checkbox__input:checked ~ .custom-checkbox__checkmark {
+  background-color: #2196F3; 
+  border-color: #2196F3;
+}
+
+.custom-checkbox__input:checked ~ .custom-checkbox__checkmark:after {
+  display: block;
+}
+
+.custom-select {
+  border-radius: var(--border-radius--circular);
+  border: 2px solid #ddd; 
+  padding: 0.5rem 1rem;
+  appearance: none; 
+  background-color: white;
+  cursor: pointer;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='16'%3E%3Cpath d='M6 0l4 5H2l4-5zm0 16l-4-5h8l-4 5z' fill='%23000000'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.7rem top 50%;
+  background-size: 0.8rem auto;
+  padding-right: 2rem; 
+  font-size: 0.8rem;
+  max-width: 120px;
+}

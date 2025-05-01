@@ -191,7 +191,10 @@
           </p>
         </div>
         <div class="briefcase__task-actions">
-          <input type="checkbox" class="checkbox" />
+          <label class="custom-checkbox">
+            <input type="checkbox" class="custom-checkbox__input" />
+            <span class="custom-checkbox__checkmark"></span>
+          </label>
         </div>
       </div>
        <div class="briefcase__task">
@@ -204,7 +207,10 @@
           </p>
         </div>
         <div class="briefcase__task-actions">
-          <input type="checkbox" />
+          <label class="custom-checkbox">
+            <input type="checkbox" class="custom-checkbox__input" />
+            <span class="custom-checkbox__checkmark"></span>
+          </label>
         </div>
       </div>
       <div class="briefcase__task">
@@ -212,16 +218,18 @@
           <i class="fa-solid fa-table-columns"></i>
         </div>
         <div class="briefcase__task-content">
-          <span>Sign up Andrew for basketball camp</span>
+          <span>SSign up Andrew for basketSign up Andrew for basketSign up Andrew for basketSign up Andrew for basketign up Andrew for basketball camp</span>
           <p>
             <%= link_to "<strong>Summer schedules</strong>".html_safe, "/", class: "just-a-link" %> in <%= link_to "Parenting", "/", class: "just-a-link", target: "_blank" %>
           </p>
         </div>
         <div class="briefcase__task-actions">
-          <select class="select">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
+          <select class="custom-select">
+            <option value="1">Triage</option>
+            <option value="2">Figuring it out</option>
+            <option value="3">In progress</option>
+            <option value="4">Done</option>
+            <option value="5">Not now</option>
           </select>
         </div>
       </div>
@@ -337,7 +345,6 @@
 </div>
 
 <div class="divider"></div>
-
 
 <div class="remote-control">
   <%= link_to "Zero states", "/", class: "remote-control__link" %>
