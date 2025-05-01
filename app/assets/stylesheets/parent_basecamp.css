@@ -28,7 +28,7 @@ main {
 
 .top-nav {
   width: 100%;
-  padding: 0 0.5rem;
+  padding: 0.5rem;
   height: 40px;
   margin-bottom: 2rem;
   display: flex;
@@ -70,6 +70,17 @@ main {
 
 .top-nav__link svg {
   width: 20px;
+}
+
+.top-nav__user {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--border-radius--circular);
+  background-color: var(--color--blue);
+  color: var(--color--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .header {
@@ -143,17 +154,18 @@ main {
 
 .briefcase__sticker {
   position: absolute;
-  width: 46px;
-  height: 46px;
+  width: 64px;
+  height: 64px;
   background-color: var(--color--bg-sand);
   color: var(--color--white);
-  border-radius: var(--border-radius--circular);
+  border-radius: var(--border-radius--lg);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   box-shadow: var(--box-shadow--sticker);
   cursor: pointer;
+  
 }
 
 .briefcase__sticker:hover {
@@ -167,16 +179,15 @@ main {
 
 .briefcase__sticker-badge {
   position: absolute;
-  bottom: -5px;
-  right: -2px;
-  background-color: inherit;
+  bottom: 0;
+  right: 0;
   color: var(--color--white);
   border-radius: var(--border-radius--sm);
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 0.1rem 0.3rem;
-  font-size: 0.7rem;
+  font-size: 0.9rem;
   font-weight: 900;
   min-width: 20px;
 }
@@ -184,42 +195,42 @@ main {
 .briefcase__sticker--tasks {
   background-color: var(--color--blue-50);
   left: 20px;
-  top: -16px;
-  rotate: -3deg;
+  top: -46px;
+  rotate: -6deg;
 }
 
 .briefcase__sticker--cards {
   background-color: var(--color--orange-50);
-  left: 80px;
-  top: -12px;
-  rotate: -5deg;
+  left: 100px;
+  top: -80px;
+  rotate: -2deg;
 }
 
 .briefcase__sticker--events {
   background-color: var(--color--yellow-50);
-  left: 140px;
+  left: 180px;
   top: -18px;
-  rotate: 10deg;
+  rotate: 7deg;
 }
 
 .briefcase__sticker--check-ins {
   background-color: var(--color--purple-50);
-  right: 140px;
-  top: -14px;
-  rotate: 3deg;
+  right: 180px;
+  top: -28px;
+  rotate: -3deg;
 }
 
 .briefcase__sticker--time {
   background-color: var(--color--green-50);
-  right: 80px;
-  top: -20px;
-  rotate: 3deg;
+  right: 100px;
+  top: -50px;
+  rotate: -1deg;
 }
 
 .briefcase__sticker--boosts {
   background-color: var(--color--red-50);
   right: 20px;
-  top: -8px;
+  top: -18px;
   rotate: -5deg;
 }
 
@@ -274,6 +285,10 @@ main {
 
 .briefcase__heading + .briefcase__description {
   margin-top: -0.5rem;
+}
+
+.briefcase__task + .briefcase__post-it {
+  margin-top: 0.5rem;
 }
 
 .briefcase__post-it {

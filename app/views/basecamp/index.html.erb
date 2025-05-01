@@ -48,8 +48,8 @@
       </a>
     </li>
   </ul>
-  <div class="user">
-    <span class="user__name">Bethany</span>
+  <div class="top-nav__user">
+    <span>BW</span>
   </div>
 </div>
 <div class="header">
@@ -185,9 +185,8 @@
       Your upcoming <%= link_to "assignments", "/", class: "just-a-link", target: "_blank" %>, <%= link_to "events", "/", class: "just-a-link", target: "_blank" %>, and <%= link_to "check-ins", "/", class: "just-a-link", target: "_blank" %>.
     </p>
     <div class="briefcase__items">
-
       <div class="briefcase__post-it">
-        Today
+        Up Next &uarr; 
       </div>
       <div class="briefcase__task">
         <div class="briefcase__task-icon">
@@ -213,7 +212,9 @@
           </p>
         </div>
       </div>
-    
+      <div class="briefcase__post-it">
+        Today
+      </div>
       <div class="briefcase__task">
         <div class="briefcase__task-icon">
           <i class="fa-solid fa-bell"></i>
@@ -224,9 +225,6 @@
           </p>
         </div>
       </div>
-      <div class="briefcase__post-it">
-        Tomorrow
-      </div>
       <div class="briefcase__task">
         <div class="briefcase__task-icon">
           <i class="fa-solid fa-calendar-day"></i>
@@ -236,6 +234,9 @@
           <p><strong>All day</strong> in <%= link_to "The House", "/", class: "just-a-link", target: "_blank" %>
           </p>
         </div>
+      </div>
+      <div class="briefcase__post-it">
+        Tomorrow
       </div>
       <div class="briefcase__task">
         <div class="briefcase__task-icon">
@@ -252,7 +253,7 @@
         <%= link_to "See 7 overdue assignments", "/", class: "just-a-link just-a-link--em" %>
       </div>
     </div>
-     <div class="zero-state">
+    <div class="zero-state">
       <span>Relax! You have nothing on tap. Once you have a to-do, card, or event assigned to you, it'll show up here.<br>
       </span>
     </div>
