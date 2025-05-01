@@ -62,66 +62,57 @@
 </div>
 
 <div class="projects" data-controller="basecamp--toggle-projects">
-  <div class="projects__btn" data-action="click->basecamp--toggle-projects#toggle">
+  <div class="projects__btn" data-basecamp--toggle-projects-target="button" data-action="click->basecamp--toggle-projects#toggle">
     <span>Dive into a project</span>
-    <i class="fa-solid fa-arrow-trend-down"></i>
+    <i class="fa-solid fa-arrow-down"></i>
   </div>
   <ul class="projects__listing hidden" data-basecamp--toggle-projects-target="listing">
     <li class="project-listing__item project-listing__item--pinned">
-      <%= link_to "Q3 Marketing", "/", class: "project-listing__link"  %>
+      <%= link_to "Customer support playbook", "/", class: "project-listing__link"  %>
     </li>
-    <li class="project-listing__item">
-      <%= link_to "Q3 Marketing", "/", class: "project-listing__link"  %>
+    <li class="project-listing__item  project-listing__item--pinned">
+      <%= link_to "Demo sessions", "/", class: "project-listing__link"  %>
     </li>
     <li>
-      <span class="project-listing__divider">
-        Q3 Marketing
-      </span>
-      <ul>
-        <li>
-          <%= link_to "Q3 Marketing", "/"  %>
+      <div class="project-listing__divider">
+        <span>Recent Projects</span>
+      </div>
+      <ul class="project-listing__group">
+        <li class="project-listing__item">
+          <%= link_to "Q3 Marketing", "/", class: "project-listing__link"  %>
         </li>
-        <li>
-          <%= link_to "Making a Podcast", "/"  %>
+        <li class="project-listing__item">
+          <%= link_to "Making a Podcast", "/", class: "project-listing__link"  %>
         </li>
-          <li>
-          <%= link_to "The House", "/", class: "just-a-link" %>
+        <li class="project-listing__item">
+          <%= link_to "The House", "/", class: "project-listing__link" %>
         </li>
-        <li>
-          <%= link_to "The House", "/", class: "just-a-link" %>
+        <li class="project-listing__item">
+          <%= link_to "The House", "/", class: "project-listing__link" %>
         </li>
       </ul>
     </li>
-    
-    <li>
-      <%= link_to "The House", "/", class: "just-a-link" %>
+    <li class="project-listing__item">
+      <div class="project-listing__divider project-listing__divider--stack">
+        <span>Q2 Projects</span>
+      </div>
+      <ul class="project-listing__group">
+        <li class="project-listing__item">
+          <%= link_to "Marketing initiatives", "/", class: "project-listing__link"  %>
+        </li>
+        <li class="project-listing__item">
+          <%= link_to "Making it rain", "/", class: "project-listing__link"  %>
+        </li>
+        <li class="project-listing__item">
+          <%= link_to "One of those really long project names you test with", "/", class: "project-listing__link" %>
+        </li>
+      </ul>
     </li>
-    <li>
-      <%= link_to "The House", "/", class: "just-a-link" %>
+    <li class="project-listing__item">
+      <%= link_to "Website redesign", "/", class: "project-listing__link"  %>
     </li>
-    <li>
-      <%= link_to "The House", "/", class: "just-a-link" %>
-    </li>
-    <li>
-      <%= link_to "The House", "/", class: "just-a-link" %>
-    </li>
-    <li>
-      <%= link_to "The House", "/", class: "just-a-link" %>
-    </li>
-    <li>
-      <%= link_to "The House", "/", class: "just-a-link" %>
-    </li>
-    <li>
-      <%= link_to "The House", "/", class: "just-a-link" %>
-    </li>
-    <li>
-      <%= link_to "The House", "/", class: "just-a-link" %>
-    </li>
-    <li>
-      <%= link_to "The House", "/", class: "just-a-link" %>
-    </li>
-    <li>
-      <%= link_to "The House", "/", class: "just-a-link" %>
+    <li class="project-listing__item">
+      <%= link_to "Mobile app updates", "/", class: "project-listing__link"  %>
     </li>
   </ul>
 </div>
@@ -307,7 +298,6 @@
     <!-- End: Don't forget -->
   </div>
 </div>
-
 
 <div class="thought">
   <button class="thought__close">×</button>

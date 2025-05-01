@@ -1,7 +1,7 @@
 import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {
-  static targets = ["listing"]
+  static targets = ["button", "listing"]
 
   connect() {
     this.closeIfClickedOutside = this.closeIfClickedOutside.bind(this)
@@ -14,12 +14,19 @@ export default class extends Controller {
 
   toggle(e) {
     e.stopPropagation()
+    const wasHidden = this.listingTarget.classList.contains("hidden")
     this.listingTarget.classList.toggle("hidden")
+    if (wasHidden) {
+      this.buttonTarget.classList.add("projects__btn--selected")
+    } else {
+      this.buttonTarget.classList.remove("projects__btn--selected")
+    }
   }
 
   closeIfClickedOutside(e) {
     if (!this.listingTarget.contains(e.target)) {
       this.listingTarget.classList.add("hidden")
+      this.buttonTarget.classList.remove("projects__btn--selected")
     }
   }
 } 
