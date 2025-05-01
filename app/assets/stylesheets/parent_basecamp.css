@@ -287,6 +287,18 @@ main {
   margin-top: -0.5rem;
 }
 
+.briefcase__section {
+  border: 1px solid transparent;
+  border-radius: var(--border-radius--lg);
+  padding: 0rem 1rem 1rem 1rem;
+  height: fit-content;
+}
+
+.briefcase__section--em {
+  border-color: var(--color--border);
+  box-shadow: var(--box-shadow);
+}
+
 .briefcase__task + .briefcase__post-it {
   margin-top: 0.5rem;
 }
@@ -298,7 +310,6 @@ main {
   color: var(--color--white);
   padding: 0.1rem 0.4rem;
   width: fit-content;
-  rotate: -2deg;
   border-radius: var(--border-radius--xs);
   transform: translateX(-8px);
 }
@@ -315,6 +326,11 @@ main {
   grid-template-columns: 40px 1fr 50px;
   gap: 0.6rem;
   border-bottom: 1px solid var(--color--border);
+}
+
+.briefcase__task--reminder {
+  padding: 0.7rem 0.7rem 0.7rem 0;
+  grid-template-columns: 40px 1fr;
 }
 
 .briefcase__task-icon {
@@ -334,7 +350,9 @@ main {
 
 .briefcase__task-content {
   span {
+    display: block;
     font-weight: 500;
+    line-height: 1.2;
   }
 
   p {
@@ -402,6 +420,7 @@ main {
   margin-top: 2rem;
   text-align: center;
   color: var(--color--dark-gray);
+  display: none;
 }
 
 .zero-state--dont-forget {
@@ -455,7 +474,7 @@ h2 {
 }
 
 .projects__btn:hover {
-  border-color: var(--color--black);
+  border-color: var(--color--bg-sand);
   background-color: var(--color--white);
 }
 

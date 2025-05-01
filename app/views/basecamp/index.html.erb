@@ -52,6 +52,7 @@
     <span>BW</span>
   </div>
 </div>
+
 <div class="header">
   <div class="header__cta-btns">
     <%= link_to "New project", "/", class: "header__cta-btn" %>
@@ -126,6 +127,7 @@
 </div>
 
 <div class="briefcase">
+  <!-- Begin: Stickers -->
   <div class="briefcase__stickers">
     <a href="/" class="briefcase__sticker briefcase__sticker--tasks">
       <div class="briefcase__sticker-badge">
@@ -177,7 +179,7 @@
     </a>
   </div>
   <!-- Begin: What's on tap -->
-  <div>
+  <div class="briefcase__section">
     <div class="briefcase__heading">
       <span>What's on tap</span>
     </div>
@@ -203,7 +205,7 @@
       </div>
       <div class="briefcase__task">
         <div class="briefcase__task-icon">
-          <i class="fa-solid fa-list-check"></i>
+          <i class="fa-solid fa-table-columns"></i>
         </div>
         <div class="briefcase__task-content">
           <span>Sign up Andrew for basketball camp</span>
@@ -259,62 +261,40 @@
     </div>
   </div>
   <!-- End: What's on tap -->
-  <div class="flex-center">
+  <div class="briefcase__section briefcase__section--em">
     <!-- Begin: Don't forget -->
     <div class="briefcase__heading">
       <%= image_tag "basecamp/icons/dont-forget.svg", class: "briefcase__heading-icon" %>
       <span>Don't forget</span>
     </div>
-    <div class="briefcase__items">
-      <div class="briefcase__task">
+    <div class="briefcase__items briefcase__items--scrollable">
+      <div class="briefcase__task briefcase__task--reminder">
         <div class="briefcase__task-icon">
+          <i class="fa-solid fa-comments"></i>
         </div>
         <div class="briefcase__task-content">
-          <span>Get Farmer's Insurance plumbing doc signed</span>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nec turpis et arcu accumsan efficitur at ac est. 
-            Aliquam eu dolor at nibh pharetra commodo. Curabitur magna turpis, sollicitudin vitae varius non,
-            scelerisque et turpis. Pellentesque bibendum diam ut lectus rhoncus vehicula. Nulla nisl eros, 
-            iaculis a magna vel, posuere rhoncus turpis. Praesent lorem nibh, elementum a sapien eu, tincidunt dapibus augue.
-              Quisque faucibus blandit elit, non semper dui viverra sed. Donec congue porttitor nulla.
+          <span>Chat: Q2 Marketing Ideas</span>
+          <p>Michael Sanders &bull; <%= Time.now.yesterday.strftime("%a %b %d") %>
           </p>
         </div>
       </div>
-      <div class="briefcase__task">
+      <div class="briefcase__task briefcase__task--reminder">
         <div class="briefcase__task-icon">
+          <i class="fa-solid fa-comments"></i>
         </div>
         <div class="briefcase__task-content">
-          <span>Get Farmer's Insurance plumbing doc signed</span>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nec turpis et arcu accumsan efficitur at ac est. 
-            Aliquam eu dolor at nibh pharetra commodo. Curabitur magna turpis, sollicitudin vitae varius non,
-            scelerisque et turpis. Pellentesque bibendum diam ut lectus rhoncus vehicula. Nulla nisl eros, 
-            iaculis a magna vel, posuere rhoncus turpis. Praesent lorem nibh, elementum a sapien eu, tincidunt dapibus augue.
-              Quisque faucibus blandit elit, non semper dui viverra sed. Donec congue porttitor nulla.
+          <span>@mentioned you in: What's going on with the marketing thing?</span>
+          <p>Lindsay Sanders &bull; <%= Time.now.yesterday.strftime("%a %b %d") %>
           </p>
         </div>
       </div>
-      <div class="briefcase__task">
+      <div class="briefcase__task  briefcase__task--reminder">
         <div class="briefcase__task-icon">
+          <i class="fa-solid fa-wave-square"></i>
         </div>
         <div class="briefcase__task-content">
-          <span>Get Farmer's Insurance plumbing doc signed</span>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nec turpis et arcu accumsan efficitur at ac est. 
-            Aliquam eu dolor at nibh pharetra commodo. Curabitur magna turpis, sollicitudin vitae varius non,
-            scelerisque et turpis. Pellentesque bibendum diam ut lectus rhoncus vehicula. Nulla nisl eros, 
-            iaculis a magna vel, posuere rhoncus turpis. Praesent lorem nibh, elementum a sapien eu, tincidunt dapibus augue.
-              Quisque faucibus blandit elit, non semper dui viverra sed. Donec congue porttitor nulla.
-          </p>
-        </div>
-      </div>
-      <div class="briefcase__task">
-        <div class="briefcase__task-icon">
-        </div>
-        <div class="briefcase__task-content">
-          <span>Get Farmer's Insurance plumbing doc signed</span>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nec turpis et arcu accumsan efficitur at ac est. 
-            Aliquam eu dolor at nibh pharetra commodo. Curabitur magna turpis, sollicitudin vitae varius non,
-            scelerisque et turpis. Pellentesque bibendum diam ut lectus rhoncus vehicula. Nulla nisl eros, 
-            iaculis a magna vel, posuere rhoncus turpis. Praesent lorem nibh, elementum a sapien eu, tincidunt dapibus augue.
-              Quisque faucibus blandit elit, non semper dui viverra sed. Donec congue porttitor nulla.
+          <span>Hill Chart: Progress Update</span>
+          <p>Craig Bryant &bull; <%= 2.days.ago.strftime("%a %b %d") %>
           </p>
         </div>
       </div>
@@ -344,4 +324,5 @@
   <%= link_to "Zero states", "/", class: "remote-control__link" %>
   <%= link_to "Beginning of day", "/", class: "remote-control__link" %>
   <%= link_to "End of day", "/", class: "remote-control__link" %>
+  <%= link_to "Alternative EOD", "/", class: "remote-control__link" %>
 </div>
