@@ -118,7 +118,7 @@
 </div>
 
 <div class="briefcase">
-  <!-- Begin: Stickers -->
+  <!-- Stickers -->
   <div class="briefcase__stickers">
     <a href="/" class="briefcase__sticker briefcase__sticker--tasks">
       <div class="briefcase__sticker-badge">
@@ -169,7 +169,7 @@
       </span>
     </a>
   </div>
-  <!-- Begin: What's on tap -->
+  <!-- What's on tap -->
   <div class="briefcase__section">
     <div class="briefcase__heading">
       <span>What's on tap</span>
@@ -191,7 +191,20 @@
           </p>
         </div>
         <div class="briefcase__task-actions">
-          xxxx
+          <input type="checkbox" class="checkbox" />
+        </div>
+      </div>
+       <div class="briefcase__task">
+        <div class="briefcase__task-icon">
+          <i class="fa-solid fa-list-check"></i>
+        </div>
+        <div class="briefcase__task-content">
+          <span>Get Farmer's Insurance plumbing doc signed</span>
+          <p><%= link_to "<strong>Things before moving</strong>".html_safe, "/", class:"just-a-link" %> in <%= link_to "The House", "/", class: "just-a-link", target: "_blank" %>
+          </p>
+        </div>
+        <div class="briefcase__task-actions">
+          <input type="checkbox" />
         </div>
       </div>
       <div class="briefcase__task">
@@ -201,8 +214,15 @@
         <div class="briefcase__task-content">
           <span>Sign up Andrew for basketball camp</span>
           <p>
-            <strong>Summer schedules</strong> in <%= link_to "Parenting", "/", class: "just-a-link", target: "_blank" %>
+            <%= link_to "<strong>Summer schedules</strong>".html_safe, "/", class: "just-a-link" %> in <%= link_to "Parenting", "/", class: "just-a-link", target: "_blank" %>
           </p>
+        </div>
+        <div class="briefcase__task-actions">
+          <select class="select">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+          </select>
         </div>
       </div>
       <div class="briefcase__post-it">
@@ -243,6 +263,7 @@
       </div>
       <div class="briefcase__links">
         <%= link_to "See 8 more things on tap", "/", class: "just-a-link just-a-link--em" %>
+        <span>&bull;</span>
         <%= link_to "See 7 overdue assignments", "/", class: "just-a-link just-a-link--em" %>
       </div>
     </div>
@@ -251,9 +272,8 @@
       </span>
     </div>
   </div>
-  <!-- End: What's on tap -->
   <div class="briefcase__section briefcase__section--em">
-    <!-- Begin: Don't forget -->
+    <!-- Don't forget -->
     <div class="briefcase__heading">
       <%= image_tag "basecamp/icons/dont-forget.svg", class: "briefcase__heading-icon" %>
       <span>Don't forget</span>
@@ -266,6 +286,16 @@
         <div class="briefcase__task-content">
           <span>Chat: Q2 Marketing Ideas</span>
           <p>Michael Sanders &bull; <%= Time.now.yesterday.strftime("%a %b %d") %>
+          </p>
+        </div>
+      </div> 
+      <div class="briefcase__task briefcase__task--reminder">
+        <div class="briefcase__task-icon">
+          <i class="fa-solid fa-comments"></i>
+        </div>
+        <div class="briefcase__task-content">
+          <span>Chat: Website redesign</span>
+          <p>Mustafa Shabib &bull; <%= Time.now.yesterday.strftime("%a %b %d") %>
           </p>
         </div>
       </div>
@@ -295,7 +325,6 @@
       <%= link_to "What's this?", "/", class: "just-a-link" %>
       </span>
     </div>
-    <!-- End: Don't forget -->
   </div>
 </div>
 
