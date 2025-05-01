@@ -90,7 +90,7 @@ main {
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-  width: 68em;
+  width: clamp(300px, 90%, 68em);
   margin-bottom: 1rem;
   position: relative;
 }
@@ -133,7 +133,7 @@ main {
 
 .briefcase {
   position: relative;
-  width: 68em; 
+  width: clamp(300px, 90%, 68em);
   display: grid;
   grid-template-columns: 1.8fr 1fr;
   gap: 2rem;
@@ -142,6 +142,11 @@ main {
   border: 1px solid var(--color--border);
   padding: 1.6rem 2rem 2rem 2rem;
   box-shadow: var(--box-shadow);
+
+  @media (max-width: 1024px) {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .briefcase__stickers {
@@ -299,6 +304,12 @@ main {
 .briefcase__section--em {
   border-color: var(--color--border);
   box-shadow: var(--box-shadow);
+
+
+  @media (max-width: 1024px) {
+    border-color: transparent;
+    box-shadow: none;
+  }
 }
 
 .briefcase__task + .briefcase__post-it {
@@ -406,6 +417,11 @@ main {
   display: flex;
   justify-content: center;
   gap: 0.5rem;
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .accomplishments {
