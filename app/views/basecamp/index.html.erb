@@ -1,16 +1,52 @@
 
 
-<div class="top_nav">
+<div class="top-nav">
   <div class="logo">
     <%= image_tag "basecamp/icons/basecamp-full-logo.svg", class: "logo__img" %>
   </div>
-  <ul>
-    <li>Home</li>
-    <li>Calendar</li>
-    <li>Chat</li>
-    <li>Files</li>
-    <li>People</li>
-    <li>Ideas</li>
+  <ul class="top-nav__link-items">
+    <li class="top-nav__link-item">
+      <a href="/" class="top-nav__link">
+        <svg viewBox="0 0 24 24"><path d="m12.2 21.7 7.4 1.3h.2c.2 0 .3-.1.4-.2l2.2-2.2c.3-.2.3-.8 0-1-.2-.3-.8-.3-1 0l-.3.4 1.6-7.1 1-1.2c.2-.1.3-.3.2-.7-.1-.3-.2-.5-.4-.6-.2-.1-.5 0-.7.2l-.4.4-6.1-9.7c-.2-.3-.8-.5-1.1-.2L9.4 4.6c-.1.1-.2.1-.3.2L1.8 17.4l-.6-1c-.1-.2-.3-.5-.5-.5s-.5.1-.6.3c-.1.4-.1.6 0 .8l1.1 2.2v.1c.1.1.1.2.3.3.1.1.2.1.3.1l5.1.9 2.8-8.8 2.5 9.9ZM10.9 5.6 15.4 3l5.7 9.2-.1.7-1.6 7-6-10.1-2.5-4.2Z" fill="currentColor"></path></svg>
+        <span>Home</span>
+      </a>
+    </li>
+    <li class="top-nav__link-item">
+      <a href="/" class="top-nav__link">
+        <svg viewBox="0 0 24 24"><path d="M8 6a2 2 0 0 1 2-2h10a2 2 0 1 1 0 4H10a2 2 0 0 1-2-2Zm-6 6a2 2 0 0 1 2-2h10a2 2 0 1 1 0 4H4a2 2 0 0 1-2-2Zm5 4a2 2 0 1 0 0 4h10a2 2 0 1 0 0-4H7Z" fill="currentColor"></path></svg>
+        <span>Lineup</span>
+      </a>
+    </li>
+    <li class="top-nav__link-item">
+      <a href="/" class="top-nav__link">
+        <svg viewBox="0 0 24 24"><path fill="currentColor" d="M5 3a4 4 0 0 0-4 4v5a4.002 4.002 0 0 0 3 3.874V19a1 1 0 0 0 1.625.78L10.35 16H15a4 4 0 0 0 4-4V7a4 4 0 0 0-4-4H5Z"></path><path fill="currentColor" d="M13 20c-1.32 0-2.49-.639-3.218-1.624l1.095-.876H15a5.5 5.5 0 0 0 5.5-5.5V9.29A4.001 4.001 0 0 1 23 13v3a4.002 4.002 0 0 1-3 3.874V22a1 1 0 0 1-1.6.8L14.667 20H13Z"></path></svg>
+        <span>Pings</span>
+      </a>
+    </li>
+    <li class="top-nav__link-item">
+      <a href="/" class="top-nav__link">
+        <svg viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M1.013 13.838a.992.992 0 0 0-.013.184V20a2 2 0 0 0 2 2h18a2 2 0 0 0 2-2v-5.976a.99.99 0 0 0-.068-.386L19.42 3.975A3 3 0 0 0 16.599 2H7.401a3 3 0 0 0-2.82 1.975l-3.512 9.66a.992.992 0 0 0-.056.203Zm5.448-9.18A1 1 0 0 1 7.401 4h9.198a1 1 0 0 1 .94.658L20.572 13h-3.851c-.87 0-1.554.546-1.898 1.172C14.403 14.938 13.546 16 12 16s-2.403-1.062-2.823-1.828C8.833 13.546 8.149 13 7.279 13H3.428L6.46 4.658Z" clip-rule="evenodd"></path></svg>
+        <span>Hey!</span>
+      </a>
+    </li>
+    <li class="top-nav__link-item">
+      <a href="/" class="top-nav__link">
+        <svg viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M19.778 19.778l.002-.002C21.77 17.786 23 15.036 23 12c0-6.075-4.925-11-11-11S1 5.925 1 12a10.963 10.963 0 003.316 7.87A10.964 10.964 0 0012 23a10.963 10.963 0 007.778-3.222zM13 3.055v8.53l6.032 6.033A9.001 9.001 0 0013 3.055z" clip-rule="evenodd"></path></svg>
+        <span>Activity</span>
+      </a>
+    </li>
+    <li class="top-nav__link-item">
+      <a href="/" class="top-nav__link">
+        <svg viewBox="0 0 24 24"><path fill="currentColor" d="M9 11a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3ZM16.5 9.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0ZM8.589 14.24a1 1 0 0 0-1.301 1.52A7.225 7.225 0 0 0 12 17.5a7.225 7.225 0 0 0 4.712-1.74 1 1 0 1 0-1.3-1.52A5.225 5.225 0 0 1 12 15.5a5.225 5.225 0 0 1-3.411-1.26Z"></path><path fill="currentColor" fill-rule="evenodd" d="M12 1C5.925 1 1 5.925 1 12s4.925 11 11 11 11-4.925 11-11S18.075 1 12 1ZM3 12a9 9 0 1 1 18 0 9 9 0 0 1-18 0Z" clip-rule="evenodd"></path></svg>
+        <span>My Stuff</span>
+      </a>
+    </li>
+    <li class="top-nav__link-item">
+      <a href="/" class="top-nav__link">
+        <svg viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M11 3a8 8 0 104.852 14.361c1.021 1.214 3.293 3.905 3.744 4.357a1.5 1.5 0 002.121-2.122c-.418-.418-3.135-2.714-4.356-3.743A8 8 0 0011 3zm-6 8a6 6 0 1112 0 6 6 0 01-12 0z" clip-rule="evenodd"></path></svg>
+        <span>Find</span>
+      </a>
+    </li>
   </ul>
   <div class="user">
     <span class="user__name">Bethany</span>
@@ -24,12 +60,12 @@
   <div class="header__greeting">Happy <%= Time.now.strftime("%A") %>, <strong>Bethany!</strong></div>
 </div>
 
-<div class="projects">
-  <div class="projects__btn">
+<div class="projects" data-controller="basecamp--toggle-projects">
+  <div class="projects__btn" data-action="click->basecamp--toggle-projects#toggle">
     <span>Dive into a project</span>
     <i class="fa-solid fa-arrow-trend-down"></i>
   </div>
-  <ul class="projects__listing">
+  <ul class="projects__listing hidden" data-basecamp--toggle-projects-target="listing">
     <li class="project-listing__item project-listing__item--pinned">
       <%= link_to "Q3 Marketing", "/", class: "project-listing__link"  %>
     </li>
@@ -148,7 +184,7 @@
     <p class="briefcase__description">
       Your upcoming <%= link_to "assignments", "/", class: "just-a-link", target: "_blank" %>, <%= link_to "events", "/", class: "just-a-link", target: "_blank" %>, and <%= link_to "check-ins", "/", class: "just-a-link", target: "_blank" %>.
     </p>
-    <div class="briefcase__items hidden">
+    <div class="briefcase__items">
 
       <div class="briefcase__post-it">
         Today
@@ -228,7 +264,7 @@
       <%= image_tag "basecamp/icons/dont-forget.svg", class: "briefcase__heading-icon" %>
       <span>Don't forget</span>
     </div>
-    <div class="briefcase__items hidden">
+    <div class="briefcase__items">
       <div class="briefcase__task">
         <div class="briefcase__task-icon">
         </div>
@@ -301,3 +337,10 @@
 </div>
 
 <div class="divider"></div>
+
+
+<div class="remote-control">
+  <%= link_to "Zero states", "/", class: "remote-control__link" %>
+  <%= link_to "Beginning of day", "/", class: "remote-control__link" %>
+  <%= link_to "End of day", "/", class: "remote-control__link" %>
+</div>
