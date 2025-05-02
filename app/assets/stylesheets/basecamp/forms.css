@@ -1,7 +1,18 @@
+/*******************************************************
+
+ Forms.css
+ Form styles for Basecamp Home screen redesign
+ 
+********************************************************/
+
 .custom-checkbox {
   position: relative;
   display: inline-block;
   cursor: pointer;
+
+  .custom-checkbox__checkmark {
+    border-color: var(--color--ink);
+  }
 }
 
 .custom-checkbox__input {
@@ -10,50 +21,43 @@
   cursor: pointer;
   height: 0;
   width: 0;
+
+  /* Show checkmark when checked */
+  &:checked ~ .custom-checkbox__checkmark {
+    background-color: var(--color--ink);
+    border-color: var(--color--ink);
+  }
+
+  ~ .custom-checkbox__checkmark:after {
+    display: block;
+  }
 }
 
 .custom-checkbox__checkmark {
   position: relative;
   display: inline-block;
-  height: 20px;
-  width: 20px;
-  border: 2px solid #ccc;
-  border-radius: 4px;  /* Adjust for desired roundness */
-  background-color: white;
-}
+  height: var(--size--checkbox);
+  width: var(--size--checkbox);
+  border: 1px solid var(--color--gray);
+  border-radius: var(--border-radius--sm);
 
-/* Checkbox hover effect */
-.custom-checkbox:hover .custom-checkbox__checkmark {
-  border-color: #999;
-}
-
-/* Checkmark (hidden by default) */
-.custom-checkbox__checkmark:after {
-  content: '';
-  position: absolute;
-  display: none;
-  left: 6px;
-  top: 2px;
-  width: 5px;
-  height: 10px;
-  border: solid white;
-  border-width: 0 2px 2px 0;
-  transform: rotate(45deg);
-}
-
-/* Show checkmark when checked */
-.custom-checkbox__input:checked ~ .custom-checkbox__checkmark {
-  background-color: var(--color--ink);
-  border-color: var(--color--ink);
-}
-
-.custom-checkbox__input:checked ~ .custom-checkbox__checkmark:after {
-  display: block;
+  &:after {
+    content: '';
+    position: absolute;
+    display: none;
+    left: 6px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid var(--color--white);
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
 }
 
 .custom-select {
   border-radius: var(--border-radius--circular);
-  border: 2px solid #ddd; 
+  border: 1px solid var(--color--gray);
   padding: 0.5rem 1rem;
   appearance: none; 
   background-color: white;
@@ -70,6 +74,8 @@
   white-space: nowrap;
 }
 
+
+
 .toggle-switch {
   position: absolute;
   top: 1rem;
@@ -83,6 +89,14 @@
   opacity: 0;
   width: 0;
   height: 0;
+
+  &:checked + .toggle-switch__slider {
+    background-color: var(--color--green-50);
+
+    &:before {
+      transform: translateX(16px);
+    }
+  }
 }
 
 .toggle-switch__slider {
@@ -92,27 +106,19 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
+  background-color: var(--color--gray);
   transition: .4s;
   border-radius: 34px;
-}
 
-.toggle-switch__slider:before {
-  position: absolute;
-  content: "";
-  height: 16px;
-  width: 16px;
-  left: 4px;
-  bottom: 4px;
-  background-color: white;
-  transition: .4s;
-  border-radius: 50%;
-}
-
-.toggle-switch__input:checked + .toggle-switch__slider {
-  background-color: var(--color--bg-sand);
-}
-
-.toggle-switch__input:checked + .toggle-switch__slider:before {
-  transform: translateX(16px);
+  &:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 4px;
+    background-color: var(--color--white);
+    transition: .4s;
+    border-radius: 50%;
+  }
 }

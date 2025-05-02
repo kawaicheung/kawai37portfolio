@@ -65,62 +65,63 @@
 </div>
 
 <!-- Projects -->
-<div class="projects" data-controller="basecamp--toggle-projects">
-  <div class="projects__btn" data-basecamp--toggle-projects-target="button" data-action="click->basecamp--toggle-projects#toggle">
+<div class="projects" data-controller="basecamp--toggle-projects" data-basecamp--toggle-projects-selected-class-value="projects__expander--selected">
+  <div class="projects__expander" data-basecamp--toggle-projects-target="button" data-action="click->basecamp--toggle-projects#toggle">
     <span>Dive into a project</span>
     <i class="fa-solid fa-arrow-down"></i>
   </div>
   <ul class="projects__listing hidden" data-basecamp--toggle-projects-target="listing">
-    <li class="project-listing__item project-listing__item--pinned">
-      <%= link_to "Customer support playbook", "", class: "project-listing__link"  %>
+    <li class="projects__listing-item projects__listing-item--pinned">
+      <%= link_to "Customer support playbook", "", class: "projects__listing-link"  %>
     </li>
-    <li class="project-listing__item  project-listing__item--pinned">
-      <%= link_to "Demo sessions", "", class: "project-listing__link"  %>
+    <li class="projects__listing-item  projects__listing-item--pinned">
+      <%= link_to "Demo sessions", "", class: "projects__listing-link"  %>
     </li>
-    <li class="project-listing__item">
-      <div class="project-listing__divider project-listing__divider--stack">
+    <li class="projects__listing-item">
+      <div class="projects__listing-divider projects__listing-divider--stack">
         <span>Q2 Projects</span>
       </div>
-      <ul class="project-listing__group">
-        <li class="project-listing__item">
-          <%= link_to "Marketing initiatives", "", class: "project-listing__link"  %>
+      <ul class="projects__listing-group">
+        <li class="projects__listing-item">
+          <%= link_to "Marketing initiatives", "", class: "projects__listing-link"  %>
         </li>
-        <li class="project-listing__item">
-          <%= link_to "Making it rain", "", class: "project-listing__link"  %>
+        <li class="projects__listing-item">
+          <%= link_to "Making it rain", "", class: "projects__listing-link"  %>
         </li>
-        <li class="project-listing__item">
-          <%= link_to "One of those really long project names you test with", "", class: "project-listing__link" %>
+        <li class="projects__listing-item">
+          <%= link_to "One of those really long project names you test with", "", class: "projects__listing-link" %>
         </li>
       </ul>
     </li>
     <li>
-      <div class="project-listing__divider">
+      <div class="projects__listing-divider">
         <span>Recent Projects</span>
       </div>
-      <ul class="project-listing__group">
-        <li class="project-listing__item">
-          <%= link_to "Q3 Marketing", "", class: "project-listing__link"  %>
+      <ul class="projects__listing-group">
+        <li class="projects__listing-item">
+          <%= link_to "Q3 Marketing", "", class: "projects__listing-link"  %>
         </li>
-        <li class="project-listing__item">
-          <%= link_to "Making a Podcast", "", class: "project-listing__link"  %>
+        <li class="projects__listing-item">
+          <%= link_to "Making a Podcast", "", class: "projects__listing-link"  %>
         </li>
-        <li class="project-listing__item">
-          <%= link_to "The House", "", class: "project-listing__link" %>
+        <li class="projects__listing-item">
+          <%= link_to "The House", "", class: "projects__listing-link" %>
         </li>
-        <li class="project-listing__item">
-          <%= link_to "The House", "", class: "project-listing__link" %>
+        <li class="projects__listing-item">
+          <%= link_to "The House", "", class: "projects__listing-link" %>
         </li>
       </ul>
     </li>
-    <li class="project-listing__item">
-      <%= link_to "Website redesign", "", class: "project-listing__link"  %>
+    <li class="projects__listing-item">
+      <%= link_to "Website redesign", "", class: "projects__listing-link"  %>
     </li>
-    <li class="project-listing__item">
-      <%= link_to "Mobile app updates", "", class: "project-listing__link"  %>
+    <li class="projects__listing-item">
+      <%= link_to "Mobile app updates", "", class: "projects__listing-link"  %>
     </li>
   </ul>
 </div>
 
+<!-- Briefcase -->
 <div class="briefcase">
   <!-- Stickers -->
   <div class="briefcase__stickers">
@@ -289,7 +290,7 @@
       <%= image_tag "basecamp/icons/dont-forget.svg", class: "briefcase__heading-icon" %>
       <span>Don't forget</span>
     </div>
-    <div class="briefcase__items briefcase__items--scrollable">
+    <div class="briefcase__items">
       <div class="briefcase__task briefcase__task--reminder">
         <div class="briefcase__task-icon">
           <i class="fa-solid fa-comments"></i>
@@ -356,7 +357,6 @@
 <p class="ghost-callout">
   Could put project cards underneath here and forego "Manage Projects" link at the top.  
 </p>
-
 
 <div class="remote-control">
   <strong>View:</strong><br>

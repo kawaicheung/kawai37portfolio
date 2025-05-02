@@ -1,4 +1,5 @@
 /*
+ *= require basecamp_vars
  *= require_tree ./basecamp
  *= require_self
  */
@@ -121,67 +122,65 @@ main {
   width: var(--width--projects);
 }
 
-.projects__btn {
-  z-index: 2;
-  background-color: var(--color--blue);
-  height: var(--height-projects-btn);
-  color: var(--color--white);
+.projects__expander {
+  z-index: var(--z-index--projects-expander);
+  background-color: transparent;
+  height: var(--height--projects-expander);
   padding: 0.5rem 1rem;
   border-radius: var(--border-radius--lg);
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
-  border: 4px solid var(--color--border);
+  border: var(--border-width--lg) solid var(--color--border);
   border-bottom: none;
-  background-color: transparent;
   color: var(--color--ink);
   font-weight: 700;
   cursor: pointer;
+
+  &:hover:not(.projects__expander--selected) {
+    background-color: var(--color--white);
+  }
 }
 
-.projects__btn:hover:not(.projects__btn--selected) {
+.projects__expander--selected {
   border-color: var(--color--bg-sand);
-  background-color: var(--color--white);
-}
-
-.projects__btn--selected {
-  border-color: var(--color--ink);
   background-color: var(--color--white);
 }
 
 .projects__listing {
   position: absolute;
-  z-index: 1;
-  top: calc(var(--height-projects-btn) - 4px);
   width: 100%;
+  z-index: var(--z-index--projects-listing);
+  /* Cover the border of the expander */
+  top: calc(var(--height--projects-expander) - var(--border-width--lg));
   max-height: clamp(200px, 50vh, 400px);
   overflow-y: scroll;
   background-color: var(--color--white);
   border-radius: var(--border-radius--lg);
-  border: 4px solid var(--color--ink);
+  border: var(--border-width--lg) solid var(--color--bg-sand);
   box-shadow: var(--box-shadow);
   padding: 1rem;
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* IE 10+ */
   list-style: none;
+  scrollbar-width: none; 
+  -ms-overflow-style: none; 
+
+  &::-webkit-scrollbar {
+    display: none; 
+  }
 }
 
-.project-listing::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Opera */
-}
-
-.project-listing__divider {
+.projects__listing-divider {
   position: relative;
-  font-weight: 600;
   display: flex;
   align-items: center;
   width: 100%;
   margin-top: 0.5rem;
+  font-weight: 600;
 
   span {
     padding: 0.1rem 0.4rem;
     text-transform: uppercase;
     font-size: 0.9rem;
-    font-weight: 800;
+    font-weight: 700;
     border-radius: var(--border-radius--sm);
     color: var(--color--white);
     background-color: var(--color--bg-sand);
@@ -190,26 +189,26 @@ main {
   &::after {
     content: "";
     flex: 1;
-    height: 2px;
+    height: 1px;
     background-color: var(--color--border);
   }
 }
 
-.project-listing__divider--stack {
+.projects__listing-divider--stack {
   span {
-    color: var(--color--ink);
-    background-color: transparent;
-    text-transform: none;
     font-size: 1.1rem;
+    background-color: transparent;
+    color: var(--color--ink);
+    text-transform: none;
   }
 }
 
-.project-listing__group {
+.projects__listing-group {
   padding: 0.5rem;
   margin: 0;
 }
 
-.project-listing__item {
+.projects__listing-item {
   position: relative;
   text-decoration: none;
   display: block;
@@ -218,16 +217,18 @@ main {
   width: 100%;
 }
 
-.project-listing__item--pinned::before {
-  content: "📌";
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 0.9rem;
+.projects__listing-item--pinned {
+  &::before {
+    content: "📌";
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.9rem;
+  }
 }
 
-.project-listing__link {
+.projects__listing-link {
   display: block;
   text-decoration: none;
   color: var(--color--ink);
@@ -238,22 +239,22 @@ main {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+
+  &:hover {
+    background-color: var(--color--yellow-20);
+  }
 }
 
-.project-listing__link:hover {
-  border-color: var(--color--border);
-}
-
-
+/* Briefcase */
 .briefcase {
   position: relative;
-  width: clamp(200px, 90%, 68rem);
   display: grid;
-  grid-template-columns: 1.8fr 1fr;
   gap: 2rem;
+  grid-template-columns: 1.8fr 1fr;
+  width: var(--width--section);
   background-color: var(--color--white);
   border-radius: var(--border-radius--lg);
-  border: 4px solid var(--color--border);
+  border: var(--border-width--lg) solid var(--color--border);
   padding: 1.6rem 2rem 4rem 2rem;
 
   @media (max-width: 1024px) {
@@ -268,7 +269,7 @@ main {
   top: -80px;
   left: 50%;
   transform: translateX(-50%);
-  width: clamp(300px, 98%, 68rem);
+  width: clamp(300px, 100%, 68rem);
   display: flex;
   justify-content: space-between;
 
@@ -282,15 +283,15 @@ main {
 
 .briefcase__sticker {
   position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 64px;
   height: 64px;
   background-color: var(--color--bg-sand);
   color: var(--color--white);
   border-radius: var(--border-radius--lg);
   border: 1px solid var(--color--border);
-  display: flex;
-  align-items: center;
-  justify-content: center;
   font-size: 1.4rem;
   box-shadow: var(--box-shadow--sticker);
   cursor: pointer;
@@ -299,26 +300,21 @@ main {
     width: 52px;  
     height: 52px;
   }
-}
 
-.briefcase__sticker:hover {
-  animation: bounce 0.1s ease-in-out forwards;
-}
-
-@keyframes bounce {
-  0% { transform: scale(1); }
-  100% { transform: scale(1.1); }
+  &:hover {
+    animation: bounce 0.1s ease-in-out forwards;
+  }
 }
 
 .briefcase__sticker-badge {
   position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   bottom: 0;
   right: 0;
   color: var(--color--white);
   border-radius: var(--border-radius--sm);
-  display: flex;
-  align-items: center;
-  justify-content: center;
   padding: 0.1rem 0.3rem;
   font-size: 0.9rem;
   font-weight: 900;
@@ -334,15 +330,6 @@ main {
   left: 20px;
   top: -46px;
   rotate: -6deg;
-
-
-  @media (max-width: 800px) {
-    position: relative;
-    transform: none;
-    top: 0;
-    left: 0;
-    rotate: 0deg;
-  }
 }
 
 .briefcase__sticker--cards {
@@ -393,13 +380,13 @@ main {
 
 .briefcase__heading {
   position: relative;
-  font-size: 1.2rem;
-  font-weight: 600;
   display: flex;
   align-items: center;
   gap: 0.4rem;
   width: 100%;
   margin: 1rem 0;
+  font-size: 1.2rem;
+  font-weight: 600;
 
   span {
     background-color: var(--color--bg-sand);
@@ -422,9 +409,9 @@ main {
 }
 
 .briefcase__heading-icon {
-  width: 20px;
-  height: 20px;
   position: absolute;
+  width: var(--size--briefcase-icon);
+  height: var(--size--briefcase-icon);
   top: -14px;
   left: 50%;
   transform: translateX(-50%);
@@ -452,15 +439,10 @@ main {
   border-color: var(--color--border);
   box-shadow: var(--box-shadow);
 
-
   @media (max-width: 1024px) {
     border-color: transparent;
     box-shadow: none;
   }
-}
-
-.briefcase__task + .briefcase__post-it {
-  margin-top: 0.5rem;
 }
 
 .briefcase__post-it {
@@ -472,6 +454,10 @@ main {
   width: fit-content;
   border-radius: var(--border-radius--xs);
   transform: translateX(-8px);
+}
+
+.briefcase__task + .briefcase__post-it {
+  margin-top: 0.5rem;
 }
 
 .briefcase__items {
@@ -536,17 +522,6 @@ main {
   justify-content: flex-end;
 }
 
-.briefcase__task-actions--calendar {
-  color: var(--color--blue);
-  background-color: var(--color--blue-30);
-  border-radius: var(--border-radius--circular);
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .briefcase__item {
   padding: 1rem;
   border-radius: var(--border-radius--sm);
@@ -571,60 +546,9 @@ main {
   }
 }
 
-.accomplishments {
-  border: solid 1px blue;
-  height: 180px;
-  margin-bottom: 1rem;
-}
-
-.zero-state {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  justify-self: center;
-  border: dashed 4px var(--color--yellow-30);
-  border-radius: var(--border-radius--lg);
-  padding: 1.4rem;
-  margin-top: 2rem;
-  text-align: center;
-  color: var(--color--dark-gray);
-  display: none;
-}
-
-.zero-state--dont-forget {
-  height: 200px;
-  width: 200px;
-  border-radius: var(--border-radius--circular);
-}
-
-
-.divider {
-  width: 68em;
-  height: 1px;
-  background-color: var(--color--border);
-  margin: 2rem 0;
-}
-
-h2 {
-  font-size: 1.2rem;
-}
-
-.just-a-link {
-  color: var(--color--black);
-  text-decoration: underline;
-}
-
-.just-a-link--em {
-  color: var(--color--blue);
-}
-
-
-.just-a-link--sm {
-  font-size: 0.9rem;
-}
-
-
+/* Thought */
 .thought {
+  z-index: var(--z-index--thought);
   position: relative;
   padding: 2rem 4rem;
   display: flex;
@@ -632,10 +556,8 @@ h2 {
   align-items: center;
   color: var(--color--pink-70);
   width: fit-content;
-  max-width:80%;
+  max-width: 80%;
   position: relative;
-  z-index: 1033;
-  background-color: var(--color--body);
   rotate: -1deg;
   background-color: var(--color--yellow-30);
   transform: translateY(-20px);
@@ -656,23 +578,6 @@ h2 {
   border-radius: var(--border-radius--sm);
 }
 
-.thought__close {
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  border: none;
-  background: none;
-  color: var(--color--dark-gray);
-  font-size: 1.5rem;
-  cursor: pointer;
-  padding: 0 6px;
-  line-height: 1;
-}
-
-.thought__close:hover {
-  color: var(--color--black);
-}
-
 .thought__title {
   font-weight: 600;
   letter-spacing: -0.02em;
@@ -682,13 +587,29 @@ h2 {
   font-weight: 400;
   font-size: 0.9rem;
   color: var(--color--dark-gray);
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
 }
 
+/* Zero states */
+.zero-state {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+  border: var(--border-width--lg) dashed var(--color--yellow-30);
+  border-radius: var(--border-radius--lg);
+  padding: 1.4rem;
+  margin-top: 2rem;
+  text-align: center;
+  color: var(--color--dark-gray);
+}
+
+.zero-state--dont-forget {
+  height: var(--size--zero-state);
+  width: var(--size--zero-state);
+  border-radius: var(--border-radius--circular);
+}
+
+/* Remote control */
 .remote-control {
   position: fixed;
   bottom: 1rem;
@@ -699,7 +620,7 @@ h2 {
   border: 1px solid var(--color--border);
   box-shadow: var(--box-shadow);
   background-color: var(--color--ink);
-  z-index: 1033;
+  z-index: var(--z-index--remote-control);
   color: var(--color--white);
 }
 
@@ -709,22 +630,22 @@ h2 {
   color: var(--color--white);
 }
 
-.checkbox {
-  width: 20px;
-  height: 20px;
-  border: 4px solid var(--color--border);
-  border-radius: var(--border-radius--circular);
-}
-
+/* Ghost callout */
 .ghost-callout {
   padding: 4rem;
   border-radius: var(--border-radius--lg);
-  border: 4px dashed var(--color--border);
-  width: clamp(300px, 90%, 68rem);
+  border: var(--border-width--lg) dashed var(--color--border);
+  width: var(--width--section);
   border-radius: var(--border-radius--lg);
   margin-bottom: 4rem;
   text-align: center;
   font-size: 1.2rem;
   font-weight: 600;
   color: var(--color--bg-sand);
+}
+
+/* Animations */
+@keyframes bounce {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.1); }
 }

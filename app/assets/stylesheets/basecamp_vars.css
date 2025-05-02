@@ -1,3 +1,10 @@
+/*******************************************************
+
+ Basecamp_vars.css
+ Variable declarations for Basecamp Home screen redesign
+ 
+********************************************************/
+
 :root {
   /* Typography */
   --font-family--sans-serif: -apple-system, system-ui, BlinkMacSystemFont, Aptos, Roboto, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -24,10 +31,9 @@
   --box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
   --box-shadow--sticker: 0 1px 1px 0 var(--color--bg-sand);
 
-
-
   --color--red-50: hsl(13, 97.9%, 62.9%);
   --color--orange-50: hsl(35.2, 100%, 47.8%);
+  --color--yellow-20: hsl(49.8, 89.8%, 88.4%);
   --color--yellow-50: hsl(46.6, 98.3%, 45.5%);
   --color--green-50: hsl(135.6, 39.7%, 52.5%);
   --color--blue-50: hsl(209.2, 100%, 62.9%);
@@ -36,13 +42,22 @@
 
 
   --height--top-bar: 40px;
-  --height-projects-btn: 40px;
-
+  --height--projects-expander: 40px;
 
   --size--avatar: 32px;
   --size--nav-icon: 20px;
-
+  --size--briefcase-icon: 20px;
+  --size--zero-state: 200px;
+  --size--checkbox: 20px;
 
   --width--section: clamp(300px, 90%, 68rem);
   --width--projects: clamp(300px, 95%, 400px);
+
+  --border-width--lg: 4px;
+
+  --z-index--projects-expander: 2;
+  --z-index--projects-listing: 1;
+  --z-index--thought: 5;
+  --z-index--remote-control: 10;
 }
+
