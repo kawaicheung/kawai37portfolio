@@ -5,7 +5,8 @@
 </p>
 <p>
   I decided to dive into one overall concept, showing various states of that concept over time. In the link below, you'll
-  see the prototype along with a bunch of links on the bottom to those states. 
+  see the prototype along with a list of links on the bottom to those states. I also link to those states in this write-up
+  as I discuss my thought process.
 </p>
 <%= render "shared/external_link_button", path: basecamp_path, text: "My rework of Basecamp's home screen", target: "_blank" %>
 <!--<p class="note">
@@ -16,13 +17,17 @@
 
 <h3>The North Star: A focus on <strong>feeling good</strong></h3>
 <p>
-  Home screens typically bludgeon you with data&mdash;charts, graphs, percentages of something. 
-  The stuff that makes for a good marketing site screenshot.
+  Unlike Basecamp's Home screen, most home screens typically bludgeon you with data&mdash;charts, graphs, percentages of something. 
+  The stuff that makes for a good marketing site screenshot. The stuff that makes you feel like the app is working.
 </p>
 <p>
-  In real life, you feel bad. Have you ever looked at a productivity chart and thought, "Wow, we're doing great"? Neither have I.
+  In real life, it all just makes you feel bad. Have you ever looked at a productivity chart and thought, "Wow, we're doing great"? Neither have I.
+</p>
 <p>
-  The Home screen is also the very first screen a new customer sees after Jason's welcome message. 
+  So, that's not where I went with this.
+</p>
+<p>
+  Basecamp's Home screen is also the very first screen a new customer sees after Jason's welcome message. 
   It's an opportunity to introduce not just Basecamp the product, but Basecamp the philosophy. 
   What is this software about? What is it <strong>not</strong> about?
 </p>
@@ -33,11 +38,11 @@
   Let's trust that our customers are trying to do good work.
 </p>
 <p>
-  <strong>Basecamp is about momentum</strong>. Taking a meaningful step down the path today. Celebrating the progress you just made.
-  Re-evaluating work from the vantage point now. Communication over calculation.
+  <strong>Basecamp is about momentum</strong>. Taking a meaningful step down a path today. Celebrating the progress you just made.
+  Re-evaluating work from the vantage point right now. Communication over calculation.
 </p>
 <p>
-  The home screen should exude making you <em>feel good</em>. 
+  The home screen should exude making you <em>feel</em> this. It should make you feel...good.
 </p>
 <p>
   In control.<br>
@@ -48,12 +53,12 @@
   Satisfied.<br>
 </p>
 <p>
-  Nothing that the internet, AI, or social media seems to be about today.
+  Nothing that the internet, social media, or AI seems to be about today.
 </p>
 <p>
   This was my North Star for the week. Making the Home screen not just a launching pad for everything else, 
-  but feel like a home. A place that's inviting for the latest customer. A place a 10-year Basecamp customer 
-  might look at in a new way.
+  but feel like a home. A place that's inviting for the latest customer. A place a 15-year Basecamper 
+  might not have known they missed.
 </p>
 <hr>
 <h3>The Briefcase</h3>
@@ -75,30 +80,30 @@
 <ul>
   <li>If you've marked any assignments <em>Up Next</em>, they go at the top.</li>
   <li>Items due today (or have an end date of today) go next.</li>
-  <li>After that, the next two days where you have something due.</li>
+  <li>After that, it shows the next two days where you have something due.</li>
 </ul>
 <p class="note">
   <strong>Logic thoughts:</strong> I would show maybe 8 items at most. These would naturally go away as you check off to-dos or
   mark a card as "Done" or "Not Now", bringing the next items up. 
 </p>
 <p>
-  Underneath, a button to more items on tap would expand the list, and a link to 
-  your overdue assignments would link off to the "My assignments with dates" section of "My assignments" since
+  Underneath, a button to "more items on tap" would expand the list. A link to 
+  your overdue assignments would jump you to the "My assignments with dates" section of "My assignments" since
   overdue assignments show at the top of that page.
 </p>
 <p>
   Right underneath the "What's on tap" header is a short sentence: "Your upcoming assignments, events, and check-ins."
-  The first two would link to "My assignments", "My schedule". (I don't believe there is a "My check-ins" page at the global level yet.)
-  If this person isn't tied to any project with check-ins, we could omit that last part.
+  The first two would link to "My assignments" and "My schedule". I don't believe there is a "My check-ins" page at the global level yet,
+  so that may not link at all. If this person isn't tied to any project with check-ins, we could omit that last part to prevent confusion.
 </p>
 <p>
   For first time customers, we could stub the default "My Project" project with a sample to-do and event, and also turn on the 
-  Card Table by default with a card. <%= link_to "Here's what that intro page would look like to a first time customer.", "/", target: "_blank" %>
+  Card Table by default with a card. <%= link_to "Here's what the intro page would look like to a first time customer.", "/", target: "_blank" %>
 </p>
 <h4>Don&rsquo;t forget</h4>
 <p>
   I love the "Don't forget" concept. It's a great way to curate all the other forms of communication in Basecamp regardless of where they come from. 
-  I think that list should show up on the Briefcase as well. This way, the briefcase shows you:
+  I think that list should show up on the Briefcase, not just in the Hey! navigation. This way, the briefcase shows you:
 </p>
 <ul>
   <li>
@@ -109,20 +114,20 @@
   </li>
 </ul>
 <p>
-  The Home screen now gives you a greater sense of control and calm. That an important thing hasn't slipped through the cracks. 
+  The Home screen now gives you a greater sense of control and calm. Assurance that an important thing hasn't slipped through the cracks. 
   You'd want to come here to make sure you didn't forget anything, and <%= link_to "an empty briefcase", "/", target: "_blank" %> should make you feel good too!
 </p>
 <hr>
-<h3>A calm thought to start your day</h3>
+<h3>A calm thought to start your morning</h3>
 <p>
   We all know the benefits of reading a few pages of a book before you go to bed instead of doom-scrolling through your phone. 
   But what about the reverse? What about reading a short, thought-provoking piece of non-fiction
   to rev up your brain in the morning before you hit that first task rather than...doom-scrolling through your phone?
 </p>
 <p>
-  So, I thought it would be fun to surface one philosophical-thought-by-Basecamp each day. No algorithm. No random rotations.
+  So, I thought it would be fun to surface one <em>philosophical-thought-by-Basecamp</em> each day. No algorithm. No random rotations.
   One thought a day that lives as a little sticky note at the bottom of the briefcase. (I originally had this at 
-  the top but thought it might be too invasive.)
+  the top but thought that might be too invasive.)
 </p>
 <p>
   For example, Jason's (probably) written hundreds of posts that could fit this daily dopamine hit.
@@ -131,10 +136,10 @@
   <%= link_to "five", "https://world.hey.com/jason/subjectivity-in-productivity-e0b4e2ee", target: "_blank" %>
   <%= link_to "recent", "https://world.hey.com/jason/making-it-happen-vs-letting-it-happen-28d4b4c0", target: "_blank" %>
   <%= link_to "ones", "https://world.hey.com/jason/the-work-of-art-and-the-work-of-the-art-28d4b4c0", target: "_blank" %>.
-  There are hundreds of chapters to pull from <em>Rework</em> or <em>It Doesn't Have to Be Crazy At Work</em>.
+  There are hundreds of chapters to pull from <em>Rework</em> or <em>It Doesn't Have to Be Crazy At Work</em> as well.
 </p>
 <p>
-  We'd have to curate carefully. They can't feel like we're trying to sell someone. They shouldn't be political. 
+  We'd have to curate carefully. They can't feel like we're trying to sell someone. They should be appropriate for the times. 
   But they ought to enhance the things that Basecamp stands for. 
 </p>
 <p>
@@ -143,107 +148,121 @@
   If it doesn't work (or is too much work), we just ditch it.
 </p>
 <p class="note">
-  <strong>If there was a week two&hellip;</strong> I would've implemented a toggle that could just store a <span class="code">localStorage</span>
+  <strong>If there was a week two:</strong> I would implement a toggle that could just store a <span class="code">localStorage</span>
   property to turn this off or back on again.
 </p>
 <hr>
-<h3>Building on your day (stickers)</h3>
+<h3>Feeling the momentum of your day</h3>
 <p>
-  This is not about stats. this is about feeling good. A step forward. A thing done. It's ephemeral. It resets daily.
+  I started by saying that Basecamp is not about metrics. But, that doesn't mean we should shy away from 
+  numbers altogether. We can use them to celebrate, not reprimand.
 </p>
 <p>
   The usual experience of completing tasks in software isn't very motivating.
-  You complete a task? It grays out.
+  You complete a to-do? It simply grays out.
   Drag a card to &ldquo;Done&rdquo;? It just goes away.
-  Sign off your Zoom meeting? Crickets.
-  [task,card,event,time-tracked]
+  Sign off your Zoom meeting? A dark screen with your face on it.
 </p>
 <p>
-  Everytime you get something done during the day, the Home screen should celebrate that in a Basecamp-y way. 
-  Not with a small increment in a pie chart. Not confetti raining down from the top of the screen. Just a nudge. A wink.
-  That's what this area is for. 
+  As you accomplish things during the day, the Home screen <em>celebrates</em> this. 
+  Not with a small increment in a pie chart. Not over-the-top, cringy confetti raining down from the top of the screen. 
+  Just a nudge.
 </p>
 <p>
-  To keep with the philosophy. these shouldn't be too calculated (besides time tracked). It's not &ldquo;you've completed 30% of your tasks today&rdquo;,
-  it's more like &ldquo;hey, you got things done today!&rdquo;. Roll over the icons and they point you to relevant places in Basecamp
-  for more detail (though later on we could perhaps build in a more tailored experience). That's enough. 
+  Notice how empty the top area of the Home screen feels at the beginning of the day? As things get done, "stickers"
+  will start appearing there. Maybe it'll remind folks of that feeling when you got one of those
+  "Great job!" scratch-n'-sniff stickers for completing your worksheet in grade school.
+</p>
+<ul>
+  <li>
+    <strong>To-Dos</strong>: When you complete a to-do, it shows up as the light blue sticker. Complete one and there's
+    a checkmark on the lower-right. Complete more, and the checkmark turns into a number. This would link to your "Completed assignments" page.
+  </li>
+  <li>
+    <strong>Cards</strong>: Same idea for cards marked "Done".
+  </li>
+  <li>
+    <strong>Events</strong>: If an event has a time, once that time has passed, we can assume it's done and show it as the yellow sticker.
+    (A little more backend work here I know). This would link to your "My schedule" page.
+  </li>
+  <li>
+    <strong>Automatic check-in</strong>: Finish your write-up? It shows as the purple sticker. 
+    This could link to the first check-in you've done that day if there are multiple.
+  </li>
+  <li>
+    <strong>Time-tracked</strong>: If you've tracked time, it shows as the green sticker with your total cumulative hours on the lower-right.
+    This would link to your "Timesheets" page.
+  </li>
+  <li>
+    <strong>Boosts</strong>: If you've boosted, it shows as the red sticker with your total cumulative boosts on the lower-right.
+    This would link to your "My Boosts" page.
+  </li>
+</ul>
+<p class="note">
+  <strong>Design nuance:</strong> I like the idea of a number that sits on the lower-right within the sticker rather than a 
+  floating red circle on the upper-right. The latter is synonymous with "I'm behind" on your inbox or your text messages. 
+  Not particularly calming.
 </p>
 <p>
-  Note: We wouldn't gray out and show here. If you have a to-do done the icon appears. If it doesn't you don't see something grayed out.
-  This means if nothing gets done, there's no feeling of "I got nothing done". It may just not have been that type of day. 
+  At the end of a productive day's work, <%= link_to "your Home screen should fill with colors", "/", target: "_blank" %>.
+  And if you didn't get things done that way because maybe that wasn't how your day lined up? 
+  Fine too! It's still calm. No slap on the wrist.
 </p>
 <p>
-  I konw you guys dont do "counts" but i do them for good things. counts on boosts and time tracked.
-  Everything here is a positive. Put the numbers in!!!!!! Everything usually on upper right has a feeling of urgency and its red. so lets make it lower.
+  This area would reset at the end of each day, hinting at the idea that Basecamp is about looking forward, not back.
 </p>
 <p>
-  If there are more 'things' to add later on perhaps we'd redesign. Perhaps make it even more randomized.
-  Right now it is a nice 3 on 3 side to side where if you dont have everything its still ok. it looks normal.
-  but i have a hunch tehre arent going to often be too many drastically new things.
+  The other benefit of Stickers? They might lead you to places in Basecamp you might not know about. 
+  For example, it took me awhile to even know there was a page that tracked all my boosts or a central timesheet.
 </p>
-<p>
-  Stickers would also lead you to places you might not know about. All your boosts, your full timesheet, your assignmetsn, etc. 
+
+<p class="note">
+  <strong>If there was a week two:</strong> I would implement the stickers so they would auto-update. For example, on checking 
+  off a to-do, I'd animate the to-do sticker with a little pop effect. In a real project scenario, I would also work with a back-end developer
+   to update the numbers in real-time.
+  (I haven't used Turbo streams yet, so this would be a great learning experience.)
 </p>
 <hr>
-<h3>A single list of what's coming up</h3>
+<h3>What about all those projects?</h3>
 <p>
-  Working your way down the Home screen, next up is what's coming up. 
+  In the very center of the Home screen is the project navigator that reads "Dive into a project". Click, find, and go. 
+  There's an activeness and direction to the verb "dive" I like here rather than just saying "go" or "jump".
 </p>
+<ul>
+  <li>
+    <strong>Pinned projects and stacks</strong> show up at the top.
+  </li>
+  <li>
+    <strong>Recent projects</strong> not in those lists show up after.
+  </li>
+  <li>
+    Older projects show up last.
+  </li>
+</ul>
 <p>
-  The current selling point is that Bascamp is one tool that covers the core features of other tools. But the flipside is it can
-  feel like an umbrella of just a bunch of tools. Seeing how they all fit together takes some time.
+  After debating this for awhile, I decided I didn't want to lose any of the features of the existing project card design. 
+  For folks that may do more <em>managing of everything</em> rather than specific task work, the old design works very well.
+  They might find the new design doesn't fit them at all. So one of two approaches might work:
 </p>
+<ul>
+  <li>
+    The "Manage projects & templates" link at the top would surface the existing page (minus the "Your Schedule" and "Your Assignments" sections at the bottom).
+  </li>
+  <li>
+    Or, ditch that link altogether, and put the entire project cards section below the briefcase inside the same kind of white container. 
+  </li>
+</ul>
 <p>
-  One of the learning curves with Basecamp is knowing where all the pieces live. There's to-dos and cards. There's chats, pings, 
-  and messages. There's events. Automatic check-ins. They're all siloed in their own areas of the product. The home screen would
-  also serve as a way to bring all the relevant, timely stuff in one place. Think of this area as your "Today" briefcase or backpack.
-</p>
-<p>
-  I think this helps new folks understand how all the pieces fit together. On trial signup we could stub out a sample to-do, have
-  the card table turned on automatically with a sample card, and a sample event. Make it clear they are samples (no need to try to 
-  "fake them" as something real) but this way a new person doesn't feel overwhelmed.
-</p>
-<p>
-  Ordering thoughts: All events on top, then all "Up next" you marked, then all Todos/cards due that day, then all to-dos with a date range still running-
-  BTW i noticed a to-do can have a range of dates.... If NO date based things then maybe just pull any things?
+  Lastly, I did remove the company name and logo on the Home screen. We don't show either on any other page, so my hunch is that the benefit
+  of cleaning that area up for these other design goals was worth it. But, I could be totally wrong about this and we could certainly fit it back 
+  in to the top of the page
 </p>
 <hr>
-<h3>What about all the projects?</h3>
 <p>
-  This is one I debated awhile this week about. Seeing all your projects is still important. And right now, the clearest place to see them 
-  is on the Home screen. I also imagine that for some folks, particularly managers, seeing projects is more important than 
-  their own work. 
+  We're living in unique times when the direction of so many things seems up in the air. But I think there's an opportunity 
+  to differentiate Basecamp even further by doing something that sounds pretty sensible&mdash;making you feel good about what you're doing. 
+  That seems to be a lost art these days, doesn't it?
 </p>
 <p>
-  For a one-week exercise, I thought we shouldn't touch projects at all, but instead have the projects UI come after my new work. 
-  I like the stack option and re-arrangements. It's a pretty involved "thing". If you prefer to see htis then flip it. If not leave it below.
+  Looking forward to your feedback!
 </p>
-<hr>
-<h3>A focus on one thing</h3>
-<p>
-  There are so many ways to get to other parts. All sorts of reports. Segregated by projects. Manual feels per project. 
-  But no place that talks about you, regardless of the projects you're on, and curates
-  what you've done, taking all the features into account.
-</p>
-<h3>If i had more time</h3>
-<p>
-  1) Small toggle on "Thought".
-</p>
-<p>
-  
-</p>
-
-<!--
-
-* Introduce the various pieces (to dos, cards, events, etc.) since you dont do the traditional "tour" or "guide" route. 
-* The key feeling shouldnt be about "Features" but about "whats happening". Everyone can relate to 'whats on my plate' or 'what did i miss' or 'what should i not forget'. The features unfold as you go...simple verbiage brings that about (it's part of the UI) without having to explicitly note it (like we would in a tour).
-* Emptiness should feel OK and preferred like Hey. 
-* Considering backend development - leverage sample project assigned to you perhaps, or in the "My Project". dont know yet.
-
-* A sense of "Now". Whats important now + generall important.
-
-* What you have coming up and the stuff you just did that makes you feel good. The home screen for basecamp will be unlike any overview / dashboard of every other app...its about where you are. What you just did and what you are going to do. It is about making you feel good. About giving you momentum.
-
-* Ths is not about stats. this is about feeling good. A step forward. A thing done. It's ephemeral. It resets daily. It's about more than the work (an inspirational idea -- becuase were all procrastinating in some ways might as well do it in the app).
-
->
