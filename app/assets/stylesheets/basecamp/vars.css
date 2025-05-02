@@ -35,5 +35,14 @@
   --color--green-60: hsl(148.4, 68.8%, 31.4%);
 
 
+  --height--top-bar: 40px;
   --height-projects-btn: 40px;
+
+
+  --size--avatar: 32px;
+  --size--nav-icon: 20px;
+
+
+  --width--section: clamp(300px, 90%, 68rem);
+  --width--projects: clamp(300px, 95%, 400px);
 }
