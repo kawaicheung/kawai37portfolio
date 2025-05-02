@@ -20,11 +20,11 @@
   <body>
     <header>
       <%= render "shared/header_pin" %>
-      <%= render "shared/remote_control" %>
+      <% unless @hide_nav %><%= render "shared/remote_control" %><% end %>
     </header>
     <main>
-      <%= render "shared/nav_container" %>
-      <article>
+      <% unless @hide_nav %><%= render "shared/nav_container" %><% end %>
+      <article class="<%=@custom_article_class%>">
         <%= yield %>
         <% if deduced_next_path %>
           <div class="mobile-right">

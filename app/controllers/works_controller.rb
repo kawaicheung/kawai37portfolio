@@ -24,5 +24,7 @@ class WorksController < ApplicationController
   end
 
   def basecamp
+    @hide_nav = true
+    @custom_article_class = "design-exercise"
   end
 end

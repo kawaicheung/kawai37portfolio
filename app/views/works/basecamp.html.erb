@@ -1,96 +1,150 @@
 <% content_for :title, "Basecamp Home screen rework" %>
-<h2>Making Basecamp&rsquo;s home screen feel like home.</h2>
+<h2>Making Basecamp&rsquo;s Home screen feel like home.</h2>
 <p>
-  Hey again 37signals!
-  I just figured, since I already made this portfolio site, I might as well add a new page for this 
-  design exercise (See, I can design with scalability in mind!).  The link to the 
-  prototype is below. My reasoning is below that.
+  Hi again, 37signals! I'm excited to share my redesign of Basecamp's home screen.
 </p>
 <p>
-  Note: I tried to make the feel match basecamp but for time constraints there are places where I use fonts etc for icons and such just to get the idea across. 
-  obviosuly would use the icon set that matches baseceamp in a real scenario. Also some edge-case stuff i would usualy do (long names that ellipsis or overflow etc).
-</p>
-<p>
-  I got rid of the company name...not sure. does it matter? its only there. we cant customize the domain anymore. the logo is already at the upper right for bcamp.
-  people know its bcamp. no white label. so does it really need to be there? 
+  I decided to dive into one overall concept, showing various states of that concept over time. In the link below, you'll
+  see the prototype along with a bunch of links on the bottom to those states. 
 </p>
 <%= render "shared/external_link_button", path: basecamp_path, text: "My rework of Basecamp's home screen", target: "_blank" %>
+<!--<p class="note">
+  <strong>Note:</strong> I tried to make the feel match Basecamp as closely as possible, but took some liberties to not get bogged down on minutiae. 
+  For example, for some iconography, I went with <%= link_to "Font Awesome", "https://fontawesome.com/", target: "_blank" %> just to get the idea across. 
+</p>-->
 <hr>
-<h3>My North Star: A focus on <strong>feeling good</strong>.</h3>
+
+<h3>The North Star: A focus on <strong>feeling good</strong></h3>
 <p>
-  The Home screen is the very first screen a new customer sees after Jason's welcome message. 
-  It's an immediate opportunity to introduce not just Basecamp the product, but Basecamp the philosophy. 
+  Home screens typically bludgeon you with data&mdash;charts, graphs, percentages of something. 
+  The stuff that makes for a good marketing site screenshot.
 </p>
 <p>
+  In real life, you feel bad. Have you ever looked at a productivity chart and thought, "Wow, we're doing great"? Neither have I.
+<p>
+  The Home screen is also the very first screen a new customer sees after Jason's welcome message. 
+  It's an opportunity to introduce not just Basecamp the product, but Basecamp the philosophy. 
   What is this software about? What is it <strong>not</strong> about?
 </p>
 <p>
-  Basecamp is not about hard metrics. 
+  <strong>Basecamp is not about hard metrics</strong>. 
   It's not about &ldquo;why are so many things red&rdquo; or &ldquo;why is that number so high&rdquo; 
   or &ldquo;why is that line going down&rdquo;. Those things might tell you some contrived bad news.
-  In 25 years of using apps I've never looked at a screen of charts and numbers and "felt great". There's always "SOMETHING".
-  It's always telling you what's deficient and lacking. We have to trust that basecamp customers are diligent - they want to do good work.
-  Focus, control, encouragement over guilt-tripping on numbers that don't tell you the real story.
+  Let's trust that our customers are trying to do good work.
 </p>
 <p>
-  Basecamp is about momentum. Taking a meaningful step down the path today. Celebrating the progress you just made.
+  <strong>Basecamp is about momentum</strong>. Taking a meaningful step down the path today. Celebrating the progress you just made.
   Re-evaluating work from the vantage point now. Communication over calculation.
 </p>
 <p>
-  The home screen should exude this.
-  It should make you <em>feel good</em>. 
+  The home screen should exude making you <em>feel good</em>. 
 </p>
 <p>
-  In control. <br>
-  Calm. <br>
-  In meaningful thought. <br>
-  Focused. <br>
-  Productive. <br>
+  In control.<br>
+  In meaningful thought.<br>
+  Calm.<br>
+  Focused.<br>
+  Productive.<br>
   Satisfied.<br>
 </p>
 <p>
-  Everything that the internet seems not to be about today.
+  Nothing that the internet, AI, or social media seems to be about today.
 </p>
 <p>
-  This was my focus for the week. Making the Home screen not just a launching pad for everything else, 
-  but feel like home. A place you come back to not because you have to, but because you want to.
+  This was my North Star for the week. Making the Home screen not just a launching pad for everything else, 
+  but feel like a home. A place that's inviting for the latest customer. A place a 10-year Basecamp customer 
+  might look at in a new way.
 </p>
 <hr>
-<h3>General groupings</h3>
+<h3>The Briefcase</h3>
 <p>
- There are so many things...we can't have the home screen be everything. So natural most important things to me to fulfill control, happiness...
- (1) Whats coming up soon / made priority (CONTROL on what you should focus on) (2) your feeling of accomplishment (HAPPINESS on what you did) 
- (3) Things you dont wanna forget (CONTROL from the rest) (4) Happy thought.-
- In a way this rmoves all the other noise. No 'chatter' - pings/chats/messages stay up top...but you can 'bring them down' with dont forget.
- I know this lives in the hey menu but it feels like the perfect place on the homepage to go "oh yeah heres the few things i wanted to wrap up or get back to"
-<hr>
-<h3>A meaningful thought</h3>
+  The old Home screen was about your projects, with some stuff about you at the bottom.
+  This Home screen is about <strong>you</strong> first. The main area (which I'm calling "the briefcase" internally
+  but doesn't have to be called anything on the app) shows you two sections.
+</p>
+<div class="figure-container smaller">
+  <figure>
+    <%= link_to image_tag("dd-og-site.webp", alt: "A screenshot of the original DoneDone marketing site"), "https://web.archive.org/web/20100927203150/http://www.getdonedone.com/index.aspx", target: "_blank", class: "link-thumbnail" %>
+  </figure>
+</div>
+<h4>What's on tap</h4>
 <p>
-   This one's a bit out of left field. But I think it could be neat.
+  This section consolidates your assigned to-dos, cards, events, and automatic check-ins across all your projects in one place,
+  in the following order:
+</p>
+<ul>
+  <li>If you've marked any assignments <em>Up Next</em>, they go at the top.</li>
+  <li>Items due today (or have an end date of today) go next.</li>
+  <li>After that, the next two days where you have something due.</li>
+</ul>
+<p class="note">
+  <strong>Logic thoughts:</strong> I would show maybe 8 items at most. These would naturally go away as you check off to-dos or
+  mark a card as "Done" or "Not Now", bringing the next items up. 
 </p>
 <p>
-  People talk about the benefits of reading a few pages of fiction instead of doom-scrolling through your phone
-  before you go to bed. But what about the reverse? What about reading a short, thought-provoking piece of non-fiction
+  Underneath, a button to more items on tap would expand the list, and a link to 
+  your overdue assignments would link off to the "My assignments with dates" section of "My assignments" since
+  overdue assignments show at the top of that page.
+</p>
+<p>
+  Right underneath the "What's on tap" header is a short sentence: "Your upcoming assignments, events, and check-ins."
+  The first two would link to "My assignments", "My schedule". (I don't believe there is a "My check-ins" page at the global level yet.)
+  If this person isn't tied to any project with check-ins, we could omit that last part.
+</p>
+<p>
+  For first time customers, we could stub the default "My Project" project with a sample to-do and event, and also turn on the 
+  Card Table by default with a card. <%= link_to "Here's what that intro page would look like to a first time customer.", "/", target: "_blank" %>
+</p>
+<h4>Don&rsquo;t forget</h4>
+<p>
+  I love the "Don't forget" concept. It's a great way to curate all the other forms of communication in Basecamp regardless of where they come from. 
+  I think that list should show up on the Briefcase as well. This way, the briefcase shows you:
+</p>
+<ul>
+  <li>
+    The items you're responsible for that are due at a certain time.
+  </li>
+  <li>
+    The items that don't necessarily have a due date but are important to you.
+  </li>
+</ul>
+<p>
+  The Home screen now gives you a greater sense of control and calm. That an important thing hasn't slipped through the cracks. 
+  You'd want to come here to make sure you didn't forget anything, and <%= link_to "an empty briefcase", "/", target: "_blank" %> should make you feel good too!
+</p>
+<hr>
+<h3>A calm thought to start your day</h3>
+<p>
+  We all know the benefits of reading a few pages of a book before you go to bed instead of doom-scrolling through your phone. 
+  But what about the reverse? What about reading a short, thought-provoking piece of non-fiction
   to rev up your brain in the morning before you hit that first task rather than...doom-scrolling through your phone?
 </p>
 <p>
   So, I thought it would be fun to surface one philosophical-thought-by-Basecamp each day. No algorithm. No random rotations.
-  One thought for everyone a day.
+  One thought a day that lives as a little sticky note at the bottom of the briefcase. (I originally had this at 
+  the top but thought it might be too invasive.)
 </p>
 <p>
-  We'd have to curate carefully. They can't feel promotional. They shouldn't be political. But they ought to 
-  enhance the things that Basecamp stands for. 
   For example, Jason's (probably) written hundreds of posts that could fit this daily dopamine hit.
   <%= link_to "Here", "https://world.hey.com/jason/doing-what-you-think-not-what-you-thought-60bb5bef", target: "_blank" %>
   <%= link_to "are", "https://world.hey.com/jason/go-do-business-00af347c", target: "_blank" %>
   <%= link_to "five", "https://world.hey.com/jason/subjectivity-in-productivity-e0b4e2ee", target: "_blank" %>
   <%= link_to "recent", "https://world.hey.com/jason/making-it-happen-vs-letting-it-happen-28d4b4c0", target: "_blank" %>
   <%= link_to "ones", "https://world.hey.com/jason/the-work-of-art-and-the-work-of-the-art-28d4b4c0", target: "_blank" %>.
+  There are hundreds of chapters to pull from <em>Rework</em> or <em>It Doesn't Have to Be Crazy At Work</em>.
+</p>
+<p>
+  We'd have to curate carefully. They can't feel like we're trying to sell someone. They shouldn't be political. 
+  But they ought to enhance the things that Basecamp stands for. 
 </p>
 <p>
   Maybe we start with a month's worth&ndash;they just go away after that. 
   Maybe some people love it and we keep adding onto the stack over time. 
-  And we make it easy to opt out of. If it doesn't work (or is too much work), it's easy to remove.
+  If it doesn't work (or is too much work), we just ditch it.
+</p>
+<p class="note">
+  <strong>If there was a week two&hellip;</strong> I would've implemented a toggle that could just store a <span class="code">localStorage</span>
+  property to turn this off or back on again.
 </p>
 <hr>
 <h3>Building on your day (stickers)</h3>
