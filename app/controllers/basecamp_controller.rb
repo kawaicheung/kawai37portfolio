@@ -4,7 +4,15 @@ class BasecampController < ApplicationController
     render "index"
   end
 
-  def second_time
+  def zero_states
+    render "index"
+  end
+
+  def beginning_of_day
+    render "index"
+  end
+
+  def end_of_day
     render "index"
   end
 end
