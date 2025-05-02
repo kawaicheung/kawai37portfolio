@@ -22,7 +22,7 @@
   --border-radius--circular: 99rem;
 
   --box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
-  --box-shadow--sticker: 0 2px 2px 0 rgba(0, 0, 0, 0.3);
+  --box-shadow--sticker: 0 1px 1px 0 var(--color--bg-sand);
 
 
 

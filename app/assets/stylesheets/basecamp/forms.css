@@ -43,8 +43,8 @@
 
 /* Show checkmark when checked */
 .custom-checkbox__input:checked ~ .custom-checkbox__checkmark {
-  background-color: #2196F3; 
-  border-color: #2196F3;
+  background-color: var(--color--ink);
+  border-color: var(--color--ink);
 }
 
 .custom-checkbox__input:checked ~ .custom-checkbox__checkmark:after {
@@ -64,5 +64,55 @@
   background-size: 0.8rem auto;
   padding-right: 2rem; 
   font-size: 0.8rem;
-  max-width: 120px;
+  max-width: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.toggle-switch {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: inline-block;
+  width: 40px;
+  height: 24px;
+}
+
+.toggle-switch__input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle-switch__slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.toggle-switch__slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+.toggle-switch__input:checked + .toggle-switch__slider {
+  background-color: var(--color--bg-sand);
+}
+
+.toggle-switch__input:checked + .toggle-switch__slider:before {
+  transform: translateX(16px);
 }
