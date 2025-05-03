@@ -18,10 +18,20 @@
   --color--blue: hsl(211.2, 71.4%, 48%);
   --color--border: hsla(30, 26%, 89%, 1);
   --color--bg-sand: hsl(32.2, 20.2%, 60.2%);
+  
+  --color--orange-50: hsl(35.2, 100%, 47.8%);
+  --color--yellow-10: hsl(51.4, 77.8%, 94.7%);
+  --color--yellow-20: hsl(49.8, 89.8%, 88.4%);
+  --color--yellow-30: hsl(47.2, 93.1%, 77.3%);
+  --color--yellow-50: hsl(46.6, 98.3%, 45.5%);
+  --color--green-50: hsl(135.6, 39.7%, 52.5%);
   --color--blue-30: hsl(205.9, 100%, 90%);
+  --color--blue-50: hsl(209.2, 100%, 62.9%);
+  --color--purple-50: hsl(238.4, 100%, 77.6%);
+  --color--green-60: hsl(148.4, 68.8%, 31.4%);
   --color--pink-30: hsl(319.4, 81%, 91.8%);
   --color--pink-70: hsl(328.6, 55.8%, 39%);
-  --color--yellow-30: hsl(47.2, 93.1%, 77.3%);
+  --color--red-50: hsl(13, 97.9%, 62.9%);
 
   --border-radius--lg: 8px;
   --border-radius--sm: 4px; 
@@ -30,16 +40,6 @@
 
   --box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
   --box-shadow--sticker: 0 1px 1px 0 var(--color--bg-sand);
-
-  --color--red-50: hsl(13, 97.9%, 62.9%);
-  --color--orange-50: hsl(35.2, 100%, 47.8%);
-  --color--yellow-20: hsl(49.8, 89.8%, 88.4%);
-  --color--yellow-50: hsl(46.6, 98.3%, 45.5%);
-  --color--green-50: hsl(135.6, 39.7%, 52.5%);
-  --color--blue-50: hsl(209.2, 100%, 62.9%);
-  --color--purple-50: hsl(238.4, 100%, 77.6%);
-  --color--green-60: hsl(148.4, 68.8%, 31.4%);
-
 
   --height--top-bar: 40px;
   --height--projects-expander: 40px;
@@ -55,8 +55,8 @@
 
   --border-width--lg: 4px;
 
-  --z-index--projects-expander: 2;
-  --z-index--projects-listing: 1;
+  --z-index--projects-expander: 21;
+  --z-index--projects-listing: 20;
   --z-index--thought: 5;
   --z-index--remote-control: 10;
 }

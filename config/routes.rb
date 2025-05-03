@@ -24,7 +24,6 @@ Rails.application.routes.draw do
   get "works/basecamp" => "works#basecamp"
   get "contact" => "contact#index"
 
-  get "basecamp" => "basecamp#index"
   get "basecamp/first-time" => "basecamp#first_time"
   get "basecamp/zero-states" => "basecamp#zero_states"
   get "basecamp/beginning-of-day" => "basecamp#beginning_of_day"

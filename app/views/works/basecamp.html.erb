@@ -8,7 +8,7 @@
   see the prototype along with a list of links on the bottom to those states. I also link to those states in this write-up
   as I discuss my thought process.
 </p>
-<%= render "shared/external_link_button", path: basecamp_path, text: "My rework of Basecamp's home screen", target: "_blank" %>
+<%= render "shared/external_link_button", path: basecamp_first_time_path, text: "My rework of Basecamp's home screen", target: "_blank" %>
 <p class="note">
   <strong>Note:</strong> I tried to make the feel match Basecamp as closely as possible, but took some liberties to not get bogged down on minutiae. 
   For example, for some iconography, I went with <%= link_to "Font Awesome", "https://fontawesome.com/", target: "_blank" %> just to get the idea across.
@@ -84,7 +84,7 @@
   <li>After that, it shows the next two days where you have something due.</li>
 </ul>
 <p class="note">
-  <strong>Logic thoughts:</strong> I would show maybe 8 items at most. These would naturally go away as you check off to-dos or
+  <strong>Logic thoughts:</strong> I would show 6-8 items at most. These would naturally go away as you check off to-dos or
   mark a card as "Done" or "Not Now", bringing the next items up. 
 </p>
 <p>

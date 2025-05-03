@@ -26,7 +26,7 @@
       <% unless @hide_nav %><%= render "shared/nav_container" %><% end %>
       <article class="<%=@custom_article_class%>">
         <%= yield %>
-        <% if deduced_next_path %>
+        <% if deduced_next_path && !@hide_nav %>
           <div class="mobile-right">
             <%= render "shared/next_button", path: deduced_next_path, large: true %>
           </div>

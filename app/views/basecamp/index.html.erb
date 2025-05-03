@@ -70,186 +70,156 @@
     <span>Dive into a project</span>
     <i class="fa-solid fa-arrow-down"></i>
   </div>
-  <ul class="projects__listing hidden" data-basecamp--toggle-projects-target="listing">
-    <li class="projects__listing-item projects__listing-item--pinned">
-      <%= link_to "Customer support playbook", "", class: "projects__listing-link"  %>
-    </li>
-    <li class="projects__listing-item  projects__listing-item--pinned">
-      <%= link_to "Demo sessions", "", class: "projects__listing-link"  %>
-    </li>
-    <li class="projects__listing-item">
-      <div class="projects__listing-divider projects__listing-divider--stack">
-        <span>Q2 Projects</span>
-      </div>
-      <ul class="projects__listing-group">
-        <li class="projects__listing-item">
-          <%= link_to "Marketing initiatives", "", class: "projects__listing-link"  %>
-        </li>
-        <li class="projects__listing-item">
-          <%= link_to "Making it rain", "", class: "projects__listing-link"  %>
-        </li>
-        <li class="projects__listing-item">
-          <%= link_to "One of those really long project names you test with", "", class: "projects__listing-link" %>
-        </li>
-      </ul>
-    </li>
-    <li>
-      <div class="projects__listing-divider">
-        <span>Recent Projects</span>
-      </div>
-      <ul class="projects__listing-group">
-        <li class="projects__listing-item">
-          <%= link_to "Q3 Marketing", "", class: "projects__listing-link"  %>
-        </li>
-        <li class="projects__listing-item">
-          <%= link_to "Making a Podcast", "", class: "projects__listing-link"  %>
-        </li>
-        <li class="projects__listing-item">
-          <%= link_to "Internal HR tasks", "", class: "projects__listing-link" %>
-        </li>
-        <li class="projects__listing-item">
-          <%= link_to "Policies & procedures", "", class: "projects__listing-link" %>
-        </li>
-      </ul>
-    </li>
-    <li class="projects__listing-item">
-      <%= link_to "Website redesign", "", class: "projects__listing-link"  %>
-    </li>
-    <li class="projects__listing-item">
-      <%= link_to "Mobile app updates", "", class: "projects__listing-link"  %>
-    </li>
-  </ul>
+  <% if @is_first_time %>
+    <ul class="projects__listing hidden" data-basecamp--toggle-projects-target="listing">
+      <li class="projects__listing-item projects__listing-item--pinned">
+        <%= link_to "My Project", "", class: "projects__listing-link"  %>
+      </li>
+      <li class="projects__listing-item">
+        <%= link_to "Getting Started", "", class: "projects__listing-link"  %>
+      </li>
+      <li class="projects__listing-item">
+        <%= link_to "Making a Podcast", "", class: "projects__listing-link"  %>
+      </li>
+    </ul>
+  <% else %>
+    <ul class="projects__listing hidden" data-basecamp--toggle-projects-target="listing">
+      <li class="projects__listing-item projects__listing-item--pinned">
+        <%= link_to "Customer support playbook", "", class: "projects__listing-link"  %>
+      </li>
+      <li class="projects__listing-item  projects__listing-item--pinned">
+        <%= link_to "Demo sessions", "", class: "projects__listing-link"  %>
+      </li>
+      <li class="projects__listing-item">
+        <div class="projects__listing-divider projects__listing-divider--stack">
+          <span>Q2 Projects</span>
+        </div>
+        <ul class="projects__listing-group">
+          <li class="projects__listing-item">
+            <%= link_to "Marketing initiatives", "", class: "projects__listing-link"  %>
+          </li>
+          <li class="projects__listing-item">
+            <%= link_to "Making it rain", "", class: "projects__listing-link"  %>
+          </li>
+          <li class="projects__listing-item">
+            <%= link_to "One of those really long project names you test with", "", class: "projects__listing-link" %>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <div class="projects__listing-divider">
+          <span>Recent Projects</span>
+        </div>
+        <ul class="projects__listing-group">
+          <li class="projects__listing-item">
+            <%= link_to "Q3 Marketing", "", class: "projects__listing-link"  %>
+          </li>
+          <li class="projects__listing-item">
+            <%= link_to "Making a Podcast", "", class: "projects__listing-link"  %>
+          </li>
+          <li class="projects__listing-item">
+            <%= link_to "Internal HR tasks", "", class: "projects__listing-link" %>
+          </li>
+          <li class="projects__listing-item">
+            <%= link_to "Policies & procedures", "", class: "projects__listing-link" %>
+          </li>
+        </ul>
+      </li>
+      <li class="projects__listing-item">
+        <%= link_to "Website redesign", "", class: "projects__listing-link"  %>
+      </li>
+      <li class="projects__listing-item">
+        <%= link_to "Mobile app updates", "", class: "projects__listing-link"  %>
+      </li>
+    </ul>
+  <% end %>
 </div>
 
 <!-- Briefcase -->
 <div class="briefcase">
-  <!-- Stickers -->
-  <div class="briefcase__stickers">
-    <% @briefcase_stats.stickers.each do |key, sticker| %>
-      <% unless sticker[:count] == 0 %>
-        <a href="" class="briefcase__sticker briefcase__sticker--<%= sticker[:style] %>">
-          <div class="briefcase__sticker-badge">
-            <%= sticker[:count] == 1 ? "✓" : sticker[:count] %>
-          </div>
-          <span>
-            <i class="fa-solid <%= sticker[:icon] %>"></i>
-          </span>
-        </a>
+  <% if @briefcase_stats.stickers.any? { |_, sticker| sticker[:count] > 0 } %>
+    <!-- Stickers -->
+    <div class="briefcase__stickers">
+      <% @briefcase_stats.stickers.each do |key, sticker| %>
+        <% unless sticker[:count] == 0 %>
+          <a href="" class="briefcase__sticker briefcase__sticker--<%= sticker[:style] %>">
+            <div class="briefcase__sticker-badge">
+              <%= sticker[:count] == 1 ? "✓" : sticker[:count] %>
+            </div>
+            <span>
+              <i class="fa-solid <%= sticker[:icon] %>"></i>
+            </span>
+          </a>
+        <% end %>
       <% end %>
-    <% end %>
-  </div>
+    </div>
+  <% end %>
   <!-- What's on tap -->
   <div class="briefcase__section">
     <div class="briefcase__heading">
       <span>What's on tap</span>
     </div>
-    <p class="briefcase__description">
-      Your upcoming <%= link_to "assignments", "", class: "just-a-link", target: "_blank" %>, <%= link_to "events", "", class: "just-a-link", target: "_blank" %>, and <%= link_to "check-ins", "", class: "just-a-link", target: "_blank" %>.
-    </p>
     <div class="briefcase__items">
-      <div class="briefcase__post-it">
-        Up Next &uarr; 
-      </div>
-      <div class="briefcase__task">
-        <div class="briefcase__task-icon">
-          <i class="fa-solid fa-list-check"></i>
+      <% if @on_tap_items.blank? %>
+        <div class="zero-state">
+          <span>Relax! You have nothing on tap. Once you have a to-do, card, or event assigned to you, it'll show up here.<br>
+          </span>
         </div>
-        <div class="briefcase__task-content">
-          <span>Get Farmer's Insurance plumbing doc signed</span>
-          <p><%= link_to "<strong>Things before moving</strong>".html_safe, "", class:"just-a-link" %> in <%= link_to "The House", "", class: "just-a-link", target: "_blank" %>
-          </p>
+      <% else %>
+        <p class="briefcase__description">
+          Your upcoming <%= link_to "assignments", "", class: "just-a-link", target: "_blank" %>, <%= link_to "events", "", class: "just-a-link", target: "_blank" %>, and <%= link_to "check-ins", "", class: "just-a-link", target: "_blank" %>.
+        </p>
+        <% @on_tap_items&.each do |group| %>
+          <div class="briefcase__post-it">
+            <%= group[:title] %> <%= "&uarr;".html_safe if group[:title] == "Up Next" %>
+          </div>
+        <% group[:items].each do |item| %>
+          <div class="briefcase__task">
+            <div class="briefcase__task-icon">
+              <i class="fa-solid <%= item[:icon] %>"></i>
+            </div>
+            <div class="briefcase__task-content">
+              <span><%= item[:title] %></span>
+              <p>
+                <%= link_to "<strong>#{item[:topic]}</strong>".html_safe, item[:topic_link], class: "just-a-link" %> 
+                in 
+                <%= link_to item[:project], item[:project_link], class: "just-a-link", target: "_blank" %>
+              </p>
+            </div>
+            <div class="briefcase__task-actions">
+              <% if item[:type] == "task" %>
+                <label class="custom-checkbox">
+                  <input type="checkbox" class="custom-checkbox__input" />
+                  <span class="custom-checkbox__checkmark"></span>
+                </label>
+              <% elsif item[:type] == "card" %>
+                <select class="custom-select">
+                  <option value="1">Triage</option>
+                  <option value="2">Figuring it out</option>
+                  <option value="3">In progress</option>
+                  <option value="4">Done</option>
+                  <option value="5">Not now</option>
+                </select>
+              <% end %>
+            </div>
+          </div>
+          <% end %>
+        <% end %>
+      <% end %>
+      <% if @more_items_count&.positive? || @overdue_count&.positive? %>
+        <div class="briefcase__links">
+          <% if @more_items_count&.positive? %>
+            <%= link_to "See #{pluralize(@more_items_count, "more thing")} on tap &darr;".html_safe, "", class: "btn btn--clear" %>
+          <% end %>
+          <% if @overdue_count&.positive? %>
+            <%= link_to "See #{pluralize(@overdue_count, "overdue assignment")}", "", class: "just-a-link just-a-link--em just-a-link--sm" %>
+          <% end %>
         </div>
-        <div class="briefcase__task-actions">
-          <label class="custom-checkbox">
-            <input type="checkbox" class="custom-checkbox__input" />
-            <span class="custom-checkbox__checkmark"></span>
-          </label>
-        </div>
-      </div>
-       <div class="briefcase__task">
-        <div class="briefcase__task-icon">
-          <i class="fa-solid fa-list-check"></i>
-        </div>
-        <div class="briefcase__task-content">
-          <span>Get Farmer's Insurance plumbing doc signed</span>
-          <p><%= link_to "<strong>Things before moving</strong>".html_safe, "", class:"just-a-link" %> in <%= link_to "The House", "", class: "just-a-link", target: "_blank" %>
-          </p>
-        </div>
-        <div class="briefcase__task-actions">
-          <label class="custom-checkbox">
-            <input type="checkbox" class="custom-checkbox__input" />
-            <span class="custom-checkbox__checkmark"></span>
-          </label>
-        </div>
-      </div>
-      <div class="briefcase__task">
-        <div class="briefcase__task-icon">
-          <i class="fa-solid fa-table-columns"></i>
-        </div>
-        <div class="briefcase__task-content">
-          <span>Sign up Andrew for basketball camp</span>
-          <p>
-            <%= link_to "<strong>Summer schedules</strong>".html_safe, "", class: "just-a-link" %> in <%= link_to "Parenting", "", class: "just-a-link", target: "_blank" %>
-          </p>
-        </div>
-        <div class="briefcase__task-actions">
-          <select class="custom-select">
-            <option value="1">Triage</option>
-            <option value="2">Figuring it out</option>
-            <option value="3">In progress</option>
-            <option value="4">Done</option>
-            <option value="5">Not now</option>
-          </select>
-        </div>
-      </div>
-      <div class="briefcase__post-it">
-        Today
-      </div>
-      <div class="briefcase__task">
-        <div class="briefcase__task-icon">
-          <i class="fa-solid fa-bell"></i>
-        </div>
-        <div class="briefcase__task-content">
-          <span>What did you work o adsfa dfasdf addsf asdn today?</span>
-          <p><strong>Starting at 4pm</strong> in <%= link_to "The House", "", class: "just-a-link", target: "_blank" %>
-          </p>
-        </div>
-      </div>
-      <div class="briefcase__task">
-        <div class="briefcase__task-icon">
-          <i class="fa-solid fa-calendar-day"></i>
-        </div>
-        <div class="briefcase__task-content">
-          <span>Home the inspector comes</span>
-          <p><strong>All day</strong> in <%= link_to "The House", "", class: "just-a-link", target: "_blank" %>
-          </p>
-        </div>
-      </div>
-      <div class="briefcase__post-it">
-        Tomorrow
-      </div>
-      <div class="briefcase__task">
-        <div class="briefcase__task-icon">
-          <i class="fa-solid fa-calendar-day"></i>
-        </div>
-        <div class="briefcase__task-content">
-          <span>Plumbing meeting with city</span>
-          <p><strong>9:30am-11am</strong> in <%= link_to "The House", "", class: "just-a-link", target: "_blank" %>
-          </p>
-        </div>
-      </div>
-      <div class="briefcase__links">
-        <%= link_to "See 8 more things on tap &darr;".html_safe, "", class: "btn btn--clear" %>
-        <%= link_to "See 7 overdue assignments", "", class: "just-a-link just-a-link--em just-a-link--sm" %>
-      </div>
-    </div>
-    <div class="zero-state">
-      <span>Relax! You have nothing on tap. Once you have a to-do, card, or event assigned to you, it'll show up here.<br>
-      </span>
+      <% end %>
     </div>
   </div>
   <div class="briefcase__section briefcase__section--em">
-    <!-- Don't forget -->
+    <!-- Don't Forget -->
     <div class="briefcase__heading">
       <%= image_tag "basecamp/icons/dont-forget.svg", class: "briefcase__heading-icon" %>
       <span>Don't forget</span>
@@ -286,6 +256,7 @@
   </div>
 </div>
 
+<!-- Thought of the day -->
 <div class="thought">
   <span class="thought__header no-wrap">
     Today's thought from Basecamp
@@ -305,7 +276,7 @@
 </p>
 
 <div class="remote-control">
-  <strong>View:</strong><br>
+  <span class="remote-control__label">Views</span><br>
   <%= link_to "First time user", basecamp_first_time_path, class: "remote-control__link #{' remote-control__link--selected' if current_page?(basecamp_first_time_path)}" %><br>
   <%= link_to "Totally empty", basecamp_zero_states_path, class: "remote-control__link #{' remote-control__link--selected' if current_page?(basecamp_zero_states_path)}" %><br>
   <%= link_to "A typical morning", basecamp_beginning_of_day_path, class: "remote-control__link #{' remote-control__link--selected' if current_page?(basecamp_beginning_of_day_path)}" %><br>
