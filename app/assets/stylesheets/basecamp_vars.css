@@ -49,7 +49,8 @@
   --size--briefcase-icon: 20px;
   --size--zero-state: 200px;
   --size--checkbox: 20px;
-
+  --size--task-icon: 40px;
+  
   --width--section: clamp(300px, 90%, 68rem);
   --width--projects: clamp(300px, 95%, 400px);
 
