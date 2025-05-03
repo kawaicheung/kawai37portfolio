@@ -55,9 +55,9 @@
 
   --border-width--lg: 4px;
 
-  --z-index--projects-expander: 21;
-  --z-index--projects-listing: 20;
   --z-index--thought: 5;
   --z-index--remote-control: 10;
+  --z-index--projects-listing: 20;
+  --z-index--projects-expander: 21;
 }
 

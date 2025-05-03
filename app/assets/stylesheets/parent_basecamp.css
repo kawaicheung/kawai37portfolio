@@ -682,4 +682,5 @@ main {
   font-size: 1.2rem;
   font-weight: 600;
   color: var(--color--bg-sand);
+  background-color: var(--color--white);
 }

@@ -162,7 +162,7 @@
     <div class="briefcase__items">
       <% if @on_tap_items.blank? %>
         <div class="zero-state">
-          <span>Relax! You have nothing on tap. Once you have a to-do, card, or event assigned to you, it'll show up here.<br>
+          <span><strong>Time to relax!</strong> You have nothing on tap. Once you have a to-do, card, or event assigned to you, it'll show up here.<br>
           </span>
         </div>
       <% else %>
@@ -276,7 +276,7 @@
 </p>
 
 <div class="remote-control">
-  <span class="remote-control__label">Views</span><br>
+  <span class="remote-control__label">Various states</span><br>
   <%= link_to "First time user", basecamp_first_time_path, class: "remote-control__link #{' remote-control__link--selected' if current_page?(basecamp_first_time_path)}" %><br>
   <%= link_to "Totally empty", basecamp_zero_states_path, class: "remote-control__link #{' remote-control__link--selected' if current_page?(basecamp_zero_states_path)}" %><br>
   <%= link_to "A typical morning", basecamp_beginning_of_day_path, class: "remote-control__link #{' remote-control__link--selected' if current_page?(basecamp_beginning_of_day_path)}" %><br>

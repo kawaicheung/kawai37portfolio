@@ -1,36 +1,32 @@
 <% content_for :title, "Basecamp Home screen rework" %>
 <h2><strong>Design Exercise:</strong><br>Making Basecamp&rsquo;s Home screen feel like home.</h2>
 <p>
-  Hi again, 37signals! I'm excited to share my redesign of Basecamp's home screen.
+  Hi again, 37signals! I'm excited to share my redesign of Basecamp's Home screen.
 </p>
 <p>
-  I decided to dive into one overall concept, showing various states of that concept over time. In the link below, you'll
-  see the prototype along with a list of links on the bottom to those states. I also link to those states in this write-up
+  I decided to dive into one concept, showing various states of that concept over time. In the link below, you'll
+  see the prototype along with a list of links on the bottom-right to those states. I also link to those states in this write-up
   as I discuss my thought process.
 </p>
 <%= render "shared/external_link_button", path: basecamp_first_time_path, text: "My rework of Basecamp's home screen", target: "_blank" %>
 <p class="note">
   <strong>Note:</strong> I tried to make the feel match Basecamp as closely as possible, but took some liberties to not get bogged down on minutiae. 
   For example, for some iconography, I went with <%= link_to "Font Awesome", "https://fontawesome.com/", target: "_blank" %> just to get the idea across.
-  I wanted to demonstrate I can stylize things in a Basecamp way but still put some of my own personality into the design. 
+  I'm hoping to demonstrate I can stylize things in a Basecamp way while still putting some of my own twists into the design. 
 </p>
 <hr>
 
 <h3>The North Star: A focus on <strong>feeling good</strong></h3>
 <p>
-  Unlike Basecamp's Home screen, most home screens typically bludgeon you with data&mdash;charts, graphs, percentages of something. 
+  Most home screens bludgeon you with data&mdash;charts, graphs, percentages of something. 
   The stuff that makes for a good marketing site screenshot. The stuff that makes you feel like the app is working.
 </p>
 <p>
-  In real life, it all just makes you feel bad. Have you ever looked at a productivity chart and thought, "Wow, we're doing great"? Neither have I.
+  In real life, it all just makes you feel anxious. 
+  Have you ever looked at a productivity chart and thought, "Wow, we're doing great"? Neither have I.
 </p>
 <p>
   So, that's not where I went with this.
-</p>
-<p>
-  Basecamp's Home screen is also the very first screen a new customer sees after Jason's welcome message. 
-  It's an opportunity to introduce not just Basecamp the product, but Basecamp the philosophy. 
-  What is this software about? What is it <strong>not</strong> about?
 </p>
 <p>
   <strong>Basecamp is not about hard metrics</strong>. 
@@ -39,11 +35,16 @@
   Let's trust that our customers are trying to do good work.
 </p>
 <p>
-  <strong>Basecamp is about momentum</strong>. Taking a meaningful step down a path today. Celebrating the progress you just made.
-  Re-evaluating work from the vantage point right now. Communication over calculation.
+  Basecamp's Home screen is also the very first screen a new customer sees after Jason's welcome message. 
+  It's an opportunity to introduce not just Basecamp the product, but Basecamp the philosophy. 
+  What is this software about? What is it <strong>not</strong> about?
 </p>
 <p>
-  The home screen should exude making you <em>feel</em> this. It should make you feel...good.
+  <strong>Basecamp is about momentum</strong>. Taking a meaningful step down a path right now. Celebrating the progress you just made.
+  Re-evaluating work from today's vantage point. It's communication over calculation.
+</p>
+<p>
+  The Home screen should exude this feeling. It should make you feel...good.
 </p>
 <p>
   In control.<br>
@@ -57,9 +58,9 @@
   Nothing that the internet, social media, or AI seems to be about today.
 </p>
 <p>
-  This was my North Star for the week. Making the Home screen not just a launching pad for everything else, 
+  This thought was my North Star for the week. Making the Home screen not just a launching pad for everything else, 
   but feel like a home. A place that's inviting for the latest customer. A place a 15-year Basecamper 
-  might not have known they missed.
+  might not have known they missed. A place that's a little fun even.
 </p>
 <hr>
 <h3>The Briefcase</h3>
@@ -68,9 +69,9 @@
   This Home screen is about <strong>you</strong> first. The main area (which I'm calling "the briefcase" internally
   but doesn't have to be called anything on the app) shows you two sections.
 </p>
-<div class="figure-container smaller">
+<div class="figure-container">
   <figure>
-    <%= link_to image_tag("dd-og-site.webp", alt: "A screenshot of the original DoneDone marketing site"), "https://web.archive.org/web/20100927203150/http://www.getdonedone.com/index.aspx", target: "_blank", class: "link-thumbnail" %>
+    <%= image_tag "bc-briefcase.webp", alt: "Screenshot of the DoneDone workflow management interface." %>
   </figure>
 </div>
 <h4>What's on tap</h4>
@@ -99,7 +100,7 @@
 </p>
 <p>
   For first time customers, we could stub the default "My Project" project with a sample to-do and event, and also turn on the 
-  Card Table by default with a card. <%= link_to "Here's what the intro page would look like to a first time customer.", "/", target: "_blank" %>
+  Card Table by default, so we can stub out a card. <%= link_to "Here's what the intro page would look like to a first time customer.", basecamp_first_time_path, target: "_blank" %>
 </p>
 <h4>Don&rsquo;t forget</h4>
 <p>
@@ -115,8 +116,8 @@
   </li>
 </ul>
 <p>
-  The Home screen now gives you a greater sense of control and calm. Assurance that an important thing hasn't slipped through the cracks. 
-  You'd want to come here to make sure you didn't forget anything, and <%= link_to "an empty briefcase", "/", target: "_blank" %> should make you feel good too!
+  The briefcase assures that an important thing hasn't slipped through the cracks. 
+  You'd want to come here to make sure you didn't forget anything, and <%= link_to "an empty briefcase", basecamp_zero_states_path, target: "_blank" %> should make you feel good too!
 </p>
 <hr>
 <h3>A calm thought to start your morning</h3>
@@ -130,6 +131,11 @@
   One thought a day that lives as a little sticky note at the bottom of the briefcase. (I originally had this at 
   the top but thought that might be too invasive.)
 </p>
+<div class="figure-container smaller">
+  <figure>
+    <%= image_tag "bc-thought.webp", alt: "Screenshot of the DoneDone workflow management interface." %>
+  </figure>
+</div>
 <p>
   For example, Jason's (probably) written hundreds of posts that could fit this daily dopamine hit.
   <%= link_to "Here", "https://world.hey.com/jason/doing-what-you-think-not-what-you-thought-60bb5bef", target: "_blank" %>
@@ -153,10 +159,10 @@
   property to turn this off or back on again.
 </p>
 <hr>
-<h3>Feeling the momentum of your day</h3>
+<h3>You get a sticker! And you get a sticker!</h3>
 <p>
-  I started by saying that Basecamp is not about metrics. But, that doesn't mean we should shy away from 
-  numbers altogether. We can use them to celebrate, not reprimand.
+  Yes, Basecamp isn't about metrics. But, that doesn't mean we should shy away from 
+  numbers altogether. Let's use them to celebrate, not reprimand.
 </p>
 <p>
   The usual experience of completing tasks in software isn't very motivating.
@@ -174,6 +180,16 @@
   will start appearing there. Maybe it'll remind folks of that feeling when you got one of those
   "Great job!" scratch-n'-sniff stickers for completing your worksheet in grade school.
 </p>
+<div class="figure-container">
+  <figure>
+    <%= image_tag "bc-sticker-1.webp", alt: "Screenshot of the DoneDone workflow management interface." %>
+    <figcaption>
+      <span>
+        As you start getting work done, stickers will start coloring your Home screen.
+      </span>
+    </figcaption>
+  </figure>
+</div>
 <ul>
   <li>
     <strong>To-Dos</strong>: When you complete a to-do, it shows up as the light blue sticker. Complete one and there's
@@ -205,10 +221,16 @@
   Not particularly calming.
 </p>
 <p>
-  At the end of a productive day's work, <%= link_to "your Home screen should fill with colors", "/", target: "_blank" %>.
+  At the end of a productive day's work, <%= link_to "your Home screen should fill with colors", basecamp_end_of_day_path, target: "_blank" %>.
   And if you didn't get things done that way because maybe that wasn't how your day lined up? 
   Fine too! It's still calm. No slap on the wrist.
 </p>
+
+<div class="figure-container">
+  <figure>
+    <%= image_tag "bc-sticker-2.webp", alt: "Screenshot of the DoneDone workflow management interface." %>
+  </figure>
+</div>
 <p>
   This area would reset at the end of each day, hinting at the idea that Basecamp is about looking forward, not back.
 </p>
@@ -228,7 +250,7 @@
 <h3>What about all those projects?</h3>
 <p>
   In the very center of the Home screen is the project navigator that reads "Dive into a project". Click, find, and go. 
-  There's an activeness and direction to the verb "dive" I like here rather than just saying "go" or "jump".
+  There's a direction to the verb "dive" I like here more than just saying "go" or "jump".
 </p>
 <ul>
   <li>
@@ -241,6 +263,11 @@
     Older projects show up last.
   </li>
 </ul>
+<div class="figure-container">
+  <figure>
+    <%= render "shared/video_figure", video_asset_path_name: "bc-project-menu.webm" %>
+  </figure>
+</div>
 <p>
   After debating this for awhile, I decided I didn't want to lose any of the features of the existing project card design. 
   For folks that may do more <em>managing of everything</em> rather than specific task work, the old design works very well.
@@ -248,7 +275,7 @@
 </p>
 <ul>
   <li>
-    The "Manage projects & templates" link at the top would surface the existing page (minus the "Your Schedule" and "Your Assignments" sections at the bottom).
+    The "Manage projects" link at the top would surface the existing page (minus the "Your Schedule" and "Your Assignments" sections at the bottom).
   </li>
   <li>
     Or, ditch that link altogether, and put the entire project cards section below the briefcase inside the same kind of white container. 
@@ -257,27 +284,39 @@
 <p>
   Lastly, I did remove the company name and logo on the Home screen. We don't show either on any other page, so my hunch is that the benefit
   of cleaning that area up for these other design goals was worth it. But, I could be totally wrong about this and we could certainly fit it back 
-  in to the top of the page
+  at the top of the page.
 </p>
 <hr>
-<h3>Small tech notes</h3>
+<h3>A few technical notes</h3>
 <ul>
   <li>
-    Stimulus is pulling in my other stuff but the only relevant one is basecamp__toggle_projects.
+    I used one Stimulus controller for the project menu (<span class="code">basecamp/toggle_projects_controller</span>).
   </li>
   <li>
-    CSS -- Used BEM model with native CSS (no preprocessors). There is a very light amount of native nested CSS and utility-first class too.
+    For the CSS, I mainly used a BEM approach with native CSS (no preprocessors). There is a very light amount of native nested CSS.
+    I'm feeling OK about the CSS code, and would normally spend more time tidying up, but I wanted to focus on the design.
+  </li>
+  <li>
+    The various state pages are all driven from the same view, passing in a different set of model data for each route. So, it's already
+    set up in a rudimentary Rails way.
+  </li>
+  <li>
+    In terms of time, I spent last weekend just thinking about direction. I didn't get to writing code until Monday. I got in ~4 hours each day,
+    with the exception of the final day (Friday), where I spent about 8 hours throughout the day. Probably 20% of the total time was working on this write-up.
+    (I mention this just so you can better evaluate the pace I work at).
   </li>
 </ul>
-<p>
-  
-</p>
 <hr>
+<h3>A final thought</h3>
 <p>
-  We're living in unique times when the direction of so many things seems up in the air. But I think there's an opportunity 
-  to differentiate Basecamp even further by doing something that sounds pretty sensible&mdash;making you feel good about what you're doing. 
-  That seems to be a lost art these days, doesn't it?
+  I'm really excited about where 37signals is headed the next couple years. With everyone and everything jumping on AI today, 
+  fertile ground will open up in other places&mdash;and I have a hunch that's what you're also searching for.
 </p>
 <p>
-  Looking forward to your feedback!
+  Even with this small exercise, I think there's an opportunity 
+  to differentiate Basecamp by doing things differently. Something as reasonable as making you feel good about what you're doing 
+  seems to be a lost art these days, doesn't it? 
+</p>
+<p>
+  Looking forward to your feedback. And hope you all had a great time in Amsterdam!
 </p>
