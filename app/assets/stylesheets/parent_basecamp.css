@@ -362,7 +362,7 @@ main {
 
 .briefcase__sticker:nth-child(2) {
   left: 20%;
-  top: -32px;
+  top: -11px;
   rotate: -2deg;
 }
 
@@ -387,7 +387,7 @@ main {
 .briefcase__sticker:nth-child(6) {
   left: 90%;
   top: -22px;
-  rotate: -5deg;
+  rotate: 5deg;
 }
 
 @media (max-width: 800px) {
@@ -492,7 +492,7 @@ main {
 .briefcase__task {
   padding: 0.75rem 1rem 0.75rem 0;
   display: grid;
-  grid-template-columns: 40px 1fr 50px;
+  grid-template-columns: 40px 1fr auto;
   gap: 0.6rem;
   border-bottom: 1px solid var(--color--border);
 }
@@ -572,7 +572,6 @@ main {
 /* Thought */
 .thought {
   z-index: var(--z-index--thought);
-  position: relative;
   padding: 2rem 4rem;
   display: flex;
   flex-direction: column;
@@ -583,7 +582,7 @@ main {
   position: relative;
   rotate: -1deg;
   background-color: var(--color--yellow-30);
-  transform: translateY(-20px);
+  transform: translateY(-40px);
   border-radius: var(--border-radius--lg);
   border: 1px solid var(--color--bg-sand);
 }
@@ -592,6 +591,7 @@ main {
   position: absolute;
   top: -10px;
   left: 50%;
+  width: fit-content;
   transform: translateX(-50%);
   font-size: 0.9rem;
   font-weight: 600;
@@ -620,7 +620,7 @@ main {
   justify-self: center;
   border: var(--border-width--lg) dashed var(--color--yellow-30);
   border-radius: var(--border-radius--lg);
-  padding: 1.4rem;
+  padding: 2rem;
   margin-top: 2rem;
   text-align: center;
   color: var(--color--dark-gray);
@@ -630,6 +630,7 @@ main {
   height: var(--size--zero-state);
   width: var(--size--zero-state);
   border-radius: var(--border-radius--circular);
+  margin-bottom: 2rem;
 }
 
 /* Remote control */

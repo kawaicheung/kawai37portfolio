@@ -60,7 +60,7 @@
     <%= link_to "New project", "", class: "btn btn--cta" %>
     <%= link_to "Manage projects", "", class: "btn btn--clear" %>
   </div>
-  <span class="header__date"><%= Time.now.strftime("%A, %b %d") %></span>
+  <span class="header__date"><%= Time.now.strftime("%A, %b") %> <%= Time.now.day.ordinalize %></span>
   <span class="header__greeting">Happy <%= Time.now.strftime("%A") %>, <strong><%= @first_name%>!</strong></span>
 </div>
 
@@ -210,7 +210,7 @@
           <i class="fa-solid fa-bell"></i>
         </div>
         <div class="briefcase__task-content">
-          <span>What did you work on today?</span>
+          <span>What did you work o adsfa dfasdf addsf asdn today?</span>
           <p><strong>Starting at 4pm</strong> in <%= link_to "The House", "", class: "just-a-link", target: "_blank" %>
           </p>
         </div>
@@ -255,58 +255,40 @@
       <span>Don't forget</span>
     </div>
     <div class="briefcase__items">
-      <div class="briefcase__task briefcase__task--reminder">
-        <div class="briefcase__task-icon">
-          <i class="fa-solid fa-comments"></i>
+      <% @reminders&.each do |reminder| %>
+        <div class="briefcase__task briefcase__task--reminder">
+          <div class="briefcase__task-icon">
+            <i class="fa-solid <%= reminder.icon %>"></i>
+          </div>
+          <div class="briefcase__task-content">
+            <span><%= reminder.title %></span>
+            <p><%= reminder.author %> &bull; <%= time_ago_in_words(reminder.date) %> ago</p>
+          </div>
         </div>
-        <div class="briefcase__task-content">
-          <span>Chat: Q2 Marketing Ideas</span>
-          <p>Michael Sanders &bull; <%= Time.now.yesterday.strftime("%a %b %d") %>
-          </p>
-        </div>
-      </div> 
-      <div class="briefcase__task briefcase__task--reminder">
-        <div class="briefcase__task-icon">
-          <i class="fa-solid fa-comments"></i>
-        </div>
-        <div class="briefcase__task-content">
-          <span>Chat: Website redesign</span>
-          <p>Mustafa Shabib &bull; <%= Time.now.yesterday.strftime("%a %b %d") %>
-          </p>
-        </div>
-      </div>
-      <div class="briefcase__task briefcase__task--reminder">
-        <div class="briefcase__task-icon">
-          <i class="fa-solid fa-comments"></i>
-        </div>
-        <div class="briefcase__task-content">
-          <span>@mentioned you in: What's going on with the marketing thing?</span>
-          <p>Lindsay Sanders &bull; <%= Time.now.yesterday.strftime("%a %b %d") %>
-          </p>
-        </div>
-      </div>
-      <div class="briefcase__task  briefcase__task--reminder">
-        <div class="briefcase__task-icon">
-          <i class="fa-solid fa-wave-square"></i>
-        </div>
-        <div class="briefcase__task-content">
-          <span>Hill Chart: Progress Update</span>
-          <p>Craig Bryant &bull; <%= 2.days.ago.strftime("%a %b %d") %>
-          </p>
-        </div>
-      </div>
+      <% end %>
     </div>
-    <div class="zero-state zero-state--dont-forget">
-      <span>You haven't marked anything to remember currently.<br>
-      <%= link_to "What's this?", "", class: "just-a-link" %>
-      </span>
-    </div>
+    <% if @reminders.blank? %>
+      <% if @is_first_time %>
+        <div class="zero-state zero-state--dont-forget">
+          <span><strong>All around Basecamp, you can mark things so you don't forget them!</strong>
+            <%= link_to "Learn more", "", class: "just-a-link" %>
+          </span>
+        </div>
+      <% else %>
+        <div class="zero-state zero-state--dont-forget">
+          <span>
+            You haven't marked anything to remember currently.<br>
+            <%= link_to "What's this?", "", class: "just-a-link" %>
+          </span>
+        </div>
+      <% end %>
+    <% end %>
   </div>
 </div>
 
 <div class="thought">
-  <span class="thought__header">
-    Today's thought
+  <span class="thought__header no-wrap">
+    Today's thought from Basecamp
   </span>
   <span class="thought__title">
     <%= link_to "Look back less", "https://world.hey.com/jason/look-back-less-848e9db0", class: "just-a-link", target: "_blank" %>. 
@@ -325,8 +307,8 @@
 <div class="remote-control">
   <strong>View:</strong><br>
   <%= link_to "First time user", basecamp_first_time_path, class: "remote-control__link #{' remote-control__link--selected' if current_page?(basecamp_first_time_path)}" %><br>
-  <%= link_to "Zero states", basecamp_zero_states_path, class: "remote-control__link #{' remote-control__link--selected' if current_page?(basecamp_zero_states_path)}" %><br>
-  <%= link_to "Beginning of day", basecamp_beginning_of_day_path, class: "remote-control__link #{' remote-control__link--selected' if current_page?(basecamp_beginning_of_day_path)}" %><br>
-  <%= link_to "Mid day", basecamp_mid_day_path, class: "remote-control__link #{' remote-control__link--selected' if current_page?(basecamp_mid_day_path)}" %><br>
-  <%= link_to "End of day", basecamp_end_of_day_path, class: "remote-control__link #{' remote-control__link--selected' if current_page?(basecamp_end_of_day_path)}" %><br>
+  <%= link_to "Totally empty", basecamp_zero_states_path, class: "remote-control__link #{' remote-control__link--selected' if current_page?(basecamp_zero_states_path)}" %><br>
+  <%= link_to "A typical morning", basecamp_beginning_of_day_path, class: "remote-control__link #{' remote-control__link--selected' if current_page?(basecamp_beginning_of_day_path)}" %><br>
+  <%= link_to "Mid-day view", basecamp_mid_day_path, class: "remote-control__link #{' remote-control__link--selected' if current_page?(basecamp_mid_day_path)}" %><br>
+  <%= link_to "End of day view", basecamp_end_of_day_path, class: "remote-control__link #{' remote-control__link--selected' if current_page?(basecamp_end_of_day_path)}" %><br>
 </div>

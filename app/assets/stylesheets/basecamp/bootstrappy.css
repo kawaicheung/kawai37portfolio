@@ -9,6 +9,9 @@
   display: none !important;
 }
 
+.no-wrap {
+  white-space: nowrap;
+}
 
 .just-a-link {
   color: var(--color--black);
