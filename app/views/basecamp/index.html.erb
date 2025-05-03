@@ -61,7 +61,7 @@
     <%= link_to "Manage projects", "", class: "btn btn--clear" %>
   </div>
   <span class="header__date"><%= Time.now.strftime("%A, %b %d") %></span>
-  <span class="header__greeting">Happy <%= Time.now.strftime("%A") %>, <strong>Bethany!</strong></span>
+  <span class="header__greeting">Happy <%= Time.now.strftime("%A") %>, <strong><%= @first_name%>!</strong></span>
 </div>
 
 <!-- Projects -->
@@ -125,54 +125,18 @@
 <div class="briefcase">
   <!-- Stickers -->
   <div class="briefcase__stickers">
-    <a href="" class="briefcase__sticker briefcase__sticker--tasks">
-      <div class="briefcase__sticker-badge">
-        &checkmark;
-      </div>
-      <span>
-        <i class="fa-solid fa-square-check"></i>
-      </span>
-    </a>
-    <a href="" class="briefcase__sticker briefcase__sticker--cards"> 
-      <div class="briefcase__sticker-badge">
-        3
-      </div>
-      <span>
-        <i class="fa-solid fa-table-columns"></i>
-      </span>
-    </a>
-    <a href="" class="briefcase__sticker briefcase__sticker--events">
-      <div class="briefcase__sticker-badge">
-        3
-      </div>
-      <span>
-        <i class="fa-solid fa-calendar-day"></i>
-      </span>
-    </a>
-    <a href="" class="briefcase__sticker briefcase__sticker--check-ins">
-      <div class="briefcase__sticker-badge">
-        &checkmark;
-      </div>
-      <span>
-        <i class="fa-solid fa-bell"></i>
-      </span>
-    </a>
-    <a href="" class="briefcase__sticker briefcase__sticker--time">
-      <span>
-        <i class="fa-solid fa-clock"></i>
-      </span>
-      <div class="briefcase__sticker-badge">
-        4.5h
-      </div>
-    </a>
-    <a href="" class="briefcase__sticker briefcase__sticker--boosts">
-      <div class="briefcase__sticker-badge">
-        12
-      </div>
-      <span>
-        <i class="fa-solid fa-rocket"></i>
-      </span>
-    </a>
+    <% @briefcase_stats.stickers.each do |key, sticker| %>
+      <% unless sticker[:count] == 0 %>
+        <a href="" class="briefcase__sticker briefcase__sticker--<%= sticker[:style] %>">
+          <div class="briefcase__sticker-badge">
+            <%= sticker[:count] == 1 ? "✓" : sticker[:count] %>
+          </div>
+          <span>
+            <i class="fa-solid <%= sticker[:icon] %>"></i>
+          </span>
+        </a>
+      <% end %>
+    <% end %>
   </div>
   <!-- What's on tap -->
   <div class="briefcase__section">
@@ -360,9 +324,9 @@
 
 <div class="remote-control">
   <strong>View:</strong><br>
-  <%= link_to "First time user", basecamp_first_time_path, class: "remote-control__link" %><br>
-  <%= link_to "Zero states", basecamp_zero_states_path, class: "remote-control__link" %><br>
-  <%= link_to "Beginning of day", basecamp_beginning_of_day_path, class: "remote-control__link" %><br>
-  <%= link_to "Mid day", basecamp_mid_day_path, class: "remote-control__link" %><br>
-  <%= link_to "End of day", basecamp_end_of_day_path, class: "remote-control__link" %><br>
+  <%= link_to "First time user", basecamp_first_time_path, class: "remote-control__link #{' remote-control__link--selected' if current_page?(basecamp_first_time_path)}" %><br>
+  <%= link_to "Zero states", basecamp_zero_states_path, class: "remote-control__link #{' remote-control__link--selected' if current_page?(basecamp_zero_states_path)}" %><br>
+  <%= link_to "Beginning of day", basecamp_beginning_of_day_path, class: "remote-control__link #{' remote-control__link--selected' if current_page?(basecamp_beginning_of_day_path)}" %><br>
+  <%= link_to "Mid day", basecamp_mid_day_path, class: "remote-control__link #{' remote-control__link--selected' if current_page?(basecamp_mid_day_path)}" %><br>
+  <%= link_to "End of day", basecamp_end_of_day_path, class: "remote-control__link #{' remote-control__link--selected' if current_page?(basecamp_end_of_day_path)}" %><br>
 </div>
