@@ -65,15 +65,7 @@
 
 <!-- Combo Board -->
 <div class="combo-board__container">
-
-      <!--<div class="thought pinned">
-        <div class="thought__title">Appetites instead of estimates</div>
-        <div class="thought__subtitle">The problem with software estimates is that they're both entirely right and entirely wrong.</div>
-        <%= image_tag "basecamp/jason-fried.png", class: "thought__avatar" %>
-      </div>-->
-    </div>
   <div class="combo-board">
-
     <div class="whiteboard">
       <div class="briefcase__heading">
         <span>What's on tap</span>
@@ -137,8 +129,7 @@
         <% end %>
       </div>
     </div>
-  </div>
-        <div class="corkboard">
+    <div class="corkboard">
       <% if @briefcase_stats.stickers.any? { |_, sticker| sticker[:count] > 0 } %>
       <!-- Stickers -->
       <div class="corkboard__stickers">
@@ -162,4 +153,11 @@
         <% end %>
       </div>
       <% end %>
+      <!--<div class="thought pinned">
+        <div class="thought__title">Appetites instead of estimates</div>
+        <div class="thought__subtitle">The problem with software estimates is that they're both entirely right and entirely wrong.</div>
+        <%= image_tag "basecamp/jason-fried.png", class: "thought__avatar" %>
+      </div>-->
+    </div>
+  </div>
 </div>
