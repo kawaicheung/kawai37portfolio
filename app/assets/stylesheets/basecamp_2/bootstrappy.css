@@ -1,0 +1,27 @@
+/*******************************************************
+
+ Bootstrappy.css
+ Utility-first styles for Basecamp Home screen redesign
+ 
+********************************************************/
+
+.hidden {
+  display: none !important;
+}
+
+.no-wrap {
+  white-space: nowrap;
+}
+
+.just-a-link {
+  color: var(--color--black);
+  text-decoration: underline;
+}
+
+.just-a-link--em {
+  color: var(--color--blue);
+}
+
+.just-a-link--sm {
+  font-size: 0.9rem;
+}

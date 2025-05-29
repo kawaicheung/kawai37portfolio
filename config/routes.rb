@@ -30,6 +30,8 @@ Rails.application.routes.draw do
   get "basecamp/mid-day" => "basecamp#mid_day"
   get "basecamp/end-of-day" => "basecamp#end_of_day"
 
+  get "basecamp/take-two" => "basecamp#take_two"
+
 
   # Defines the root path route ("/")
   # root "posts#index"

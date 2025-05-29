@@ -1,0 +1,124 @@
+/*******************************************************
+
+ Forms.css
+ Form styles for Basecamp Home screen redesign
+ 
+********************************************************/
+
+.custom-checkbox {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+
+  .custom-checkbox__checkmark {
+    border-color: var(--color--ink);
+  }
+}
+
+.custom-checkbox__input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+
+  /* Show checkmark when checked */
+  &:checked ~ .custom-checkbox__checkmark {
+    background-color: var(--color--ink);
+    border-color: var(--color--ink);
+  }
+
+  ~ .custom-checkbox__checkmark:after {
+    display: block;
+  }
+}
+
+.custom-checkbox__checkmark {
+  position: relative;
+  display: inline-block;
+  height: var(--size--checkbox);
+  width: var(--size--checkbox);
+  border: 1px solid var(--color--gray);
+  border-radius: var(--border-radius--sm);
+
+  &:after {
+    content: '';
+    position: absolute;
+    display: none;
+    left: 6px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid var(--color--white);
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+}
+
+.custom-select {
+  border-radius: var(--border-radius--circular);
+  border: 1px solid var(--color--gray);
+  padding: 0.5rem 1rem;
+  appearance: none; 
+  background-color: white;
+  cursor: pointer;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='16'%3E%3Cpath d='M6 0l4 5H2l4-5zm0 16l-4-5h8l-4 5z' fill='%23000000'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.7rem top 50%;
+  background-size: 0.8rem auto;
+  padding-right: 2rem; 
+  font-size: 0.8rem;
+  max-width: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+
+.toggle-switch {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: inline-block;
+  width: 40px;
+  height: 24px;
+}
+
+.toggle-switch__input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+
+  &:checked + .toggle-switch__slider {
+    background-color: var(--color--green-50);
+
+    &:before {
+      transform: translateX(16px);
+    }
+  }
+}
+
+.toggle-switch__slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--color--gray);
+  transition: .4s;
+  border-radius: 34px;
+
+  &:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 4px;
+    background-color: var(--color--white);
+    transition: .4s;
+    border-radius: 50%;
+  }
+}

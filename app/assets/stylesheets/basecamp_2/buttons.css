@@ -1,0 +1,35 @@
+/*******************************************************
+
+ Buttons.css
+ Button styles for Basecamp Home screen redesign
+ 
+********************************************************/
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: solid 2px transparent;
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius--circular);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.btn--cta {
+  background-color: var(--color--green-60);
+  color: var(--color--white);
+}
+
+.btn--clear {
+  background-color: transparent;
+  border-color: var(--color--ink);
+  color: var(--color--ink);
+}
+
+.btn--white {
+  background-color: var(--color--white);
+  border-color: var(--color--ink);
+  color: var(--color--ink);
+}

@@ -1,0 +1,69 @@
+/*******************************************************
+
+ Basecamp_vars.css
+ Variable declarations for Basecamp Home screen redesign
+ 
+********************************************************/
+
+:root {
+  /* Typography */
+  --font-family--sans-serif: -apple-system, system-ui, BlinkMacSystemFont, Aptos, Roboto, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --font-family--serif: "LindenHill", Georgia, serif;
+  --font-family--handwriting: "KnewaveRegular", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+
+  --color--body: hsl(33.3, 60%, 97.1%);
+  --color--white: hsl(0, 0%, 100%);
+  --color--gray: hsl(0, 0%, 50%);
+  --color--dark-gray: hsl(0, 0%, 30%);
+  --color--dark-blue: hsl(204, 16%, 21%);
+  --color--ink: hsl(202, 18%, 21%);
+  --color--blue: hsl(211.2, 71.4%, 48%);
+  --color--border: hsla(30, 26%, 89%, 1);
+  --color--bg-sand: hsl(32.2, 20.2%, 60.2%);
+  
+  --color--orange-50: hsl(35.2, 100%, 47.8%);
+  --color--yellow-10: hsl(51.4, 77.8%, 94.7%);
+  --color--yellow-20: hsl(49.8, 89.8%, 88.4%);
+  --color--yellow-30: hsl(47.2, 93.1%, 77.3%);
+  --color--yellow-50: hsl(46.6, 98.3%, 45.5%);
+  --color--green-50: hsl(135.6, 39.7%, 52.5%);
+  --color--blue-30: hsl(205.9, 100%, 90%);
+  --color--blue-50: hsl(209.2, 100%, 62.9%);
+  --color--purple-50: hsl(238.4, 100%, 77.6%);
+  --color--green-60: hsl(148.4, 68.8%, 31.4%);
+  --color--pink-30: hsl(319.4, 81%, 91.8%);
+  --color--pink-70: hsl(328.6, 55.8%, 39%);
+  --color--red-50: hsl(13, 97.9%, 62.9%);
+
+  --border-radius--lg: 8px;
+  --border-radius--sm: 4px; 
+  --border-radius--xs: 2px;
+  --border-radius--circular: 99rem;
+
+  --box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.25);
+  --box-shadow--sticker: 0 1px 1px 0 var(--color--bg-sand);
+
+  --height--top-bar: 40px;
+  --height--projects-expander: 40px;
+
+  --size--avatar: 32px;
+  --size--nav-icon: 20px;
+  --size--briefcase-icon: 20px;
+  --size--zero-state: 200px;
+  --size--checkbox: 20px;
+  --size--task-icon: 40px;
+  
+  --width--section: clamp(300px, 90%, 68rem);
+  --width--projects: clamp(300px, 95%, 400px);
+  --width--combo-board: calc(100vw - 10px);
+
+  --border-width--lg: 4px;
+
+  --z-index--mosaic: -5;
+  --z-index--thought: 5;
+  --z-index--remote-control: 10;
+  --z-index--projects-listing: 20;
+  --z-index--projects-expander: 21;
+}
+

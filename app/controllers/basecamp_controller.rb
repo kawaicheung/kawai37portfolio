@@ -309,4 +309,72 @@ class BasecampController < ApplicationController
     @overdue_count = 3
     render "index"
   end
+
+  def take_two
+    @first_name = "Bethany"
+    @briefcase_stats = BriefcaseStats.new(
+      task_count: 3,
+      card_count: 2,
+      event_count: 1,
+      check_in_status: 1,
+      time_logged: "8h",
+      boost_count: 5
+    )
+    @reminders = [
+      Reminder.new(
+        title: "@mentioned: Summer planning",
+        author: "Lindsay Sanders",
+        date: 1.hour.ago,
+        icon: "fa-file-lines"
+      )
+    ]
+    @on_tap_items = [
+      {
+        title: "Tomorrow",
+        items: [
+          {
+            type: "event",
+            icon: "fa-calendar-day",
+            title: "Training session: New compliance documentation system",
+            topic: "10:00am-11:30am",
+            project: "Policies & Procedures",
+            project_link: ""
+          },
+          {
+            type: "card",
+            icon: "fa-table-columns",
+            title: "Review developer estimates for new contact forms",
+            topic: "Development",
+            topic_link: "",
+            project: "Website Redesign",
+            project_link: ""
+          }
+        ]
+      },
+      {
+        title: 3.days.from_now.strftime("%A, %b %e"),
+        items: [
+          {
+            type: "event",
+            icon: "fa-calendar-day",
+            title: "Training session: Learn about your laptop",
+            topic: "10:00am-11:30am",
+            project: "Policies & Procedures",
+            project_link: ""
+          },
+          {
+            type: "card",
+            icon: "fa-table-columns",
+            title: "Learn <TABLE> based design for fun again.",
+            topic: "Development",
+            topic_link: "",
+            project: "Website Redesign",
+            project_link: ""
+          }
+        ]
+      }
+    ]
+    @overdue_count = 3
+    render "take_two", layout: "parent_basecamp_2"
+  end
 end
