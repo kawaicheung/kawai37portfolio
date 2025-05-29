@@ -313,12 +313,9 @@ class BasecampController < ApplicationController
   def take_two
     @first_name = "Bethany"
     @briefcase_stats = BriefcaseStats.new(
-      task_count: 3,
-      card_count: 2,
-      event_count: 1,
-      check_in_status: 1,
-      time_logged: "8h",
-      boost_count: 5
+      task_count: 13,
+      card_count: 5,
+      boost_count: 42
     )
     @reminders = [
       Reminder.new(

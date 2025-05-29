@@ -65,7 +65,15 @@
 
 <!-- Combo Board -->
 <div class="combo-board__container">
+
+      <!--<div class="thought pinned">
+        <div class="thought__title">Appetites instead of estimates</div>
+        <div class="thought__subtitle">The problem with software estimates is that they're both entirely right and entirely wrong.</div>
+        <%= image_tag "basecamp/jason-fried.png", class: "thought__avatar" %>
+      </div>-->
+    </div>
   <div class="combo-board">
+
     <div class="whiteboard">
       <div class="briefcase__heading">
         <span>What's on tap</span>
@@ -129,16 +137,23 @@
         <% end %>
       </div>
     </div>
-    <div class="corkboard">
+  </div>
+        <div class="corkboard">
       <% if @briefcase_stats.stickers.any? { |_, sticker| sticker[:count] > 0 } %>
       <!-- Stickers -->
       <div class="corkboard__stickers">
         <% @briefcase_stats.stickers.each do |key, sticker| %>
-          <% unless sticker[:count] == 0 %>
-            <a href="" class="corkboard__sticker corkboard__sticker--<%= sticker[:style] %> pinned">
-              <div class="corkboard__sticker-badge">
-                <%= sticker[:count] == 1 ? "✓" : sticker[:count] %>
-              </div>
+          <% sticker[:count].to_i.times do %>
+            <% random_y = (rand * 10 - 2).round(1) %>
+            <% random_x = (rand * 10 - 2).round(1) %>
+            <% random_scale = (rand * 0.5 + 0.75).round(1) %>
+            <% random_rotate = (rand * 20 - 5).round(1) %>
+            <a href="" class="corkboard__sticker corkboard__sticker--<%= sticker[:style] %>" 
+            style="transform: 
+            translateY(<%= random_y %>px) 
+            translateX(<%= random_x %>px) 
+            scale(<%= random_scale %>) 
+            rotate(<%= random_rotate %>deg)">
               <span>
                 <i class="fa-solid <%= sticker[:icon] %>"></i>
               </span>
@@ -147,11 +162,4 @@
         <% end %>
       </div>
       <% end %>
-      <div class="thought pinned">
-        <div class="thought__title">Appetites instead of estimates</div>
-        <div class="thought__subtitle">The problem with software estimates is that they're both entirely right and entirely wrong.</div>
-        <%= image_tag "basecamp/jason-fried.png", class: "thought__avatar" %>
-      </div>
-    </div>
-  </div>
 </div>
