@@ -63,6 +63,79 @@
   </div>
 </div>
 
+
+<!-- Projects -->
+<div class="projects" data-controller="basecamp--toggle-projects" data-basecamp--toggle-projects-selected-class-value="projects__expander--selected">
+  <div class="projects__expander" data-basecamp--toggle-projects-target="button" data-action="click->basecamp--toggle-projects#toggle">
+    <span>Dive into a project</span>
+    <i class="fa-solid fa-arrow-down"></i>
+  </div>
+  <% if @is_first_time %>
+    <ul class="projects__listing hidden" data-basecamp--toggle-projects-target="listing">
+      <li class="projects__listing-item projects__listing-item--pinned">
+        <%= link_to "My Project", "", class: "projects__listing-link"  %>
+      </li>
+      <li class="projects__listing-item">
+        <%= link_to "Getting Started", "", class: "projects__listing-link"  %>
+      </li>
+      <li class="projects__listing-item">
+        <%= link_to "Making a Podcast", "", class: "projects__listing-link"  %>
+      </li>
+    </ul>
+  <% else %>
+    <ul class="projects__listing hidden" data-basecamp--toggle-projects-target="listing">
+      <li class="projects__listing-item projects__listing-item--pinned">
+        <%= link_to "Customer support playbook", "", class: "projects__listing-link"  %>
+      </li>
+      <li class="projects__listing-item  projects__listing-item--pinned">
+        <%= link_to "Demo sessions", "", class: "projects__listing-link"  %>
+      </li>
+      <li class="projects__listing-item">
+        <div class="projects__listing-divider projects__listing-divider--stack">
+          <span>Q2 Projects</span>
+        </div>
+        <ul class="projects__listing-group">
+          <li class="projects__listing-item">
+            <%= link_to "Marketing initiatives", "", class: "projects__listing-link"  %>
+          </li>
+          <li class="projects__listing-item">
+            <%= link_to "Making it rain", "", class: "projects__listing-link"  %>
+          </li>
+          <li class="projects__listing-item">
+            <%= link_to "One of those really long project names you test with", "", class: "projects__listing-link" %>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <div class="projects__listing-divider">
+          <span>Recent Projects</span>
+        </div>
+        <ul class="projects__listing-group">
+          <li class="projects__listing-item">
+            <%= link_to "Q3 Marketing", "", class: "projects__listing-link"  %>
+          </li>
+          <li class="projects__listing-item">
+            <%= link_to "Making a Podcast", "", class: "projects__listing-link"  %>
+          </li>
+          <li class="projects__listing-item">
+            <%= link_to "Internal HR tasks", "", class: "projects__listing-link" %>
+          </li>
+          <li class="projects__listing-item">
+            <%= link_to "Policies & procedures", "", class: "projects__listing-link" %>
+          </li>
+        </ul>
+      </li>
+      <li class="projects__listing-item">
+        <%= link_to "Website redesign", "", class: "projects__listing-link"  %>
+      </li>
+      <li class="projects__listing-item">
+        <%= link_to "Mobile app updates", "", class: "projects__listing-link"  %>
+      </li>
+    </ul>
+  <% end %>
+</div>
+
+
 <!-- Combo Board -->
 <div class="combo-board__container">
   <div class="combo-board">
